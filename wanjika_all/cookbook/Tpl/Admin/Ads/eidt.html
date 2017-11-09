@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+	
+	
+
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">广告管理</div>
+	
+ <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	
+	<ul class="nav nav-tabs">
+		  <li class="active"><a href="#profile" data-toggle="tab">修改广告</a></li>
+		</ul>
+
+	<div class="tab-content">
+		  <div class="tab-pane active" id="profile">
+		  <div class="panel-body">
+			 <form class="form-horizontal" action="__GROUP__/Ads/eidt" method="post" role="form" >
+					  <div class="form-group">
+						<label for="adurl" class="col-sm-3 control-label">广告链接(adurl):</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="adurl" name="adurl" value="{$ads.adurl}" placeholder="广告链接">
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="adpic" class="col-sm-3 control-label">广告图片(adpic):</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="logo" name="adpic" value="{$ads.adpic}"  placeholder="广告图片可以是远程链接也可以本地上传">
+						</div>
+						 <div class="col-sm-3">
+								 	<iframe src="__GROUP__/Upload" height="40"  frameborder="0" scrolling="no" ></iframe>
+						</div>
+
+					  </div>
+					   <div class="form-group">
+						<label for="adremak" class="col-sm-3 control-label">广告说明(adremak):</label>
+						<div class="col-sm-4">
+						  <textarea type="text" class="form-control" id="adremak" name="adremak" >{$ads.adremak}</textarea>
+						</div>
+						</div>
+						 <div class="form-group">
+						<label for="adremak" class="col-sm-3 control-label">广告分类(cate):</label>
+						<div class="col-sm-4">
+						 	<select name="cate"  class="form-control" >
+								<option value="home" <if condition="$ads['cate'] eq 'home'">selected</if> >首页</option>
+								<option value="cate" <if condition="$ads['cate'] eq 'cate'">selected</if> >列表</option>
+								<option value="show" <if condition="$ads['cate'] eq 'show'">selected</if> >内页</option>
+							</select>
+						</div>
+						</div>
+						<div class="form-group">
+						<label for="isshow" class="col-sm-3 control-label">显示隐藏:</label>
+						<div class="col-sm-4">
+							<label><input type="radio" value="1" name="isshow" <if condition="$ads.isshow eq 1">checked</if> />显示</label>
+							<label><input type="radio" value="0" name="isshow" <if condition="$ads.isshow eq 0">checked</if> />隐藏</label>
+							<input type="hidden" value="{$ads.time}" name="time" />
+							<input type="hidden" value="{$ads.id}" name="id" />
+						</div> 
+					
+
+					  </div>
+					 
+					  
+						 <div class="form-group">
+											<div class="col-sm-offset-3 col-sm-4">
+											  <button type="submit" class="btn btn-default" id="post">提交</button>
+											</div>
+						 </div>
+						</form>
+					  
+				</div>
+			</div>
+		  
+		  
+		
+		
+		  
+				
+</div>
+
+
+
+  </body>
+</html>

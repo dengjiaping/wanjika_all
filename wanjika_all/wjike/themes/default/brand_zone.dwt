@@ -1,0 +1,185 @@
+{* TitlePicWidth: 2 *}
+{* TitlePicHeight: 38 *}
+
+{* 说明：$title_pic，分类标题图片地址； *}
+{* 说明：$base_style，基本风格样式颜色； *}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body{ background: url(images/brandstreetbg.jpg) no-repeat fixed left top #020202;}
+.brandstreet_zone{ width:100%; margin:0 auto; overflow:hidden; display:table; padding-bottom:80px;}
+.brandstreet_zone .btz_mianpro{ width:1200px; margin:0 auto; overflow:hidden;}
+.brandstreet_zone .btz_mianpro .zdp_banner{ width:1200px; height:75px; padding-bottom:40px; margin-top:70px; background:url(../images/brandstreettitle.png) no-repeat top center; text-align:center;}
+.brandstreet_zone .btz_mianpro .zdp_banner h1{ color:#fff; font-size:42px; line-height:54px; font-family:"宋体";}
+.brandstreet_zone .btz_mianpro .zdp_banner span{ color:#fff; font-size:16px;}
+.brandstreet_zone .btz_mianpro ul{ width:1210px;}
+.brandstreet_zone .btz_mianpro li{ margin-right:8px; float:left;}
+.btz_fenlei{ width:1200px; margin:0 auto; overflow:hidden; margin-top:90px;text-align:center;}
+.btz_fenlei .btz_title{ display:inline-block; margin:0 auto; text-align:center;border-left: 2px solid #fff;}
+.btz_fenlei .btz_title .flhover{ background-color:#fff; color:#000; }
+.btz_fenlei .btz_title a{ padding: 14px 40px;display: block;color: #fff;float: left;font-size: 18px;border-right: 2px solid #fff;border-top: 2px solid #fff;border-bottom: 2px solid #fff;}
+.brandlist{ width:1210px; margin:0 auto; max-height: 695px; margin: 20px auto;overflow-y: hidden; }
+.btz_fenlei .brandlist .bl{ width:294px; height:227px; text-align:center; background-color:#fff; overflow:hidden; position:relative;}
+.btz_fenlei .brandlist .bl:hover{ background-color:#f7f7f7;}
+.btz_fenlei .brandlist .bl:hover .listpicture{
+	-moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: -webkit-transform 2.5s;
+    transition: transform 2.5s;
+    transition: transform 2.5s,-webkit-transform 2.5s;}
+.btz_fenlei .brandlist .listpicture{ width:294px; height:133px;}
+.btz_fenlei .brandlist li{ margin:0 5px 5px 0; float:left;}
+.btz_fenlei .brandlist .listlogo{ width:80px; height:80px; margin-top:-40px; left:107px; border: 1px solid #ececec;  position:absolute; z-index:1;}
+.btz_fenlei .brandlist a{ display:block; margin:0 auto;}
+.btz_fenlei .brandlist i{ font-style:normal; color:#d55147; font-weight:500;}
+.btz_fenlei .brandlist .bname{ overflow:hidden;margin:58px 0 18px 0;font-size:18px; color:#000; height:20px;line-height:20px;}
+.btz_fenlei .btz_more{ width:1200px; height:74px; margin-top:45px;}
+.goback_top .gb_img{opacity: 0.5;}
+</style>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,zDialog.js'}
+</head>
+<body id="tp">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="">
+    <div class="block block_two" style="width:100%;">
+    <!--品牌街 start-->
+    <div class="brandstreet_zone">
+    	<div class="btz_mianpro">
+            <div class="zdp_banner">
+                <h1>{$arr[0].floor_name[0]}</h1>
+                <span>{$arr[0].floor_name[1]}</span>
+            </div>
+            <ul>
+                <!-- {foreach from=$arr[1] item=brand key=key} -->
+            	<li>
+                	<a href="{$brand.floor_href}" title="" target="_blank" ><img height=340 src="{$brand.floor_img}" /></a>
+                </li>
+                <!-- {/foreach}-->
+            </ul>
+    	</div>
+
+        <!--进口食品start-->
+        <!-- {foreach from=$arr[2] item=category name=name} -->
+    	<div class="btz_fenlei" id="{$smarty.foreach.name.iteration}F" name="{$smarty.foreach.name.iteration}F">
+        	<div class="btz_title">
+                <ul>
+                    <!-- {foreach from=$arr[2] item=c name=n} -->
+                    {if $smarty.foreach.name.iteration eq $smarty.foreach.n.iteration}
+                    <a class="flhover">{$c.floor_name}</a>
+                    {else}
+                    <a onclick="window.location.href='http://www.wjike.com/brand_zone.php#{$smarty.foreach.n.iteration}F'" target="_blank" >{$c.floor_name}</a>
+                    {/if}
+                    <!-- {/foreach}-->
+                </ul>
+            </div>
+            <div class="brandlist">
+                <ul>
+                    <!-- {foreach from=$category.cat item=cat} -->
+                    <li>
+                        <div class="bl">
+                            <a href="{$cat.url}" title="" target="_blank"  class="listpicture" style="background:url(data/branddescimg/{$cat.brand_desc_img}) no-repeat center center; background-size:auto 133px;"></a>
+                        	<a href="{$cat.url}" title="" target="_blank" ><img src="data/brandlogo/{$cat.brand_logo}" class="listlogo" /></a>
+                            <a href="{$cat.url}" title="" target="_blank"  class="bname">{$cat.brand_name}</a>
+                        </div>
+                    </li>
+                    <!-- {/foreach}-->
+                </ul>
+            </div>
+            {if $category.count gt 12}
+        	<div class="btz_more">
+            	<a href="javascript:show_more('{$smarty.foreach.name.iteration}F')" ><img src="images/brandstreetmore.png" /></a>
+            </div>
+            {/if}
+    	</div>
+        <!-- {/foreach}-->
+        <!--进口食品end-->
+    </div>
+    <!--品牌街 end-->
+</div>
+
+    <div class="goback_top" id="goback_top" style="display: none;">
+    	<a target="_self" href="#tp" class="gb_img"></a>
+    </div>
+<script language="JavaScript">
+function show_more(id)
+{
+    var more = document.getElementById(id);
+    var height = more.children[1].scrollHeight;
+    more.children[1].style.maxHeight = height + "px";
+    more.children[2].style.display = "none";
+}
+ window.onscroll = function () {
+        var tempscrolltop = getDocumentTop();
+        sessionStorage.setItem("top",tempscrolltop);
+        var temptop= sessionStorage.getItem("top");
+
+        if(getDocumentTop()>getWindowHeight())
+        {
+            document.getElementById("goback_top").style.display = "block";
+        }
+        else
+        {
+            document.getElementById("goback_top").style.display = "none";
+        }
+    }
+
+//文档高度
+function getDocumentTop() {
+    var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+    if (document.body) {
+        bodyScrollTop = document.body.scrollTop;
+    }
+    if (document.documentElement) {
+        documentScrollTop = document.documentElement.scrollTop;
+    }
+    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;    return scrollTop;
+}
+
+//可视窗口高度
+function getWindowHeight() {
+    var windowHeight = 0;
+    if (document.compatMode == "CSS1Compat") {
+        windowHeight = document.documentElement.clientHeight;
+    } else {
+        windowHeight = document.body.clientHeight;
+    }
+    return windowHeight;
+}
+</script>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="blank"></div>
+<div class="block clearfix">
+  <!--left start-->
+  <div class="AreaL">
+{insert_scripts files='transport.js'}
+    <!--{foreach from=$helps item=help key=key}-->
+    <div class="xx">
+         <div class="us_top_tit cp"><p> {$help.cat_name|escape:html}</p></div>
+         <div class="userMenu" id="show{$key}">
+             <!--{foreach from=$help.article item=article}-->
+             <a href="{$article.url}" <!--{if $selected.short_title eq $article.article_id}-->class="curs"<!--{else}--><!--{/if}-->>{$article.short_title}</a>
+             <!--{/foreach}-->
+         </div>
+        </div>
+    <!--{/foreach}-->
+  </div>
+  <!--left end-->
+  <!--right start-->
+  <div class="AreaR mt-40">
+    <div class="box">
+     <div class="box_1">
+      <div style="background-color:#fff; padding:0px 15px;">
+         <!-- {if $article.content } -->
+          {$article.content}
+         <!-- {/if} -->
+         {if $article.open_type eq 2 or $article.open_type eq 1}<br />
+         <div><a href="{$article.file_url}" target="_blank">{$lang.relative_file}</a></div>
+          {/if}
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--right end-->
+</div>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<style>
+.page_bottom_all{background-color:#f3f3f3;}
+</style>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

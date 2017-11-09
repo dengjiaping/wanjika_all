@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2016跨年巨惠-送给她/他的礼物</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.bestwish_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/bestwish_01.jpg) no-repeat top center #fff; }
+.bestwish_all .bestwish_one{ width:100%; overflow:hidden; margin:0 auto; }
+.bestwish_all .bestwish_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.bestwish_all .bestwish_01{ width:978px; height:168px; background:url(images/adimages/bestwish_02.jpg) no-repeat top center; margin:0 auto; }
+.bestwish_all .bestwish_02{ width:978px; height:167px; background:url(images/adimages/bestwish_04.jpg) no-repeat top center; margin:0 auto; }
+.bestwish_all .bestwish_03{ width:978px; height:168px; background:url(images/adimages/bestwish_05.jpg) no-repeat top center; margin:0 auto; }
+.bestwish_all .bestwish_04{ width:978px; height:167px; background:url(images/adimages/bestwish_06.jpg) no-repeat top center; margin:0 auto; }
+.bestwish_all .bestwish_05{ width:978px; height:3205px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--2016跨年巨惠-送给她/他的礼物start-->
+<div class="bestwish_all">
+	<div class="bestwish_one">
+        <div class="bestwish_01"></div>
+        <div class="bestwish_02"></div>
+        <div class="bestwish_03"></div>
+        <div class="bestwish_04"></div>
+    </div>
+
+	<div class="bestwish_two">
+        <div class="bestwish_05">
+        	<img src="images/adimages/bestwish_07.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="26,23,322,392" href="goods.php?id=9657" target="_blank" />
+              <area shape="rect" coords="340,22,635,393" href="goods.php?id=10185" target="_blank" />
+              <area shape="rect" coords="651,22,946,393" href="goods.php?id=10197" target="_blank" />
+              <area shape="rect" coords="26,414,322,784" href="goods.php?id=9319" target="_blank" />
+              <area shape="rect" coords="339,413,633,783" href="goods.php?id=10136" target="_blank" />
+              <area shape="rect" coords="652,414,946,784" href="goods.php?id=6620" target="_blank" />
+            </map>
+        	<img src="images/adimages/bestwish_08.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="27,10,321,380" href="goods.php?id=9761" target="_blank" />
+              <area shape="rect" coords="340,9,635,380" href="goods.php?id=10037" target="_blank" />
+              <area shape="rect" coords="650,9,946,377" href="goods.php?id=9781" target="_blank" />
+            </map>
+        	<img src="images/adimages/bestwish_09.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="27,223,324,593" href="goods.php?id=9429" target="_blank" />
+              <area shape="rect" coords="339,222,634,593" href="goods.php?id=10186" target="_blank" />
+              <area shape="rect" coords="651,221,946,593" href="goods.php?id=9420" target="_blank" />
+            </map>
+        	<img src="images/adimages/bestwish_10.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="26,6,321,376" href="goods.php?id=10148" target="_blank" />
+              <area shape="rect" coords="340,7,635,375" href="goods.php?id=9804" target="_blank" />
+              <area shape="rect" coords="652,7,946,376" href="goods.php?id=9500" target="_blank" />
+              <area shape="rect" coords="27,399,322,769" href="goods.php?id=9469" target="_blank" />
+              <area shape="rect" coords="339,398,635,767" href="goods.php?id=10036" target="_blank" />
+              <area shape="rect" coords="652,398,946,768" href="goods.php?id=9489" target="_blank" />
+            </map>
+        	<img src="images/adimages/bestwish_11.jpg" border="0" />
+      </div>
+    </div>
+
+</div>
+<!--2016跨年巨惠-送给她/他的礼物end-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

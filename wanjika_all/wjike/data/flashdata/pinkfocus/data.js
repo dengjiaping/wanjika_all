@@ -1,0 +1,22 @@
+imgUrl1="data/afficheimg/20150824ppkmaw.JPG";
+imgtext1="";
+imgLink1=escape("http://www.4.com");
+imgUrl2="data/afficheimg/20150824lmwmgd.JPG";
+imgtext2="";
+imgLink2=escape("http://www.1.com");
+imgUrl3="data/afficheimg/20150824tyfkxm.JPG";
+imgtext3="www2";
+imgLink3=escape("http://www1");
+imgUrl4="data/afficheimg/20150824qblzur.JPG";
+imgtext4="2";
+imgLink4=escape("http://www.2.com");
+imgUrl5="data/afficheimg/20150824nadihh.JPG";
+imgtext5="3";
+imgLink5=escape("http://www.3.com");
+imgUrl6="data/afficheimg/20150824ppboaj.JPG";
+imgtext6="1";
+imgLink6=escape("http://2");
+
+var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3+"|"+imgUrl4+"|"+imgUrl5+"|"+imgUrl6;
+var links=imgLink1+"|"+imgLink2+"|"+imgLink3+"|"+imgLink4+"|"+imgLink5+"|"+imgLink6;
+var texts=imgtext1+"|"+imgtext2+"|"+imgtext3+"|"+imgtext4+"|"+imgtext5+"|"+imgtext6;

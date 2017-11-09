@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+	
+	
+
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">广告管理</div>
+	
+ <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	
+	<ul class="nav nav-tabs">
+		  <li ><a href="#profile" data-toggle="tab">添加广告</a></li>
+		  <li class="active"><a href="#home" data-toggle="tab">管理广告</a></li>
+		
+	
+		 
+		</ul>
+
+	<div class="tab-content">
+		  <div class="tab-pane" id="profile">
+		  <div class="panel-body">
+			 <form class="form-horizontal" action="__GROUP__/Ads/index" method="post" role="form" >
+					  <div class="form-group">
+						<label for="adurl" class="col-sm-3 control-label">广告链接(adurl):</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="adurl" name="adurl" placeholder="广告链接">
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="adpic" class="col-sm-3 control-label">广告图片(adpic):</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="logo" name="adpic"  placeholder="广告图片可以是远程链接也可以本地上传">
+						</div>
+						 <div class="col-sm-3">
+								 	<iframe src="__GROUP__/Upload" height="40"  frameborder="0" scrolling="no" ></iframe>
+						</div>
+
+					  </div>
+					   <div class="form-group">
+						<label for="adremak" class="col-sm-3 control-label">广告说明(adremak):</label>
+						<div class="col-sm-4">
+						  <textarea type="text" class="form-control" id="adremak" name="adremak" ></textarea>
+						</div>	
+						</div>
+						 <div class="form-group">
+						<label for="adremak" class="col-sm-3 control-label">广告分类(cate):</label>
+						<div class="col-sm-4">
+						 	<select name="cate"  class="form-control" >
+								<option value="home">首页</option>
+								<option value="cate">列表</option>
+								<option value="show">内页</option>
+							</select>
+						</div>
+						</div>
+						<div class="form-group">
+						<label for="isshow" class="col-sm-3 control-label">显示隐藏:</label>
+						<div class="col-sm-4">
+							<label><input type="radio" value="1" name="isshow" checked />显示</label>
+							<label><input type="radio" value="0" name="isshow" />隐藏</label>
+							<input type="hidden" value="{:time()}" name="time" />
+						</div> 
+					
+
+					  </div>
+					 
+					  
+						 <div class="form-group">
+											<div class="col-sm-offset-3 col-sm-4">
+											  <button type="submit" class="btn btn-default" id="post">提交</button>
+											</div>
+						 </div>
+						</form>
+					  
+				</div>
+			</div>
+		  
+		  
+		
+		  <div class="tab-pane  active" id="home">
+		    <div class="panel-body form-horizontal">
+					
+					 
+						<table class="table table-bordered table-hover table-condensed">
+							<tr>
+								<th>广告ID</th>
+								<th>广告图片</th>
+								<th>广告链接</th>
+								<th>广告词</th>
+								<th>显示位置</th>
+								<th>显示隐藏</th>
+								<th>修改删除</th>
+							</tr>
+							 <volist name="adlist" id="vo">
+								<tr>
+									<td>{$vo.id}</td>
+									<td><img src="{$vo.adpic}" width="100" height="60"/></td>
+									<td>{$vo.adurl}</td>
+									<td>{$vo.adremak}</td>
+									<td>{$vo.cate}</td>
+									<td><if condition="$vo.isshow eq 1">显示<else />隐藏</if></td>
+									<td><a href="__GROUP__/Ads/eidt/id/{$vo.id}">修改</a> | <a href="__GROUP__/Ads/del/id/{$vo.id}">删除</a></td>
+								</tr>
+							 </volist>
+						</table>
+			
+					 
+			</div>
+	   		 
+
+	
+	
+	
+		
+		   </div>
+		  
+				
+</div>
+
+
+
+  </body>
+</html>

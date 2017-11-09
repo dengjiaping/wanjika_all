@@ -1,0 +1,73 @@
+<!-- $Id: user_info.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
+{include file="pageheader.htm"}
+<div class="main-div">
+<form method="post" action="users.php" name="theForm" onsubmit="return validate()">
+<table width="100%" >
+    <tr>
+        <td class="label">{$lang.user_rank}:</td>
+        <td>
+            <select name="level">
+                <option value="1" {if $members.level==1}selected="selected"{/if}>一级会员</option>
+                <option value="2" {if $members.level==2}selected="selected"{/if}>二级会员</option>
+                <option value="3" {if $members.level==3}selected="selected"{/if}>三级会员</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">充值天数:</td>
+        <td>
+            <select name="type">
+                <option value="1" {if $members.type==1}selected="selected"{/if}>90天</option>
+                <option value="4" {if $members.type==1}selected="selected"{/if}>91天</option>
+                <option value="2" {if $members.type==2}selected="selected"{/if}>180天</option>
+                <option value="3" {if $members.type==3}selected="selected"{/if}>360天</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">充值价格:</td>
+        <td><input type="text" name="price" maxlength="30" value="{$members.price}" />{$lang.require_field}</td>
+    </tr>
+    <tr>
+        <td class="label">会员充值商品:</td>
+        <td>
+            {if $goods_members_list}
+                <select name="goods_id">
+                    {html_options options=$goods_members_list selected=$goods_members_list.goods_id}
+                </select>
+            {else}
+                    <a href="goods.php?act=add&extension_code=goods_members">请添加话费充值商品！</a>
+            {/if}
+        </td>
+    </tr>
+  <tr>
+    <td class="label"></td>
+    <td>
+      <input type="submit" value="{$lang.button_submit}" class="button" />
+      <input type="hidden" name="act" value="insert_members" />
+      <input type="hidden" name="id" value="{$members.id}" />
+    </td>
+  </tr>
+</table>
+
+</form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="JavaScript">
+<!--
+
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+    validator = new Validator("theForm");
+    validator.required("price",  '价格不能为空');
+
+    return validator.passed();
+}
+//-->
+</script>
+{/literal}
+{include file="pagefooter.htm"}

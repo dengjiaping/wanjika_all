@@ -1,0 +1,283 @@
+
+<?php
+function get_subcate_byurl($url)
+{
+	$rs = strpos($url,"category");
+	if($rs!==false)
+	{
+		preg_match("/\d+/i",$url,$matches);
+		$cid = $matches[0];
+		$cat_arr = array();
+		$sql = "select * from ".$GLOBALS['ecs']->table('category')." where parent_id=".$cid." and is_show=1 ORDER BY sort_order ASC, cat_id ASC";
+		$res = $GLOBALS['db']->getAll($sql);
+		
+		foreach($res as $idx => $row)
+		{
+			$cat_arr[$idx]['id']   = $row['cat_id'];
+            $cat_arr[$idx]['name'] = $row['cat_name'];
+            $cat_arr[$idx]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
+			$cat_arr[$idx]['children'] = get_clild_list($row['cat_id']);
+		}
+
+		return $cat_arr;
+	}
+	else 
+	{
+		return false;
+	}
+}
+
+function get_clild_list($pid)
+{
+    $sql_sub = "select * from ".$GLOBALS['ecs']->table('category')." where parent_id=".$pid." and is_show=1 ORDER BY sort_order ASC, cat_id ASC";
+
+	$subres = $GLOBALS['db']->getAll($sql_sub);
+	if($subres)
+	{
+		foreach ($subres as $sidx => $subrow)
+		{
+			$children[$sidx]['id']=$subrow['cat_id'];
+			$children[$sidx]['name']=$subrow['cat_name'];
+			$children[$sidx]['url']=build_uri('category', array('cid' => $subrow['cat_id']), $subrow['cat_name']);
+		}
+	}
+	else 
+	{
+		$children = null;
+	}
+			
+	return $children;
+}
+//
+function get_brands1($url = 0, $app = 'brand')
+{
+	preg_match("/\d+/i",$url,$matches);
+	$cat = $matches[0];
+	$children = ($cat > 0) ? ' AND ' . get_children($cat) : '';
+
+    $sql = "SELECT b.brand_id, b.brand_name, b.brand_logo, b.brand_desc, COUNT(*) AS goods_num, IF(b.brand_logo > '', '1', '0') AS tag ".
+            "FROM " . $GLOBALS['ecs']->table('brand') . "AS b, ".
+                $GLOBALS['ecs']->table('goods') . " AS g ".
+            "WHERE g.brand_id = b.brand_id $children AND is_show = 1  AND is_show_on_suggest = 1 " .
+            " AND g.is_on_sale = 1 AND g.is_alone_sale = 1 AND g.is_delete = 0 ".
+            "GROUP BY b.brand_id HAVING goods_num > 0 ORDER BY tag DESC, b.sort_order ASC";
+    $row = $GLOBALS['db']->getAll($sql);
+
+    foreach ($row AS $key => $val)
+    {
+        $row[$key]['url'] = build_uri($app, array('cid' => $cat, 'bid' => $val['brand_id']), $val['brand_name']);
+        $row[$key]['brand_desc'] = htmlspecialchars($val['brand_desc'],ENT_QUOTES);
+    }
+
+    return $row;
+}
+//
+function get_promotion_info1($goods_id = '')
+{
+    $snatch = array();
+    $group = array();
+    $auction = array();
+    $package = array();
+    $favourable = array();
+
+    $gmtime = gmtime();
+    $sql = 'SELECT act_id, act_name, act_type, start_time, end_time FROM ' . $GLOBALS['ecs']->table('goods_activity') . " WHERE is_finished=0 AND start_time <= '$gmtime' AND end_time >= '$gmtime'";
+    if(!empty($goods_id))
+    {
+        $sql .= " AND goods_id = '$goods_id'";
+    }
+    $res = $GLOBALS['db']->getAll($sql);
+    foreach ($res as $data)
+    {
+        switch ($data['act_type'])
+        {
+            case GAT_SNATCH: //夺宝奇兵
+                $snatch[$data['act_id']]['act_name'] = $data['act_name'];
+                $snatch[$data['act_id']]['url'] = build_uri('snatch', array('sid' => $data['act_id']));
+                $snatch[$data['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $data['start_time']), local_date('Y-m-d', $data['end_time']));
+                $snatch[$data['act_id']]['sort'] = $data['start_time'];
+                $snatch[$data['act_id']]['type'] = 'snatch';
+                break;
+
+            case GAT_GROUP_BUY: //团购
+                $group[$data['act_id']]['act_name'] = $data['act_name'];
+                $group[$data['act_id']]['url'] = build_uri('group_buy', array('gbid' => $data['act_id']));
+                $group[$data['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $data['start_time']), local_date('Y-m-d', $data['end_time']));
+                $group[$data['act_id']]['sort'] = $data['start_time'];
+                $group[$data['act_id']]['type'] = 'group_buy';
+                break;
+
+            case GAT_AUCTION: //拍卖
+                $auction[$data['act_id']]['act_name'] = $data['act_name'];
+                $auction[$data['act_id']]['url'] = build_uri('auction', array('auid' => $data['act_id']));
+                $auction[$data['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $data['start_time']), local_date('Y-m-d', $data['end_time']));
+                $auction[$data['act_id']]['sort'] = $data['start_time'];
+                $auction[$data['act_id']]['type'] = 'auction';
+                break;
+
+            case GAT_PACKAGE: //礼包
+                $package[$data['act_id']]['act_name'] = $data['act_name'];
+                $package[$data['act_id']]['url'] = 'package.php#' . $data['act_id'];
+                $package[$data['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $data['start_time']), local_date('Y-m-d', $data['end_time']));
+                $package[$data['act_id']]['sort'] = $data['start_time'];
+                $package[$data['act_id']]['type'] = 'package';
+                break;
+        }
+    }
+
+    $user_rank = ',' . $_SESSION['user_rank'] . ',';
+    $favourable = array();
+    $sql = 'SELECT act_id, act_range, act_range_ext, act_name, start_time, end_time FROM ' . $GLOBALS['ecs']->table('favourable_activity') . " WHERE start_time <= '$gmtime' AND end_time >= '$gmtime'";
+    if(!empty($goods_id))
+    {
+        $sql .= " AND CONCAT(',', user_rank, ',') LIKE '%" . $user_rank . "%'";
+    }
+    $res = $GLOBALS['db']->getAll($sql);
+
+    if(empty($goods_id))
+    {
+        foreach ($res as $rows)
+        {
+            $favourable[$rows['act_id']]['act_name'] = $rows['act_name'];
+            $favourable[$rows['act_id']]['url'] = 'activity.php';
+            $favourable[$rows['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $rows['start_time']), local_date('Y-m-d', $rows['end_time']));
+            $favourable[$rows['act_id']]['sort'] = $rows['start_time'];
+            $favourable[$rows['act_id']]['type'] = 'favourable';
+        }
+    }
+    else
+    {
+        $sql = "SELECT cat_id, brand_id FROM " . $GLOBALS['ecs']->table('goods') .
+           "WHERE goods_id = '$goods_id'";
+        $row = $GLOBALS['db']->getRow($sql);
+        $category_id = $row['cat_id'];
+        $brand_id = $row['brand_id'];
+
+        foreach ($res as $rows)
+        {
+            if ($rows['act_range'] == FAR_ALL)
+            {
+                $favourable[$rows['act_id']]['act_name'] = $rows['act_name'];
+                $favourable[$rows['act_id']]['url'] = 'activity.php';
+                $favourable[$rows['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $rows['start_time']), local_date('Y-m-d', $rows['end_time']));
+                $favourable[$rows['act_id']]['sort'] = $rows['start_time'];
+                $favourable[$rows['act_id']]['type'] = 'favourable';
+            }
+            elseif ($rows['act_range'] == FAR_CATEGORY)
+            {
+                /* 找出分类id的子分类id */
+                $id_list = array();
+                $raw_id_list = explode(',', $rows['act_range_ext']);
+                foreach ($raw_id_list as $id)
+                {
+                    $id_list = array_merge($id_list, array_keys(cat_list($id, 0, false)));
+                }
+                $ids = join(',', array_unique($id_list));
+
+                if (strpos(',' . $ids . ',', ',' . $category_id . ',') !== false)
+                {
+                    $favourable[$rows['act_id']]['act_name'] = $rows['act_name'];
+                    $favourable[$rows['act_id']]['url'] = 'activity.php';
+                    $favourable[$rows['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $rows['start_time']), local_date('Y-m-d', $rows['end_time']));
+                    $favourable[$rows['act_id']]['sort'] = $rows['start_time'];
+                    $favourable[$rows['act_id']]['type'] = 'favourable';
+                }
+            }
+            elseif ($rows['act_range'] == FAR_BRAND)
+            {
+                if (strpos(',' . $rows['act_range_ext'] . ',', ',' . $brand_id . ',') !== false)
+                {
+                    $favourable[$rows['act_id']]['act_name'] = $rows['act_name'];
+                    $favourable[$rows['act_id']]['url'] = 'activity.php';
+                    $favourable[$rows['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $rows['start_time']), local_date('Y-m-d', $rows['end_time']));
+                    $favourable[$rows['act_id']]['sort'] = $rows['start_time'];
+                    $favourable[$rows['act_id']]['type'] = 'favourable';
+                }
+            }
+            elseif ($rows['act_range'] == FAR_GOODS)
+            {
+                if (strpos(',' . $rows['act_range_ext'] . ',', ',' . $goods_id . ',') !== false)
+                {
+                    $favourable[$rows['act_id']]['act_name'] = $rows['act_name'];
+                    $favourable[$rows['act_id']]['url'] = 'activity.php';
+                    $favourable[$rows['act_id']]['time'] = sprintf($GLOBALS['_LANG']['promotion_time'], local_date('Y-m-d', $rows['start_time']), local_date('Y-m-d', $rows['end_time']));
+                    $favourable[$rows['act_id']]['sort'] = $rows['start_time'];
+                    $favourable[$rows['act_id']]['type'] = 'favourable';
+                }
+            }
+        }
+    }
+
+    $sort_time = array();
+    $arr = array_merge($snatch, $group, $auction, $package, $favourable);
+    foreach($arr as $key => $value)
+    {
+        $sort_time[] = $value['sort'];
+    }
+    array_multisort($sort_time, SORT_NUMERIC, SORT_DESC, $arr);
+
+    return $arr;
+}
+
+?>
+<DIV class="allsort fl allsorthover" style="height:252px;">
+  <DIV class="category fl color_white_none" id=allCategoryHeader>
+    <DIV class=ap_category id=ap_category >
+      <DIV class=mc  style="padding-bottom:8px;">
+        <!--{foreach from=get_categories_tree(0) item=cat name=cat0}-->
+        <DIV class="item fore " onMouseOver="this.className='item fore hover '" 
+onmouseout="this.className='item fore '"><SPAN >
+          <H3 style="width:165px;"><a href="{$cat.url}">{$cat.name|escape:html}</A></H3>
+          <S></S></SPAN>
+          <DIV class=i-mc>
+            <DIV class=subitem>
+              <!--{foreach from=$cat.cat_id item=child}-->
+              <DL class=fore>
+                <DT><a href="{$child.url}">{$child.name|escape:html}</a></DT>
+                <DD>
+                  <!--{foreach from=$child.cat_id item=childer}-->
+                  <EM><a href="{$childer.url}">{$childer.name|escape:html}</a></EM>
+                  <!--{/foreach}-->
+                </DD>
+              </DL>
+              <!--{/foreach}-->
+            </DIV>
+            <DIV class=fr id=JD_sort_a>
+              <DL class=brands>
+                <DT>推荐品牌 </DT>
+                <DD>
+                  <!--{foreach from=get_brands1($GLOBALS['smarty']->_var['cat']['id']) item=bchilder}-->
+                  <EM><a href="{$bchilder.url}">{$bchilder.brand_name|escape:html}</a></EM>
+                  <!--{/foreach}-->
+                </DD>
+              </DL>
+              <DL class=promotion>
+                <DT>促销活动 </DT>
+                <DD>
+                  <UL>
+                    <!-- {foreach from=$promotion_info1 item=item1 key=key} -->
+                    <LI>
+                      <!-- {if $item1.type eq "snatch"} -->
+                      <a href="snatch.php" title="{$lang.$item1.type}">{$lang.snatch_promotion}</a>
+                      <!-- {elseif $item1.type eq "group_buy"} -->
+                      <a href="group_buy.php" title="{$lang.$item1.type}">{$lang.group_promotion}</a>
+                      <!-- {elseif $item1.type eq "auction"} -->
+                      <a href="auction.php" title="{$lang.$item1.type}">{$lang.auction_promotion}</a>
+                      <!-- {elseif $item1.type eq "favourable"} -->
+                      <a href="activity.php" title="{$lang.$item1.type}">{$lang.favourable_promotion}</a>
+                      <!-- {elseif $item1.type eq "package"} -->
+                      <a href="package.php" title="{$lang.$item1.type}">{$lang.package_promotion}</a>
+                      <!-- {/if} -->
+                      <a href="{$item1.url}" title="{$lang.$item1.type} {$item1.act_name}{$item1.time}" >{$item1.act_name}</a></LI>
+                    <!-- {/foreach} -->
+                  </UL>
+                </DD>
+              </DL>
+            </DIV>
+          </DIV>
+        </DIV>
+        <!--{/foreach}-->
+      </DIV>
+    </DIV>
+  </DIV>
+</div>

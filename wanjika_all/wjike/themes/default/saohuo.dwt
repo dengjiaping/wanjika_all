@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>年终扫货 底价出击</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.saohuo_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/saohuo_01.jpg) no-repeat top center #fff; }
+.saohuo_all .saohuo_one{ width:100%; overflow:hidden; margin:0 auto; }
+.saohuo_all .saohuo_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.saohuo_all .saohuo_01{ width:942px; height:240px; background:url(images/adimages/saohuo_02.jpg) no-repeat center center; margin:0 auto; }
+.saohuo_all .saohuo_02{ width:942px; height:239px; background:url(images/adimages/saohuo_04.jpg) no-repeat center center; margin:0 auto; }
+.saohuo_all .saohuo_03{ width:942px; height:294px; background:url(images/adimages/saohuo_05.jpg) no-repeat center center; margin:0 auto; }
+.saohuo_all .saohuo_04{ width:942px; height:1623px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--年终扫货 底价出击start-->
+<div class="saohuo_all">
+	<div class="saohuo_one">
+        <div class="saohuo_01"></div>   
+        <div class="saohuo_02"></div> 
+        <div class="saohuo_03"></div> 
+    </div> 
+    
+	<div class="saohuo_two">
+        <div class="saohuo_04">
+       	  <img src="images/adimages/saohuo_06.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="8,34,223,407" href="http://www.wjike.com/goods.php?id=9766" target="_blank" />
+              <area shape="rect" coords="239,34,464,408" href="http://www.wjike.com/goods.php?id=9485" target="_blank" />
+              <area shape="rect" coords="478,31,703,407" href="http://www.wjike.com/goods.php?id=10043" target="_blank" />
+              <area shape="rect" coords="717,35,937,405" href="http://www.wjike.com/goods.php?id=9469" target="_blank" />
+              <area shape="rect" coords="5,423,222,796" href="http://www.wjike.com/goods.php?id=10157" target="_blank" />
+              <area shape="rect" coords="245,424,460,798" href="http://www.wjike.com/goods.php?id=9813" target="_blank" />
+              <area shape="rect" coords="482,424,698,796" href="http://www.wjike.com/goods.php?id=6701" target="_blank" />
+              <area shape="rect" coords="718,424,936,796" href="http://www.wjike.com/goods.php?id=3761" target="_blank" />
+            </map>
+        	<img src="images/adimages/saohuo_07.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="6,32,330,250" href="http://www.wjike.com/category.php?id=311" target="_blank" />
+              <area shape="rect" coords="340,32,626,250" href="http://www.wjike.com/category.php?id=44" target="_blank" />
+              <area shape="rect" coords="634,33,936,251" href="http://www.wjike.com/category.php?id=572" target="_blank" />
+            </map>
+      </div>   
+    </div> 
+    
+</div>
+<!--年终扫货 底价出击end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}" xmlns="http://www.w3.org/1999/html"></script>
+<!-- start add new category form -->
+<div class="main-div list-div" id="listDiv">
+    <!-- tab bar -->
+    <div id="tabbar-div">
+        <p>
+            <span class="tab-front" id="general-tab">顶部楼层管理</span>
+            <span class="tab-back" id="mix-tab">分类楼层管理</span>
+        </p>
+    </div>
+    <!-- tab body -->
+    <form action="brand_zone.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+        <table width="100%" id="general-table">
+            <tr>
+                <td colspan="2" style="text-align: right;">顶部楼层名称:</td>
+                <td colspan="3">
+                    <input type='text' name='floor_name' maxlength="20" value='{$brand_zone_info[0].floor_name|escape:html}' onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');" size="30"/> <font color="red">*中英文用","隔开</font>
+                </td>
+            </tr>
+            <tr>
+                <th width="20px">ID</th>
+                <th>顶部楼层图片</th>
+                <th>顶部楼层预览</th>
+                <th>顶部楼层链接</th>
+                <th>排序</th>
+                <th width="70px">操作</th>
+            </tr>
+            {foreach from=$brand_zone_info[1] item=floor key=i}
+            <tr id="gallery_{$floor.brand_id}">
+                <td><input type="hidden" name="floor[brand_id][]" value="{$floor.brand_id}"/>
+                    <input type="hidden" name="old_img[]" value="{$floor.floor_img}">{$floor.brand_id}</td>
+                <td><input type="file" name="floor[img][]"/></td>
+                <td align="center"><img style="vertical-align: middle;height: 80px;" src="../{$floor.floor_img}"/></td>
+                <td><textarea rows="2" cols="40" style="width: 96%;" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');" name="floor[url][]">{$floor.floor_href}</textarea></td>
+                <td><input type="text"  value="{$floor.floor_sort}" style="width: 96%;" size="2" name="floor[floor_sort][]"/></td>
+
+                <td align="center"><a href="javascript:;" onclick="if (confirm('您确认要删除楼层数据以及图片吗？')) dropImg('{$floor.brand_id}');" title="{$lang.remove}">删除</a></td>
+            </tr>
+            {/foreach}
+            <tr>
+                <td><input type="hidden" name="floor[brand_id][]" /><a href="javascript:;" onclick="addImg(this,'general-table')">[+]</a></td>
+                <td><input type="file" name="floor[img][]"/></td>
+                <td  align="center"></td>
+                <td><textarea rows="2" cols="40" style="width: 96%;" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');" name="floor[url][]"></textarea></td>
+                <td><input type="text" style="width: 96%;" size="2" name="floor[floor_sort][]"/></td>
+                <td></td>
+            </tr>
+        </table>
+        <table width="90%" id="mix-table" style="display:none">
+            <tr>
+                <th align="center" width="100px">ID</th>
+                <th>分类楼层名称</th>
+                <th>排序</th>
+                <th width="170px">操作</th>
+            </tr>
+            {foreach from=$brand_zone_info[2] item=cat key=i}
+            <tr id="gallery_{$cat.brand_id}">
+                <td align="center"><input type="hidden" name="cat[brand_id][]" value="{$cat.brand_id}"/>{$cat.brand_id}</td>
+                <td><input style="width: 96%;" type="text"  value="{$cat.floor_name}" size="2" name="cat[floor_name][]"/></td>
+                <td><input style="width: 96%;" type="text"  value="{$cat.floor_sort}" size="2" name="cat[floor_sort][]"/></td>
+                <td align="center">
+                    <a href="brand_zone.php?act=edit&brand_id={$cat.brand_id}" title="{$lang.edit}"><img src="images/icon_edit.gif" width="16" height="16" border="0" /></a>
+                    <a href="javascript:;" onclick="if (confirm('您确认要删除楼层数据以及图片吗？')) check_del('{$cat.brand_id}');" title="{$lang.trash_img}"><img src="images/icon_drop.gif" width="16" height="16" border="0" /></a>
+                </td>
+            </tr>
+            {/foreach}
+            <tr>
+                <td align="center"><input type="hidden" name="cat[brand_id][]" /><a href="javascript:;" onclick="addImg(this,'mix-table')">[+]</a></td>
+                <td><input type="text" style="width: 96%;" value="" name="cat[floor_name][]"/></td>
+                <td><input type="text" style="width: 96%;" value="" name="cat[floor_sort][]"/></td>
+                <td></td>
+            </tr>
+        </table>
+        <input type="hidden" name="act" value="{$form_act}" />
+        <input type="hidden" name="old_floor_name" value="{$brand_zone_info[0].floor_name}" />
+        <input type="hidden" name="brand_id" value="{$brand_zone_info[0].brand_id}">
+        <input type="submit" value=" 确定 " class="button" onclick="validate()">
+        <input type="reset" value=" 重置 " class="button">
+    </form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js,tab.js"}
+{literal}
+<script language="JavaScript">
+    /**
+     * 检查表单输入的数据
+     */
+    function check_del(id)
+    {
+        Ajax.call('brand_zone.php?is_ajax=1&act=zone_del', "id="+id, dropImgResponse, "GET", "JSON");
+    }
+    function validate()
+    {
+        validator = new Validator("theForm");
+        validator.required("floor_name",      '名称为空');
+        return validator.passed();
+    }
+    function addImg(obj,id)
+    {
+        var src  = obj.parentNode.parentNode;
+        var idx  = rowindex(src);
+        var tbl  = document.getElementById(id);
+        var row  = tbl.insertRow(idx + 1);
+        row.innerHTML = src.innerHTML.replace(/(.*)(addImg)(.*)(\[)(\+)/i, "$1removeImg$3$4-");
+    }
+    function removeImg(obj,id)
+    {
+        var row = rowindex(obj.parentNode.parentNode);
+        var tbl = document.getElementById(id);
+
+        tbl.deleteRow(row);
+    }
+
+    function dropImg(imgId)
+    {
+        Ajax.call('brand_zone.php?is_ajax=1&act=del_floor', "id="+imgId, dropImgResponse, "GET", "JSON");
+    }
+    function dropImgResponse(result)
+    {
+        if (result.error == 0)
+        {
+            document.getElementById('gallery_' + result.content).style.display = 'none';
+        }
+    }
+</script>
+{/literal}
+{include file="pagefooter.htm"}

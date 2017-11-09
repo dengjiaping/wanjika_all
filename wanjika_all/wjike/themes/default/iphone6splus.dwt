@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iphone 6s plus</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.ip6s_all{ width:100%; margin:0 auto; overflow:hidden;}
+.ip6s_all .ip6s_02 .buy_btn{ padding:178px 0; display:block;}
+.ip6s_all .ip6s_01{ width:100%; height:357px; background:url(images/adimages/ip6s_01.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_02{ width:100%; height:356px; background:url(images/adimages/ip6s_02.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_03{ width:100%; height:357px; background:url(images/adimages/ip6s_03.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_04{ width:100%; height:357px; background:url(images/adimages/ip6s_04.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_05{ width:100%; height:356px; background:url(images/adimages/ip6s_05.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_06{ width:100%; height:357px; background:url(images/adimages/ip6s_06.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_07{ width:100%; height:357px; background:url(images/adimages/ip6s_07.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_08{ width:100%; height:356px; background:url(images/adimages/ip6s_08.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_09{ width:100%; height:357px; background:url(images/adimages/ip6s_09.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_10{ width:100%; height:357px; background:url(images/adimages/ip6s_10.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_11{ width:100%; height:356px; background:url(images/adimages/ip6s_11.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_12{ width:100%; height:357px; background:url(images/adimages/ip6s_12.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_13{ width:100%; height:357px; background:url(images/adimages/ip6s_13.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_14{ width:100%; height:245px; background:url(images/adimages/ip6s_14.jpg) no-repeat center center; margin:0 auto;}
+.ip6s_all .ip6s_15{ width:100%; height:468px; background:url(images/adimages/ip6s_15.jpg) no-repeat center center; margin:0 auto;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--iphone6s start-->
+<div class="ip6s_all">
+    <div class="ip6s_01"></div>
+    <div class="ip6s_02"><a class="buy_btn" href="goods.php?id=9667"></a></div>
+    <div class="ip6s_03"></div>
+    <div class="ip6s_04"></div>
+    <div class="ip6s_05"></div>
+    <div class="ip6s_06"></div>
+    <div class="ip6s_07"></div>
+    <div class="ip6s_08"></div>
+    <div class="ip6s_09"></div>
+    <div class="ip6s_10"></div>
+    <div class="ip6s_11"></div>
+    <div class="ip6s_12"></div>
+    <div class="ip6s_13"></div>
+    <div class="ip6s_14"></div>
+    <div class="ip6s_15"></div>
+</div>
+<!--iphone6s end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

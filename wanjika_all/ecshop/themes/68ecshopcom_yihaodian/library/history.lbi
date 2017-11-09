@@ -1,0 +1,35 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box" id='history_div'>
+
+
+
+ <div class="itemChoose mt10" style="border-top:none;">
+   <h3><span>{$lang.view_history}</span></h3>
+  <div class="history_list mod2con" id='history_list' style="border:none; padding:5px;">
+    {insert name='history'}
+    <div style="height:0px; line-height:0px; clear:both"></div>
+  </div>
+  </div>
+</div>
+<div class="blank5"></div>
+<script type="text/javascript">
+if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
+{
+    document.getElementById('history_div').style.display='none';
+}
+else
+{
+    document.getElementById('history_div').style.display='block';
+}
+function clear_history()
+{
+Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
+}
+function clear_history_Response(res)
+{
+document.getElementById('history_list').innerHTML = '{$lang.no_history}';
+}
+</script>
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>{$info.name}</title>
+	<meta name="keywords" content="{$info.name}">
+	<meta name="description" content="{$info.name}">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/css.css" />
+	<script src="__PUBLIC__/wap/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/wap/js/slide.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/wap/js/pcwap.js" type="text/javascript" charset="utf-8"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        .list{padding:0;margin: 0;background: #fff;}
+        .list ul li p{position: static;}
+        .list ul li img{border-radius: 0;border: 0;}
+        .div_bg{background-color: #f5f5f5 !important;height: 18px !important;width: 100% !important;padding: 0;margin: 0 !important;border-radius: 0 !important;}
+        .tl{text-align: left !important;}
+        .f8{background-color: #f8f8f8;}
+        .ff{background-color: #ffffff;}
+        .div_li{float: left;width: 96%;padding: 2%;}
+        .fs_bg{background-image: url(/Tpl/Home/wap/images/fs.png);background-repeat: no-repeat;background-size: 50%;margin-bottom: 10px !important;}
+    </style>
+</head>
+<body style="background: #fff;">
+<div class="list">
+    <ul>
+        <li style="margin: 0;width: 100%;">
+            <a href="{$info.coverpic_url}"><img style="height: 100%;border-radius: 0;" src="{$info.coverpic_url}"></a>
+        </li>
+        <li style="height: inherit !important;background-image: url(__PUBLIC__/wap/images/introduction.png);background-size: 100% 100%;background-repeat: no-repeat;border-radius: 0;"><p style="height: inherit;padding: 10px 14px;">{$info[introduction]}</p></li>
+        <li class="div_bg"></li>
+        <li style="height: inherit !important;width: 100%;margin:0;border-radius: 0;">
+            <div>
+                <p class="fs-18 fs_bg lh" style="padding: 9px !important;background-position: 50% 50%;margin-top: 10px;">所需食材</p>
+                <volist name="info[materials]" id="materials">
+                <div class="div_li <if condition="($key % 2) == 0">f8<else/>ff</if>" >
+                <span style="padding: 9px 0 !important;width:50%;float: left;text-align: left;margin-right: -3px;">{$materials.name}</span>
+                <span style="padding: 9px 0 !important;width:50%;float: left;text-align: right;">{$materials.num}</span>
+                </div>
+                </volist>
+            </div>
+        </li>
+        <li class="div_bg"></li>
+        <li class="fs_bg lh" style="background-position: 50% 50%;width: 100%;margin:0;border-radius: 0;padding: 20px 0;"><p class="fs-18 lh">烹饪步骤</p></li>
+        <volist name="info[cook_step]" id="cook_step">
+        <li>
+            <div>
+                <p class="tl">{$key+1}、{$cook_step.step}</p>
+                <if condition="$cook_step.src != ''">
+                <a href="{$cook_step.src}">
+                <img style="width: 100%;height: 100%;" id="preview1" src="{$cook_step.src}"/>
+                </a>
+                </if>
+            </div>
+        </li>
+        </volist>
+        <li>
+            <p class="tl">Tips</p>
+            <p class="tl">{$info.tips}</p>
+        </li>
+<if condition="$is_true">
+    <li class="div_bg"></li>
+    <li style="background: #f5f5f5;margin: 0;border-radius: 0;padding: 0px 2% 10px;">
+        <a style="background: #00c40c;border-radius: 5px;width: 100%;display: block;text-align: center;padding: 10px 0;" href="index.php?s=/Home/Info/share&id={$info.id}&src={$info.coverpic_url}&name={$info.name}">生成美图</a>
+    </li>
+    <else /></if>
+
+    </ul>
+</div>
+<include file=":ads" />

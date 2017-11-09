@@ -1,0 +1,409 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f7f38b6e2a893fbe0bc1a49a38ae74bf";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--{if !$is_local }-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74847412-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- {/if} -->
+<a target="_blank" href="http://www.wjike.com/t91.html"><div style="height:90px;min-width:990px;background:url(../images/adheader/top_02.jpg) no-repeat scroll center top;"></div></a>
+<div style="background-color:#fff;width:100%;height: 127px;">
+<div class="block clearfix">
+ <div class="f_l wrap-logo"><a href="http://www.wjike.com/" name="top"><h1><img style="margin-left:40px;height:83px;" src="../images/index.png" /></h1></a></div>
+ <div class="hp_serch">
+         	<div class="hp_input">
+         	<form id="searchForm" name="searchForm" method="get" action="http://s.wjike.com/search.php" onsubmit="return checkSearchForm()" target="_blank">
+              	<input id="keyword" type="text" class="hp_ip" placeholder="搜索您需要的商品" maxlength="100" name="keywords" value="{$search_keywords|escape}" />
+                  <button type="submit" class="hp_sub"></button>
+            </form>
+             </div>
+             <div class="hp_hotserch">
+             	<a href="#">热搜:</a>
+             	{foreach from=$searchkeywords item=val}
+                    <a href="http://s.wjike.com/search.php?keywords={$val|escape:url}" target="_blank">{$val}</a>
+                {/foreach}
+             </div>
+         </div>
+ <div class="userlogin_center">
+   <ul>
+   <li class="userInfo">
+   {insert_scripts files='transport.js,utils.js,common.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+   </li>
+   <!--{if $navigator_list.top}-->
+   <li id="topNav" class="clearfix">
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+            <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_top_list.last} -->
+             |
+            <!-- {/if} -->
+    <!-- {/foreach} -->
+    <div class="topNavR"></div>
+   </li>
+   <!-- {/if} -->
+   </ul>
+   <div style="float: right;margin-top: 16px;margin-right: 20px;"><a href="exchange.php?sign=1" style="border: 1px solid #45ba9f;padding: 2px 2px;color: #45ba9f;">签到领积分</a></div>
+ </div></div>
+</div>
+<div  class="blank"></div>
+<!--导航start-->
+<div class="navigation_bar navigation">
+	<div class="nav_bar menu">
+        <div class="wrap2">
+            <div class="ll_all" id="a">
+                <span>浏览所有商品</span>
+                <!--分类start-->
+                    <div class="carouselfigure">
+
+                        <div class="classification {if !$is_index}ification{/if}">
+                            <div class="ll_fl" id="b" {if !$is_index}style="display:none;"{/if}>
+
+                            	<!--进口食品 start-->
+                                <div class="fl_entryway">
+                                    <div class="fl_tl_01"><a class="fl_tl_00" href="http://www.wjike.com/572.html">食品</a></div>
+                                    <div class="fl_text">
+                                        <a href="http://www.wjike.com/574.html" target="_blank">饼干点心</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/575.html" target="_blank">零食</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/577.html" target="_blank">冲饮</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/576.html" target="_blank">粮油</a>
+                                    </div>
+
+                                    <!--fl_floatlayer start-->
+                                    <div class="fl_floatlayer">
+                                    <!--{foreach from=$categories item=cat}-->
+                                    {if $cat.id eq 572}
+                                    <!--{foreach from=$cat.cat_id item=child}-->
+                                        <div class="fl_all">
+                                            <a href="{$child.url}" target="_blank" class="ff_01">{$child.name|escape:html}</a>
+                                            <div class="ff_02">
+                                                <ul>
+                                                    <li>
+                                                        <!--{foreach from=$child.cat_id item=chil}-->
+                                                        <a href="{$chil.url}" target="_blank">{$chil.name|escape:html}</a>
+                                                        <!--{/foreach}-->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    <!--{/foreach}-->
+                                    {/if}
+                                    <!--{/foreach}-->
+                                    </div>
+                                    <!--fl_floatlayer end-->
+                                </div>
+                                <!--进口食品 end-->
+
+                                <!--美妆个护 start-->
+                                <div class="fl_entryway">
+                                    <div class="fl_tl_02"><a class="fl_tl_00" href="http://www.wjike.com/710.html">美妆个护</a></div>
+                                    <div class="fl_text">
+                                        <a href="http://www.wjike.com/711.html" target="_blank">面部护理</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/721.html" target="_blank">身体护理</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/737.html" target="_blank">洗发护发</a>
+                                        <a href="http://www.wjike.com/742.html" target="_blank">口腔护理</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/779.html" target="_blank" style="color:#ff0000;">卫生巾</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/745.html" target="_blank">生活护理</a>
+                                    </div>
+
+                                    <!--fl_floatlayer start-->
+                                    <div class="fl_floatlayer fl_floatlayer_02">
+                                        <!--{foreach from=$categories item=cat}-->
+                                        {if $cat.id eq 710}
+                                        <!--{foreach from=$cat.cat_id item=child}-->
+                                            <div class="fl_all">
+                                                <a href="{$child.url}" target="_blank" class="ff_01">{$child.name|escape:html}</a>
+                                                <div class="ff_02">
+                                                    <ul>
+                                                        <li>
+                                                            <!--{foreach from=$child.cat_id item=chil}-->
+                                                            <a href="{$chil.url}" target="_blank">{$chil.name|escape:html}</a>
+                                                            <!--{/foreach}-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        <!--{/foreach}-->
+                                        {/if}
+                                        <!--{/foreach}-->
+                                    </div>
+                                    <!--fl_floatlayer end-->
+
+                                </div>
+                                <!--美妆个护 end-->
+
+                                <!--母婴用品 start-->
+                                <div class="fl_entryway">
+                                    <div class="fl_tl_03"><a class="fl_tl_00" href="http://www.wjike.com/754.html">母婴用品</a></div>
+                                    <div class="fl_text">
+                                        <a href="http://www.wjike.com/755.html" target="_blank">宝宝辅食</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/756.html" target="_blank">洗护用品</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/760.html" target="_blank">喂养用品</a>
+                                        <a href="http://www.wjike.com/772.html" target="_blank">医护用品</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/784.html" target="_blank">尿裤湿巾</a>
+                                    </div>
+
+                                    <!--fl_floatlayer start-->
+                                    <div class="fl_floatlayer fl_floatlayer_03">
+                                        <!--{foreach from=$categories item=cat}-->
+                                        {if $cat.id eq 754}
+                                        <!--{foreach from=$cat.cat_id item=child}-->
+                                            <div class="fl_all">
+                                                <a href="{$child.url}" target="_blank" class="ff_01">{$child.name|escape:html}</a>
+                                                <div class="ff_02">
+                                                    <ul>
+                                                        <li>
+                                                            <!--{foreach from=$child.cat_id item=chil}-->
+                                                            <a href="{$chil.url}" target="_blank">{$chil.name|escape:html}</a>
+                                                            <!--{/foreach}-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        <!--{/foreach}-->
+                                        {/if}
+                                        <!--{/foreach}-->
+                                    </div>
+                                    <!--fl_floatlayer end-->
+
+                                </div>
+                                <!--母婴用品 end-->
+
+                                <!--家居家电 start-->
+                                <div class="fl_entryway">
+                                    <div class="fl_tl_04"><a class="fl_tl_00" href="http://www.wjike.com/44.html">家居家电</a></div>
+                                    <div class="fl_text">
+                                        <a href="http://www.wjike.com/120.html" target="_blank">生活日用</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/43.html" target="_blank">厨房用品</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/84.html" target="_blank">清洁用品</a>
+                                        <a href="http://www.wjike.com/191.html" target="_blank">生活电器</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/119.html" target="_blank">厨房电器</a>
+                                    </div>
+
+                                    <!--fl_floatlayer start-->
+                                    <div class="fl_floatlayer fl_floatlayer_04">
+                                        <!--{foreach from=$categories item=cat}-->
+                                        {if $cat.id eq 44}
+                                        <!--{foreach from=$cat.cat_id item=child}-->
+                                            <div class="fl_all">
+                                                <a href="{$child.url}" target="_blank" class="ff_01">{$child.name|escape:html}</a>
+                                                {if $child.cat_id gt 0}
+                                                <div class="ff_02">
+                                                    <ul>
+                                                        <li>
+                                                            <!--{foreach from=$child.cat_id item=chil}-->
+                                                            <a href="{$chil.url}" target="_blank">{$chil.name|escape:html}</a>
+                                                            <!--{/foreach}-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                {/if}
+                                            </div>
+                                        <!--{/foreach}-->
+                                        {/if}
+                                        <!--{/foreach}-->
+                                    </div>
+                                    <!--fl_floatlayer end-->
+
+                                </div>
+                                <!--家居家电 end-->
+
+                                <!--手机通讯 start-->
+                                <div class="fl_entryway fl_entryway_02">
+                                    <div class="fl_tl_05"><a class="fl_tl_00" href="http://www.wjike.com/139.html">手机</a></div>
+                                    <div class="fl_text">
+                                        <a href="http://www.wjike.com/139.html" target="_blank">手机</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/548.html" target="_blank">配件</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/704.html" target="_blank">移动电源</a>
+                                        <span>、</span>
+                                        <a href="http://www.wjike.com/705.html" target="_blank">音箱</a>
+                                    </div>
+                                    <!--fl_floatlayer start-->
+                                    <!--
+                                    <div class="fl_floatlayer fl_floatlayer_05">
+                                        <!--{foreach from=$categories item=cat}-->
+                                        {if $cat.id eq 139}
+                                        <!--{foreach from=$cat.cat_id item=child}-->
+                                            <div class="fl_all">
+                                                <a href="{$child.url}" target="_blank" class="ff_01">{$child.name|escape:html}</a>
+                                                <div class="ff_02">
+                                                    <ul>
+                                                        <li>
+                                                            <!--{foreach from=$child.cat_id item=chil}-->
+                                                            <a href="{$chil.url}" target="_blank">{$chil.name|escape:html}</a>
+                                                            <!--{/foreach}-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        <!--{/foreach}-->
+                                        {/if}
+                                        <!--{/foreach}-->
+                                    </div>
+                                    -->
+                                    <!--fl_floatlayer end-->
+                                </div>
+                                <!--手机通讯 end-->
+
+                            </div>
+
+                            {if $is_index}
+                            <!--成为会员start-->
+                            <div class="understand_wjk">
+
+                            	<img src="images/ljwjikelogo.png" style="width:65px;" />
+                            	<div class="becomevip">
+                                	<a href="vip.php?act=vip_info" target="_blank">成为会员</a>
+                                </div>
+                            	<div class="becomevip"  style="background-color:#eafffa;">
+                                	<a href="t111.html" target="_blank" style="color:#45ba9f;">寻找好物</a>
+                                	<div style="position: absolute;margin: -46px 0 0 66px;"><img src="images/hot_jb.png" /></div>
+                                </div>
+                                <div class="undswjk">
+                               		<a href="flexible.php" target="_blank">了解万集客</a>
+                                </div>
+
+                                <div class="sloganwjk">
+                                	<div class="sl_01"><div style="padding-left:18px;cursor:default;">品牌授权</div>
+                                    </div>
+                                	<div class="sl_02"><div style="padding-left:18px;cursor:default;">正品保障</div>
+                                    </div>
+                                	<div class="sl_03"><div style="padding-left:18px;cursor:default;">海关监管</div>
+                                    </div>
+                                	<div class="sl_04"><div style="padding-left:18px;cursor:default;">七天退货</div>
+                                    </div>
+                                	<div class="sl_05"><div style="padding-left:18px;cursor:default;">快捷物流</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--成为会员end-->
+                            {/if}
+                        </div>
+
+                    </div>
+                    <!--分类end-->
+            </div>
+            <div class="ll_cen">
+                <a href="http://www.wjike.com/index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}</a>
+                    <a href="http://www.wjike.com/v4.html" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>亚洲馆</a>
+                    <a href="http://www.wjike.com/v3.html" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>欧洲馆</a>
+                    <a href="http://www.wjike.com/v1.html" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>澳新馆</a>
+                    <a href="http://www.wjike.com/v2.html" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>北美馆</a>
+                    <a href="http://www.wjike.com/brand_zone.php" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>品牌专区</a>
+                    <div class="nj"><img src="images/new_jb.png" /></div>
+                <!--
+                <!--{foreach from=$venues item=cat name=cat0}-->
+                    <a href="search.php?keywords={$cat.name}" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>{$cat.name|escape:html}</a>
+                    <div class="nj"><img src="images/new_jb.png" /></div>
+                <!-- {/foreach} -->
+                -->
+            </div>
+            {insert name='cart_info'}
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<!--导航end-->
+
+<!--导航end-->
+<!--如果是搜索页面显示搜索栏-->
+<!-- {if $searchphp} -->
+<!--search start-->
+
+<div style="background:#f3f3f3;">
+<div id="search"  class="clearfix">
+  <div class="keys f_l">
+   <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+    {if $searchkeywords}
+   {$lang.hot_search} ：
+   {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+   {/if}
+  </div>
+  <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
+   <select name="category" id="category" class="B_input">
+      <option value="0">{$lang.all_category}</option>
+      {$category_list}
+    </select>
+   <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" style="width:110px;"/>
+   <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+   <a href="search.php?act=advanced_search">{$lang.advanced_search}</a>
+   </form>
+</div>
+<!--search end-->
+<!-- {/if} -->
+
+{if !$is_index}
+<script language="javascript" type="text/javascript">
+document.getElementById("a").onmouseover = function(){
+document.getElementById("b").style.display = "block";
+}
+document.getElementById("a").onmouseout = function(){
+document.getElementById("b").style.display = "none";
+}
+</script>
+{/if}

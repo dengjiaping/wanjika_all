@@ -1,0 +1,76 @@
+{include file="pageheader.htm"}
+{insert_scripts files="validator.js"}
+
+<div class="main-div">
+    <form action="floor_manage.php" method="post" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>1楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/1f.jpg?t={$filemtime.1}" alt="1f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="1f" value="" id="some_name1" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/1f.jpg?t={$filemtime.1}</span></div>
+                </td>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>2楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/2f.jpg?t={$filemtime.2}"" alt="2f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="2f" value="" id="some_name2" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/2f.jpg?t={$filemtime.2}</span></div>
+                </td>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>3楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/3f.jpg?t={$filemtime.3}" alt="3f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="3f" value="" id="some_name3" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/3f.jpg?t={$filemtime.3}</span></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>4楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/4f.jpg?t={$filemtime.4}" alt="4f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="4f" value="" id="some_name4" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/4f.jpg?t={$filemtime.4}</span></div>
+                </td>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>5楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/5f.jpg?t={$filemtime.5}" alt="5f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="5f" value="" id="some_name5" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/5f.jpg?t={$filemtime.5}</span></div>
+                </td>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>6楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/6f.jpg?t={$filemtime.6}" alt="6f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="6f" value="" id="some_name6" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/6f.jpg?t={$filemtime.6}</span></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="margin-bottom:10px;"><span><b>7楼图片</b></span></div>
+                    <div style="margin-bottom:10px;"><img src="../themes/68ecshopcom_yihaodian/images/7f.jpg?t={$filemtime.7}" alt="7f.jpg" size="40"></div>
+                    <div style="margin-bottom:10px;"><input type="file" name="7f" value="" id="some_name7" size="40" /></div>
+                    <div style="margin-bottom:10px;">图片地址:<span >../images/7f.jpg?t={$filemtime.7}</span></div>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="hidden"  name="id"       value="{$rt.id}" />
+                    <input type="hidden"  name="step"       value="2" />
+                    <input type="hidden"  name="act"       value="{$rt.act}" />
+                    <input  style="margin-left: 400px;" type="submit" class="button" name="Submit"       value="添加" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div style="margin-top:20px;color: red;">
+        1.如需修改图片，请在相应的楼层下上传图片。<br /><br />
+        2.在“模版管理”-〉“库项目管理”下选择title_(楼层数).lbi。     例如：修改1楼图片，就选择title_1.lbi。<br /><br />
+        3.在lbi库项目最下方&lt; span style="height:46px;">&lt; a href="http://www.wjike.com/category.php?id=41">&lt; img src="../images/1f.jpg">&lt; /a>&lt; /span>这里修改
+          href="楼层图片链接" src="图片地址"
+    </div>
+</div>
+{include file="pagefooter.htm"}

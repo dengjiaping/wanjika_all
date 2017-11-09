@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/allproducts.css" rel="stylesheet" type="text/css" />
+<link rel="Stylesheet" type="text/css" href="themes/68ecshopcom_yihaodian/allbrands20120221.css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="blank"></div>
+<div class="block clearfix">
+<div class="sortwidth">
+    <ul class="tab-link tab">
+        <li><A href="catalog.php">所有商品分类</A> </li>
+        <li class="curr"><A href="#">所有品牌分类</A> </li>
+        <li><A href="search.php">全部商品</A> </li>
+    </ul>
+</div>
+
+
+</div>
+<script>
+function setTabCatGoods(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"curr":"";
+con.style.display=i==cursel?"block":"none";
+
+
+}
+}
+//-->
+</script>
+<div id="allbrand" class="block" style="margin-top:20px;">
+		<div class="corner corner-t">
+			<b class="tl"></b>
+			<b class="tr"></b>
+		</div>
+
+		<div class="content">
+			<div id="i-allbrand">
+				<div id="co-brands">
+					<div class="mt">
+						<h2>推荐品牌<b></b></h2>
+						<div class="extra"></div>
+					</div>
+					<div class="mc brandslist">
+					<ul class="list-h">
+
+                      <!-- {foreach from=$brand_list name="brand_list_foreach" item=brand_data} -->
+                      <!-- {if $brand_data.brand_logo} -->
+                    <li><div><span class="b-img"><a href="{$brand_data.url}" target="_blank"><img width="138" height="46" src="data/brandlogo/{$brand_data.brand_logo}" alt="{$brand_data.brand_name|escape:html}" /></a></span><span class="b-name"><a href="{$brand_data.url}" target="_blank">{$brand_data.brand_name|escape:html}</a></span></div></li>
+
+                  <!-- {/if} -->
+                  		<!-- {/foreach} -->
+                  </ul>
+					</div>
+					<div class="mb">
+						<b class="bl"></b>
+						<b class="br"></b>
+					</div>
+				</div>
+
+      <?php
+	  $GLOBALS['smarty']->assign('categories',       get_categories_tree(0)); // 分类树
+	  ?>
+
+		<ul id="tab-sort" class="tab">
+	  <!--{foreach from=$categories item=cat name=categories}-->
+	  <!-- {if $smarty.foreach.categories.iteration < 12} -->
+        <li id="goods{$smarty.foreach.categories.iteration}" onclick="setTabCatGoods('goods',{$smarty.foreach.categories.iteration},11)"  <!-- {if $smarty.foreach.categories.iteration eq 1} -->class="curr"<!-- {/if} -->><a href="javascript:void(0);">{$cat.name|escape:html}</a></li>
+	  <!-- {/if} -->
+	  <!--{/foreach}-->
+</ul>
+
+
+
+    <!--{foreach from=$categories item=cat name=categories}-->
+	  <!-- {if $smarty.foreach.categories.iteration < 12} -->
+<?php
+	$GLOBALS['smarty']->assign('get_cat_brands', get_cat_brands($GLOBALS['smarty']->_var['cat']['id']));
+?>
+      <div class="brandslist " <!-- {if $smarty.foreach.categories.iteration eq 1} --> style="display:block"{else}style="display:none"<!-- {/if} -->  id="con_goods_{$smarty.foreach.categories.iteration}">
+	  <!-- {if $get_cat_brands} -->
+        <ul class="list-h">
+
+		<!--{foreach from=$get_cat_brands item=brand_cat name=get_cat_brands}-->
+          <li>
+            <div><span class="b-img"><a target="_blank" href="brand.php?id={$brand_cat.brand_id}"><img width="138" height="46" alt="{$brand_cat.brand_name}" src="data/brandlogo/{$brand_cat.brand_logo}"/></a></span><span class="b-name"><a target="_blank" href="brand.php?id={$brand_cat.brand_id}">{$brand_cat.brand_name}</a></span></div>
+          </li>
+         <!--{/foreach}-->
+        </ul>
+        <!-- {else} -->
+		<div style="padding:20px; width:150px; margin:0px auto; font-size:14px; font-weight:bold ">当前分类无品牌!</div>
+		<!-- {/if} -->
+        </div>
+     <!-- {/if} -->
+       <!--{/foreach}-->
+
+	</div>
+	</div>
+	<div style="border-bottom:1px solid #ececec; height:5px; position:relative; margin:-5px 30px 0 30px;">
+    </div>
+	</div>
+
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>
+
+
+
+

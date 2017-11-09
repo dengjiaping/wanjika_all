@@ -1,0 +1,57 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<STYLE>
+
+B {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+
+
+PRE {
+	COLOR: #808080
+}
+
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+</STYLE>
+<style type="text/css">
+#JINGDONGNumID{ position:absolute; bottom:5px; right:5px;}
+#JINGDONGNumID li{list-style:none;float:left;width:18px;height:18px;FILTER:alpha(opacity=80);opacity:0.8;border:1px solid #FF3300;background-color:#FFFFFF;color:#D00000;text-align:center;cursor:pointer;margin-right:4px;overflow:hidden; line-height:18px;}
+#JINGDONGNumID li:hover,#JINGDONGNumID li.active{border:1px solid #D00000;background-color:#9B040D;color:#FFFFFF;width:18px;height:18px;font-weight:bold;font-size:13px; line-height:18px;}
+</style>
+<div style="overflow:hidden;width:550px;height:175px;position:relative;clear:both;background-color:#ffffff; line-height:normal;">
+	<div id="JINGDONGBox">
+		<ul id="JINGDONGContentID">
+       {foreach from=$flash_img_list name="flash_img_list" item=fimg}
+			<li><a href="{$fimg.img_link}"><img border="0" src="{$fimg.img_url}" width="550" height="175"/></a></li><!--{/foreach}-->
+       </ul>
+	</div>
+	<ul id="JINGDONGNumID">
+      {foreach from=$flash_img_list name="flash_img_list" item=fimg}
+		<li class="">{$smarty.foreach.flash_img_list.iteration}</li>
+	     <!--{/foreach}-->
+  
+	</ul>
+</div>
+<script type="text/javascript">
+new Marquee(
+{
+	MSClassID : "JINGDONGBox",
+	ContentID : "JINGDONGContentID",
+	TabID	  : "JINGDONGNumID",
+	Direction : 0,
+	Step	  : 0.3,
+	Width	  : 550,
+	Height	  : 175,
+	Timer	  : 20,
+	DelayTime : 3000,
+	WaitTime  : 0,
+	ScrollStep: 175,
+	SwitchType: 0,
+	AutoStart : 1
+})
+
+</script>
+
+
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,shopping_flow.js'}
+<style>
+#olpayicons input
+{
+    line-height: 25px;
+    height: 25px;
+}
+#olpayicons img
+{
+    vertical-align: sub;
+}
+#olpayicons label
+{
+    width:160px;
+}
+.payment{
+    position: relative;
+    border: 1px solid red;
+    padding: 10px 20px;
+}
+.payments{
+    border: 1px solid #e2e2e2;
+    padding: 10px 20px;
+}
+.pay_sel{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background: url(themes/default/images/pay_sel.png);
+    background-size: contain;
+}
+</style>
+</head>
+<body style="background-color: rgb(243, 243, 243);">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--当前位置 start-->
+<!--
+<div class="block box">
+ <div id="ur_here">
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+ </div>
+</div>
+-->
+<!--当前位置 end-->
+<div class="blank"></div>
+<div class="block">
+        <!-- 去支付 -->
+        {insert_scripts files='zDialog.js'}
+        <script type="text/javascript">
+        function add()
+        {
+            Dialog.confirm('请您在新打开的页面上完成付款？',function(){location.href="user.php?act=order_list";},function(){Dialog.close();},300,100,true);
+        }
+        </script>
+        <div class="wrap-center-bg">
+            <div class="wrap wrap-center ta" style="margin-bottom:30px;">
+                <div style="display: inline-block;"><img style="margin-right: 10px;margin-bottom: -5px;width:50px;" src="./images/ddsuccess.png"/></div>
+                <div style="display: inline-block;text-align: left;">
+                <p class="fs-20 mt-10">请您尽快支付，以便及时处理您的订单</p>
+                <p class="fs-12 mt-10">请您在<span style="color:red;">2小时内</span>完成支付，否则订单会自动取消</p>
+                </div>
+                <p style="padding-bottom: 30px;border-bottom: 1px solid #f3f3f3;"></p>
+                <div style="margin-top: 30px;margin-bottom: 10px;overflow: hidden;color:#666666;">
+                    <div style="float: left;width: 50%;text-align: left;">
+                    <span style="display:block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{$goods_names}</span>
+                    <span>收货信息：{$order.address_name|escape}     联系方式：{$order.tel|escape}</span>
+                    </div>
+                    <div style="float: right;line-height: 30px;">
+                    <span><a href="user.php?act=order_detail&order_id={$order.order_id}">查看订单</a><span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap wrap-center-order color-66 wrap-order-border1">
+            <form name="payment" method="post" action="user.php" target="_blank">
+                <p class="fs-12 color-hs mb-30">支付金额:<span style="font-size:16px;color:#dc0034;">{$order.formated_order_amount}</span><input type="hidden" name="act" value="act_edit_payment" /><input type="hidden" name="order_id" value="{$order.order_id}" /><input class="btn-pay cp" onclick='add();' style="float:none;margin-left: 30px;border-radius: 4px;" type="submit" name="Submit" value="去支付" /></p>
+                <div class="oh">
+                <!-- {foreach from=$payment_list item=payment} -->
+                <!-- 循环支付方式 -->
+                    <div class="oh" style="display:inline-block;">
+                      <div {if $order.pay_id eq $payment.pay_id}class="payment"{else}class="payments"{/if}  id="{$payment.pay_id}" >
+                      <label>
+                      <input style="display:none;opacity: 0;width:0px;" type="radio" name="pay_id" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/>
+                      <img style="width:130px;vertical-align: middle;" src="images/{$payment.pay_code}.png">
+                      <i id="sel_{$payment.pay_id}" class="pay_sel" {if $order.pay_id neq $payment.pay_id}style="display:none;"{/if}></i>
+                      </label>
+                      </div>
+                    </div>
+                <!-- {/foreach} 循环支付方式 -->
+
+                        <div id="olpayicons" style="<!--{if $order.pay_id eq 16}-->display:block;<!--{else}-->display:none;<!--{/if}-->float:left;margin-top:30px;padding: 20px;background-color: #f3f3f3;">
+                                <!--
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="jsyh" name="bankradios" id="jsyhrdo" checked=true />
+                                    <img src="images/jsyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="gsyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/gsyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="yzcx" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/yzcx.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="nyyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/nyyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="zgyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/zgyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="pfyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/pfyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="jtyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/jtyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="zsyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/zsyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="msyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/msyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="fzyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/fzyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="zxyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/zxyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="gfyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/gfyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="hxyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/hxyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="xyyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/xyyh.png" />
+                                </label>
+                                -->
+                                <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="zxyh" name="bankradios" id="zxyhrdo" />
+                                      <img src="images/zxyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="gsyh" name="bankradios" id="gsyhrdo" />
+                                      <img src="images/gsyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="nyyh" name="bankradios" id="nyyhrdo" />
+                                      <img src="images/nyyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="jsyh" name="bankradios" id="jsyhrdo" checked="true" />
+                                      <img src="images/jsyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="jtyh" name="bankradios" id="jtyhrdo" />
+                                      <img src="images/jtyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="yzcx" name="bankradios" id="yzcxrdo" />
+                                      <img src="images/yzcx.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="zgyh" name="bankradios" id="zgyhrdo" />
+                                      <img src="images/zgyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="hxyh" name="bankradios" id="hxyhrdo" />
+                                      <img src="images/hxyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="gfyh" name="bankradios" id="gfyhrdo" />
+                                      <img src="images/gfyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="zsyh" name="bankradios" id="zsyhrdo" />
+                                      <img src="images/zsyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="xyyh" name="bankradios" id="xyyhrdo" />
+                                      <img src="images/xyyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="pfyh" name="bankradios" id="pfyhrdo" />
+                                      <img src="images/pfyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="yzcx" name="bankradios" id="yzcxrdo" />
+                                      <img src="images/yzcx.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="msyh" name="bankradios" id="msyhrdo" />
+                                      <img src="images/msyh.png" />
+                                  </label>
+                        </div>
+                    </div>
+                        <div class="">
+                        </div>
+                  </form>
+            </div>
+        </div>
+</div>
+</div>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js,lrtk.js'}
+<!-- #BeginLibraryItem "/library/index_maintain_css.lbi" --><!-- #EndLibraryItem -->
+<style>
+.activity_banner{ width:1200px; height:130px; margin:0 auto;padding-top: 4px;}
+.activity_banner .left_img_one{ width:598px; height:130px; float:left;}
+.activity_banner .right_img_two{ width:598px; height:130px; float:right;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="blank"></div>
+<div class="vip_lbt">
+
+<!-- 轮播代码 开始 -->
+  <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script>
+<!-- 代码 结束 -->
+</div>
+<!-- #BeginLibraryItem "/library/index_maintain.lbi" --><!-- #EndLibraryItem -->
+<div class="blank"></div>
+<style>
+.page_bottom_all{background-color:#f3f3f3;}
+</style>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

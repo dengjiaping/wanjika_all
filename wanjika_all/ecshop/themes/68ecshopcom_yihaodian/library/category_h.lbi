@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<DIV class="f_l">
+  <DIV class="f_l bm_sottitly" style="background-position:left -460px">
+      
+  </DIV>
+  <DIV class="f_l bm_sortcon" i="0">
+     <!--{foreach from=$categories item=cat name=fo}-->
+     <!--{if $smarty.foreach.fo.iteration lt 4}-->
+        <DIV style="HEIGHT: 69px" >
+          <DIV style="HEIGHT: 63px; OVERFLOW: hidden;" class="f_l bm_sort1">
+            <DIV class="f_l bm_sttit"> <A title="" href="{$cat.url}" target=_blank>{$cat.name|escape:html}</A> </DIV>
+            <UL class="f_l bm_sortul">
+            <!--{foreach from=$cat.cat_id item=child name=foo}-->
+               <!--{if $smarty.foreach.foo.iteration lt 10}-->
+               <LI> <A title="" href="{$child.url}" target=_blank>{$child.name|escape:html}</A> </LI>
+               <!--{/if}-->
+            <!--{/foreach}-->
+            </UL>
+          </DIV>
+        </DIV>
+     <!--{/if}-->
+     <!--{/foreach}-->
+  </DIV>
+</DIV>

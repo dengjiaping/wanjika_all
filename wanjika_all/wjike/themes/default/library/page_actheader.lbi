@@ -1,0 +1,155 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f7f38b6e2a893fbe0bc1a49a38ae74bf";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--{if !$is_local }-->
+<script type="text/javascript">
+var _adwq = _adwq || [];
+_adwq.push(['_setAccount', 'y1tui']);
+_adwq.push(['_setDomainName', '.wjike.com']);
+_adwq.push(['_trackPageview']);
+
+(function() {
+var adw = document.createElement('script');
+adw.type = 'text/javascript';
+adw.async = true;
+adw.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://s') + '.emarbox.com/js/adw.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(adw, s);
+})();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74847412-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- {/if} -->
+<a target="_blank" href="http://www.wjike.com/topic.php?topic_id=80"><div style="height:90px;min-width:990px;background:url(../images/adheader/top_02.jpg) no-repeat scroll center top;"></div></a>
+<div style="background-color:#fff;width:100%;">
+<div class="block clearfix">
+ <div class="f_l wrap-logo"><a href="http://www.wjike.com/index.php" name="top"><img style="margin-left:40px;height:83px;" src="../images/index.png" /></a></div>
+ <div class="head_search">
+ 			<div class="searchForm">
+ 				<form id="searchForm" name="searchForm" method="get" action="search.php" onsubmit="return checkSearchForm()" target="_blank">
+ 					<input id="keyword" placeholder="搜索您需要的商品" maxlength="100" name="keywords" value="{$search_keywords|escape}">
+ 					<button type="submit" class="searchBtn"></button>
+ 				</form>
+ 			</div>
+ 			<p id="hotKeywordsShow"><span>热索：</span>
+ 			{foreach from=$searchkeywords item=val}
+ 				<a href="http://www.wjike.com/search.php?keywords={$val|escape:url}">{$val}</a>
+            {/foreach}
+ 			</p>
+ 		</div>
+ <div class="userlogin_center">
+   <ul>
+   <li class="userInfo">
+   {insert_scripts files='transport.js,utils.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+   </li>
+   <!--{if $navigator_list.top}-->
+   <li id="topNav" class="clearfix">
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+            <a href="http://www.wjike.com/{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_top_list.last} -->
+             |
+            <!-- {/if} -->
+    <!-- {/foreach} -->
+    <div class="topNavR"></div>
+   </li>
+   <!-- {/if} -->
+   </ul>
+ </div>
+</div>
+
+</div>
+<div  class="blank"></div>
+<!--导航start-->
+<div class="navigation">
+	<div class="menu">
+        <div class="wrap2">
+            <div class="headerNavWrap" style="height:45px;">
+                <ul class="headerNavMain">
+                    <li><a href="http://www.wjike.com/index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}<span></span></a></li>
+                    <!--{foreach from=get_categories_tree(0) item=cat name=cat0}-->
+                      <li><a href="http://www.wjike.com/{$cat.url}" {if $cat.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}>{$cat.name|escape:html}<span></span></a></li>
+                     <!-- {/foreach} -->
+                </ul>
+            </div>
+
+{insert name='cart_info'}
+
+
+         </div>
+
+     </div>
+</div>
+<!--导航end-->
+<!--如果是搜索页面显示搜索栏-->
+<!-- {if $searchphp} -->
+<!--search start-->
+
+<div style="background:#f3f3f3;">
+<div id="search"  class="clearfix">
+  <div class="keys f_l">
+   <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+    {if $searchkeywords}
+   {$lang.hot_search} ：
+   {foreach from=$searchkeywords item=val}
+   <a href="http://www.wjike.com/search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+   {/if}
+  </div>
+  <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
+   <select name="category" id="category" class="B_input">
+      <option value="0">{$lang.all_category}</option>
+      {$category_list}
+    </select>
+   <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" style="width:110px;"/>
+   <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
+   <a href="http://www.wjike.com/search.php?act=advanced_search">{$lang.advanced_search}</a>
+   </form>
+</div>
+<!--search end-->
+<!-- {/if} -->

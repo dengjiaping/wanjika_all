@@ -1,0 +1,98 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script language="javascript"> 
+<!--
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+<div class="block clearfix">
+<div class="logo">
+<img src="../images/aw_05.gif"/>
+</div>
+<div style="float:left;height:84px;background:url(../images/defaultbg_07.gif) no-repeat; overflow:hidden; width:725px; text-align:right;">
+<div class="top_nav">   
+    {insert_scripts files='transport.js,utils.js'}
+	<font id="ECS_MEMBERZONE">
+    {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} 
+    </font>
+		 <!--{if $navigator_list.top}-->
+				<!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+					 <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+						<!-- {if !$smarty.foreach.nav_top_list.last} -->
+							|
+					 <!-- {/if} -->
+				<!-- {/foreach} -->
+		 <!-- {/if} -->
+    </div>
+<div style="float:right; width:270px; margin-top:8px;">
+<a><img src="../images/cusf.gif"/></a>
+<a><img src="../images/aw_08.gif"/></a>
+</div>
+
+</div>
+</div>
+<div class="main_nav clearfix">
+<ul style="float:left;"> 
+<li class="fir"><a href="../index.php" {if $navigator_list.config.index eq 1}class="home"{/if}>{$lang.home}</a></li>
+<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+<!--{if $smarty.foreach.nav_middle_list.last}-->
+<li class="oth" style="background:none;">
+<!--{else}-->
+<li class="oth">
+<!--{/if}-->
+<a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}>{$nav.name}</a></li>
+<!-- {/foreach} -->
+</ul>
+<ul class="cartbox">
+<li id="ECS_CARTINFO">
+{insert_scripts files='transport.js'}
+ 购物车有{insert name='cart_info'}件商品
+</li>
+</ul>
+</div>
+<div class="search_div">
+<div class="block" style="height:38px; line-height:38px; background:#E5E5E5;">
+<div id="search"  class="clearfix" style="float:left; margin-left:26px;">
+  <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style="_position:relative; top:5px;">
+   <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="keypaz"/>
+   <input name="imageField" type="submit" value="搜索" class="s_btn" />
+   </form>
+</div>
+<div class="hotword">
+   <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+    {if $searchkeywords}
+    <span style="color:#5D5D5D">热门搜索：</span>
+   {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}" style="color:#5D5D5D">{$val}</a>
+   {/foreach}
+   {/if}
+</div>
+</div>
+</div>
+<div class="blank"></div>

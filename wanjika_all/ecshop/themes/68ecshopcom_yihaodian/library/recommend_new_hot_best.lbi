@@ -1,0 +1,162 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box">
+<div class="newgoods">
+	<!--  Tab start -->
+	<div class="box"><a name="salelog"></a>
+        <div id="com_b" class="titleX clearfix">
+			<h2><span>新品推荐</span></h2>
+			<h2 class="h2bg"><span>经典畅销</span></h2>
+			<h2 class="h2bg"><span>精品推荐</span></h2>
+            <h2 class="h2bg"><span style="border-right:0; width:245px;">特价促销</span></h2>
+        </div>
+		<div id="com_v" class="RelaArticle"></div>
+		<div id="com_h" class="padd_box">
+		<blockquote>
+         <UL id=new_new class="f_l bm_htpc">
+			 <!--新品推荐 START-->
+			    <!--{foreach from=$new_goods item=goods}-->
+            
+              <LI style="WIDTH: 152px; DISPLAY: block; HEIGHT: 205px; OVERFLOW: hidden" onmouseover="this.className='bm_htpclihover'" onmouseout="this.className=''">
+                 <A title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank>
+                 <IMG style="WIDTH: 150px; HEIGHT: 150px" src="{$goods.thumb}" alt="{$goods.name|escape:html}">
+                 </A> 
+                 <DIV class="clear fl bm_htpcbuy">
+                  <A href="{$goods.url}" title="{$goods.name|escape:html}" target=_blank style="float:left">{$goods.name}</A>
+                 </DIV>
+                 <DIV class="fl bm_htpcbuy">
+                     <SPAN style="width:150px; font-weight:bold; padding-left:5px;">
+                     <font style="font-size:14px">
+                         <!-- {if $goods.promote_price neq ""} -->
+                          {$goods.promote_price}
+                         <!-- {else}-->
+                          {$goods.shop_price} 
+                         <!--{/if}-->
+                     </font>
+                     
+                     <font class="market" style="color:#CCC;">
+                         {$goods.market_price}
+                     </font>
+                     </SPAN> 
+                     
+                 </DIV>
+               </LI>
+         
+         <!--{/foreach}-->
+			<!--新品推荐 END-->
+            </UL>
+		</blockquote>
+		<blockquote>
+			  <UL id=new_new class="f_l bm_htpc">
+              <!--热门畅销 START-->
+			  <!--{foreach from=$hot_goods item=goods}-->
+              <LI style="WIDTH: 152px; DISPLAY: block; HEIGHT: 205px; OVERFLOW: hidden" onmouseover="this.className='bm_htpclihover'" onmouseout="this.className=''">
+                 <A title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank>
+                 <IMG style="WIDTH: 150px; HEIGHT: 150px" src="{$goods.thumb}" alt="{$goods.name|escape:html}">
+                 </A> 
+                 <DIV class="clear fl bm_htpcbuy">
+                  <A href="{$goods.url}" title="{$goods.name|escape:html}" target=_blank style="float:left">{$goods.name}</A>
+                 </DIV>
+                 <DIV class="fl bm_htpcbuy">
+                     <SPAN style="width:150px; font-weight:bold; padding-left:5px;">
+                     <font style="font-size:14px">
+                         <!-- {if $goods.promote_price neq ""} -->
+                          {$goods.promote_price}
+                         <!-- {else}-->
+                          {$goods.shop_price} 
+                         <!--{/if}-->
+                     </font>
+                     
+                     <font class="market" style="color:#CCC;">
+                         {$goods.market_price}
+                     </font>
+                     </SPAN> 
+                     
+                 </DIV>
+               </LI>
+             <!--{/foreach}-->
+			 <!--热门畅销 END-->	
+           </UL>
+		</blockquote>
+		<blockquote>
+			 <UL id=new_new class="f_l bm_htpc">
+              <!--精品推荐 START-->
+			<!--{foreach from=$best_goods item=goods}-->
+              <LI style="WIDTH: 152px; DISPLAY: block; HEIGHT: 205px; OVERFLOW: hidden" onmouseover="this.className='bm_htpclihover'" onmouseout="this.className=''">
+                 <A title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank>
+                 <IMG style="WIDTH: 150px; HEIGHT: 150px" src="{$goods.thumb}" alt="{$goods.name|escape:html}">
+                 </A> 
+                 <DIV class="clear fl bm_htpcbuy">
+                  <A href="{$goods.url}" title="{$goods.name|escape:html}" target=_blank style="float:left">{$goods.name}</A>
+                 </DIV>
+                 <DIV class="fl bm_htpcbuy">
+                     <SPAN style="width:150px; font-weight:bold; padding-left:5px;">
+                     <font style="font-size:14px">
+                         <!-- {if $goods.promote_price neq ""} -->
+                          {$goods.promote_price}
+                         <!-- {else}-->
+                          {$goods.shop_price} 
+                         <!--{/if}-->
+                     </font>
+                     
+                     <font class="market" style="color:#CCC;">
+                         {$goods.market_price}
+                     </font>
+                     </SPAN> 
+                     
+                 </DIV>
+               </LI>
+             <!--{/foreach}-->
+			 <!--精品推荐 END-->	
+           </UL>
+		</blockquote>
+        <blockquote>
+            <!-- {if $promotion_goods} -->
+            <UL id=new_new class="f_l bm_htpc">
+              <!--特价促销 START-->
+			<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+              <LI style="WIDTH: 152px; DISPLAY: block; HEIGHT: 205px; OVERFLOW: hidden" onmouseover="this.className='bm_htpclihover'" onmouseout="this.className=''">
+                 <A title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank>
+                 <IMG style="WIDTH: 150px; HEIGHT: 150px" src="{$goods.thumb}" alt="{$goods.name|escape:html}">
+                 </A> 
+                 <DIV class="clear fl bm_htpcbuy">
+                  <A href="{$goods.url}" title="{$goods.name|escape:html}" target=_blank style="float:left">{$goods.name}</A>
+                 </DIV>
+                 <DIV class="fl bm_htpcbuy">
+                     <SPAN style="width:150px; font-weight:bold; padding-left:5px;">
+                     <font style="font-size:14px">
+                         <!-- {if $goods.promote_price neq ""} -->
+                          {$goods.promote_price}
+                         <!-- {else}-->
+                          {$goods.shop_price} 
+                         <!--{/if}-->
+                     </font>
+                     
+                     <font class="market" style="color:#CCC;">
+                         {$goods.market_price}
+                     </font>
+                     </SPAN> 
+                     
+                 </DIV>
+               </LI>
+             <!--{/foreach}-->
+			 <!--特价促销 END-->	
+           </UL>
+           <!-- {/if} -->
+        </blockquote>
+	</div>  
+	<script type="text/javascript">
+		<!--
+		reg("com");
+		//-->
+	</script>
+	<div style="clear:both"></div>
+
+	<!--  Tab end  -->
+
+
+</div>
+</div>
+</div>
+<div class="blank5"></div>
+
+

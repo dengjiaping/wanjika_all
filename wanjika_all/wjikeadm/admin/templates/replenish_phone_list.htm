@@ -1,0 +1,130 @@
+
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<div class="form-div">
+  <form action="javascript:searchSnatch()" name="searchForm">
+    <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+    <select name = "searchType">
+      <option value="goods_id">{$lang.lab_goods_id}</option>
+      <option value="card_sn">{$lang.lab_card_sn}</option>
+      <option value="patch_id">{$lang.lab_patch_id}</option>
+<!--      <option value="order_sn">{$lang.lab_order_sn}</option>-->
+    </select>
+    <input type="hidden" name="exportf" value = "0"/>
+    <input type="hidden" name="act" value = "query_card"/>
+    <input type="text" name="keyword" /> <input type="submit" value="{$lang.button_search}" class="button" />
+  </form>
+</div>
+
+<form method="POST" action="phone_card.php?act=batch_drop_card&goods_id={$goods_id}" name="listForm" onsubmit = "return(confirm('{$lang.drop_confirm}'))"; >
+<!-- start card list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+  <table cellpadding="3" cellspacing="1">
+    <tr>
+      <th>
+        <input onclick='listTable.selectAll(this, "checkboxes")' type="checkbox">
+        <a href="javascript:listTable.sort('card_id'); ">{$lang.record_id}</a>{$sort_card_id}
+      </th>
+      <th><a href="javascript:listTable.sort('goods_id'); ">{$lang.lab_goods_id}</a>{$sort_goods_id}</th>
+      <th><a href="javascript:listTable.sort('card_sn'); ">{$lang.lab_card_sn}</a>{$sort_card_sn}</th>
+      <!-- <th><a href="javascript:listTable.sort('card_password'); ">{$lang.lab_card_password}</a>{$sort_card_password}</th> -->
+      <th><a href="javascript:listTable.sort('money'); ">{$lang.lab_cz_money}</a>{$sort_money}</th>
+<!--      <th><a href="javascript:listTable.sort('leave_money'); ">leave_money</a>{$sort_leave_money}</th>-->
+      <th><a href="javascript:listTable.sort('end_date'); ">{$lang.lab_end_date}</a>{$sort_end_date}</th>
+      <th><a href="javascript:listTable.sort('use_status'); ">{$lang.lab_use_status}</a>{$sort_use_status}</th>
+      <th><a href="javascript:listTable.sort('card_status'); ">{$lang.lab_card_status}</a>{$sort_card_status}</th>
+      <th><a href="javascript:listTable.sort('patch_id'); ">{$lang.lab_patch_id}</a>{$sort_patch_id}</th>
+<!--      <th><a href="javascript:listTable.sort('order_sn'); ">{$lang.lab_order_sn}</a>{$sort_order_sn}</th>-->
+      <th>{$lang.handler}</th>
+    </tr>
+    {foreach from=$card_list item=card}
+    <tr>
+      <td><input value="{$card.card_id}" name="checkboxes[]" type="checkbox">{$card.card_id}</td>
+      <td><span>{$card.goods_id}</span></td>
+      <td><span>{$card.card_sn}</span></td>
+      <!-- <td><span>{$card.card_password}</span></td> -->
+      <td><span>{$card.money}</span></td>
+<!--      <td><span>{$card.leave_money}</span></td>-->
+      <td align="right"><span>{$card.end_date}</span></td>
+      <td align="center">{$card.use_status}<!-- <img src="images/{if $card.use_status}yes{else}no{/if}.gif" /> --></span>
+      </td>
+      <td align="center">{$card.card_status}<!-- <img src="images/{if $card.card_status}yes{else}no{/if}.gif" /> --></span>
+      </td>
+      <td>{$card.patch_id}</td>
+<!--      <td>{$card.order_sn}</td>-->
+      <td align="center">
+        <a href="phone_card.php?act=edit_replenish&amp;card_id={$card.card_id}" title="{$lang.edit}"><img src="images/icon_edit.gif" border="0" height="16" width="16" /></a>
+        <a href="javascript:;" onclick="listTable.remove({$card.card_id}, '{$lang.drop_confirm}', 'remove_card')" title="{$lang.drop}"><img src="images/icon_drop.gif" border="0" height="16" width="16" /></a>
+      </td>
+    </tr>
+    {foreachelse}
+    <tr><td class="no-records" colspan="10">{$lang.no_records}</td></tr>
+    {/foreach}
+  </table>
+
+  <table cellpadding="4" cellspacing="0">
+    <tr>
+      <td><input type="submit" name="drop" id="btnSubmit" value="{$lang.drop}" class="button" disabled="true" /> 
+      <input type="button" name="merge" id="btnSubmit2" value="{$lang.merge}" class="button" onclick='if(confirm("{$lang.merge_confirm}")){listForm.action="phone_card.php?act=merge_confirm";listForm.submit();searchForm.exportf.value=0;searchForm.action="phone_card.php?act=batch_drop_card&goods_id={$goods_id}";}'  disabled="true"/>
+      <input type="button" name="down" id="btnSubmit3" value="{$lang.down}" class="button" onclick='if(confirm("{$lang.down_confirm}")){listForm.action="phone_card.php?act=down_phone_card";listForm.submit();searchForm.action="phone_card.php?act=batch_down_card&goods_id={$goods_id}";}' disabled="true" />
+      <input type="button" name="delay" id="btnSubmit4" value="{$lang.delay}" class="button" onclick='if(confirm("{$lang.delay_confirm}")){listForm.action="phone_card.php?act=delay_phone_card";listForm.submit();searchForm.action="phone_card.php?act=batch_down_card&goods_id={$goods_id}";}' disabled="true" />
+      </td>
+      
+	  <td align="right">{include file="page.htm"}</td>
+      
+    </tr>
+  </table>
+
+{if $full_page}
+</div>
+<!-- end card_list list -->
+</form>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+
+  listTable.recordCount = {$record_count};
+  listTable.pageCount = {$page_count};
+  listTable.query = "query_card";
+
+  {foreach from=$filter item=item key=key}
+  listTable.filter.{$key} = '{$item}';
+  {/foreach}
+ 
+{literal}
+  onload = function()
+  {
+    document.forms['searchForm'].elements['keyword'].focus();
+    startCheckOrder();
+  }
+
+
+function searchSnatch()
+{
+  var keyword = Utils.trim(document.forms['searchForm'].elements['keyword'].value);
+  var type = document.forms['searchForm'].elements['searchType'].value;
+  var exportf = document.forms['searchForm'].elements['exportf'].value;
+
+  if (keyword.length > 0)
+  {
+    listTable.filter['search_type'] = type;
+    listTable.filter['keyword']     = keyword;
+    listTable.filter['exportf']     = exportf;
+    listTable.loadList();
+    document.forms['searchForm'].elements['exportf'].value = 0;
+  }
+  else
+  {
+    document.forms['searchForm'].elements['keyword'].focus();
+  }
+}
+//-->
+</script>
+{/literal}
+
+{include file="pagefooter.htm"}
+{/if}

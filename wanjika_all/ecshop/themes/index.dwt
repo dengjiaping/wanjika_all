@@ -1,0 +1,660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<SCRIPT type=text/javascript>
+var URLPrefix = {};
+var headerType="base";
+var favorite="万集客，移动话费支付";
+var hostUrl="#";
+var httpUrl="#";
+var no3wUrl="";
+var simpleUrl="wjike";
+var chineseUrl="万集客";
+var imagePath="";
+var currSiteId=1;
+var currBsSiteId=1;//仅busystock使用
+var currSiteType=1;//区分1号店与1号商城
+var siteStyle=1;//用于特殊处理逻辑标志
+var siteFlag=1;//用于控制合归生效开关
+var merchant=2;
+var isIndex = 1;
+var indexFlag=1;//区分首页和搜索页
+var currVersionNum=437585;
+var currDomain="#";
+var oppositeDomain="#";
+var lazyLoadImageObjArry = lazyLoadImageObjArry || [];
+var multiSearch="true";
+var currProvinceId=2;
+var isFixTopNav = false
+</SCRIPT>
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+<SCRIPT type=text/javascript>
+var isWidescreen=screen.width>=1280;
+//if (isWidescreen){document.getElementsByTagName("body")[0].className="w1200";}
+</SCRIPT>
+</head>
+<BODY>
+<SCRIPT type=text/javascript>
+if (isWidescreen){document.getElementsByTagName("body")[0].className="w1200";}
+</SCRIPT>
+
+<!-- #BeginLibraryItem "/library/page_headerindex.lbi" --><!-- #EndLibraryItem -->
+<DIV class=content>
+<DIV class="wrap clearfix">
+<DIV class=left_side>
+<DIV class=promo_show id=index_menu_carousel>
+<DIV class=promo_wrapper>
+<OL class=clearfix>
+<!-- #BeginLibraryItem "/library/fenlei_ad.lbi" --><!-- #EndLibraryItem -->
+</OL></DIV>
+<DIV class=show_num_bg></DIV>
+<UL>
+   <LI class=cur>1 </LI>
+ 	<LI>2 </LI>
+   <LI>3 </LI>
+  <LI>4 </LI>
+  <LI>5 </LI>
+
+</UL><A class=show_next href="javascript:void(0);"><S></S></A><A 
+class=show_pre href="javascript:void(0);"><S></S></A></DIV>
+<!-- #BeginLibraryItem "/library/pinpaiqijian.lbi" --><!-- #EndLibraryItem -->
+<DIV class=recommend_list id=index_recommend_list>
+<!-- #BeginLibraryItem "/library/rexiaotitle.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" --><!-- #EndLibraryItem -->
+</DIV></DIV>
+<DIV class=right_side>
+<!-- #BeginLibraryItem "/library/index_right.lbi" --><!-- #EndLibraryItem -->
+
+<DL class=sort_brand id=sort_brand>
+<!-- #BeginLibraryItem "/library/qiehuantit.lbi" --><!-- #EndLibraryItem -->
+
+
+  <DD>
+  <DIV class=scroll_wrapper>
+  <DIV class="scroll_box clearfix">
+  <DIV class=aort_list><!-- TemplateBeginEditable name="公告上切换广告1_1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告1_2" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告1_3" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告1_4" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </DIV>
+  <DIV class=aort_list><!-- TemplateBeginEditable name="公告上切换广告2_1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告2_2" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告2_3" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告2_4" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </DIV>
+  <DIV class=aort_list><!-- TemplateBeginEditable name="公告上切换广告3_1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告3_2" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告3_3" -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="公告上切换广告3_4" -->
+<!-- TemplateEndEditable -->
+  </DIV></DIV></DIV>
+  <P class=scroll_btn><A class=on herf="javascript:void(0);">1</A> <A 
+  herf="javascript:void(0);">2</A> <A herf="javascript:void(0);">3</A> </P></DD>
+  
+<!-- #BeginLibraryItem "/library/brands.lbi" --><!-- #EndLibraryItem -->
+
+  
+  </DL>
+<DL class=notice_news id=notice_news>
+  <DT class=clearfix><!-- #BeginLibraryItem "/library/wenzhangtit.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateBeginEditable name="公告文章列表" -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+<DD class=list><!--{foreach from=$articles item=article_item}--><A 
+  href="{$article_item.url}" target=_blank 
+>{$article_item.short_title} </A><!--{/foreach}-->
+  <P class=tr><A 
+  href="{$articles_cat.url}" 
+  target=_blank>更多</A></P></DD>
+
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+<!-- TemplateBeginEditable name="新闻文章列表" -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+<DD class=list><!--{foreach from=$articles item=article_item}--><A 
+  href="{$article_item.url}" target=_blank 
+>{$article_item.short_title} </A><!--{/foreach}-->
+  <P class=tr><A 
+  href="{$articles_cat.url}" 
+  target=_blank>更多</A></P></DD>
+
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  
+  <!-- TemplateBeginEditable name="友情推荐文章列表" -->
+<!-- TemplateEndEditable -->
+  
+  
+ </DL>
+</DIV></DIV></DIV>
+<DIV id=needLazyLoad>
+<DIV id="" lazyLoad_textarea="div_textarea_0"><TEXTAREA id=div_textarea_0 style="DISPLAY: none" autocomplete="off"><div class="index_column_ad wrap mt"><!-- TemplateBeginEditable name="首页通栏广告1" -->
+<!-- TemplateEndEditable --></div>
+<div class="index_item_sort wrap mt clearfix">
+<div style="border-bottom:2px solid #a0cb36;">
+<!-- #BeginLibraryItem "/library/title_1.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类1顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类一左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类一商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类一右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类一右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类一右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap mt">
+ <!-- TemplateBeginEditable name="分类1下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+</div>
+</TEXTAREA> </DIV>
+<DIV id="" lazyLoad_textarea="div_textarea_1"><TEXTAREA id=div_textarea_1 style="DISPLAY: none" autocomplete="off">
+<div class="index_item_sort wrap mt clearfix">
+<div style="border-bottom:2px solid #1396ac;">
+<!-- #BeginLibraryItem "/library/title_2.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类2顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类二左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类二商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类二右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类二右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类二右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap  mt">
+ <!-- TemplateBeginEditable name="分类2下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+
+</TEXTAREA> </DIV>
+<DIV id="" lazyLoad_textarea="div_textarea_2"><TEXTAREA id=div_textarea_2 style="DISPLAY: none" autocomplete="off">
+<div class="index_item_sort wrap mt clearfix">
+<div style="border-bottom:2px solid #f96839;">
+<!-- #BeginLibraryItem "/library/title_3.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类3顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类三左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类三商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类三右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类三右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类三右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap  mt">
+ <!-- TemplateBeginEditable name="分类3下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+
+</TEXTAREA> </DIV>
+<DIV id="" lazyLoad_textarea="div_textarea_3"><TEXTAREA id=div_textarea_3 style="DISPLAY: none" autocomplete="off"><div class="index_column_ad wrap mt">
+<!-- TemplateBeginEditable name="首页通栏广告2" -->
+<!-- TemplateEndEditable -->
+</div>
+
+
+
+<div class="index_item_sort wrap mt clearfix">
+<div style="border-bottom:2px solid #aa8779;">
+<!-- #BeginLibraryItem "/library/title_4.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类4顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类四左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类四商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类四右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类四右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类四右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap  mt">
+ <!-- TemplateBeginEditable name="分类4下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+
+</TEXTAREA> </DIV>
+<DIV id="" lazyLoad_textarea="div_textarea_4"><TEXTAREA id=div_textarea_4 style="DISPLAY: none" autocomplete="off"><div class="index_column_ad wrap mt">
+<!-- TemplateBeginEditable name="首页通栏广告3" -->
+<!-- TemplateEndEditable -->
+</div>
+
+
+
+<div class="index_item_sort wrap mt clearfix">
+<div  style="border-bottom:2px solid #635a60;">
+<!-- #BeginLibraryItem "/library/title_5.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类5顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类五左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类五商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类五右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类五右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类五右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap  mt">
+ <!-- TemplateBeginEditable name="分类5下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+
+</TEXTAREA> </DIV>
+<DIV id="" lazyLoad_textarea="div_textarea_5"><TEXTAREA id=div_textarea_5 style="DISPLAY: none" autocomplete="off"><div class="index_item_sort wrap mt clearfix">
+<div style="border-bottom:2px solid #a43ea1;">
+<!-- #BeginLibraryItem "/library/title_6.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类6顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类六左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类六商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类六右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类六右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类六右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap  mt">
+ <!-- TemplateBeginEditable name="分类6下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+
+</TEXTAREA> </DIV>
+<DIV id="" lazyLoad_textarea="div_textarea_6"><TEXTAREA id=div_textarea_6 style="DISPLAY: none" autocomplete="off">
+<div class="index_column_ad wrap mt">
+<!-- TemplateBeginEditable name="首页通栏广告4" -->
+<!-- TemplateEndEditable -->
+</div>
+
+
+
+<div class="index_item_sort wrap mt clearfix">
+<div style="border-bottom:2px solid #a43ea1;">
+<!-- #BeginLibraryItem "/library/title_7.lbi" -->
+<!-- #EndLibraryItem -->
+<span style="margin-left:-3px;">
+<!-- TemplateBeginEditable name="分类7顶部广告位" -->
+<!-- TemplateEndEditable -->
+</span>
+</div>
+<div class="index_item_sort_bigpic mt">
+ <!-- TemplateBeginEditable name="分类七左侧广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<ul class="pr_list">
+ <!-- TemplateBeginEditable name="分类七商品列表" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+</ul>
+<div class="large_right_banner fr">
+ <!-- TemplateBeginEditable name="分类七右侧广告1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类七右侧广告2" -->
+<!-- TemplateEndEditable -->
+ <!-- TemplateBeginEditable name="分类七右侧广告3" -->
+<!-- TemplateEndEditable -->
+
+
+</div>
+</div>
+<div class="index_column_ad wrap  mt">
+ <!-- TemplateBeginEditable name="分类7下通栏广告" -->
+<!-- TemplateEndEditable -->
+</div>
+
+</TEXTAREA> 
+ </DIV>
+
+
+
+
+
+</DIV>
+
+<SCRIPT type=text/javascript>
+if(lazyLoadImageObjArry){
+lazyLoadImageObjArry.push("friendlinkLazyLoad");
+lazyLoadImageObjArry.push("footerbannerLazyLoad");
+lazyLoadImageObjArry.push("footerbanner2LazyLoad");
+}
+</SCRIPT>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --><DIV class="fixedRight show"><A href="message.php" 
+target=_blank><SPAN>用户反馈</SPAN></A> <A class="toTop" 
+href="#headertop">回到顶部</A> 
+<SCRIPT src="themes/68ecshopcom_yihaodian/js/global_index_top.js" 
+type=text/javascript></SCRIPT>
+
+
+<script>
+$(function() {
+window.Object_toJSONtring = Object.prototype.toJSONtring;
+delete Object.prototype.toJSONtring;
+});
+</script>
+
+</BODY>
+</html>

@@ -1,0 +1,88 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<div class="bar">
+	<p>   
+	{insert_scripts files='transport.js,utils.js'}
+   {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} 
+   <!--{if $navigator_list.top}-->
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+            <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_top_list.last} -->
+             |
+            <!-- {/if} -->
+    <!-- {/foreach} -->  
+    
+     <!-- {/if} -->
+	</p>
+</div>
+<div class="head">
+	<div class="logo" id="logoimg"><a href="../index.php"><img src="images/logo.gif"></a></div>
+    <div class="tel" id="logoleft">客服热线<span>400-085-1115</span></div> 
+    <div></div><br class="clear">
+</div>
+
+<div class="menu" id="headli">
+	<div class="ma" id="MuneDui"><a href="search.php?intro=hot"><span>热卖</span></a><a href="search.php?intro=best"><span>精品</span></a><a href="search.php?intro=new"><span>新品</span></a><a href="search.php?intro=promotion"><span>特价</span></a> 	   
+	</div> 
+	
+	<br class="clear">
+    <ul id="IndexType">
+    	
+		<li {if $navigator_list.config.index eq 1} {/if}><a class="home" href="../index.php">{$lang.home}</a></li>
+  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav } -->
+  <li {if $nav.active eq 1} class="cur"{/if}><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a> </li>
+ <!-- {/foreach} -->
+    </ul>
+    <div class="gwc"><a href="flow.php">我的购物车</a> <!--（{insert_scripts files='transport.js'}{insert name='cart_info'}）<span><a href="flow.php">去结算»</a></span>--></div>
+</div>
+
+<div class="block clearfix">
+<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style="padding:0px; margin:0px;">
+<div class="sc" >
+   <select name="category" id="category">
+      <option value="0">{$lang.all_category}</option>
+      {$category_list}
+    </select>
+    <input id="keyword" name="keywords" value="请输入关键字..." onfocus="javascript:this.value='';" type="text">
+ <input  value="搜 索" class="b1" type="submit">　
+ <a href="search.php?act=advanced_search">{$lang.advanced_search}</a> 
+     {if $searchkeywords}
+   {$lang.hot_search} ：
+   {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+   {/if}
+ 
+ </div>
+</form>
+<div class="menubar">
+<a href="../flow.php" class="q1" title="我的购物车"></a>
+<a href="../user.php" class="q2" title="我的万集客"></a>
+<a href="../user.php?act=account_log" class="q3" title="万集客账户"></a>
+<a href="../user.php?act=account_deposit" class="q4" title="账户充值"></a>
+</div>
+</div>
+
+
+
+	<script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+           alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+	<div class="blank5"></div>

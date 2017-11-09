@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><if condition="$seotitle">{$seotitle}<else />{$title}</if>-{$webname}</title>
+	<meta name="keywords" content="{$key}">
+	<meta name="description" content="{$desc}">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/css.css" />
+	<script src="__PUBLIC__/wap/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/wap/js/slide.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/wap/js/pcwap.js" type="text/javascript" charset="utf-8"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+
+<div class="web980">
+
+	<div class="list_left">		
+			<div class="content">
+				<div class="title">
+				<h2>{$title}</h2>
+				<div class="time">
+				<a href="/">首页</a> > {$daohan}			
+				</div>
+				</div>
+				<div class="con">
+				{$content}
+				</div>
+				
+				<img src="__PUBLIC__/pcwap/images/0.jpg" />
+				<div class="lianxi">
+				
+			<p><span></span>{$webname}</p>			
+			<p><span>电话：</span><a href="tel:{$tel}">{$tel}</a></p>
+			<p><span>Q  Q：</span>{$qq[0]}</p>
+			<p><span>地址：</span>{$address}</p>
+			
+		</div>
+		<img src="__PUBLIC__/pcwap/images/1.jpg" />
+			
+			
+		
+	</div>
+	
+	
+
+</div>
+
+<include file=":footer" />

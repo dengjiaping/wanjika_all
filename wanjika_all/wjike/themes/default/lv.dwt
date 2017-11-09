@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>绿盾专题活动页</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.lv_all{ width:100%; margin:0 auto; overflow:hidden; }
+.lv_all .lv_one{ width:100%; margin:0 auto; overflow:hidden; background-color:#05b09d; }
+.lv_all .lv_two{ width:100%; margin:0 auto; overflow:hidden; background-color:#fdf6dc; }
+
+.lv_all .lv_01{ width:100%; height:230px; background:url(images/adimages/lv_01.jpg) no-repeat center center;}
+.lv_all .lv_02{ width:100%; height:229px; background:url(images/adimages/lv_02.jpg) no-repeat center center;}
+.lv_all .lv_03{ width:100%; height:230px; background:url(images/adimages/lv_03.jpg) no-repeat center center;}
+.lv_all .lv_04{ width:100%; height:229px; background:url(images/adimages/lv_04.jpg) no-repeat center center;}
+.lv_all .lv_05{ width:100%; height:230px; background:url(images/adimages/lv_05.jpg) no-repeat center center;}
+.lv_all .lv_06{ width:1200px; height:373px; margin:0 auto;}
+.lv_all .lv_07{ width:1200px; height:405px; margin:0 auto;}
+.lv_all .lv_08{ width:1200px; height:157px; margin:0 auto;}
+.lv_all .lv_09{ width:1200px; height:590px; margin:0 auto;}
+.lv_all .lv_10{ width:1200px; height:313px; margin:0 auto;}
+.lv_all .lv_11{ width:100%; height:244px; background:url(images/adimages/lv_13.jpg) no-repeat center center;}
+.lv_all .lv_12{ width:1200px; height:435px; margin:0 auto;}
+.lv_all .lv_13{ width:1200px; height:419px; margin:0 auto;}
+.lv_all .lv_14{ width:1200px; height:540px; margin:0 auto;}
+.lv_all .lv_15{ width:1200px; height:543px; margin:0 auto;}
+
+
+</style></head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--绿盾start-->
+
+<div class="lv_all">
+	<div class="lv_01"></div>   
+	<div class="lv_02"></div>  
+	<div class="lv_03"></div>
+	<div class="lv_04"></div>  
+	<div class="lv_05"></div>
+    
+  <div class="lv_one">
+    	<div class="lv_06">
+        	<a href="goods.php?id=5155"><img src="images/adimages/lv_07.jpg" /></a>
+        </div>
+   	<div class="lv_07">
+        	<a href="goods.php?id=5155"><img src="images/adimages/lv_09.jpg" /></a>
+        </div>
+   	<div class="lv_08">
+        	<a href="#"><img src="images/adimages/lv_10.jpg" /></a>
+        </div>
+    	<div class="lv_09">
+        	<a href="#"><img src="images/adimages/lv_11.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="89,24,292,310" href="goods.php?id=5151" />
+              <area shape="rect" coords="295,26,491,306" href="goods.php?id=5150" />
+              <area shape="rect" coords="498,27,693,304" href="goods.php?id=5148" />
+              <area shape="rect" coords="698,26,893,304" href="goods.php?id=5156" />
+              <area shape="rect" coords="903,27,1097,304" href="goods.php?id=5154" />
+              <area shape="rect" coords="93,313,287,587" href="goods.php?id=5149" />
+              <area shape="rect" coords="295,312,490,586" href="goods.php?id=5153" />
+              <area shape="rect" coords="498,315,692,586" href="goods.php?id=5157" />
+              <area shape="rect" coords="700,314,895,583" href="goods.php?id=5142" />
+              <area shape="rect" coords="903,313,1097,586" href="goods.php?id=5143" />
+            </map>
+        	</a>
+      </div>
+   	<div class="lv_10">
+        	<a href="#"><img src="images/adimages/lv_12.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="91,9,287,287" href="goods.php?id=5140" />
+              <area shape="rect" coords="297,11,489,286" href="goods.php?id=5147" />
+              <area shape="rect" coords="499,11,691,290" href="goods.php?id=5144" />
+              <area shape="rect" coords="700,8,894,290" href="goods.php?id=5146" />
+              <area shape="rect" coords="903,11,1098,288" href="goods.php?id=5145" />
+            </map>
+   	  </a>
+    </div>
+    </div>
+    
+    <div class="lv_11"></div>
+    
+    <div class="lv_two">
+    	<div class="lv_12">
+       	  <a href="goods.php?id=10022"><img src="images/adimages/lv_15.jpg" /></a>
+        </div>
+    	<div class="lv_13">
+       	  <a href="goods.php?id=5158"><img src="images/adimages/lv_17.jpg" /></a>
+        </div>
+    	<div class="lv_14">
+        	<img src="images/adimages/lv_18.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="183,18,554,503" href="goods.php?id=10020" />
+              <area shape="rect" coords="626,27,1003,497" href="goods.php?id=10019" />
+            </map>
+        </div>
+    	<div class="lv_15">
+        	<img src="images/adimages/lv_19.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="311,142,554,499" href="goods.php?id=10021" />
+              <area shape="rect" coords="631,140,877,500" href="goods.php?id=5159" />
+            </map>
+        </div>
+    </div>
+    
+</div>
+
+<!--绿盾end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{if $type eq 'best'}精品推荐{elseif $type eq 'promote'}商家促销{elseif $type eq 'hot'}热门商品{else}最新商品{/if} - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+</head>
+<body>
+{include file='head3.html'}
+<div class="mc radius">
+	<ul class="mu-l2w">
+        <li>
+            <div class="t-lists" style="position:relative;">
+		{foreach from=$goods_list item=goods}
+        <a href="goods.php?id={$goods.goods_id}">
+            <div class="box{if $smarty.foreach.goo.iteration == 1} first{/if}">
+                <table cellspacing="0" cellpadding="0" class="tab" width="95%" >
+                    <tbody>
+                    <tr>
+                        <td class="p-img" style="float:none;" width="105px"><img src="/{$goods.goods_img}"  alt="{$goods.goods_name}" style="width: 100px;height: 100px;"/></td>
+                        <td  valign="top" class="text">
+                            {if $goods.is_overseas eq 1}
+                            <div style="overflow: hidden;margin-bottom: 4px;">{if $goods.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$goods.overseas_logo}.jpg"  style="margin: 2px 5px 0 0;width: 25px;height: 15px;"/>{/if}<p style="float: left;color: #37af93;">{$goods.overseas_logo_name}品牌 官方直供</p></div>
+                            <!--<img src="images/bsc_jb.png"  style="position:absolute;right:21px;top:1px;"/>-->
+                            {/if}
+                            <div class="p-name" style="margin-bottom:0px;padding-bottom: 6px;color: #3C3C3C;font-size: 0.875em;" >{$goods.goods_name}<font color="red">{$goods.goods_brief}</font> </div>
+                            <div class="p-detail" style="float:left;width:180px;height: 40px;"><span><font color="red" style="font-family:Arial;font-weight:bold">{if $promote_price}{$goods.promote_price}{else}{$goods.shop_price}{/if}</font>{if $goods.goods_discount lt 10}<span style="padding-left: 6px !important;color:#333333;"><i style="padding:0 10px;background-image:url(/mobile/images/1_03.png);background-repeat:no-repeat;background-size: 45px 16px;color:#f9f9f9;font-style: normal;">{$goods.goods_discount}折</i><span style="display: block;padding-top: 6px;color: #d6d6d6;">国内参考价:{$goods.market_price}{/if}</div></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </a>
+        {foreachelse}
+		<p style="text-align: center;">您还没有收藏商品</p>
+		{/foreach}
+                </div>
+        </li>
+	</ul>
+</div>
+{if $pagebar}
+{$pagebar}
+{/if}
+{include file='foot.html'}
+</body>
+</html>

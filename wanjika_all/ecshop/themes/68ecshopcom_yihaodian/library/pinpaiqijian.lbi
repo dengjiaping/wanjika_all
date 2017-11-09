@@ -1,0 +1,11 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<dl class="sort_brand" style="width: 205px; position: relative; height: 165px; margin-bottom: 10px; margin-top: -170px;">
+	<dt class="brand_pinpai"><A href="javascript:void(0);" tk="YHD_HOME_HTAB_BRANDSHOP">品牌旗舰</A></dt>
+	<DD class="brand_list clearfix">
+	  <!-- {if $brand_list} -->
+	  <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+	  <A href="{$brand.url}" target=_blank ><IMG src="data/brandlogo/{$brand.brand_logo}" ></A>
+	  <!-- {/foreach} -->
+	  <!-- {/if} -->
+</DD>
+</dl>

@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<div id="simple_header">
+      <div class="simplelogo">
+      	<a href="index.php" target="_blank">
+	      			<img src="images/loginlogo.jpg" height="55" />
+      	</a>
+      </div>
+      <div class="simplenav"> 
+           		<p  class=""id="ECS_MEMBERZONE" style="color:#333;">{insert_scripts files='utils.js,common.min.js?0705,transport.js'}
+            {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}&nbsp;
+           		</p>
+          
+          <div class="tr"><a href="help.php?id=9" target="_blank">帮助中心</a></div>
+      </div>
+      <div class="clear"></div>
+  </div>

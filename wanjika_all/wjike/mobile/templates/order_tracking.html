@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>订单跟踪 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files="../../js/utils.js,../js/transport.js"}
+{insert_scripts files="../../js/region.js,../js/newutils.js"}
+{insert_scripts files="../common.js"}
+<style>
+.address_edit{
+    background: #fff;
+    border-bottom: 1px solid #dadada;
+}
+.address_edit li{
+    display: table;
+    width: 96%;
+    margin: 0 auto;
+    border-bottom: 1px solid #dadada;
+}
+.address_edit li label{
+    display: inline-block;
+    height: auto;
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+}
+.address_edit li span{
+    width: 70%;
+    text-indent: 20px;
+    height: 49px;
+    line-height: normal;
+    background: #fff;
+}
+.tracking{
+    margin-top:10px;
+    padding:10px;
+    background: #fff;
+    border-bottom: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    margin-bottom: 20px;
+}
+.tracking_d{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 16px 16px;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #37af93;
+    border-radius: 10px;
+    width: 15px;
+    height: 15px;
+}
+.tracking_da{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 16px 17px;
+    padding: 0;
+    border-radius: 10px;
+    width: 15px;
+    height: 15px;
+}
+.tracking_i{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    margin-left: 2px;
+    width: 11px;
+    height: 11px;
+    background: #37af93;
+    border-radius: 5px;
+}
+.tracking_ia{
+    display: block;
+    background: #dadada;
+    height: 12px;
+    width: 12px;
+    margin-left: 1px;
+    border-radius: 7px;
+}
+.tracking_s{
+    border-left: 1px solid #dadada;
+    margin-left: 7px;
+    margin-top: -3px;
+    height:75px;
+    display: inline-block;
+}
+.tracking_b{
+    padding: 10px 0;
+    border-bottom: 1px solid #dadada;
+}
+.tracking_r{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+</style>
+</head>
+<body style="background: #f2f0f1;">
+{include file='head3.html'}
+<div class="address_edit">
+    <ul>
+        <li>
+            <label>物流状态</label>
+            <span>{$shipping.shipping_state}</span>
+        </li>
+        <li>
+            <label>收货人</label>
+            <span>{$shipping.consignee}</span>
+        </li>
+        <li>
+            <label>快递公司</label>
+            <span>{$shipping.shipping_name}</span>
+        </li>
+        <li style="border: 0;">
+            <label>快递单号</label>
+            <span>{$shipping.shipping_no}</span>
+        </li>
+    </ul>
+</div>
+<div class="tracking">
+    {if $shipping_info.data}
+    {foreach from=$shipping_info.data key=key item=shipping name=name}
+    <div class="tracking_b">
+        {if $smarty.foreach.name.first}
+        <div class="tracking_d"><i class="tracking_i"></i><i class="tracking_s"></i></div>
+        {elseif $smarty.foreach.name.last}
+        <div class="tracking_d"><i class="tracking_i"></i></div>
+        {else}
+        <div class="tracking_da"><i class="tracking_ia"></i><i class="tracking_s"></i></div>
+        {/if}
+        <div class="tracking_r">
+            <p>{$shipping.context}</p>
+            <p>{$shipping.time}</p>
+        </div>
+    </div>
+    {/foreach}
+    {else}
+    <div class="tracking_b">暂无物流信息</div>
+    {/if}
+</div>
+</body>
+</html>

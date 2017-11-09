@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>单身狗的温暖,恋上你的床</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.bed_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#ff9900; }
+.bed_all .bed_01{ width:100%; height:134px; background:url(images/adimages/bed_01.jpg) no-repeat center center;}
+.bed_all .bed_02{ width:100%; height:134px; background:url(images/adimages/bed_02.jpg) no-repeat center center;}
+.bed_all .bed_03{ width:100%; height:134px; background:url(images/adimages/bed_03.jpg) no-repeat center center;}
+.bed_all .bed_04{ width:100%; height:134px; background:url(images/adimages/bed_04.jpg) no-repeat center center;}
+.bed_all .bed_05{ width:100%; height:167px; background:url(images/adimages/bed_05.jpg) no-repeat center center;}
+.bed_all .bed_06{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/bed_06.png) no-repeat center center #161616;}
+.bed_all .bed_061{ width:1000px;  margin:0 auto;}
+
+.bed_all .bed_07{ width:100%; height:207px; background:url(images/adimages/bed_11.jpg) no-repeat center center;}
+
+.bed_all .bed_08{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/bed_12.png) no-repeat center center #6c338a;}
+.bed_all .bed_081{ width:1000px;  margin:0 auto;}
+
+.bed_all .bed_09{ width:100%; height:475px; background:url(images/adimages/bed_17.jpg) no-repeat center center;}
+.bed_all .bed_09 a{ display:block; padding:237px 0;}
+.bed_all .bed_10{ width:100%; height:475px; background:url(images/adimages/bed_18.jpg) no-repeat center center;}
+.bed_all .bed_10 a{ display:block; padding:237px 0;}
+
+.bed_all .bed_11{ width:100%; height:470px; background-color:#fff;}
+.bed_all .bed_111{ width:651px; height:347px; padding:61px 0; margin:0 auto;}
+.bed_all .bed_12{ width:100%; height:643px; background:url(images/adimages/bed_24.jpg) no-repeat center center;}
+.bed_all .bed_12 a{ display:block; padding:321px 0;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--买手挑好货 手机购start-->
+<div class="bed_all">
+	<div class="bed_01"></div>
+	<div class="bed_02"></div>
+	<div class="bed_03"></div>
+	<div class="bed_04"></div>
+	<div class="bed_05"></div>
+
+  <div class="bed_06">
+    	<div class="bed_061">
+    		<img src="images/adimages/bed_07.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="66,100,349,446" href="goods.php?id=5109" />
+              <area shape="rect" coords="359,100,637,447" href="goods.php?id=5104" />
+              <area shape="rect" coords="646,97,933,446" href="goods.php?id=5103" />
+            </map>
+      </div>
+    	<div class="bed_061">
+    		<img src="images/adimages/bed_09.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="66,7,347,362" href="goods.php?id=4355" />
+              <area shape="rect" coords="358,9,639,356" href="goods.php?id=4358" />
+              <area shape="rect" coords="650,8,933,354" href="goods.php?id=8570" />
+            </map>
+        </div>
+    	<div class="bed_061">
+    		<img src="images/adimages/bed_10.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="66,5,349,350" href="goods.php?id=8571" />
+              <area shape="rect" coords="360,4,636,348" href="goods.php?id=8573" />
+              <area shape="rect" coords="649,3,929,348" href="goods.php?id=8584" />
+            </map>
+        </div>
+    </div>
+
+	<div class="bed_07"></div>
+
+  	<div class="bed_08">
+    	<div class="bed_081">
+    		<img src="images/adimages/bed_13.png" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="107,32,479,482" href="goods.php?id=4283" />
+              <area shape="rect" coords="510,31,882,484" href="goods.php?id=4224" />
+            </map>
+      </div>
+    	<div class="bed_081">
+    		<img src="images/adimages/bed_15.png" usemap="#Map5" border="0" />
+            <map name="Map5" id="Map5">
+              <area shape="rect" coords="108,4,478,449" href="goods.php?id=9397" />
+              <area shape="rect" coords="512,4,881,447" href="goods.php?id=9386" />
+            </map>
+        </div>
+    </div>
+
+	<div class="bed_09">
+    	<a href="category.php?id=74&brand=170&price_min=0&price_max=0"></a>
+    </div>
+	<div class="bed_10">
+   		 <a href="category.php?id=74&brand=238&price_min=0&price_max=0"></a>
+    </div>
+	<div class="bed_11">
+    	<div class="bed_111">
+    		<a href="category.php?id=74"><img src="images/adimages/bed_21.jpg" /></a>
+        </div>
+    </div>
+	<div class="bed_12">
+    	<a href="vip.php?act=vip_info"></a>
+    </div>
+</div>
+<!--买手挑好货 手机购end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

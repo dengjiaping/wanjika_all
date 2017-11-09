@@ -1,0 +1,134 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="themes/ecmoban_ehaier/qq/images/qq.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='themes/ecmoban_ehaier/qq/ServiceQQ.js' type='text/javascript' charset='utf-8'></script>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<div id="topNav"  >
+<div class="block">
+<div class="f_l">
+ <a  onClick="window.external.AddFavorite(location.href,document.title);">收藏本站</a>   
+</div>
+<div class="f_r log">
+<ul>
+    <li style="float:left;  "  class="clearfix">
+       {insert_scripts files='utils.js'}
+        <font id="ECS_MEMBERZONE">
+       {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+       </li>
+       <li style="float:left"   class="clearfix">  
+     <!--{if $navigator_list.top}-->
+        <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->  
+       <a style=" padding:0 5px;" href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+        <!-- {/foreach} --> <!-- {/if} -->
+        </li>|
+    </ul>
+    <ul class="ul1" onmouseover="this.className='ul1 ul1_on'" onmouseout="this.className='ul1'">
+        <a class="a1" href="user.php">我的账户</a>
+        <div class="ul1_float">
+        <a   target="_blank" href="user.php">我的账户</a>
+        <a class="a1" href="user.php?act=order_list">我的订单</a>
+        <a class="a1" href="user.php?act=message_list">我的留言</a>
+        <a class="a1" href="user.php?act=collection_list">我的收藏</a>
+        <a class="a1" href="user.php?act=affiliate">我的推荐</a>
+        </div>
+    </ul>
+</div>
+
+</div>
+</div>
+
+
+<div style=" clear:both"></div>
+
+<div class="block header_new" >
+ <div class="logo"><a href="../index.php" name="top"><img style="float:left;" src="../images/logo.gif" /></a></div>
+  
+<div class="hot_kw">
+   <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+           alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+    {if $searchkeywords}
+   <strong>热门搜索</strong>： 
+   {foreach from=$searchkeywords item=val name=no}
+   <a  href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+   {/if}
+  </div>
+  <div class="search">
+   <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+   <div class="search_input">
+   <input name="keywords" type="text" id="keyword" value="搜索产品" onclick="javascript:this.value=''" class="B_input"/>   
+   </div>
+   <div class="submit">
+<input name="imageField" type="submit" value=" " class="go" style="cursor:pointer;"  />
+   </div>
+    </form>
+  </div>
+ <div class="icons"><img src="../images/50a211df07fd0f6c07000063.png" width="215" height="50" alt=""></div>    
+</div>
+
+ 
+
+
+
+<div class="g-menu">
+<div class="menu-shadow-hack"></div>
+  <div class="g-menu-wrap">
+    <div class="all-catalog" >
+      <a href="catalog.php" class="all-btn">所有商品分类<i class="arrow"></i></a>        
+    </div>
+
+  <div class="channel">
+    <ul>
+      <li  {if $navigator_list.config.index eq 1}  class="m-home" {/if}> <a href="../index.php" >{$lang.home}</a></li>
+        <!-- {foreach name=no from=$navigator_list.middle item=nav } -->
+      <li {if $nav.active eq 1}  class="m-home" {/if}><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}    >{$nav.name}</a>
+      <span class="tag_hot">hot</span>
+
+     </li>
+<!-- {/foreach} -->
+
+
+</ul>
+</div>
+
+
+
+
+<div class="min-cart"  id="ECS_CARTINFO">
+<div class="min-cart-btn">
+<div class="cart-count">
+<span class="cart-count-wrap">
+<a  href="flow.php">{insert name='cart_info'}</a>    
+</span>  
+</div> 
+<div class="qujiesuan"><a  href="flow.php"> 去结算</a>   </div>    
+</div>   
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+

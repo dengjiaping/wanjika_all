@@ -1,0 +1,62 @@
+{include file="pageheader.htm"}
+{insert_scripts files="validator.js"}
+<script type="text/javascript" src="../js/calendar.php"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<form action="ad_header.php" method="post" enctype="multipart/form-data">
+    <div class="main-div">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label"><a href="javascript:showNotice('width_height');" title="{$lang.form_notice}"><img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}"></a>{$lang.img_src}</td>
+                {if $rt neq 1}
+                <div align=center><img src="/{$rt.src}"></div>
+                {/if}
+                <td><input type="file" name="img_file_src" value="" id="some_name" size="40" />
+                    <br /><input name="img_src" type="text" value="{$rt.src}" size="40" />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="label">图片链接</td>
+                <td><input name="img_url" type="text" value="{$rt.href}" size="40" /></td>
+
+            </tr>
+            <tr>
+                <td class="label">图片说明</td>
+                <td><input name="img_text" type="text" value="{$rt.alt}" size="40" /></td>
+            </tr>
+            <tr>
+            <tr>
+                <td><div align="right"><strong>显示在线时间</strong></div></td>
+                <td>
+                    <input type="text" name="start_time" maxlength="60" size="20"  id="start_time_id" value="{$rt.start_time}"/>
+                    <input name="start_time_btn" type="button" id="start_time_btn" onclick="return showCalendar('start_time_id', '%Y-%m-%d %H:%M', '24', false, 'start_time_btn');" value="{$lang.btn_select}" class="button"/>
+                    ~
+                    <input type="text" name="end_time" maxlength="60" size="20"  id="end_time_id" value="{$rt.end_time}" />
+                    <input name="end_time_btn" type="button" id="end_time_btn" onclick="return showCalendar('end_time_id', '%Y-%m-%d %H:%M', '24', false, 'end_time_btn');" value="{$lang.btn_select}" class="button"/>
+                </td>
+            </tr>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="hidden"  name="id"       value="{$rt.id}" />
+                    <input type="hidden"  name="step"       value="2" />
+                    <input type="hidden"  name="act"       value="{$rt.act}" />
+                    <input type="submit" class="button" name="Submit"       value="关闭广告" />
+                    <input type="submit" class="button" name="Submit"       value="添加" />
+                    <input type="submit" class="button" name="Submit"       value="修改" />
+                    <input type="reset" class="button"  name="Reset"        value="重置" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+<script type="Text/Javascript" language="JavaScript">
+    <!--
+    onload = function()
+    {
+        // 开始检查订单
+        startCheckOrder();
+    }
+    //-->
+</script>
+{include file="pagefooter.htm"}

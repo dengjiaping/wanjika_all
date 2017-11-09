@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--导航下的广告区域(去掉)-->
+<!--<div class="zhaop"><a href="#"><img src="images/zp-01.jpg"></a><a href="#" target="_blank"><img src="images/zp-02.jpg"></a><a href="#" target="_blank"><img src="images/zp-03.jpg"></a><a href="#" target="_blank"><img src="images/zp-04.jpg"></a></div> -->
+
+
+<div class="block clearfix">
+  <!--left start-->
+  <div class="IndexAreaL">  
+  <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
+  <!--<div class="f_l" style="margin-top:0px; border:1px #cccccc solid; height:132px; width:206px; overflow:hidden;">-->
+  <!-- TemplateBeginEditable name="首页产品导航下广告" -->
+<!-- TemplateEndEditable -->
+  <!-- </div>-->
+  <!-- TemplateBeginEditable name="左边区域" -->
+<!-- TemplateEndEditable -->
+  </div>
+  <!--left end-->
+  
+  <!--middle start -->
+  <div class="IndexAreaM">  
+   <!--焦点图和站内快讯 START-->
+    <div class="box clearfix">
+       <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+        </div>   	
+   <!-- TemplateBeginEditable name="中间主区域" -->
+<!-- TemplateEndEditable -->
+  </div>
+  <!--middle end -->
+  
+  <!--right start-->
+  <div class="IndexAreaR">   
+	<!--站内快讯 START-->
+	<!-- #BeginLibraryItem "/library/new_articles.lbi" --><!-- #EndLibraryItem -->
+   <!-- TemplateBeginEditable name="右边主区域" -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="IndexAreaR" height="83px">
+	<a href="category.php?id=4"><img src="images/bag.jpg"/></a>
+  </div>
+  <!--right end-->
+<div class="blank5"></div>
+</div>
+
+
+	
+
+
+<div class="block clearfix">
+	<!--==特价促销==-->
+	<div style="background:url(images/sales.jpg) ; line-height:44px; height:44px; width:100%; float:left;">
+		<span class="f_r"><a href="search.php?intro=promotion" style="color:#FFFFFF">更多>></a>&nbsp;&nbsp;</span>
+		</div>
+	<div class="f_l" style="width:100%;">
+	<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --><!-- #EndLibraryItem --></div>
+	
+	<!--==新品模块=== -->
+	<div style="background:url(images/new.jpg) ; line-height:44px; height:44px; width:100%; float:left;">
+	<span class="f_r"><a href="search.php?intro=new" style="color:#FFFFFF">更多>></a>&nbsp;&nbsp;</span>
+	</div>
+	<div class="f_l clearfix" style="width:980px; height:271px; overflow:hidden; margin-bottom:5px;">
+	  <!-- TemplateBeginEditable name="新品下广告" -->
+	  <a href="goods.php?id=724"><img src="images/new-bn.jpg"/></a>
+<!-- TemplateEndEditable -->
+	</div>
+	<div class="f_l" style="width:100%;">
+	<!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem --></div>
+	
+	<!--===热卖===--->
+	<div style="background:url(images/hot.jpg) ; line-height:44px; height:44px; width:100%; float:left;">
+	<span class="f_r"><a href="search.php?intro=hot" style="color:#FFFFFF">更多>></a>&nbsp;&nbsp;</span>
+	</div>
+	<div class="f_l clearfix" style="width:980px; height:271px; overflow:hidden; margin-bottom:5px;">
+	  <!-- TemplateBeginEditable name="热卖下广告" -->
+	  <a href="goods.php?id=551"><img src="images/hot-bn.jpg"></a>
+<!-- TemplateEndEditable -->
+	</div>
+	<div class="f_l" style="width:100%;">
+	<!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem --></div>
+	
+	<!--===精品推荐===-->
+	<div style="background:url(images/best.jpg) ; line-height:44px; height:44px; width:100%; float:left;">
+	<span class="f_r"><a href="search.php?intro=best" style="color:#FFFFFF">更多>></a>&nbsp;&nbsp;</span>
+	</div>
+	<div class="f_l clearfix" style="width:980px; height:271px; overflow:hidden; margin-bottom:5px;">
+	  <!-- TemplateBeginEditable name="精品下广告" -->
+	  <a href="goods.php?id=839"><img src="images/jingpin-bn.jpg"></a>
+<!-- TemplateEndEditable -->
+	</div>
+	<div class="f_l" style="width:100%;">
+	<!-- #BeginLibraryItem "/library/recommend_best.lbi" --><!-- #EndLibraryItem --></div>
+</div>
+    <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+ 
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

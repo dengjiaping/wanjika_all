@@ -1,0 +1,156 @@
+{* TitlePicWidth: 2 *}
+{* TitlePicHeight: 38 *}
+
+{* 说明：$title_pic，分类标题图片地址； *}
+{* 说明：$base_style，基本风格样式颜色； *}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$keywords}_{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body{background-color:#f3f3f3;}
+.newarrivals_cg{ width:1200px; margin:0 auto; margin-top:55px; }
+.newarrivals_cg .nr_til{ width:1200px; height:40px; text-align:center; background:url(../images/newarrivalsbg_02.png) no-repeat center center;}
+.newarrivals_cg .nr_til h2{ padding-bottom:5px; font-weight:normal;font-size: 22px;}
+.newarrivals_cg .nr_til span{ font-size:12px; color:#999;}
+.newarrivals_cg .nr_text{ width:1210px; height:260px; margin:0 auto; position:relative; margin-top:30px;}
+.newarrivals_cg .nr_text li{ width:236px; height:260px; background-color:#fff; text-align:center; float:left; margin-right:5px;
+transition-property: transform;transition-duration: .1s;transition-timing-function: linear;overflow: visible;}
+.newarrivals_cg .nr_text li:hover{
+-webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,.1);  -moz-box-shadow: 0 0 8px 2px rgba(0,0,0,.1);  box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+-webkit-transform: scale(1.03);  -moz-transform: scale(1.03);  transform: scale(1.03);
+}
+.newarrivals_cg .nr_text .newproduct{ width:212px; height:250px; margin:0 10px 10px 10px; text-align:left;}
+.newarrivals_cg .nr_text .newproduct a{ display:block;width: 216px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.newarrivals_cg .nr_text .newproduct span{ color:#d22147; float:left;}
+.food_cgpage{ width:1200px; display:table; margin:0 auto; position:relative; margin-top:55px; margin-bottom:55px;}
+.food_cgpage .cz_title{width:1200px; height:40px; margin:0 auto; border-bottom:2px solid #45ba9f; padding-bottom:10px;}
+.food_cgpage .cz_title h2{ float:left; margin-top: 10px;}
+.food_cgpage .cz_title .tlicon{ float:left;width:38px;height:30px;}
+.food_cgpage .cz_title .tl{ margin-top:7px; float:left; font-size:20px; font-weight:400;}
+.food_cgpage .cz_title .cz_fl{ float:right; margin-top:24px;}
+.food_cgpage .cz_title .cz_fl a{ float:left; padding-left:15px;}
+.food_cgpage .nr_text{ width:1210px; height:597px; position:relative; margin-top:5px; margin-right:-10px; float:left;}
+.food_cgpage .nr_text li{ width:236px; height:296px;background-color:#fff; text-align:center; float:left; margin-right:5px;
+transition-property: transform;transition-duration: .1s;transition-timing-function: linear;overflow: visible; margin-bottom:5px;}
+.food_cgpage .nr_text li:hover{ -webkit-box-shadow: 0 0 8px 3px rgba(0,0,0,.2);  -moz-box-shadow: 0 0 8px 3px rgba(0,0,0,.2);  box-shadow: 0 0 8px 3px rgba(0,0,0,.2);
+-webkit-transform: scale(1.03);  -moz-transform: scale(1.03);  transform: scale(1.03);}
+.food_cgpage .nr_text .newproduct{ width:216px; height:230px; margin: 0 10px 10px 10px; text-align:center;}
+.food_cgpage .nr_text .newproduct a{ display:block;text-align:center; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.food_cgpage .nr_text .newproduct .nr_price{ color:#000; font-size:22px; color:#d22147; margin:9px 0; }
+.food_cgpage .nr_text .newproduct i{ font-style:normal; font-size:12px;}
+.food_cgpage .nr_text .newproduct .np_l{  width:196px; height:196px;}
+.food_cgpage .nr_text .newproduct .lj_buybtn{ display:table; padding:5px 24px; margin:0 auto;border:1px solid #ddd; color:#d22147; width:auto;}
+.food_cgpage .nr_text .newproduct .lj_buybtn:hover{ background-color:#d22147; color:#fff; border:1px solid #d22147; }
+.food_cgpage .nr_text .hs_pro{ width:716px; height:240px; float:left;}
+</style>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js,lrtk.js,zDialog.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="block">
+    <!-- 轮播代码 开始 -->
+      <script type="text/javascript">
+      var flashdata = 'data/flashdata/test/{$data}.js';
+      </script>
+      <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script>
+    <!-- 代码 结束 -->
+    <div class="block block_two" style="width:100%;">
+
+
+
+    <!-- {foreach from=$venue item=venues key=key} -->
+    {if $venues.floor_style eq 1}
+    <div class="newarrivals_cg">
+        <div class="nr_til">
+            <h2>{$venues.floor_desc[0]}</h2>
+            <span>{$venues.floor_desc[1]}</span>
+        </div>
+        <div class="nr_text">
+            <ul>
+                <!-- {foreach from=$venues.goods_ids item=goods key=key} -->
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/{$goods.goods_id}.html" target="_blank" title="{$goods.goods_name}">
+                            <img src="{$goods.original_img}" width="216px" height="216px"/>
+                        </a>
+                        <a href="http://item.wjike.com/{$goods.goods_id}.html" target="_blank" title="{$goods.goods_name}">{$goods.goods_name}</a>
+                        <span>RMB {$goods.shop_price}</span>
+                    </div>
+                </li>
+                <!-- {/foreach}-->
+            </ul>
+        </div>
+    </div>
+    {else}
+    <div class="food_cgpage">
+        <div class="cz_title">
+            <h2>
+                <img src="{$venues.floor_img}" class="tlicon"/>
+                <div class="tl">{$venues.floor_desc[0]}</div>
+            </h2>
+            <div class="cz_fl">
+            <!-- {foreach from=$venues.cat item=cat key=key} -->
+                <a href="{$cat.href}" target="_blank">{$cat.name}</a>
+            <!-- {/foreach}-->
+            </div>
+        </div>
+        <div class="nr_text">
+            <ul>
+                <!-- {foreach from=$venues.goods_ids item=goods key=key} -->
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/{$goods.goods_id}.html" target="_blank" title="{$goods.goods_name}">
+                            <img class="np_l" src="{$goods.original_img}"/>
+                        </a>
+                        <a href="http://item.wjike.com/{$goods.goods_id}.html" target="_blank" title="{$goods.goods_name}">{$goods.goods_name}</a>
+                        <div class="nr_price"><i>￥</i>{$goods.shop_price}</div>
+                        <a href="http://item.wjike.com/{$goods.goods_id}.html" class="lj_buybtn">立即购买</a>
+                    </div>
+                </li>
+                <!-- {/foreach}-->
+            </ul>
+         </div>
+    </div>
+    {/if}
+    <!-- {/foreach}-->
+    <div class="btz_more">
+        <a href="http://s.wjike.com/search.php?keywords={$venue_name}"><img src="themes/default/images/more.png"></a>
+    </div>
+
+    </div>
+</div>
+
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

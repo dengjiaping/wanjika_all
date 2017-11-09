@@ -1,0 +1,33 @@
+<!-- $Id: category_list.htm 17019 2010-01-29 10:10:34Z liuhui $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+<!-- start ad position list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+<table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+  <tr>
+    <th>场馆ID</th>
+    <th>场馆名称</th>
+    <th>{$lang.handler}</th>
+  </tr>
+  {foreach from=$venue_info item=venue}
+  <tr align="center" id="{$cat.venue_id}">
+    <td align="30%" class="first-cell" >{$venue.venue_id}</td>
+    <td width="30%">{$venue.venue_name}</td>
+    <td width="40%" align="center">
+      <a href="../venue.php?venue_id={$venue.venue_id}" title="{$lang.view}" target="_blank">{$lang.view}</a> |
+      <a href="venue.php?act=edit&amp;venue_id={$venue.venue_id}">{$lang.edit}</a> |
+      <a href="javascript:;" onclick="listTable.remove({$venue.venue_id}, '您确认要删除场馆下所有数据以及图片吗？')" title="{$lang.remove}">{$lang.remove}</a>
+    </td>
+  </tr>
+  {/foreach}
+</table>
+{if $full_page}
+</div>
+</form>
+{include file="pagefooter.htm"}
+{/if}

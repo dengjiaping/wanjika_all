@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+<style>
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    .login-div{
+        position: relative;
+        margin-top: 10px;
+    }
+    .login-div input{
+        text-indent:58px !important;
+    }
+    .login-label{
+        position: absolute;
+        z-index: 3;
+        top: 8px;
+        left: 0px;
+        width: 50px;
+        height: 26px;
+        border-right: 1px solid #d0d0d0;
+    }
+    .login-name{
+        background: url(/mobile/images/login.png) no-repeat;
+        background-size: 20px 19px;
+        background-position: 17px 4px;
+    }
+    .login-pw{
+        background: url(/mobile/images/pw.png) no-repeat;
+        background-size: 16px 19px;
+        background-position: 19px 4px;
+    }
+    .login-forget
+    {
+        float: right;
+        margin: 10px 0px 10px 0px;
+        color: #37af93
+    }
+    .login-regist
+    {
+        background-color: #eafffa;
+        border: 1px solid #37af93;
+    }
+    .checkboxFive {
+        position: relative;
+        margin-right: 1%;
+    }
+    .checkboxFive label {
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: -2px;
+        right: 100px;
+        background: #eee;
+        border:1px solid #ddd;
+    }
+    .checkboxFive label:after {
+        opacity: 0.2;
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 5px;
+        background: transparent;
+        top: 5px;
+        left: 4px;
+        border: 3px solid #333;
+        border-top: none;
+        border-right: none;
+
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .checkboxFive label:hover::after {
+        opacity: 0.2;
+    }
+
+    .checkboxFive input[type=checkbox]:checked + label {
+        background: #37af93;
+    }
+    .checkboxFive input[type=checkbox]:checked + label:after {
+        opacity: 1;
+        border-color: #ffffff;
+    }
+</style>
+</head>
+<body>
+{include file='head3.html'}
+{if $login_faild eq 1}
+<div class="login-reg-tip"> <font class="red">用户名或密码错误，请重新输入</font> </div>
+{/if}
+<div class="login-reg mc radius">
+	<form action="usertest.php?act=do_login" method="post" id="frm_login">
+        <div class="login-div">
+            <label class="login-label login-name"></label><input type="text" value="{$user_name}" name="username" id="username" style="background: #fff;" class="common-input" autocomplete="off" placeholder="请输入用户名/邮箱/已验证手机" />
+        </div>
+        <div class="login-div">
+            <label class="login-label login-pw"></label><input class="common-input" type="password" name="pwd" autocomplete="off" id="pwd" placeholder="请输入登陆密码"  />
+        </div>
+        <div><a class="login-forget" href="user.php?act=forget_password">忘记密码？</a></div>
+		<div>
+            <input type="hidden" name="back_act" value="{$back_act}" />
+			<input type="submit" class="sub_btn"  value="登录">
+		</div>
+        <a href="user.php?act=register"><div class="sub_btn login-regist" style="width: 98.5%;color: #37af93;">还没账号？注册一个</div></a>
+            <!-- Checbox Five -->
+        {if !$is_binding and $is_weixin}
+            <div class="checkboxFive">
+                <input style="display: none;" type="checkbox" value="1" id="checkboxFiveInput" name="weixin_binding" />
+                <label for="checkboxFiveInput"></label><span style="right: 0px;position: absolute;">绑定个人微信号</span>
+            </div>
+        {/if}
+	</form>
+</div>
+</body>
+</html>

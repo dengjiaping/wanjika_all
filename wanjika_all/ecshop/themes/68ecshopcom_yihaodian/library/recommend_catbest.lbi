@@ -1,0 +1,30 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<H2>热卖推荐</H2>
+
+
+  <!--{foreach from=$best_goods item=goods}-->
+<DL>
+  <DT><A  title="{$goods.name|escape:html}" 
+ 
+  href="{$goods.url}" target=_blank>{$goods.short_style_name}<EM></EM></A></DT>
+  <DD class=pic><A 
+ 
+  href="{$goods.url}" target=_blank><IMG 
+  title="{$goods.name|escape:html}" src="{$goods.thumb}"> </A></DD>
+  <DD class=price><SPAN><!-- {if $goods.promote_price neq ""} -->今日特价：<!-- {else}-->
+      本店售价：
+      <!--{/if}--></SPAN><STRONG > <!-- {if $goods.promote_price neq ""} -->
+      {$goods.shop_price}
+      <!-- {else}-->
+      {$goods.shop_price}
+      <!--{/if}--></STRONG> </DD>
+  <DD class=buy><A
+ 
+  href="javascript:addToCart({$goods.id})">立即抢购 
+</A></DD></DL>
+  <!--{/foreach}-->
+
+
+
+
+<SUP class=hotSup>热卖推荐</SUP>

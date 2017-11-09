@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body style="background-color:#f3f3f3;">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="blank"></div>
+<div class="block">
+<div class="searchResult">
+	<div class="result">
+    	<div class="result_title_left">{$ur_here_name}</div>
+		<div class="result_title_right">共<span>{$pager.record_count}</span>件商品</div>
+    </div>
+    <div class="classification">
+    	<div class="fl">分类：</div>
+        <div class="category">
+            <a href="{$ur_here_url}">全部</a>
+            <!--{foreach from=$categoriess.cat_id item=child}-->
+                 <span>|</span><a href="{$child.url}" alt="{$child.name}" title="{$child.name}">{$child.name|escape:html}</a>
+                 <!--{/foreach}-->
+        </div>
+    </div>
+    <div id="brand_class" class="classification brand_max_height">
+    	<div class="fl">品牌：</div>
+        <div class="category">
+        <!--{foreach from=$brands item=brand}-->
+             <a href="{$brand.url}" {if $brand.selected}class="fl_select"{/if}  alt="{$brand.brand_name}" title="{$brand.brand_name}">{$brand.brand_name}</a><span>|</span>
+        <!--{/foreach}-->
+        </div>
+        <div class="fl" style="position: absolute;bottom: 5px;right: 30px;">
+        <a id="brand_getall" class="brand_o brand_on" style="display:none;" href="javascript:open_brand()">更多</a>
+        </div>
+    </div>
+    <!--{if $filter_attr_list}-->
+        <!--{foreach from=$filter_attr_list item=attr_list}-->
+            <div class="classification">
+                <div class="fl">{$attr_list.filter_attr_name}：</div>
+                <div class="category">
+                <!--{foreach from=$attr_list.attr_list item=filter}-->
+                     <a href="{$filter.url}" {if $filter.selected}class="fl_select"{/if} alt="{$filter.attr_value}" title="{$filter.attr_value}">{$filter.attr_value}</a><span>|</span>
+                <!--{/foreach}-->
+                </div>
+            </div>
+        <!--{/foreach}-->
+    <!--{/if}-->
+    <!--{if $price_grade}-->
+        <div class="classification">
+            <div class="fl">价格：</div>
+            <div class="category">
+            <!--{foreach from=$price_grade item=price}-->
+                 <a href="{$price.url}" {if $price.selected}class="fl_select"{/if} alt="{$price.price_range}" title="{$price.price_range}">{$price.price_range}</a><span>|</span>
+            <!--{/foreach}--></div>
+        </div>
+    <!--{/if}-->
+</div>
+<div class="pl_list">
+    <div class="searchRext list_two">
+
+
+      <!--{if $goods_list}-->
+        <div class="classSort">
+          <form method="GET" class="sort" name="listform">
+            <a <!-- {if $pager.sort == 'last_update'} --> class="fl_select"<!--{/if}--> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}#goods_list"">默认</a><span>|</span>
+            <a <!-- {if $pager.sort == 'salesnum' && $pager.order == 'DESC'} --> class="fl_select"<!--{/if}--> href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=salesnum&order=DESC#goods_list">销量排序</a><span>|</span>
+            <a <!-- {if $pager.sort == 'shop_price' && $pager.order == 'DESC'} --> class="fl_select"<!--{/if}-->  href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=DESC#goods_list">价格从高到低</a><span>|</span>
+            <a <!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} --> class="fl_select"<!--{/if}-->  href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=ASC#goods_list">价格从低到高</a>
+
+          <input type="hidden" name="category" value="{$category}" />
+          <input type="hidden" name="display" value="{$pager.display}" id="display" />
+          <input type="hidden" name="brand" value="{$brand_id}" />
+          <input type="hidden" name="price_min" value="{$price_min}" />
+          <input type="hidden" name="price_max" value="{$price_max}" />
+          <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+          <input type="hidden" name="page" value="{$pager.page}" />
+          <input type="hidden" name="sort" value="{$pager.sort}" />
+          <input type="hidden" name="order" value="{$pager.order}" />
+          </form></div>
+
+        <div class="product_list list_center">
+            <!-- {if $pager.display == 'grid'} -->
+                    <!--{foreach from=$goods_list item=goods}-->
+                        <!-- {if $goods.goods_id} -->
+                            <div class="pl" onmouseover="this.className='pl_hover'" onmouseout="this.className='pl'" style="position:relative;">
+                                {if $goods.is_overseas eq 1}{if $goods.overseas_logo neq 'taiwan'}<img src="images/{$goods.overseas_logo}.jpg"  style="position:absolute;left:4px;"/>{/if}{/if}
+                                <a href="{$goods.url}" target="_blank"><img src="{$goods.goods_img}" title="{$goods.goods_name}" alt="{$goods.goods_name}" width="260px" height="260px" /></a>
+                                <p><a  style="overflow: hidden;height:50px;" href="{$goods.url}"  target="_blank" title="{$goods.name|escape:html}">{$goods.goods_name}</a></p>
+                                <!--<a href="#" class="p_remark">&nbsp</a>-->
+                                <!--<div class="vipbuying_btn"><a href="javascript:addToCart({$goods.goods_id})">加入购物车</a></div>-->
+                       <div class="vipbuying_btn">{if $goods.is_immediately eq 0}<a href="javascript:addToCart({$goods.goods_id})">加入购物车</a>{else}<a id="onlyone" href="javascript:addToCart2({$goods.goods_id})">立即购买</a>{/if}</div>
+                                <div class="pp">
+                                    <div class="pro_price">{if $goods.promote_price neq "" }{$goods.promote_price}{else}{$goods.shop_price}{/if}</div>
+                                </div>
+                            </div>
+                         <!--{/if}-->
+                    <!--{/foreach}-->
+                    <!--分页start-->
+                    <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --><!--隐藏属性class="nextpage"-->
+                    <!--分页start-->
+            <!--{/if}-->
+        </div>
+    <!--{else}-->
+    <div style="padding:20px 0px; text-align:center;color:#ff8410;" class="f5" >抱歉，没有找到相关的商品!</div>
+    <!--{/if}-->
+    </div>
+
+
+
+</div>
+</div>
+</div>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>] 
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<script language="javascript" type="text/javascript">
+window.onload=getBrandsAll;
+function getBrandsAll()
+{
+   var obj = document.getElementById("brand_class");
+   var brand_getall = document.getElementById("brand_getall");
+   var brand_class = document.getElementById("brand_class");
+   if(obj.scrollHeight > 90)
+   {
+        brand_getall.style.display= "";
+        brand_class.className += " brand_height";
+   }
+   else
+   {
+        brand_class.className = "classification";
+        brand_getall.style.display= "none";
+   }
+}
+</script>
+</body>
+</html>

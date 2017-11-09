@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<DIV class="itemChoose mt10" style=" border-top:none;" >
+<H3>销售排行</H3>
+
+
+<div class="box_1">
+<UL class="hotlist1">
+
+  <!--{foreach  name=tops from=$top_goods item=goods}-->
+  <LI class=num2 id="tops{$smarty.foreach.tops.iteration}" onMouseOver="show_goodspic({$smarty.foreach.tops.iteration},'top')" >
+  <A class=sosba title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank rel=images/index/r1.gif>
+  <IMG src="images/top/{$smarty.foreach.tops.iteration}.gif" align=absMiddle> 
+  {$goods.short_name|truncate:8}</A> <a href="{$goods.url}" style="font-size:12px; font-weight:bold; color:#c00; font-family:Arial,Helvetica;">¥{$goods.shop_price}</a>
+  </LI>
+  
+  
+  <LI class=num1 id="topb{$smarty.foreach.tops.iteration}" style="DISPLAY:none">
+  <A href="{$goods.url}" target=_blank>
+  <IMG class=u src="images/top/{$smarty.foreach.tops.iteration}.gif" align=absMiddle> 
+  <IMG class=imgs height=74 src="{$goods.thumb}" alt="{$goods.name|escape:html}" > 
+  <SPAN>{$goods.short_name|truncate:12}<STRONG>
+              <font class="goodsprice" style="font-size:12px; font-weight:bold; color:#c00; font-family:Arial,Helvetica;">
+           <!-- {if $goods.promote_price neq ""} -->
+          ¥{$goods.promote_price}
+          <!-- {else}-->
+          ¥{$goods.shop_price}
+          <!--{/if}-->
+           </font>
+  </STRONG></SPAN></A> </LI>
+  
+      <!-- {/foreach} -->
+
+ <script type=text/javascript> 	window.onload = show_goodspic(1,'top');</script>
+
+</UL>
+
+
+
+
+</div></DIV>
+
+
+
+
+

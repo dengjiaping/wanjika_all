@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$goods_info.goods_name}的详细介绍 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<script src="/mobile/js/shopping_flow.js"></script>
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+<style>
+.pack_sel{color: #37af93;}
+.good-lnk-l{float: left;margin: 6px 0px 6px -1px;padding: 10px 0;width:50%;border-right: 1px solid #e0e0e0;text-align: center;}
+.good-lnk-r{float: left;padding:16px 0;width:50%;text-align: center;}
+</style>
+{insert_scripts files='common.js,../js/transport.js,../js/utils.js'}
+</head>
+<body>
+{include file='head2.html'}
+<!-- {if !$package_detail} -->
+<div style="overflow: hidden;display:block;width: 100%;">
+    <!-- {if !$is_pack} -->
+    <a href="goods.php?act=view_img&amp;id={$goods_id}" class="pack_sel good-lnk-l" style="width: 100%;border: 0;">商品详情</a>
+    <!-- {else} -->
+    <a href="goods.php?act=view_img&amp;id={$goods_id}" class="{if !$package_goods_list}pack_sel {/if}good-lnk-l">商品详情</a>
+    <a href="goods.php?act=view_img&amp;id={$goods_id}&amp;package_goods=1" class="{if $package_goods_list}pack_sel {/if}good-lnk-r">组合购买</a>
+    <!-- {/if} -->
+</div>
+<!-- {/if} -->
+<div style="background-color: #f2f0f0;padding: 10px;"></div>
+<!-- {if $package_detail} -->
+<div>
+    <div style="padding:10px;font-size: 14px;">{$act_name}</div>
+    <!-- {foreach from=$package_goods_list item=package_goods name=pack_goods} -->
+    <div style="display: block;overflow: hidden;margin: 10px;padding: 0 0 10px 0;border-bottom: 1px solid #d0d0d0;">
+        <a href="goods.php?id={$package_goods.goods_id}">
+            <img style="float: left;border: 1px solid #d0d0d0;" width="80" src="/{$package_goods.goods_thumb}">
+            <div style="display: block;padding-left: 10px;height: 80px;line-height: 80px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                <span>{$package_goods.goods_name2}</span>
+            </div>
+        </a>
+    </div>
+    <!-- {/foreach} -->
+    <div style="display: block;overflow: hidden;padding:10px;"><span style="float: left;height:36px;line-height: 36px;color: #CC0000;">礼包价：￥{$pack_price}</span><a href="javascript:addPackageToCartM({$package_id})" class="btn-quk-buy" style="float:right;width: 80px;" >加入购物车</a></div>
+</div>
+<!-- {else} -->
+    <!-- {if $package_goods_list} -->
+    <div style="padding: 10px;">
+    <!-- {foreach from=$package_goods_list item=package_goods name=pack_goods} -->
+        <div style="display: block;font-size: 14px;margin-bottom: 10px;"><span>{$package_goods.act_name}</span></div>
+        <a href="goods.php?act=view_img&amp;id={$goods_id}&amp;package_detail={$package_goods.act_id}">
+        <div style="display: block;overflow: hidden;padding: 10px 0;">
+            <div style="float: left;width: 75%;">
+            <!-- {foreach from=$package_goods.goods_list item=goods_list name=g} -->
+                {if $smarty.foreach.g.iteration gt 1}<s style="display: inline-block;vertical-align: middle;background:url(/themes/default/images/plus.png) no-repeat;width:16px;height:16px;background-size: 16px;border-radius: 16px;"></s>{/if}
+                <div style="display: inline-block;border: 1px solid #d0d0d0;"><img width="60" src="/{$goods_list.goods_thumb}" /></div>
+            <!-- {/foreach} -->
+            </div>
+            <div style="float: left;width: 25%;font-size: 10px;">
+                组合价购买<br />
+                <div class="shop fs-18" style="color: #CC0000;font-size: 18px;">{$package_goods.package_price}</div>
+                立减<span class="shop" style="color: #CC0000;">{$package_goods.saving}</span>元<br />
+            </div>
+        </div>
+        </a>
+        <div style="display: block;overflow: hidden;padding:10px 0 ;border-top: 1px solid #d0d0d0;"><a href="javascript:addPackageToCartM({$package_goods.act_id})" class="btn-quk-buy" style="float:right;width: 80px;" >加入购物车</a></div>
+    <!-- {/foreach} -->
+    </div>
+    <!-- {else} -->
+    <div style="margin-top: 8px;padding: 10px;background-color: #fff;border-top: 1px solid #e0e0e0;border-bottom: 1px solid #e0e0e0;"> <span class="red">{$goods_info.goods_name}的详细介绍</span></div>
+    <style>
+    .desc img{ width:100%;height:auto;line-height:1.8em;font-size: .800em;color:#5a5a5a}
+    </style>
+    <div class="mc radius desc">
+        {$goods_desc}
+    </div>
+    <!-- {/if} -->
+<!-- {/if} -->
+{include file='foot.html'}
+
+<script type="text/javascript">
+    var addto_cart_success = "该商品已添加到购物车。";
+    var goods_id = {$goods_info.goods_id};
+    var goodsattr_style = {$cfg.goodsattr_style|default:1};
+    var goodsId = {$goods_info.goods_id};
+</script>
+</body>
+</html>

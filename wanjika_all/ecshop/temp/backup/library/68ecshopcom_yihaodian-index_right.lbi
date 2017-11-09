@@ -1,0 +1,111 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<DIV class=service> <A class=s1 href="#" target=_blank >快速投递</A><A class="s2" href="#" target=_blank >正品保障</A><A class=s3 href="#" target=_blank >售后无忧</A>
+  <!--a标签不要折行噢-->
+</DIV>
+
+<DL class=index_right>
+<form method="post" action="flow.php?step=add_to_cart" name="charge">
+	<div style="background-color:#fff;padding:15px 14px 10px 14px;border-style:solid; border-width:1px; border-color:#B22222">
+	<h3>手机充值</h3>
+    <!--{if $charge_list}-->
+	<table cellspacing="10">
+	    <tr>
+	        <td align="right"><label>手机号：</label></td>
+	        <td align="left">
+                    <input onkeyup="validate_tel()" style="color:#999;width:90px;" maxlength="11" value="请输入手机号" name="tel" type="text"
+		onmouseover=this.focus();this.select();autocomplete="off";
+        onclick="if(value==defaultValue){value='';this.style.color='#000'}"
+        onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999" />
+	        </td>
+	    </tr>
+	    <tr>
+	        <td align="right"><label>面值：</label></td>
+	        <td align="left">
+            <select name="goods_id" onchange="price_area()">
+            {foreach from=$charge_list item=price key=id}
+            <option value="{$id}" charge_price="{$price}">{$price}元</option>
+            {/foreach}
+            </select>
+	        </td>
+	    </tr>
+	    <tr>
+        	 <td align="right"><label>价格：</label></td>
+        	 <td align="left">
+                <span id="ajax_price" style="color:#EE0000;"></span>&nbsp;元
+             </td>
+        </tr>
+	    <tr>
+	        <td></td>
+	        <td align="left"><input id="submit" style="padding:2px;background:#AAAAAA;color:white;border:1px #AAAAAA solid;border-radius:3px;-webkit-border-radius: 3px;" type="submit"  value="点击充值"></input></td>
+	    </tr>
+	</table>
+    <!-- {else} -->
+	    <div style="padding:15px;color:#EE0000;">话费充值商品已售罄，请稍后尝试。</div>
+    <!--{/if}-->
+    </div>
+    <input type="hidden" name="send_type" value="charge_calls" />
+    <input id="charge_price" type="hidden" name="charge_price" value="0" />
+</form>
+  <!--<DT>1号专享 </DT>
+  <DD><A   href="exchange.php" target=_blank ><IMG src="../images/indexright_1.png"   >
+    <P>积分商城</P>
+    </A><A   href="#" target=_blank ><IMG   src="../images/indexright_1.png" >
+    <P>1号榜</P>
+    </A><A   href="#" target=_blank ><IMG src="../images/indexright_3.png"  >
+    <P>家居馆</P>
+    </A></DD>-->
+</DL>
+
+<script type="text/javascript" language="JavaScript">
+var f = document['charge'];
+var index = f.elements['goods_id'].selectedIndex;
+var price = f.elements['goods_id'].options[index].getAttribute('charge_price');
+var btn = document.getElementById("submit");
+btn.disabled = true;
+Ajax.call('flow.php?step=get_charge_price', 'price=' + price, get_price_response, 'POST', 'JSON');
+function validate_tel() {
+    var tel = f.elements['tel'].value;
+    var index = f.elements['goods_id'].selectedIndex;
+    var price = f.elements['goods_id'].options[index].getAttribute('charge_price');
+    if(tel.length == 11){
+        Ajax.call('flow.php?step=check_charge_info&price=' + price, 'tel=' + tel, call_charge_response, 'POST', 'JSON');
+    }
+}
+function price_area() {
+    var tel = f.elements['tel'].value;
+    var index = f.elements['goods_id'].selectedIndex;
+    var price = f.elements['goods_id'].options[index].getAttribute('charge_price');
+    if(tel.length == 11){
+        Ajax.call('flow.php?step=check_charge_info&price=' + price, 'tel=' + tel, call_charge_response, 'POST', 'JSON');
+    }
+    else{
+        Ajax.call('flow.php?step=get_charge_price', 'price=' + price, get_price_response, 'POST', 'JSON');
+    }
+}
+function call_charge_response(result)
+{
+      var btn = document.getElementById("submit");
+      var price = document.getElementById("charge_price");
+      btn.disabled = true;
+      btn.style.background="#AAAAAA";
+      btn.style.border="#AAAAAA";
+      if (result.status > 0)
+      {
+            btn.disabled = false;
+            btn.style.background="#ff0000";
+            btn.style.border="#ff0000";
+            var charge = document.getElementById("ajax_price");
+            charge.innerHTML = result.price;
+            price.value = result.price;
+      }
+      else{
+            var charge = document.getElementById("ajax_price");
+            charge.innerHTML = "--";
+      }
+}
+function get_price_response(result)
+{
+    var charge = document.getElementById("ajax_price");
+    charge.innerHTML = result.price;
+}
+</script>

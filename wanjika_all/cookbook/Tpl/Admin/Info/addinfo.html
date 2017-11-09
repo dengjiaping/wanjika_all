@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	<script src="__PUBLIC__/kindeditor-4.1.10/kindeditor-min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="__PUBLIC__/kindeditor-4.1.10/themes/default/default.css" />	
+	<script charset="utf-8" src="__PUBLIC__/kindeditor-4.1.10/lang/zh_CN.js"></script>
+	<script>
+		KindEditor.ready(function(K) {
+				K.create('#content', {
+					themeType : 'simple',
+					uploadJson : '__GROUP__/Upload/ueditor',
+					fileManagerJson : '__GROUP__/Upload/imageManager',
+					allowFileManager : true
+				});
+				var uploadbutton = K.uploadbutton({
+					button : K('#uploadButton')[0],
+					fieldName : 'imgFile',
+					url : '__GROUP__/Upload/ueditor',
+					afterUpload : function(data) {
+						if (data.error === 0) {
+							var url = K.formatUrl(data.url, 'absolute');
+							K('#url').val(url);
+						} else {
+							alert(data.message);
+						}
+					},
+					afterError : function(str) {
+						alert('自定义错误信息: ' + str);
+					}
+				});
+				uploadbutton.fileBox.change(function(e) {
+					uploadbutton.submit();
+				});
+				
+				
+				});
+				
+		</script>
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">内容添加</div>
+	
+ <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	
+	<ul class="nav nav-tabs">
+		  <li class="active"><a href="#home" data-toggle="tab">基本信息</a></li>
+		 
+	</ul>
+	<div class="tab-content">
+		  <div class="tab-pane active" id="home">
+		  <div class="panel-body">
+			 <form class="form-horizontal" action="__GROUP__/Info/addinfo" method="post" >
+					
+					  <div class="form-group">
+						<label for="domain" class="col-sm-3 control-label">所属分类(cid):</label>
+						<div class="col-sm-2">						
+							<select name="cid"  class="form-control" >
+								<option value="">----请选择分类----</option>
+								<volist name="cate" id="vo">
+									<option value="{$vo.id}">{$vo.catename}</option>
+									<volist name="vo['sub']" id="v2">
+										<option value="{$v2.id}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----{$v2.catename}</option>
+									</volist>
+								</volist>
+							</select>
+						</div>
+						<div class="col-sm-1">
+						 <label><input type="checkbox" name="istop" id="istop" value="1">置顶</label>						
+						</div>
+						<div class="col-sm-1">
+						 <label><input type="checkbox" name="isrec" id="isrec" value="1">推荐</label>						
+						</div>
+						<div class="col-sm-1">
+						 <label><input type="checkbox" name="isshow" id="isshow" checked value="1">验证</label>						
+						</div>
+						<div class="col-sm-1">
+						 <label><input type="checkbox" name="isrev" id="isrev" value="1">评论</label>						
+						</div>
+
+					  </div>
+					    <div class="form-group">
+						<label for="webname" class="col-sm-3 control-label">标题(name):</label>
+						<div class="col-sm-4">
+						  <input type="webname" class="form-control" id="infoname" name="name" placeholder="信息标题">
+						 
+						</div>
+					  </div>
+					  <div class="form-group">
+					  <label for="pic" class="col-sm-3 control-label">缩略图(pic):</label>
+					  <div class="col-sm-3">
+					   <input type="pic" class="form-control" id="logo" name="pic" value="" placeholder="">					 
+
+					   </div>
+					   <div class="col-sm-3">
+								 	<iframe src="__GROUP__/Upload" height="40"  frameborder="0" scrolling="no" ></iframe>
+							</div>
+					  </div>
+					   <div class="form-group">
+						<label for="tags" class="col-sm-3 control-label">标签(tags):</label>
+						<div class="col-sm-4">
+						  <input type="tags" class="form-control" id="tags" name="tags" placeholder="多个用豆号,分开">
+						</div>
+						<div class="col-sm-2">
+						<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">
+						  选择已有tags
+						</button>
+						</div>
+					  </div>
+				  <div class="form-group">
+						
+						 <textarea id="content" type="text/plain" name="content" style="width:100%; height:500px;" ></textarea>
+						</div>
+			 <div class="form-group">
+						<label for="infotitle" class="col-sm-3 control-label">SEO标题(title):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="infotitle" name="title" placeholder="SEO标题">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="infokey" class="col-sm-3 control-label">关键词(key):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="infokey" name="key" placeholder="关键词">
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="infodesc" class="col-sm-3 control-label">描述(desc):</label>
+						<div class="col-sm-4">
+						<textarea  type="text" class="form-control input-sm"  rows="3" id="desc" name="desc" placeholder="描述"></textarea>
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="hits" class="col-sm-3 control-label">浏览量(hits):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="hits" name="hits" value="0">
+						</div>
+					  </div>
+
+					  <div class="form-group">
+						<label for="revs" class="col-sm-3 control-label">评论数量(revs):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="revs" name="revs" value="0">
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="author" class="col-sm-3 control-label">作者(author):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="author" name="author"  value="{$Think.config.webname}">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="time" class="col-sm-3 control-label">时间(time):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="time" name="time"  value="{:date('Y-m-d H:i:s',time())}">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="price" class="col-sm-3 control-label">价格(price):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="price" name="price" >
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="pcs" class="col-sm-3 control-label">单位(pcs):</label>
+						<div class="col-sm-4">
+						 <input type="text" class="form-control input-sm" id="pcs" name="pcs" >
+						</div>
+					  </div>					 
+			
+					<div id="jai"></div>
+					
+			 </div>
+		 </div>
+		  
+	   		 
+
+	
+	
+	 <div class="form-group">
+						<div class="col-sm-offset-3 col-sm-4">
+						  <button type="submit" class="btn btn-primary btn-lg" id="post">提交</button>
+						  <button type="button" id="clon" class="btn btn-primary btn-lg">加一条自定义</button>	
+						</div>
+	 </div>
+	</form>
+	
+		
+		   </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">TAGS列表</h4>
+      </div>
+      <div class="modal-body">
+			<volist name="taglist" id="vo">
+				<label><input type="checkbox" name="taglist" id="taglist" value="{$vo.tag}" />{$vo.tag} </label>
+			</volist>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="tagtrue">确定选择</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+</div>
+<script>
+	$("#tagtrue").click(function(){
+		 s=''; 
+		  $('input[name="taglist"]:checked').each(function(){ 
+			s+=$(this).val()+','; 
+		  });
+			$("#tags").val(s);
+			$('#myModal').modal('hide');
+	});
+		$("#clon").click(function(){
+$("#jai").append('<div class="form-group" id="ziduan"><label for="pcs" class="col-sm-3 control-label">字&nbsp;段&nbsp;名(diy):</label>						<div class="col-sm-2" >							<input type="text" name="diykey[]" />							</div>						<label for="pcs" class="col-sm-2 control-label">字&nbsp;段&nbsp;值(value):</label>						<div class="col-sm-2" >							<input type="text" name="value[]" />							</div>						</div>');
+		});
+	</script>
+
+
+  </body>
+</html>

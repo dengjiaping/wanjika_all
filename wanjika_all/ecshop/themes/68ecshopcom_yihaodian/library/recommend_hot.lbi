@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<UL class="tab_content clearfix">
+  <!-- {if $hot_goods} -->
+  <!--{foreach from=$hot_goods item=goods}-->
+  <LI><A class=pro_img title="{$goods.name|escape:html}" 
+  href="{$goods.url}" target=_blank  ><IMG src="{$goods.thumb}" ></A> <A class=pro_name title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank>{$goods.short_style_name}</A>
+  <span style="float:left;color:red">&nbsp{$goods.cuxiao}</span>&nbsp
+    <P class=tl><STRONG>
+      <!-- {if $goods.promote_price neq ""} -->
+      {$goods.shop_price}
+      <!-- {else}-->
+      {$goods.shop_price}
+      <!--{/if}-->
+      </STRONG><DEL>{$goods.market_price}</DEL></P>
+  </LI>
+  <!--{/foreach}-->
+  <!-- {/if} -->
+</UL>

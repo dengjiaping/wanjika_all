@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的购物车 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files='../../js/transport.js,../js/utils.js'}
+{insert_scripts files='../shopping_flow.js'}
+<script type="text/javascript">
+    window.onload=function(){ returnflow(1);}
+function add_num(rec_id,goods_id,n){
+    window.goods_id =goods_id;
+//	document.getElementById("goods_number_"+rec_id+"").value++;
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+    if(n>0)
+    {
+        if(number+1>n)
+        {
+            number=n;
+            document.getElementById("goods_number_"+rec_id+"").value=n;
+        }
+        else
+        {
+            document.getElementById("goods_number_"+rec_id+"").value=number;
+        }
+    }
+    else
+    {
+        number++;
+        document.getElementById("goods_number_"+rec_id+"").value=number;
+    }
+	//Ajax.call('cart.php', 'act=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+	Ajax.call('cart.php?act=update_group_cart', 'rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+
+}
+
+function red_num(rec_id,goods_id){
+    window.goods_id = goods_id;
+	if (document.getElementById("goods_number_"+rec_id+"").value>1){
+		document.getElementById("goods_number_"+rec_id+"").value--;
+	}
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+	Ajax.call('cart.php', 'act=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function change_price(rec_id,goods_id,n){
+    window.goods_id = goods_id;
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+    if(n>0)
+    {
+        if(number>n)
+        {
+            number=n;
+            document.getElementById("goods_number_"+rec_id+"").value=n;
+        }
+        else
+        {
+            document.getElementById("goods_number_"+rec_id+"").value=number;
+        }
+    }
+    else
+    {
+        document.getElementById("goods_number_"+rec_id+"").value=number;
+    }
+	Ajax.call('cart.php','act=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function changePriceResponse(result){
+	if(result.error == 1){
+		alert(result.content);
+		document.getElementById("goods_number_"+result.rec_id+"").value =result.number;
+	}else{
+		document.getElementById('subtotal_'+result.rec_id).innerHTML = result.subtotal;//商品总价
+		document.getElementById('return_goods_price').innerHTML = result.goods_price;//商品单价
+//		document.getElementById('cart_totalnum').innerHTML = result.number;//商品总数量
+		document.getElementById('discount').innerHTML = result.discount;//活动优惠
+		document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物车商品总价说明
+        changeSelected(goods_id,true);
+	}
+}
+</script>
+    <style>
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px white inset;
+        }
+        .cart_li_sel{
+            background: #fff;
+        }
+        .cart_icon{
+            display:inline-block;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+        }
+        .cart_icons{
+            background: url(/mobile/images/cart-icon-checked.png);
+            background-size: 20px;
+            background-position-y: 10px;
+            background-repeat: no-repeat;
+            margin-top: -10px;
+        }
+        .cart_iconun{
+            background: url(/mobile/images/cart-icon-unchecked.png);
+            background-size: 20px;
+            background-position-y: 10px;
+            background-repeat: no-repeat;
+            margin-top: -10px;
+        }
+        .cart_total{
+            overflow: hidden;
+            padding: 20px 0;
+            background: #fff;
+        }
+        .cart_btn{
+            padding: 20px;
+            background: #37af93;
+            color: #fff;
+        }
+        .cart_tol{
+            float: right;
+            padding-right: 10px;
+            height: 16px;
+            line-height: 16px;
+        }
+        .cart_btn-type{
+            padding: 10px 30px;
+            border-radius: 1px;
+            border: 1px solid #38af93;
+            background-color: #fff;
+            font-size: 1em;
+            color: #38af93;
+        }
+    </style>
+</head>
+<body style="background: #f2f0f1;">
+{include file='head2.html'}
+{if $cart_faild eq 1}
+	<div class="login-reg-tip"> <font class="red">{$tips}</font> </div>
+{/if}
+<!--{if $goods_list}-->
+<!--{if !$user_name}-->
+<div class="w" style="margin:10px 0 0; text-align:center">现在 <a href="user.php">登录</a> ，您购物车中的商品将被永久保存 </div>
+<!--{/if}-->
+<!--<div class="my-cart"> <span class="red">共<span id="cart_totalnum">{$total.real_goods_count}</span>件商品</span>-->
+	<!--<div class="btn-area-rt"> <a href="goods_list.php" class="link ft15">继续购买 |</a><a href="buy.php?act=checkout" class="btn-type ft15">去结算</a></div>-->
+<!--</div>-->
+<div class="cart-list mc" style="margin:0;padding:0;margin-top: 10px;">
+	<ul>
+		<!-- {foreach from=$goods_list item=goods} -->
+		<li class="first cart_li cart_li_sel" id="li_{$goods.goods_id}" style="border: 0;margin-bottom: 5px;" >
+			<div class="clear">
+                <div style="display:inline-block;vertical-align: middle;width: 30px;height: 20px;"><span name="select" class="cart_icon {if $goods.is_selected eq 1} cart_icons{else} cart_iconun{/if}" id="{$goods.goods_id}" onclick="changeSelected({$goods.goods_id})"></span></div>
+				<div class="p-img p-img-v1" style="display: inline-block;width: 14%;"> {if $goods.extension_code eq 'package_buy'}<img width="50" height="50" alt="{$goods.goods_name|escape:html}" src="/{$goods.goods_thumb}">{else}<a href="goods.php?id={$goods.goods_id}" class="pay-img"><img width="50" height="50" alt="{$goods.goods_name|escape:html}" src="/{$goods.goods_thumb}"></a>{/if} </div>
+				<div class="fl-v1" style="display: inline-block;vertical-align: middle;width: 54%;">
+					<p class="p-name">{if $goods.extension_code eq 'package_buy'}{$goods.goods_name}{else}<a href="goods.php?id={$goods.goods_id}"  style="color: #000000;" target="_blank" class="f6">{$goods.goods_name}</a>{/if}
+						<!-- {if $goods.parent_id > 0} -->
+						<span style="color:#FF0000">（相关配件）</span>
+						<!-- {elseif $goods.is_gift} -->
+						<span style="color:#FF0000">（赠品）</span>
+						<!-- {/if} -->
+						<!-- {if $goods.is_shipping} -->
+						（免运费商品）
+						<!-- {/if} -->
+					</p>
+					<!-- {if $show_marketprice} -->
+					<!--<p class="p-price">市场价：<span class="red">{$goods.market_price}</span></p>-->
+					<!-- {/if} -->
+					<p class="p-price" >{if $goods.max_number gt 0}<span style="color:#e61c44;">限购{$goods.max_number}件</span>{/if}</p>
+					<p class="p-price2"></p>
+					<p class="p-amount">{$goods.goods_attr|nl2br}</p>
+					<p class="p-price" style="overflow:hidden;padding: 10px 0;">
+						<!-- {if $goods.goods_id gt 0 && $goods.is_gift eq 0 && $goods.parent_id eq 0} 普通商品可修改数量 -->
+						<a href="javascript:;" onclick="red_num({$goods.rec_id},{$goods.goods_id});" title="减少数量" style="float:left;background:url(../../themes/default/images/minus.png);background-size: contain;width: 22px;height: 22px;"></a>
+						<input type="text" name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" size="3" style="float:left;height:20px;width:60px;border-radius:0;border:1px solid #dddddd;text-align:center;-webkit-appearance: none;" onkeyup="value=value.replace(/[^\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" onblur="change_price({$goods.rec_id},{$goods.goods_id},{$goods.max_number})" />
+						 <a href="javascript:;" onclick="add_num({$goods.rec_id},{$goods.goods_id},{$goods.max_number})" title="增加数量" style="float:left;background:url(../../themes/default/images/plus.png);background-size: contain;width: 22px;height: 22px;"></a>
+						<!-- {else} -->
+						{$goods.goods_number}
+						<!-- {/if} -->
+					</p>
+					<p class="p-price2"></p>
+					<p class="p-price"><span style="font-size: 18px;" class="red" id="subtotal_{$goods.rec_id}">{$goods.subtotal}</span></p>
+				</div>
+                <div style="display: inline-block;vertical-align: middle;width: 10%;"><a href="javascript:if (confirm('您确实要把该商品移出购物车吗？')) location.href='cart.php?act=drop_goods&id={$goods.rec_id}'; ">删除</a></div>
+			</div>
+		</li>
+		<!-- {/foreach} -->
+	</ul>
+</div>
+<div class="cart_total">
+    <div class="cart_iconun" name="selectall" style="float: left;margin-bottom: -4px;margin-left:10px;width: 20px;height: 30px;" onclick="changeSelectedAll()"></div>
+    <span style="padding-left: 10px;color: #a0a0a0;">全选</span>
+    <div style="float: right;"><a onclick="returnflow()" class="cart_btn">去结算</a></div>
+    <div class="cart_tol"><p style="font-size: 16px;color: #393a3b;" <!-- {if $show_marketprice} -->class="common-border"<!--{/if}-->>合计：<span id="cart_amount_desc" style="font-size: 22px;color: #db2929;">{$total.goods_price}</span>
+	</p>
+    <p id="yourdiscount" style="padding-top: 4px;display:{if $formatdiscount}block{else}none{/if};">活动优惠：<span id="discount">-{$discount}</span></p>
+	<!-- {if $show_marketprice} -->
+	<p>比市场价 <span class="red">{$total.market_price}</span> 节省了 {$total.saving} ($total.save_rate)</p>
+	<!--{/if}-->
+    </div>
+</div>
+<!--{else}-->
+<div class="icon-cart mc"> <span></span>
+	<p>目前您的购物车空空如也~</p>
+	<a href="index.php" class="cart_btn-type" style="display:inline-block; margin:20px 4px 0; text-align:center;">去购物</a>
+</div>
+<!--{/if}-->
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的订单 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+<style>
+.order_info{
+    padding: 0;
+    margin: 0;
+}
+.order_info li{
+    border:none;
+}
+.order_menu{
+    padding: 0px 10px 50px 0px;
+}
+.order_menu li{
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+.order_menu li a{
+    font-size: 16px;
+}
+.home_blank{
+    height: 10px;
+    background: #f2f0f1;
+}
+.order_select{
+    color: #37af93;
+    border-bottom: 1px solid #37af93;
+}
+.order_handler{
+    padding: 4px 10px 6px 10px;
+    background: #bdbdbd;
+    color: #fff;
+    border-radius: 2px;
+}
+.order_handler a{
+    color: #fff;
+}
+.order_pay{
+    margin-left:10px ;
+    padding: 6px 14px;
+    background: #51318f;
+    border: 0;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 2px;
+}
+    .order_null{
+        display: inline-block;
+        margin-top: 60px;
+        padding: 10px 50px;
+        background-color: #37af93;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head4.html'}
+<div class="order_info mc radius">
+    <ul class="order_menu">
+        <li><a href="user.php?act=order_list" {if $status eq 'all'}class="order_select"{/if}>全部</a></li>
+        <li><a href="user.php?act=order_list&status=unpay" {if $status eq 'unpay'}class="order_select"{/if}>待付款</a></li>
+        <li><a href="user.php?act=order_list&status=deliveryd" {if $status eq 'deliveryd'}class="order_select"{/if}>待收货</a></li>
+        <li><a href="user.php?act=order_list&status=complete" {if $status eq 'complete'}class="order_select"{/if}>交易完成</a></li>
+    </ul>
+    <div class="home_blank"></div>
+	<ul>
+	{foreach from=$orders item=order_data name=orderit}
+	<li style="margin-top: 0px;font-size: 12px;" {if $smarty.foreach.goodsit.iteration neq 1} style="border:none"{/if}>
+	<span style="padding-left: 10px;">订单<span style="margin-left: 4px;">{$order_data.order_sn}</span></span>{$order_data.mobile_status}<br/>
+
+	{foreach from=$order_data.order_goods item=order name=orderit}
+    <a href="user.php?act=order_info&id={$order_data.order_id}">
+    <span style="display: block;margin:20px 10px 0px 10px;padding-bottom: 6px;border-bottom: 1px solid #e0e0e0;">
+        <img src="/{$order.goods_thumb}" style="width: 80px;"/>
+        <span style="display: inline-block;vertical-align: middle;height: 60px;width: 75%;">{$order.goods_name}
+        <p><span style="color: #db2929;padding-right: 6px;">{$order.shop_price}</span>x<span style="padding-left: 4px;">{$order.goods_number}</span></p></span>
+    </span>
+    </a>
+    {/foreach}
+        <div style="display: block;text-align: right;margin: 8px;">
+        <!--订单状态：{$order_data.order_status}<br/>-->
+            <div style="display: inline-block;"><span>{$order_data.handler}</span></div>
+            {if $order_data.pay_status eq 0 && $order_data.ori_order_status neq 2 && $order_data.ori_order_status neq 4}
+            <div style="display: inline-block;">
+                <a class="order_pay" href="user.php?act=order_pay&id={$order_data.order_id}">去支付</a>
+            </div>
+            {/if}
+
+	    {if $order_data.mobile_sta && !$order_data.is_members}<a href="user.php?act=order_traking&order_id={$order_data.order_id}"><span style="display: inline-block;">跟踪订单</span></a>{/if}
+        </div>
+        <div class="home_blank"></div>
+	</li>
+
+	{foreachelse}
+	<li><div style="text-align: center;"><img src="/mobile/images/order_null.png" style="margin-bottom:10px;width: 80px;"><p style="color: #a0a0a0;">您暂时没有订单</p><a class="order_null" href="index.php">随便逛逛</a></div></li>
+	{/foreach}</ul></div>
+{if $pagebar}
+<div style="text-align:center;margin-bottom: 10px;">
+	{$pagebar}
+</div>
+{/if}
+{include file='foot.html'}
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+            }
+        })
+    }
+</script>
+</body>
+</html>

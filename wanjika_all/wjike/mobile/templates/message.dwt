@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {if $auto_redirect}
+    <meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+    {/if}
+    <title>{$page_title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="ecdaddy.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    <script src="/mobile/js/jquery-1.6.2.min.js"></script>
+    <script src="/mobile/js/common2.js"></script>
+</head>
+<body>
+{include file='head.html'}
+<div style="text-align:center;margin:20px 0 0 0 ;">
+    <span style="color: #FF0000;">{$message.content}</span>
+    <div class="blank"></div>
+    {if $message.back_url}
+    <p  style="margin:5px 0;"><a href="{$message.back_url}">返回</a></p>
+    {/if}
+</div>
+{include file='foot.html'}
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>利仁电煎锅</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.pan_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#e7e7e7; }
+.pan_all .pan_01{ width:100%; height:173px; background:url(images/adimages/pan_01.jpg) no-repeat center center;}
+.pan_all .pan_02{ width:100%; height:172px; background:url(images/adimages/pan_02.jpg) no-repeat center center;}
+.pan_all .pan_03{ width:100%; height:173px; background:url(images/adimages/pan_03.jpg) no-repeat center center;}
+.pan_all .pan_04{ width:100%; height:172px; background:url(images/adimages/pan_04.jpg) no-repeat center center;}
+.pan_all .pan_05{ width:100%; height:173px; background:url(images/adimages/pan_05.jpg) no-repeat center center;}
+.pan_all .pan_06{ width:100%; height:109px; background:url(images/adimages/pan_06.jpg) no-repeat center center;}
+.pan_all .pan_07{ width:100%; height:250px; background:url(images/adimages/pan_07.jpg) no-repeat center center;}
+.pan_all .pan_08{ width:100%; height:124px; background:url(images/adimages/pan_08.jpg) no-repeat center center;}
+.pan_all .pan_09{ width:100%; height:414px; background:url(images/adimages/pan_09.jpg) no-repeat center center;}
+.pan_all .pan_10{ width:100%; height:479px; background:url(images/adimages/pan_10.jpg) no-repeat center center;}
+.pan_all .pan_11{ width:100%; height:523px; background:url(images/adimages/pan_11.jpg) no-repeat center center;}
+.pan_all .pan_12{ width:100%; height:438px; background:url(images/adimages/pan_12.jpg) no-repeat center center;}
+.pan_all .pan_13{ width:100%; height:274px; background:url(images/adimages/pan_13.jpg) no-repeat center center;}
+.pan_all .pan_14{ width:100%; height:247px; background:url(images/adimages/pan_14.jpg) no-repeat center center;}
+.pan_all .pan_15{ width:100%; height:735px; background:url(images/adimages/pan_15.jpg) no-repeat center center;}
+.pan_all .pan_16{ width:100%; height:271px; background:url(images/adimages/pan_16.jpg) no-repeat center center;}
+.pan_all .pan_17{ width:100%; height:411px; background:url(images/adimages/pan_17.jpg) no-repeat center center;}
+.pan_all .pan_18{ width:100%; height:480px; background:url(images/adimages/pan_18.jpg) no-repeat center center;}
+.pan_all .pan_181{ padding:240px 0; display:block;}
+.pan_all .pan_19{ width:100%; height:382px; background:url(images/adimages/pan_19.jpg) no-repeat center center;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--利仁电煎锅start-->
+<div class="pan_all">
+	<div class="pan_01"></div>
+	<div class="pan_02"></div>
+	<div class="pan_03"></div>
+	<div class="pan_04"></div>
+	<div class="pan_05"></div>
+	<div class="pan_06"></div>
+	<div class="pan_07"></div>
+	<div class="pan_08"></div>
+	<div class="pan_09"></div>
+	<div class="pan_10"></div>
+	<div class="pan_11"></div>
+	<div class="pan_12"></div>
+	<div class="pan_13"></div>
+	<div class="pan_14"></div>
+	<div class="pan_15"></div>
+	<div class="pan_16"></div>
+	<div class="pan_17"></div>
+	<div class="pan_18">
+    	<a href="goods.php?id=9531" class="pan_181"></a>
+    </div>
+	<div class="pan_19"></div>
+</div>
+<!--利仁电煎锅end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

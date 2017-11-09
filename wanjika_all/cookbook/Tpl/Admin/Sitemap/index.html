@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+	
+	
+
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">广告管理</div>
+	
+ <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	
+	<ul class="nav nav-tabs">
+		  <li class="active" ><a href="#profile" data-toggle="tab">生成地图</a></li>
+		
+		 
+		</ul>
+
+	<div class="tab-content">
+		  <div class="tab-pane active" id="profile">
+		  <div class="panel-body">
+			 <form class="form-horizontal" action="__GROUP__/Sitemap/index" method="post" role="form" >
+					  
+						<div class="form-group">
+						<label for="isshow" class="col-sm-3 control-label">生成选择:</label>
+						<div class="col-sm-6">
+							<label><input type="checkbox" value="1" name="ismobil"  />手机版</label>
+							<label><input type="checkbox" value="1" name="baidu"  />百度手机版</label>
+							<label><input type="checkbox" value="1" name="google"  />谷歌手机版</label>
+							<label><input type="checkbox" value="1" name="so"  />360手机匹配</label>
+							<label><input type="checkbox" value="1" name="ispc" checked />电脑版</label>						
+						</div> 
+					
+
+					  </div>
+					  
+						<div class="form-group">
+						<label for="isshow" class="col-sm-3 control-label">生成说明:</label>
+						<div class="col-sm-6">
+									<p>勾选了手机版请分别勾选百度 谷歌 360 分别生成；电脑版只需要生成一次即可；</p>
+									<p>地图将会生成在你网站的根目录，</p>
+									<p>百度手机版地图：http://www.pcwap.cn/baidu-sitemap.xml</p>		
+									<p>google手机版地图：http://www.pcwap.cn/google-sitemap.xml</p>		
+									<p>电脑版地图：http://www.pcwap.cn/sitemap.xml</p>		
+									<p>360手机移动适配：http://www.pcwap.cn/360sitemap.txt</p>		
+						</div> 
+					
+
+					  </div>
+					 
+					 
+					  
+						 <div class="form-group">
+											<div class="col-sm-offset-3 col-sm-4">
+											  <button type="submit" class="btn btn-default" id="post">提交</button>
+											</div>
+						 </div>
+						</form>
+					  
+				</div>
+			</div>
+		  
+	
+				
+</div>
+
+
+
+  </body>
+</html>

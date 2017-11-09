@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $brand_list} -->
+<div class="box" >
+  <h3 style="background:url(../images/brands_title.gif) no-repeat"><span style=" color:#FFF; font-family:'微软雅黑';
+font-size:14px;">热门促销</span></h3>
+  <div class="box_1" >
+  <div class="boxCenterList clearfix" style="background:#ebf5db; padding-left:0px;">
+      <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+      {if $smarty.foreach.brand_foreach.index <= 12}
+      <!-- {if $brand.brand_logo} -->
+      <a href="{$brand.url}"><img style="width:90px; height:45px; margin-bottom:16px;*margin-bottom:19px;_margin-bottom:22px; border:#ececec 1px solid; float:left; margin-left:8px;" src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html}({$brand.goods_num})" /></a>
+      <!-- {/if} -->
+      {/if}
+      <!-- {/foreach} -->
+    </div>  
+  </div>
+</div>
+<!-- {/if} -->

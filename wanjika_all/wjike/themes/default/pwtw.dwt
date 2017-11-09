@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>品味台湾</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.pwtw_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/pw_tw_01.jpg) no-repeat top center #fff; }
+.pwtw_all .pwtw_one{ width:100%; overflow:hidden; margin:0 auto; }
+.pwtw_all .pwtw_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.pwtw_all .pwtw_01{ width:1200px; height:334px; background:url(images/adimages/pw_tw_02.jpg)no-repeat center center; margin:0 auto; }
+.pwtw_all .pwtw_02{ width:1200px; height:335px; background:url(images/adimages/pw_tw_04.jpg) no-repeat center center; margin:0 auto; }
+.pwtw_all .pwtw_03{ width:1200px; height:334px; background:url(images/adimages/pw_tw_05.jpg) no-repeat center center; margin:0 auto; }
+.pwtw_all .pwtw_04{ width:1200px; height:335px; background:url(images/adimages/pw_tw_06.jpg) no-repeat center center; margin:0 auto; }
+.pwtw_all .pwtw_05{ width:1200px; height:334px; background:url(images/adimages/pw_tw_07.jpg) no-repeat center center; margin:0 auto; }
+.pwtw_all .pwtw_06{ width:1200px; height:4082px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--品味台湾start-->
+<div class="pwtw_all">
+	<div class="pwtw_one">
+        <div class="pwtw_01"></div>
+        <div class="pwtw_02"></div>
+        <div class="pwtw_03"></div>
+        <div class="pwtw_04"></div>
+        <div class="pwtw_05"></div>
+    </div>
+
+	<div class="pwtw_two">
+        <div class="pwtw_06">
+            <!--
+        	<img src="images/adimages/pw_tw_08.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="3,3,1196,431" href="http://wjike.com/goods.php?id=10275" target="_blank" />
+            </map>
+            -->
+        	<img src="images/adimages/pw_tw_09.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="3,32,1196,472" href="http://wjike.com/category.php?id=575&amp;brand=362&amp;price_min=0&amp;price_max=0" target="_blank" />
+            </map>
+        	<img src="images/adimages/pw_tw_10.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="4,41,1196,478" href="http://wjike.com/category.php?id=574&amp;brand=360&amp;price_min=0&amp;price_max=0" target="_blank" />
+            </map>
+        	<img src="images/adimages/pw_tw_11.jpg" />
+        	<img src="images/adimages/pw_tw_12.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="3,3,1197,449" href="http://wjike.com/category.php?id=710&brand=356&price_min=0&price_max=0" target="_blank" />
+            </map>
+        	<img src="images/adimages/pw_tw_13.jpg" usemap="#Map5" border="0" />
+            <map name="Map5" id="Map5">
+              <area shape="rect" coords="2,49,1196,502" href="http://wjike.com/category.php?id=710&brand=359&price_min=0&price_max=0" target="_blank" />
+            </map>
+        	<img src="images/adimages/pw_tw_14.jpg" usemap="#Map6" border="0" />
+            <map name="Map6" id="Map6">
+              <area shape="rect" coords="3,4,1197,477" href="http://wjike.com/goods.php?id=10243" target="_blank" />
+            </map>
+      </div>
+    </div>
+
+</div>
+<!--品味台湾源end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

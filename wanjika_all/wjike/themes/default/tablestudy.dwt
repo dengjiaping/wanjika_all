@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>好事达 乐思成长学习桌椅(蓝色)</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.tablestudy_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#ff9900; }
+.tablestudy_all .tablestudy_01{ width:100%; height:323px; background:url(images/adimages/tablestudy_01.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_02{ width:100%; height:323px; background:url(images/adimages/tablestudy_02.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_03{ width:100%; height:232px; background:url(images/adimages/tablestudy_03.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_04{ width:100%; height:354px; background:url(images/adimages/tablestudy_04.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_05{ width:100%; height:478px; background:url(images/adimages/tablestudy_05.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_06{ width:100%; height:229px; background:url(images/adimages/tablestudy_06.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_07{ width:100%; height:255px; background:url(images/adimages/tablestudy_07.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_08{ width:100%; height:282px; background:url(images/adimages/tablestudy_08.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_09{ width:100%; height:320px; background:url(images/adimages/tablestudy_09.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_10{ width:100%; height:403px; background:url(images/adimages/tablestudy_10.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_11{ width:100%; height:416px; background:url(images/adimages/tablestudy_11.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_12{ width:100%; height:323px; background:url(images/adimages/tablestudy_12.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_13{ width:100%; height:267px; background:url(images/adimages/tablestudy_13.jpg) no-repeat center center;}
+.tablestudy_all .buystudy{ display:block; padding:133px 0;}
+.tablestudy_all .tablestudy_14{ width:100%; height:315px; background:url(images/adimages/tablestudy_14.jpg) no-repeat center center;}
+.tablestudy_all .tablestudy_15{ width:100%; height:328px; background:url(images/adimages/tablestudy_15.jpg) no-repeat center center;}
+.tablestudy_all .lqvip{ display:block; padding:164px 0;}
+</style>
+</head>
+
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--买手挑好货 手机购start-->
+<div class="tablestudy_all">
+	<div class="tablestudy_01"></div>
+	<div class="tablestudy_02"></div>
+	<div class="tablestudy_03"></div>
+	<div class="tablestudy_04"></div>
+	<div class="tablestudy_05"></div>
+	<div class="tablestudy_06"></div>
+	<div class="tablestudy_07"></div>
+	<div class="tablestudy_08"></div>
+	<div class="tablestudy_09"></div>
+	<div class="tablestudy_10"></div>
+	<div class="tablestudy_11"></div>
+	<div class="tablestudy_12"></div>
+	<div class="tablestudy_13">
+    	<a href="goods.php?id=9331" class="buystudy"></a>
+    </div>
+	<div class="tablestudy_14"></div>
+	<div class="tablestudy_15">
+    	<a href="vip.php?act=vip_info" class="lqvip"></a>
+    </div>
+</div>
+<!--买手挑好货 手机购end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

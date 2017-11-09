@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$keywords}_{$page_title}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    <link rel="stylesheet" type="text/css" href="style/swiper.min.css">
+    <script src="/mobile/js/jquery-1.6.2.min.js"></script>
+    <script src="/mobile/js/common2.js"></script>
+    <script src="/mobile/js/swiper.min.js"></script>
+    <style>
+        .ad {
+            margin: 0 auto;
+            max-width: 640px;
+            width: 100%;
+        }
+        .ad .adscroller img {
+            height: auto;
+            max-height: 240px;
+            max-width: 640px;
+            min-height: 132px;
+            min-width: 320px;
+            width: 100%;
+        }
+
+        .activity_all { width:100%; overflow:hidden; margin:0 auto; }
+        .activity_all .act_pic{ width:100%; text-align:center;}
+        .activity_all .act_pic a{ display:block;}
+        .activity_all .act_pic img{ height: auto;max-height: 240px;max-width: 640px;min-height: 132px;min-width: 320px;width: 100%;}
+        .arror-right{
+            position: relative;
+            width: 0px;
+            height: 0px;
+            top: 32px;
+            left: 13px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #51318f;
+        }
+        #demo1 a{display: block;}
+    </style>
+    </head>
+<body>
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head4.html'}
+<!-- 轮播代码 开始 -->
+<script type="text/javascript">
+    var flashdata = '../../data/flashdata/test/{$data}.js';
+</script>
+<script type="text/javascript" src="../../data/flashdata/{$flash_theme}/mobile_cycle_image.js"></script>
+<!-- 代码 结束 -->
+
+<div style="overflow:hidden;background-color: #f2f0f1;padding-top: 10px;">
+    <div class="t-lists" >
+        <ul id="test">
+            {foreach from=$venue item=venues name=key}
+            <li style="display: inline-block;width:100%;color: #45ba9f;text-align: center;margin: 0 0 10px 0;background:url(../../mobile/images/btb.png);background-repeat: no-repeat;background-size: 50%;background-position: 50% 50%;">{$venues.floor_desc[0]}</li>
+                {foreach from=$venues.goods_ids item=goods name=key}
+                <li class="{if $smarty.foreach.key.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                    <a href="goods.php?id={$goods.goods_id}">
+                        <div class="default_div">
+                            <img src="/{$goods.original_img}"  width="100" height="100" alt=""/>
+                        </div>
+                        <div style="margin: 10px 10px 7px 10px;">
+                            <div style="display: inline-block;height: 20px;width: 100%;">
+                                {if $goods.overseas_logo neq ''}
+                                <div class="fl">{if $goods.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$goods.overseas_logo}.jpg"  style="margin: 0px 5px 0 0;width: 25px;height: 15px;"/>{/if}</div><div style="height: 18px;line-height: 18px;"><span style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$goods.country_name}品牌 官方直供</span></div>
+                                {/if}
+                            </div>
+                            <div class="p-name default_pname" >{$goods.goods_name}<span color="red">{$goods.goods_brief}</span> </div>
+                            <div class="p-detail" style="width:180px;height: 20px;"><span style="font-size:18px;font-family:Arial;font-weight:bold;color: #db2929;">{if $promote_price}{$goods.shop_price}{else}￥{$goods.shop_price}{/if}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {/foreach}
+            {/foreach}
+        </ul>
+    </div>
+</div>
+{include file='foot.html'}
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+            }
+        })
+    }
+    function search_session()
+    {
+        sessionStorage.setItem("page",1);
+        sessionStorage.setItem("top",0);
+    }
+</script>
+</body>
+</html>

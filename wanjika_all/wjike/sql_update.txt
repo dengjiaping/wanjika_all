@@ -1,0 +1,49 @@
+CREATE TABLE `ecs_user_members` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `level` tinyint(3) NOT NULL,
+  `levelname` varchar(60) NOT NULL,
+  `type` tinyint(3) NOT NULL,
+  `days` int(10) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `integralrate` float(6,1) default NULL,
+  `goods_id` int(10) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `goodsid` (`goods_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+CREATE TABLE `ecs_invoice` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `type` tinyint(3) NOT NULL,
+  `company_info` varchar(60),
+  `content` tinyint(3) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+alter table ecs_users add `is_members` tinyint(1) unsigned NOT NULL default '0';
+
+alter table ecs_users add `members_deadline` int(11) unsigned default '0';
+
+alter table ecs_users add `members_id` int(10) unsigned default '0';
+
+alter table ecs_users add `invoice_id` int(10) unsigned default '0';
+
+alter table ecs_order_info add `has_invoiced` tinyint(1) unsigned NOT NULL default '0';
+
+alter table ecs_user_members add `goods_id` int(10) NOT NULL default '0';
+
+alter table ecs_cart add `is_selected` tinyint(1) unsigned NOT NULL default '0';
+
+
+alter table ecs_goods add `salesnum` int(11) unsigned default '0';
+
+
+DROP TABLE IF EXISTS `ecs_freemembers_log`;
+CREATE TABLE `ecs_freemembers_log` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `user_id` mediumint(8) NOT NULL,
+  `has_get` tinyint(1) unsigned NOT NULL default '0',
+  `add_time` int(10) unsigned NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+

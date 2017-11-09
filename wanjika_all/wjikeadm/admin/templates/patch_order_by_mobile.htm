@@ -1,0 +1,30 @@
+<!-- $Id: msg_info.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
+{include file="pageheader.htm"}
+
+
+{if $send_fail}
+<ul style="padding:0; margin: 0; list-style-type:none; color: #CC0000;">
+<li style="border: 1px solid #CC0000; background: #FFFFCC; padding: 10px; margin-bottom: 5px;" >{$lang.mail_send_fail}</li>
+</ul>
+{/if}
+
+<div class="main-div">
+<form method="post" action="order.php?act=patch_order_by_mobile" name="theForm" enctype="multipart/form-data">
+<table border="0" width="98%">
+<tr><td> {if $posted eq "1"}{$show}{else}请按照要求上传订单文件<br>具体格式:"手机号,收货地址,商品id,商品数量"<br>如"13500000111,北京,10,1"
+{/if}</td></tr>
+  <tr>
+    <td align="right">固定格式文件:</td>
+    <td rowspan="1"><input name="order_file" type="file" value="" align="left"></td>
+  </tr>
+  <tr>
+  <td></td>
+    <td>
+<!--      <input type="hidden" name="parent_id" value="{$msg.reply_id}">-->
+      <input type="submit" name="orderlist" value="提交" class="button">
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+{include file="pagefooter.htm"}

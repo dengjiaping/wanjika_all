@@ -1,0 +1,100 @@
+{include file="pageheader.htm"}
+<!-- start add new country form -->
+<div class="main-div">
+  <form action="goods.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+  <table width="100%" id="general-table">
+      <tr>
+        <td class="label">商品国家名称:</td>
+        <td>
+          <input type='text' name='country_name' maxlength="20" value='{$country_info.country_name|escape:html}' size='27' /> <font color="red">*</font>
+        </td>
+      </tr>
+      <tr>
+          <td class="label">商品国家编码:</td>
+          <td>
+              <input type='text' name='country_code' maxlength="20" value='{$country_info.country_code|escape:html}' size='27' /> <font color="red">*</font>
+          </td>
+      </tr>
+      <tr>
+          <td class="label">商品国家图标:</td>
+          <td>
+              <input type="file" name="img_file_src" size="35" id="doc" onchange="javascript:setImagePreview();" />
+              <input name="img_src" type="hidden" value="{$country_info.country_img}" size="40" />
+          </td>
+      </tr>
+      <tr>
+          <td class="label">图标:</td>
+          <td>
+              <div id="localImag"><img id="preview" src="{$country_info.country_img|escape:html}" width="37" height="25" style="{if $country_info.country_img}display: block;{else}display: none;{/if} width: 37px; height: 25px;"></div>
+          </td>
+      </tr>
+      </table>
+      <div class="button-div">
+        <input type="submit" value="{$lang.button_submit}" />
+        <input type="reset" value="{$lang.button_reset}" />
+      </div>
+    <input type="hidden" name="act" value="{$form_act}" />
+    <input type="hidden" name="old_country_name" value="{$country_info.country_name}" />
+    <input type="hidden" name="old_country_code" value="{$country_info.country_code}" />
+    <input type="hidden" name="country_id" value="{$country_info.country_id}" />
+  </form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="JavaScript">
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+  validator = new Validator("theForm");
+    validator.required("country_name",      '商品国家为空');
+    validator.required("country_code",      '商品国家编码为空');
+//    validator.required("img_file_src",      '商品国家图标为空');
+  return validator.passed();
+}
+
+//下面用于图片上传预览功能
+function setImagePreview(avalue) {
+    var docObj=document.getElementById("doc");
+
+    var imgObjPreview=document.getElementById("preview");
+    if(docObj.files &&docObj.files[0])
+    {
+//火狐下，直接设img属性
+        imgObjPreview.style.display = 'block';
+        imgObjPreview.style.width = '37px';
+        imgObjPreview.style.height = '25px';
+//imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+//火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+        imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+    }
+    else
+    {
+//IE下，使用滤镜
+        docObj.select();
+        var imgSrc = document.selection.createRange().text;
+        var localImagId = document.getElementById("localImag");
+//必须设置初始大小
+        localImagId.style.width = "150px";
+        localImagId.style.height = "180px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+        try{
+            localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+            localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        }
+        catch(e)
+        {
+            alert("您上传的图片格式不正确，请重新选择!");
+            return false;
+        }
+        imgObjPreview.style.display = 'none';
+        document.selection.empty();
+    }
+    return true;
+}
+
+</script>
+{/literal}
+{include file="pagefooter.htm"}

@@ -1,0 +1,59 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="form-div">
+    <form action="mysms.php?act=virtuallist" method="post">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        手机号<input name="tel" type="text" id="tel" size="15" value={$tel}>
+        用户名<input name="user_name" type="text" id="user_name" size="15" value={$user_name}>
+        <select name="status" id="status">
+            <option value="-1">请选择</option>
+            <option value="0" {if $status==0 && $status != null}selected="selected"{/if}>失败</option>
+            <option value="1" {if $status==1}selected="selected"{/if}>成功</option>
+        </select>
+        <input type="submit" value="{$lang.button_search}" class="button" />
+    </form>
+</div>
+
+<div class="list-div" id="listDiv">
+{/if}
+    <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>用户ID</th>
+                <th>用户名</th>
+                <th>手机号</th>
+                <th>短信内容</th>
+                <th>卡类型</th>
+                <th>发送结果</th>
+            </tr>
+                {foreach from=$sendresult_list item=sendresult key=okey}
+            <tr>
+                <td align="center" valign="top" nowrap="nowrap">{$sendresult.user_id}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$sendresult.user_name}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$sendresult.tel}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$sendresult.content}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$sendresult.card_type}</td>
+                <td align="center" valign="top" nowrap="nowrap">{if $sendresult.status}成功{else}失败{/if}</td>
+            </tr>
+            {/foreach}
+        </table>
+    <table id="page-table" cellspacing="0">
+            <tr>
+                <td align="right" nowrap="true">
+                    {include file="page.htm"}
+                </td>
+            </tr>
+        </table>
+{if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

@@ -1,0 +1,76 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<div class="form-div">
+    <form action="grasp_datalist.php?act=list" method="post">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        商品名称<input name="goodsname" type="text" id="goodsname" size="15" value={$goodsname}>
+        抓取关键字<input name="keywords" type="text" id="keywords" size="15" value={$keywords}>
+        发送时间
+        <input type="text" name="start_time" maxlength="60" size="20"  id="start_time_id" value={$start_time} >
+        <input name="start_time_btn" type="button" id="start_time_btn" onclick="return showCalendar('start_time_id', '%Y-%m-%d %H:%M', '24', false, 'start_time_btn');" value="{$lang.btn_select}" class="button"/>
+        ~
+        <input type="text" name="end_time" maxlength="60" size="20"  id="end_time_id" value={$end_time} >
+        <input name="end_time_btn" type="button" id="end_time_btn" onclick="return showCalendar('end_time_id', '%Y-%m-%d %H:%M', '24', false, 'end_time_btn');" value="{$lang.btn_select}" class="button"/>
+        <input type="submit" value="{$lang.button_search}" class="button" />
+        <input name="download" type="submit" class="button" id="download" value="下载" />
+    </form>
+</div>
+
+<div class="list-div" id="listDiv">
+{/if}
+    <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>ID</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>商品排名</th>
+                <th>商品链接</th>
+                <th>商品排序类型</th>
+                <th>抓取关键字</th>
+                <th>抓取时间</th>
+            </tr>
+                {foreach from=$data_list item=goods}
+        <tr>
+            <td align="center">{$goods.id}</td>
+            <td align="center">{$goods.goods_name}</td>
+            <td align="center">{$goods.goods_price}</td>
+            <td align="center">{$goods.rank}</td>
+            <td align="center">{$goods.goods_link}</td>
+            <td align="center">{if $goods.sorttype eq 1}相关度{else}销量{/if}</td>
+            <td align="center">{$goods.grasp_keywords}</td>
+            <td align="center">{$goods.addtime}</td>
+        </tr>
+            {/foreach}
+        </table>
+    <table id="page-table" cellspacing="0">
+            <tr>
+                <td align="right" nowrap="true">
+                    {include file="page.htm"}
+                </td>
+            </tr>
+        </table>
+{if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+
+
+    function resend(id,tel,content)
+    {
+        var returnVal = window.confirm("是否重新发送？");
+        if(returnVal) {
+            window.location.href='sms.php?act=send_sms&send_num='+tel+'&msg='+content+'&smsid='+id;
+        }
+    }
+</script>
+{include file="pagefooter.htm"}
+{/if}

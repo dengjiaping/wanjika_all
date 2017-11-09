@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{if $keywords}{$keywords}{else}搜索{/if} - 万集客，万集客狂欢节，进口食品，进口零食，进口生活用品，进口母婴产品-万集客商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    {insert_scripts files='../../js/transport.js,../js/utils.js'}
+    {insert_scripts files='../common.js'}
+    <style type="text/css">
+        #slideDown{margin-top: 0;width: 100%;}
+        #slideDown1,#slideDown2{width: 100%;height: 20px;display: none;}
+        #slideDown1{height: 20px;}
+        #slideDown1>p,#slideDown2>p,#slideDown3>p{margin: 20px auto;text-align:center;font-size: 14px;}
+        .goback_top {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            width: 50px;
+            z-index: 999;
+        }
+        .goback_top .gb_img {
+            padding: 25px;
+            display: block;
+            background: url(/mobile/images/goback_top.png) no-repeat center center;
+            background-size: contain;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body {if $s_empty}style="background: #f5f5f5;"{/if}>
+{include file='head6.html'}
+{if $s_empty}
+    <div style="padding: 10px;">
+        {if $history}
+        <div style="display:block;overflow:hidden;padding: 10px 0;">
+            <p>最近搜索</p>
+            <div style="margin-top: 10px;">
+                <ul>
+                    {foreach from=$history item=record}
+                    <li style="float: left;padding:5px 7px;margin:0 10px 8px 0;border: 1px solid #efefef;border-radius:2px;background: #fff;"><a href="search.php?keywords={$record.keyword}">{$record.keyword}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        {/if}
+        {if $searchkeywords}
+        <div style="display:block;overflow:hidden;">
+            <p>热门搜索</p>
+            <div style="margin-top: 10px;">
+                <ul>
+                    {foreach from=$searchkeywords item=val}
+                    <li style="float: left;padding:5px 7px;margin:0 10px 8px 0;border: 1px solid #efefef;border-radius:2px;background: #fff;"><a href="search.php?keywords={$val}">{$val}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        {/if}
+    </div>
+{else}
+    <div style="display: block;height: 30px;line-height: 30px;">
+        <a style="margin: 0 20px;{if $smarty.get.last eq 1}color: #db2929;{else}color: #000;{/if}" href="search.php?keywords={$keywords}&last=1">默认</a>
+        <a style="margin-right: 20px;{if $smarty.get.salesnum eq 1}color: #db2929;{else}color: #000;{/if}" href="search.php?keywords={$keywords}&salesnum=1">销量</a>
+        <a style="margin-right: 20px;{if $smarty.get.new_goods eq 1}color: #db2929;{else}color: #000;{/if}" href="search.php?keywords={$keywords}&new_goods=1">新品</a>
+        {if $order_price neq 1}
+        <a style="margin-right: 20px;{if $smarty.get.order_price eq 2}color: #db2929;{else}color: #000;{/if}" href="search.php?keywords={$keywords}&order_price=1">价格</a>
+        {else}
+        <a style="margin-right: 20px;{if $smarty.get.order_price eq 1}color: #db2929;{else}color: #000;{/if}" href="search.php?keywords={$keywords}&order_price=2">价格</a>
+        {/if}
+    </div>
+    <div style="height:6px;background-color: #f2f0f1;"></div>
+
+    <div style="overflow:hidden;background-color: #f2f0f1;">
+        <div class="t-lists" >
+            <ul id="test">
+                {foreach from=$goods_data item=best_data name=goo}
+                <li style="float:{if $smarty.foreach.goo.index % 2 ==0}left{else}right{/if};margin-bottom:8px;width: 49%;background-color: #fff;">
+                    <a href="goods.php?id={$best_data.goods_id}">
+                        <div style="border-bottom: 0px solid #d0d0d0;text-align: center;margin: 10px 10px 0px;padding-bottom: 10px;">
+                            <img src="/{$best_data.goods_thumb}"  width="
+                            " height="100" alt=""/>
+                        </div>
+                        <div style="margin: 10px 10px 7px 10px;">
+                            <div style="display: inline-block;height: 20px;width: 100%;">
+                                {if $best_data.is_overseas eq 1}
+                                <div class="fl">{if $best_data.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$best_data.overseas_logo}.jpg"  style="margin: 0px 5px 0 0;width: 25px;height: 15px;"/>{/if}</div><div style="height: 18px;line-height: 18px;"><span style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$best_data.overseas_logo_name}品牌 官方直供</span></div>
+                                {/if}
+                            </div>
+                            <div class="p-name" style="overflow: hidden;text-overflow: -o-ellipsis-lastline;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;margin-bottom:5px;height: 36px;line-height: 18px;color: #3C3C3C;font-size: 1em;" ><div style="height: 36px;">{$best_data.name}</div><span color="red">{$best_data.goods_brief}</span> </div>
+                            <div class="p-detail" style="width:180px;height: 20px;"><span style="font-size:18px;font-family:Arial;font-weight:bold;color: #db2929;">{if $promote_price}{$best_data.price}{else}{$best_data.price}{/if}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {foreachelse}
+                暂无此类商品
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    {if $slidedown neq 1}
+    <div id="slideDown">
+        <div id="slideDown1" style="display: block;">
+            <p>上滑加载</p>
+        </div>
+        <div id="slideDown2">
+            <p>正在加载 ...</p>
+        </div>
+        <div id="slideDown3" style="display: none;">
+            <p>暂无更多内容</p>
+        </div>
+    </div>
+    {/if}
+    <input type="hidden" id="keywords" value="{$keywords}" />
+    <input type="hidden" id="pages1" value="{$pages1}" />
+
+    <div class="goback_top" id="goback_top" style="display: none;">
+        <a target="_self" href="#" class="gb_img"></a>
+    </div>
+    {include file='foot.html'}
+{/if}
+</body>
+<script type="text/javascript">
+    var temppage= sessionStorage.getItem("page");
+    var temptop= sessionStorage.getItem("top");
+    var pages2 = document.getElementById("pages1").value;
+    if(temppage > 1)
+    {
+        var scroll_keywords = document.getElementById("keywords");
+        for(i=2;i<=temppage;i++)
+        {
+            if(i<=pages2)
+            {
+                Ajax.call('search.php?', "keywords="+scroll_keywords.value+'&search_load=1&page='+i, returnPage, 'POST', 'JSON',false);
+            }
+        }
+        page = temppage;
+    }
+    window.onscroll = function () {
+        var tempscrolltop = getDocumentTop();
+        sessionStorage.setItem("top",tempscrolltop);
+        var temptop= sessionStorage.getItem("top");
+
+        if(getDocumentTop()>getWindowHeight())
+        {
+            document.getElementById("goback_top").style.display = "block";
+        }
+        else
+        {
+            document.getElementById("goback_top").style.display = "none";
+        }
+        //监听事件内容
+        if(getScrollHeight() == getWindowHeight() + getDocumentTop()){
+            search_load();
+        }
+//        else
+//        {
+//            var page_number = (getDocumentTop()+getWindowHeight())/1310;
+//            if( (parseInt(page_number)+0.220) >page_number.toFixed(3) )
+//            {
+//                sessionStorage.setItem("page",parseInt(page_number));
+//            }
+//            else
+//            {
+//
+//                sessionStorage.setItem("page",parseInt(page_number)+1);
+//            }
+//        }
+    }
+    window.onload = scroll_to;
+    function scroll_to()
+    {
+        window.scrollTo(0,temptop);
+    }
+</script>
+</html>

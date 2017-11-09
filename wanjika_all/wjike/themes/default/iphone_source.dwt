@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>苹果Apple-移动电源</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.iphone_6s_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#ff9900; }
+.iphone_6s_all .iphone_6s_one{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/iphone_6s_01.jpg) repeat-x top center;}
+.iphone_6s_all .iphone_6s_two{ width:100%; overflow:hidden; margin:0 auto; background-color:#fff7eb;}
+.iphone_6s_all .iphone_6s_three{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/iphone_6s_13.jpg) repeat-x top center;}
+
+.iphone_6s_all .iphone_6s_01{ width:1200px; height:364px; margin:0 auto;}
+.iphone_6s_all .iphone_6s_02{ width:1200px; height:364px; margin:0 auto;}
+.iphone_6s_all .iphone_6s_03{ width:1200px; height:356px; margin:0 auto;}
+.iphone_6s_all .iphone_6s_04{ width:100%; height:311px; margin:0 auto; background:url(images/adimages/iphone_6s_06.jpg) no-repeat center center;}
+.iphone_6s_all .iphone_6s_05{ width:100%; height:245px; margin:0 auto; background:url(images/adimages/iphone_6s_07.jpg) no-repeat center center;}
+.iphone_6s_all .iphone_6s_06{ width:1200px; height:760px; margin:0 auto;}
+.iphone_6s_all .iphone_6s_07{ width:100%; height:149px; margin:0 auto;}
+.iphone_6s_all .iphone_6s_08{ width:100%; height:408px; margin:0 auto;}
+.iphone_6s_all .iphone_6s_09{ width:1200px; height:769px; margin:0 auto;}
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--买手挑好货 手机购start-->
+<div class="iphone_6s_all">
+
+	<div class="iphone_6s_one">
+        <div class="iphone_6s_01"><img src="images/adimages/iphone_6s_02.jpg" /></div>   
+        <div class="iphone_6s_02"><img src="images/adimages/iphone_6s_04.jpg" /></div>  
+        <div class="iphone_6s_03">
+            <a href="goods.php?id=9655"><img src="images/adimages/iphone_6s_05.jpg" /></a>
+        </div> 
+    </div> 
+    
+    <div class="iphone_6s_04"></div> 
+    <div class="iphone_6s_05"></div> 
+        
+	<div class="iphone_6s_two">
+    	<div class="iphone_6s_06"><img src="images/adimages/iphone_6s_09.jpg" usemap="#Map" border="0" />
+          <map name="Map" id="Map">
+            <area shape="rect" coords="18,69,379,744" href="goods.php?id=9653" />
+            <area shape="rect" coords="430,69,771,740" href="goods.php?id=9650" />
+            <area shape="rect" coords="811,73,1172,739" href="goods.php?id=9647" />
+          </map>
+    	</div>
+    </div>
+    
+    <div class="iphone_6s_07"><img src="images/adimages/iphone_6s_11.jpg" /></div>   
+    <div class="iphone_6s_08"><img src="images/adimages/iphone_6s_12.jpg" /></div>  
+    
+	<div class="iphone_6s_three">
+    	<div class="iphone_6s_09"><img src="images/adimages/iphone_6s_14.jpg" usemap="#Map2" border="0" />
+          <map name="Map2" id="Map2">
+            <area shape="rect" coords="14,152,271,718" href="goods.php?id=10034" />
+            <area shape="rect" coords="312,153,576,719" href="goods.php?id=10046" />
+            <area shape="rect" coords="602,153,868,721" href="goods.php?id=10035" />
+            <area shape="rect" coords="884,153,1165,721" href="goods.php?id=10045" />
+          </map>
+    	</div>
+    </div>
+    
+    <div class="iphone_6s_10"><img src="images/adimages/iphone_6s_17.jpg" /></div>   
+    <div class="iphone_6s_11">
+    	<a href="vip.php?act=vip_info"><img src="images/adimages/iphone_6s_18.jpg" /></a>
+    </div> 
+     
+</div>
+
+
+
+<!--买手挑好货 手机购end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<!-- $Id: link_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+{include file="pageheader.htm"}
+<div class="main-div">
+	<form action="moviecode.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+		<table width="100%" id="general-table">
+			<tr>
+				<td class="label">供应商名</td>
+				<td>
+					<input type="text" name="applier_name" value="{$applier_name|escape:html}" size="30"  />
+				</td>
+			</tr>
+			<tr>
+				<td class="label">对应的后台管理员id，多个用“,”分开</td>
+				<td>
+					<input type="text" name="admin_ids" value="{$admin_ids|escape:html}" size="30"  />
+				</td>
+			</tr>
+				<td class="label">&nbsp;</td>
+				<td>
+					<input type="submit" value="{$actstr}" class="button" />
+					<input type="hidden" name="act" value="{$act}" />
+					<input type="hidden" name="applier_id" value="{$applier_id}" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+<script language="JavaScript">
+{literal}
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+    validator = new Validator("theForm");
+    validator.required("applier_name",      link_name_empty);
+    return validator.passed();
+}
+
+{/literal}
+//-->
+</script>
+{include file="pagefooter.htm"}

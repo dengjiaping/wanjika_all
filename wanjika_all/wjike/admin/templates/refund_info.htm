@@ -1,0 +1,91 @@
+<!-- $Id: order_info.htm 17060 2010-03-25 03:44:42Z liuhui $ -->
+
+{include file="pageheader.htm"}
+{insert_scripts files="topbar.js,../js/utils.js,listtable.js,selectzone.js,../js/common.js"}
+
+<div class="list-div" style="margin-bottom: 5px">
+<table width="100%" cellpadding="3" cellspacing="1">
+  <tr>
+    <th colspan="9" scope="col">{$lang.goods_info}</th>
+    </tr>
+  <tr>
+    <td scope="col"><div align="center"><strong>{$lang.goods_name_brand}</strong></div></td>
+    <td scope="col"><div align="center"><strong>{$lang.goods_sn}</strong></div></td>
+    <td scope="col"><div align="center"><strong>可退单价</strong></div></td>
+    <td scope="col"><div align="center"><strong>可退数量</strong></div></td>
+    <td scope="col"><div align="center"><strong>{$lang.subtotal}</strong></div></td>
+  </tr>
+  {foreach from=$goods_list item=goods}
+  <tr>
+    <td>{$goods.goods_name}</td>
+    <td>{$goods.goods_sn}</td>
+    <td><div align="right">{$goods.formated_refund_price}</div></td>
+    <td><div align="right">{$goods.refund_num}
+    </div></td>
+    <td><div align="right">{$goods.formated_subtotal}</div></td>
+  </tr>
+  {/foreach}
+</table>
+</div>
+
+
+<form name="theForm" action="order.php?act=step_post&step=refund" method="post" onsubmit="return changeNum({$goods.refund_num})">
+    <div class="list-div">
+        <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th width="150" align="left">退款商品数量:</th>
+                <td><input id="refund_goods_num" name="refund_goods_num" type="text" value="" onkeydown="onlyNum();" style="ime-mode:Disabled"/><span style="margin-left:20px;color: red;">最大退款商品数量：{$goods.refund_num}</span></td>
+            </tr>
+            <tr>
+                <th align="left">安抚费金额:</th>
+                <td><input name="comfort_money" type="text" value=""/></td>
+            </tr>
+            <tr>
+                <th align="left">安抚费原因:</th>
+                <td><textarea cols="32" rows="6" name="comfort_reason"></textarea></td>
+            </tr>
+        </table>
+    </div>
+    <input name="order_sn" type="hidden" value="{$order_sn}"/>
+    <input name="user_id" type="hidden" value="{$user_id}"/>
+    <input name="refund_goods_id" type="hidden" value="{$goods.goods_id}"/>
+    <input name="refund_discount" type="hidden" value="{$goods.refund_discount}"/>
+    <input name="refund_bonus" type="hidden" value="{$goods.refund_bonus}"/>
+    <input name="refund_gift" type="hidden" value="{$goods.refund_gift}"/>
+    <input name="refund_money" type="hidden" value="{$goods.refund_money}"/>
+    <input name="refund_num" type="hidden" value="{$goods.refund_num}"/>
+    <input name="rec_id" type="hidden" value="{$goods.rec_id}"/>
+    <div align="center">
+        <p>
+            <input name="" type="submit" class="button" value="提交退款" />
+        </p>
+    </div>
+</form>
+
+<script type="text/javascript">
+    /**
+     *检查退货数量
+     */
+    function changeNum(t)
+    {
+        var n = document.getElementById("refund_goods_num").value;
+        n = parseInt(n);
+        if(n>t)
+        {
+            alert("超出最大退货数量");
+            return false;
+        }
+        else if(n==0)
+        {
+            alert("请输入退货数量");
+            return false;
+        }
+        return true;
+    }
+    function onlyNum() {
+        if(!(event.keyCode==46)&&!(event.keyCode==8)&&!(event.keyCode==37)&&!(event.keyCode==39))
+            if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
+                event.returnValue=false;
+    }
+</script>
+{include file="pagefooter.htm"}

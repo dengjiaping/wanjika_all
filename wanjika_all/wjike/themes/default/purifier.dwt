@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>买99元VIP会员,即送价值199元的日本BLUA便携空气净化器一台</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.purifier_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/purifier_01.jpg) no-repeat center center #fff; }
+.purifier_all .purifier_one{ width:100%; overflow:hidden; margin:0 auto; }
+.purifier_all .purifier_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.purifier_all .purifier_01{ width:1200px; height:367px; background:url(images/adimages/purifier_02.jpg) no-repeat center center; margin:0 auto; }
+.purifier_all .purifier_02{ width:1200px; height:366px; background:url(images/adimages/purifier_04.jpg) no-repeat center center; margin:0 auto; }
+.purifier_all .purifier_03{ width:1200px; height:1689px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--买99元VIP会员,即送价值199元的日本BLUA便携空气净化器一台start-->
+<div class="purifier_all">
+	<div class="purifier_one">
+        <div class="purifier_01"></div>
+        <div class="purifier_02"></div>
+    </div>
+
+    <div class="purifier_two">
+        <div class="purifier_03">
+        	<img src="images/adimages/purifier_05.jpg" />
+        	<img src="images/adimages/purifier_06.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="78,43,408,400" href="goods.php?id=10157" target="_blank" />
+              <area shape="rect" coords="431,38,771,398" href="goods.php?id=10159" target="_blank" />
+              <area shape="rect" coords="786,39,1148,398" href="goods.php?id=10158" target="_blank" />
+            </map>
+        	<a href="vip.php?act=vip_info"><img src="images/adimages/purifier_07.jpg" /></a>
+        	<img src="images/adimages/purifier_08.jpg" />
+        </div>
+    </div>
+
+</div>
+<!--买99元VIP会员,即送价值199元的日本BLUA便携空气净化器一台end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

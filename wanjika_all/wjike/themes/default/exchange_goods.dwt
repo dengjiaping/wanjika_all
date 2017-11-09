@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<script type="text/javascript">
+function $id(element)
+{
+  return document.getElementById(element);
+}
+//切屏--是按钮，_v是内容平台，_h是内容库
+function reg(str)
+{
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+
+  for(var i=0;i<bt.length;i++)
+  {
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+
+    bt[i].onclick=function()
+    {
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++)
+      {
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+
+function del(){
+    var num = document.getElementById("number");
+    var n = parseInt(num.value);
+    if(n>99)
+    {
+        num.value=99;
+    }
+    else
+    {
+        if(n-1<=0){
+                num.value=1;
+        }else{
+                num.value = n-1;
+        }
+    }
+}
+function add(t){
+    var num = document.getElementById("number");
+    var n = parseInt(num.value);
+    if(num.value >= 99)
+    {
+        num.value=99;
+    }
+    else
+    {
+        num.value = n+1;
+    }
+}
+</script>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--当前位置 start-->
+<div class="block box">
+  <div id="ur_here">
+    <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+  </div>
+</div>
+<!--当前位置 end-->
+<div class="blank"></div>
+
+<div class="block clearfix">
+<div class="vipbuy_enter">
+{insert_scripts files='mzp-packed.js'}
+<div class="ve_left">
+    <div class="pic_img">
+          <div class="preview">
+              <!--放大镜代码start -->
+              <div class="box_fdj">
+                  <div class="left-pro">
+                      <div class="t1">
+                          <div id="showArea">
+                          <!-- {foreach from=$pictures item=picture}-->
+                              <a href="{$picture.img_url}" rel="zoom1" rev="{$picture.img_url}"><img src="{if $picture.thumb_url}{$picture.thumb_url}{else}{$picture.img_url}{/if}" {$goods.goods_name} style="width:90px; height:90px;"  /></a>
+                          <!--{/foreach}-->
+                          </div>
+                      </div>
+                      <div class="t2">
+                        <a href="{$goods.original_img}" id="zoom1" class="MagicZoom">
+                            <img src="{$goods.original_img}" id="main_img" alt="{$goods.goods_name|escape:html}" class="main_img" style="width:428px; height:428px;" />
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- 放大镜代码end -->
+          </div>
+      </div>
+      <div class="collection">
+          <!-- JiaThis Button BEGIN -->
+          <div class="jiathis_style">
+            <span class="jiathis_txt">分享：</span>
+            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+          </div>
+          <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+          <!-- JiaThis Button END -->
+          <a class="lt" id="coll_s" style="{if $collect_goods}display:block;{else}display:none;{/if}" class="coll_pro" href="javascript:collect({$goods.goods_id})"><b class="coll_s"></b><em>已收藏</em></a>
+          <a class="lt" id="coll" style="{if !$collect_goods}display:block;{else}display:none;{/if}" class="coll_pro" href="javascript:collect({$goods.goods_id})"><b class="coll"></b><em>加入收藏</em></a>
+          <div class="sc_success" style="display:none;">
+            <a href="#" class="sc_closed"></a>
+            <p class="sc_suc">收藏成功！</p>
+              <a href="#" class="sc_see">查看我的收藏</a>
+          </div>
+      </div>
+    </div>
+<div class="price_btn_right">
+  {if $goods.is_overseas eq 1}
+          <div class="oh">{if $goods.overseas_logo neq 'taiwan'}<img class="fl" src="images/{$goods.overseas_logo}.jpg"  style="margin-right: 13px;"/>{/if}<p style="float: left;margin-top: 4px;color: #37af93;">{$goods.overseas_logo_name}品牌 官方直供</p></div>
+          <img src="images/bsc_jb.png"  style="position:absolute;right:21px;top:1px;"/>{/if}
+    <div class="pr" style="padding-bottom:5px;"><div class="pb_tl">{$goods.goods_style_name}<p style="font-size: 12px;margin-top: 16px;color:#333333;">{$goods.goods_brief}</p></div>
+
+      </div>
+    <div class="pr2" style="background-color:#f9f9f9;">
+          <div class="pc">{$lang.exchange_integral}<i>{$goods.exchange_integral}</i></div>
+          <div>很划算？加入会员天天低价>><a href="vip.php?act=vip_info" style="color:#d22147;">加入会员</a></div>
+          <!-- {if $cfg.show_goodssn} 显示商品货号-->
+              <div class="infor1">
+                  <div class="ts"><strong>{$lang.goods_sn}</strong></div>
+                  <div class="pay">{$goods.goods_sn}</div>
+              </div>
+          <!-- {/if} -->
+          <!-- {if $goods.goods_brand neq "" and $cfg.show_brand} 显示商品品牌-->
+              <div class="infor1">
+                  <div class="ts"> <strong>{$lang.goods_brand}</strong></div>
+                  <div class="pay"><a href="http://www.wjike.com/b{$goods.brand_id}.html">{$goods.goods_brand}</a></div>
+              </div>
+          <!--{/if}-->
+      </div>
+          <!-- {if $goods_collect neq ""} 显示商品规格-->
+          <div id="collect">
+              <!-- {foreach from=$goods_collect item=goods_value name=val} -->
+              <div class="infor1" style="line-height:32px;width:580px;">
+                  <div class="ts collect_name"><strong>{$goods_value.ca_name}：</strong></div>
+                  <div style="float:right;width:510px;">
+                  <!-- {foreach from=$goods_value.attrv_array item=value key=key name=v} -->
+                      {if $key eq $goods_value.goods_attrid}
+                          <div class="item selected" clstag="{$key}">
+                              <a href="javascript:;" onclick="selected(this)">{$value}</a>
+                          </div>
+                      {else}
+                          <div class="item" clstag="{$key}">
+                              <a href="javascript:;" onclick="selected(this)">{$value}</a>
+                          </div>
+                      {/if}
+                  <!-- {/foreach} -->
+                  </div>
+              </div>
+              <!-- {/foreach} -->
+          </div>
+          <!--{/if}-->
+    <div class="pr2 pr3">
+    <!--{if $goods.goods_number lt 1}-->
+            <div class="buy_btn"><div class="vipbuy_btn" style="background-color: #ccc;">{$lang.stock_up}</div></div>
+            <!--{elseif $goods.is_on_sale eq 0}-->
+            <div class="buy_btn"><div class="vipbuy_btn" style="background-color: #ccc;">已下架</div></div>
+            <!--{else}-->
+                <div style="display: block;margin-bottom: 10px;height:32px;">
+                <div style="float:left;width:70px;"><strong>选择数量：</strong></div>
+        		<div class="up_down_num">
+                	<a class="pm" href="javascript:;" onclick="del()" ><i class="minus"></i></a>
+                    <input name="number" type="text" id="number" size="4" onkeyup="changeNum(this,{$goods.max_number})" value="1" placeholder="1" class="num">
+                    <a class="pm" href="javascript:;" onclick="add({$goods.max_number})" ><i class="plus"></i></a>
+                </div>
+                </div>
+        		<div class="buy_btn">
+                    <a id="onlyone" class="vipbuy_btn" href="javascript:addToCart3({$goods.goods_id})">立即兑换</a>
+                </div>
+            <!--{/if}-->
+      </div>
+  <div class="goback_top">
+    <a target="_self" href="#tp" class="gb_img"></a>
+  </div>
+  </div>
+
+</div>
+<div class="pl_list">
+<script type="text/javascript">
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+function setTabs(name,cursel,n){
+var i=1;
+for(i=0;i<=n;i++){
+var menus=document.getElementById(name+i);
+menus.className=i==cursel?"hover":"";
+}
+}
+</script>
+   <div class="searchRext list_two">
+
+      <div class="select_card">
+        <ul>
+            <li><a onclick="setTab('news',1,4)" class="hover" id="news1">商品详情</a></li>
+            <li><a onclick="setTab('news',2,4)" class="" id="news2" >规格参数</a></li>
+            <li><a onclick="setTab('news',3,4)" class="" id="news3">售后服务</a></li>
+            {if $goods.is_overseas eq 1}<li><a onclick="setTab('news',4,4)" class="" id="news4">海淘须知</a></li>{/if}
+          </ul>
+      </div>
+
+      <div id="con_news_1" class="detail_pic" style="display: block;">
+        <blockquote>
+              {$goods.goods_desc}
+          </blockquote>
+      </div>
+
+      <div style="display: none;" id="con_news_2" class="detail_pic">
+      <blockquote>
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#dddddd">
+              <!-- {foreach from=$properties item=property_group key=key} -->
+              <tr>
+                <th colspan="2" bgcolor="#FFFFFF">{$key|escape}</th>
+              </tr>
+              <!-- {foreach from=$property_group item=property} -->
+              <tr>
+                <td bgcolor="#FFFFFF" align="left" width="30%" class="f1">[{$property.name|escape:html}]</td>
+                <td bgcolor="#FFFFFF" align="left" width="70%">{$property.value}</td>
+              </tr>
+              <!-- {/foreach}-->
+              <!-- {/foreach}-->
+          </table>
+      </blockquote>
+      </div>
+      <div style="display: none;" id="con_news_3" class="detail_pic">
+          <blockquote>
+              <img src="images/fwbz.jpg" alt="服务保障">
+          </blockquote>
+      </div>
+      {if $goods.is_overseas eq 1}
+      <div style="display: none;" id="con_news_4" class="detail_pic">
+          <blockquote>
+              <img src="images/overseasnotice.jpg" alt="海淘须知">
+          </blockquote>
+      </div>
+      {/if}
+   </div>
+</div>
+<div class="blank5"></div>
+
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+  <div class="box_1">
+    <div class="links clearfix">
+      <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+        <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+      <!--结束图片类型的友情链接{/foreach}-->
+      <!-- {if $txt_links} -->
+        <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+          [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+        <!--结束文字类型的友情链接{/foreach}-->
+      <!-- {/if} -->
+    </div>
+  </div>
+</div>
+<!--{/if}-->
+<div class="blank"></div>
+<!--友情链接 end-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+
+<script type="text/javascript">
+<!-- {literal} -->
+onload = function()
+{
+  fixpng();
+}
+<!-- {/literal} -->
+</script>
+</html>

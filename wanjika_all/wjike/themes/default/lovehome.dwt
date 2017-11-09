@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱家爱生活 从万集客开始</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.lovehome_all{ width:100%; margin:0 auto; overflow:hidden; }
+.lovehome_all .lovehome_01{ width:100%; height:107px; background:url(images/lovehome_01.jpg) no-repeat center center;}
+.lovehome_all .lovehome_02{ width:100%; height:107px; background:url(images/lovehome_02.jpg) no-repeat center center;}
+.lovehome_all .lovehome_03{ width:100%; height:108px; background:url(images/lovehome_03.jpg) no-repeat center center;}
+.lovehome_all .lovehome_04{ width:100%; height:107px; background:url(images/lovehome_04.jpg) no-repeat center center;}
+.lovehome_all .lovehome_05{ width:100%; height:107px; background:url(images/lovehome_05.jpg) no-repeat center center;}
+
+.lovehome_all .lovehome_06{ width:100%; height:106px; background-color:#ff8cb8; }
+.lovehome_all .lovehome_061{ width:1200px; height:106px; margin:0 auto;}
+.lovehome_all .lovehome_07{ width:100%; height:646px; background:url(images/lovehome_74.jpg) no-repeat center center; }
+.lovehome_all .lovehome_071{ width:1200px; height:417px; margin:0 auto; padding:114px 0;}
+
+.lovehome_all .lovehome_06_1{ width:100%; height:106px; background-color:#e84756; }
+
+.lovehome_all .lovehome_071 ul{ padding: 0 117px;}
+.lovehome_all .lovehome_071 li{ width:302px; height:399px; float:left;}
+
+.lovehome_all .lovehome_08{ width:100%; height:781px; background-color:#ffe3ec; }
+.lovehome_all .lovehome_09{ width:100%; height:781px; background:url(images/lovehome_85.jpg) no-repeat center center; }
+.lovehome_all .lovehome_091{ width:1200px; height:700px; margin:0 auto; padding:40px 0;}
+.lovehome_all .lovehome_091 ul{ padding: 0 126px;}
+.lovehome_all .lovehome_091 li{ width:296px; height:335px; float:left;}
+
+.lovehome_all .lovehome_10{ width:100%; height:350px; background-color:#ffe6ee; }
+.lovehome_all .lovehome_101{ width:1200px; height:283px; margin:0 auto; padding:33px 0;}
+.lovehome_all .lovehome_101 ul{ padding: 0 96px;}
+.lovehome_all .lovehome_101 li{ width:499px; height:283px; float:left;}
+.right_10{ margin-right:10px;}
+.bottom_10{ margin-bottom:10px;}
+.right_30{ margin-right:30px;}
+.bottom_30{ margin-bottom:30px;}
+</style>
+
+
+</head>
+
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--美好生活 从厨房开始start-->
+<div class="lovehome_all">
+	<div class="lovehome_01"></div>
+	<div class="lovehome_02"></div>
+	<div class="lovehome_03"></div>
+	<div class="lovehome_04"></div>
+	<div class="lovehome_05"></div>
+    
+	<div class="lovehome_06">
+    	<div class="lovehome_061"><img src="images/lovehome_07.png" /></div>
+    </div>
+    <div class="lovehome_07">
+    	<div class="lovehome_071">
+        	<ul>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=9390"><img src="images/lovehome_08.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=9394"><img src="images/lovehome_10.jpg" /></a></li>
+            	<li><a href="http://www.wjike.com/goods.php?id=9397"><img src="images/lovehome_12.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="lovehome_06_1">
+    	<div class="lovehome_061"><img src="images/lovehome_13.png" /></div>
+    </div>
+            
+            
+    <div class="lovehome_08">
+    	<div class="lovehome_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=9326"><img src="images/lovehome_18.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=9325"><img src="images/lovehome_21.jpg" /></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=9359"><img src="images/lovehome_23.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=9399"><img src="images/lovehome_28.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=9402"><img src="images/lovehome_29.jpg" /></a></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=9342"><img src="images/lovehome_31.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="lovehome_06">
+    	<div class="lovehome_061"><img src="images/lovehome_14.png" /></div>
+    </div>
+                        
+    <div class="lovehome_09" style="background-color:#ae2f5a;">
+    	<div class="lovehome_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=1882"><img src="images/lovehome_36.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=9673"><img src="images/lovehome_39.jpg" /></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=1654"><img src="images/lovehome_41.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=1646"><img src="images/lovehome_43.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=9367"><img src="images/lovehome_44.jpg" /></a></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=9365"><img src="images/lovehome_45.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="lovehome_06_1">
+    	<div class="lovehome_061"><img src="images/lovehome_15.png" /></div>
+    </div>
+    
+                
+    <div class="lovehome_08">
+    	<div class="lovehome_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=4607"><img src="images/lovehome_46.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=9562"><img src="images/lovehome_47.jpg" /></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=9574"><img src="images/lovehome_48.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=9578"><img src="images/lovehome_52.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=9579"><img src="images/lovehome_53.jpg" /></a></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=1739"><img src="images/lovehome_54.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>    
+    
+	<div class="lovehome_06">
+    	<div class="lovehome_061"><img src="images/lovehome_16.png" /></div>
+    </div>
+            
+    <div class="lovehome_09" style="background-color:#ae2f5a;">
+    	<div class="lovehome_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=4283"><img src="images/lovehome_58.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="http://www.wjike.com/goods.php?id=4355"><img src="images/lovehome_59.jpg" /></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=5104"><img src="images/lovehome_60.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=5103"><img src="images/lovehome_64.jpg" /></a></li>
+            	<li class="right_30"><a href="http://www.wjike.com/goods.php?id=7786"><img src="images/lovehome_65.jpg" /></a></li>
+            	<li class="bottom_30"><a href="http://www.wjike.com/goods.php?id=8571"><img src="images/lovehome_66.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+            
+    <div class="lovehome_10">
+    	<div class="lovehome_101">
+        	<ul>
+            	<li class="right_10 bottom_10"><a href="http://www.wjike.com/category.php?id=44&brand=79&price_min=0&price_max=0"><img src="images/lovehome_71.jpg" /></a></li>
+            	<li class="bottom_10"><a href="http://www.wjike.com/category.php?id=44&brand=291&price_min=0&price_max=0"><img src="images/lovehome_73.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</div>
+<!--美好生活 从厨房开始end-->
+
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

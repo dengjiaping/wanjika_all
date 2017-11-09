@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+<style>
+.mr {margin-right:46px;}
+iframe img {border:0}
+</style>
+</head>
+<body class="w1200">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div style="height:717px;min-width:990px;overflow:hidden;background:url(../images/alliance-center.jpg) no-repeat scroll center top #AE0F13;"></div>
+<div style="background:#c50514;">
+	<div style="width:1000px;margin-left:auto;margin-right:auto;margin-top:-167px;">
+		<div style="margin-bottom:40px;">
+			<span class="mr">
+				<iframe id="f" width="300px" height="250px" src= "http://union.yihaodian.com/link_make/viewPicInfo.do?imgSize=300x250&adPositionId=9522&truckerU=108258981" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" > </iframe>
+			</span>
+			<span class="mr">
+				<iframe width="300" height="250" src="http://www.taobao.com/go/rgn/union/link_tmall.php?size=300x250&pid=mm_46334211_0_0" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" name="alimamaifrm"></iframe>
+			</span>
+			<span>
+				<iframe width="300" height="250" src="http://www.taobao.com/go/rgn/union/link_3c.php?size=300x250&pid=mm_46334211_0_0" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" name="alimamaifrm"></iframe>
+			</span>
+		</div>
+		<div style="margin-bottom:40px;">
+			<span class="mr">
+				<iframe width="300" height="250" src="http://www.taobao.com/go/rgn/union/link_temai.php?size=300x250&pid=mm_46334211_0_0" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" name="alimamaifrm"></iframe>
+			</span>
+			<span class="mr">
+				<iframe id="f" src="http://union.vancl.com/SelfAdapterAD/SelfAdapterADRectangle.aspx?source=wanjike&w=300&h=250&t=1" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" style="height: 252px; width: 302px; "></iframe>
+			</span>
+			<span>
+				<iframe src="http://rcm-cn.amazon-adsystem.com/e/cm?t=wanjike-23&o=28&p=12&l=ur1&category=books&banner=0ZZ6QB4NZNPBBGFE1XG2&f=ifr" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+			</span>
+		</div>
+		<div style="margin-bottom:40px;">
+			<span class="mr">
+				<iframe src="http://rcm-cn.amazon-adsystem.com/e/cm?t=wanjike-23&o=28&p=12&l=ur1&category=automotive&banner=1696FR0WC1T9SYG8NQR2&f=ifr" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+			</span>
+			<span class="mr">
+				<iframe src="http://rcm-cn.amazon-adsystem.com/e/cm?t=wanjike-23&o=28&p=12&l=ur1&category=sha&banner=10TMH85P9VGGH48B5WG2&f=ifr" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+			</span>
+			<span>
+				<a href='http://click.union.vipshop.com/redirect.php?url=eyJ1Y29kZSI6Imd5MnZkc3Z2Iiwic2NoZW1lY29kZSI6ImRobWUxcW5kIiwiYWRjb2RlIjoiczlwYmo3dDUifQ==' target='_blank'><img src='http://a.vimage4.com/upload/actpics/cps/0/1309/188/45nmat9z3lwfliu.jpg' style="width: 300px; height: 250px;"></img></a>
+			</span>
+		</div>
+		<div style="margin-bottom:40px;">
+			<span class="mr">
+				<a href="http://click.union.jd.com/JdClick/?unionId=0&t=2&to=http://www.jd.com/electronic.html" target="_blank"><img src="http://show.union.jd.com/source/JD/JD-A-300x250.gif" /></a>
+			</span>
+			<span class="mr">
+				<a href="http://track.lefeng.com/track.jsp?aid=1048558&url=http://www.lefeng.com/" target="_blank"><img src="http://img1.imglafaso.com/unionImageRepository/2013/08/28/20130828061216.jpg" /></a>
+			</span>
+			<span>
+				<a href='http://zhadan.newegg.com.cn/?cm_mmc=CPS-_-wanjike-_-wanjike-_-zhadan' target='_blank'><img width='300px' height='250px' src='http://c1.neweggimages.com.cn/NeweggPic2/Marketing/201210/cps/1011/cps300x250.jpg' border='0' /></a>
+			</span>
+		</div>
+		<div style="margin-bottom:40px;">
+			<span class="mr">
+				<script charset="gbk" type="text/javascript" src="http://union.dangdang.com/adapi/sc?id=CzXGQRalnM&from=P-319045"></script>
+			</span>
+			<span class="mr">
+				<script type='text/javascript' language='javascript'>sid = '1660'; wid = '1717'; cid = '830'; w = '300';h = '250';feedback=""</script><script src='http://cps.gome.com.cn/Content/c.js' type='text/javascript'></script>
+			</span>
+			<span>
+				<script type='text/javascript' language='javascript'>sid = '1660'; wid = '1717'; cid = '829'; w = '300';h = '250';feedback=""</script><script src='http://cps.gome.com.cn/Content/c.js' type='text/javascript'></script>
+			</span>
+		</div>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

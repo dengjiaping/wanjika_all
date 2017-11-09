@@ -1,0 +1,88 @@
+<style>
+
+/****************热销品牌 start****************/
+.hotbrand{ width:1200px; height:155px; margin-top:20px;}
+.hotbrand .entrance{ width:216px; height:155px; float:left;}
+.hotbrand .hbimg{ width:984px; height:155px; float:right;}
+.hotbrand .hbimg li{ height:76px; border-right:1px solid #f1f1f1; border-top:1px solid #f1f1f1; float:left;}
+.hotbrand .hbimg .hbibot{ border-bottom:1px solid #f1f1f1;}
+/****************热销品牌 end****************/
+
+
+/****************新品上架 start****************/
+.newarrivals{ width:1200px; margin:0 auto; margin-top:55px; }
+.newarrivals .nr_til{ width:1200px; height:40px; text-align:center; background:url(http://wjike.com/data/afficheimg/newarrivalsbg.png) no-repeat center center;}
+.newarrivals .nr_til h2{ padding-bottom:5px; font-weight:normal;font-size: 22px;}
+.newarrivals .nr_til span{ font-size:12px; color:#999;}
+.newarrivals .nr_text{ width:1210px; height:260px; margin:0 auto; position:relative; margin-top:30px;}
+.newarrivals .nr_text li{ width:236px; height:260px; background-color:#f3ffff; text-align:center; float:left; margin-right:5px;
+transition-property: transform;transition-duration: .1s;transition-timing-function: linear;overflow: visible;}
+.newarrivals .nr_text li:hover{   -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,.1);  -moz-box-shadow: 0 0 8px 2px rgba(0,0,0,.1);  box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+-webkit-transform: scale(1.03);  -moz-transform: scale(1.03);  transform: scale(1.03);}
+.newarrivals .nr_text .newproduct{ width:212px; height:250px; margin:0 10px 10px 10px; text-align:center;}
+.newarrivals .nr_text .newproduct a{ display:table;}
+.newarrivals .nr_text .newproduct span{ color:#d22147; float:left;}
+/****************新品上架 end****************/
+
+
+/****************热销单品 start****************/
+.hotsaleproduct{ width:1200px; margin:0 auto; margin-top:55px; display:table; }
+.hotsaleproduct .nr_til{ width:1200px; height:40px; text-align:center; background:url(http://wjike.com/data/afficheimg/newarrivalsbg.png) no-repeat center center; margin-bottom:30px;}
+.hotsaleproduct .nr_til h2{ padding-bottom:5px; font-weight:normal;font-size: 22px;}
+.hotsaleproduct .nr_til span{ font-size:12px; color:#999;}
+.hotsaleproduct .nr_text{ width:482px; height:465px; margin:0 auto; position:relative; margin-top:0px; float:right; margin-right:-5px;}
+.hotsaleproduct .nr_text li{ width:236px; height:240px; margin-bottom:5px; background-color:#f9f9f9; text-align:center; float:left; margin-right:5px;
+transition-property: transform;transition-duration: .1s;transition-timing-function: linear;overflow: visible;}
+.hotsaleproduct .nr_text li:hover{  -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,.1);  -moz-box-shadow: 0 0 8px 2px rgba(0,0,0,.1);  box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+-webkit-transform: scale(1.03);  -moz-transform: scale(1.03);  transform: scale(1.03);}
+.hotsaleproduct .nr_text .newproduct{ width:216px; height:240px; margin: 0 10px 10px 10px; text-align:center;}
+.hotsaleproduct .nr_text .newproduct a{ display:table;}
+.hotsaleproduct .nr_text .newproduct span{ color:#d22147; float:left;}
+.hotsaleproduct .nr_text .newproduct .np_l{ margin-left:10px; width:196px; height:196px;}
+.hotsaleproduct .newproduct{ width:718px; height:485px; float:left;}
+.hotsaleproduct .newproduct .rxbotfive{ margin-bottom:5px;}
+/****************热销单品 end****************/
+
+
+/****************日韩专区 start****************/
+.countryzone{ width:1200px; display:table; margin:0 auto; position:relative; margin-top:55px; margin-bottom:55px;}
+.countryzone .cz_title{width:1200px; height:40px; margin:0 auto; border-bottom:2px solid #21a0e8; padding-bottom:10px;}
+.countryzone .cz_title_bottom{border-bottom:2px solid #ff6600 !important;}
+.countryzone .cz_title h2{ float:left;}
+.countryzone .cz_title .cz_fl{ float:right; margin-top:24px;}
+.countryzone .cz_title .cz_fl a{ float:left; padding-left:15px;}
+.countryzone .nr_text{ width:723px; height:240px; position:relative; margin-top:5px; margin-right:0px; float:left;}
+.countryzone .nr_text li{ width:236px; height:240px;background-color:#f9f9f9; text-align:center; float:left; margin-right:5px;
+transition-property: transform;transition-duration: .1s;transition-timing-function: linear;overflow: visible; margin-bottom:5px;}
+.countryzone .nr_text li:hover{  -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,.1);  -moz-box-shadow: 0 0 8px 2px rgba(0,0,0,.1);  box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+-webkit-transform: scale(1.03);  -moz-transform: scale(1.03);  transform: scale(1.03);}
+.countryzone .nr_text .newproduct{ width:216px; height:230px; margin: 0 10px 10px 10px; text-align:center;}
+.countryzone .nr_text .newproduct a{ display:table;}
+.countryzone .nr_text .newproduct span{ color:#000; float:left;}
+.countryzone .nr_text .newproduct .np_l{ margin-left:10px; width:196px; height:196px;}
+.countryzone .nr_text .hs_pro{ width:716px; height:240px; float:left;}
+.countryzone .activityentr{ width:477px; height:485px; float:right; margin-top:5px;}
+/****************日韩专区 end****************/
+
+
+/****************澳新专区 start****************/
+.countryzone_aoxin{ width:1200px; display:table; margin:0 auto; position:relative;}
+.countryzone_aoxin .cz_title{width:1200px; height:40px; margin:0 auto; border-bottom:2px solid #08c2ae; padding-bottom:10px;}
+.countryzone_aoxin .cz_title h2{ float:left;}
+.countryzone_aoxin .cz_title .cz_fl{ float:right; margin-top:24px;}
+.countryzone_aoxin .cz_title .cz_fl a{ float:left; padding-left:15px;}
+.countryzone_aoxin .nr_text{ width:723px; height:240px; position:relative; margin-top:5px; margin-right:0px; float:right;}
+.countryzone_aoxin .nr_text li{ width:236px; height:240px;background-color:#f9f9f9; text-align:center; float:left; margin-left:5px;
+transition-property: transform;transition-duration: .1s;transition-timing-function: linear;overflow: visible; margin-bottom:5px;}
+.countryzone_aoxin .nr_text li:hover{  -webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,.1);  -moz-box-shadow: 0 0 8px 2px rgba(0,0,0,.1);  box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+-webkit-transform: scale(1.03);  -moz-transform: scale(1.03);  transform: scale(1.03);}
+.countryzone_aoxin .nr_text .newproduct{ width:216px; height:230px; margin: 0 10px 10px 10px; text-align:center;}
+.countryzone_aoxin .nr_text .newproduct a{ display:table;}
+.countryzone_aoxin .nr_text .newproduct span{ color:#000; float:left;}
+.countryzone_aoxin .nr_text .newproduct .np_l{ margin-left:10px; width:196px; height:196px;}
+.countryzone_aoxin .nr_text .hs_pro{ width:716px; height:240px; float:right;}
+.countryzone_aoxin .activityentr{ width:477px; height:485px; float:left; margin-top:5px;}
+/****************澳新专区 end****************/
+
+
+</style>

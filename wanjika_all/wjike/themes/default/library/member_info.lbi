@@ -1,0 +1,71 @@
+<div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_info.user_id}&name={$user_info.username}" defer async></script>
+{if $user_info}
+<div class="wrap_user">
+            <dl class="menu3">
+                <dt>
+                    <div class="wrap_user_vip">
+                        <div class="link3">|</div>
+                        <a href="http://www.wjike.com/user.php"><span>我的账户</span></a>
+                    </div>
+                </dt>
+            </dl>
+            <dl class="menu4">
+                <dt>
+                    <div class="wrap_user_vip">
+                        <a href="#"><span>手机万集客</span></a>
+                    </div>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <div class="sm_ewm">扫描微信二维码</div>
+                            <img src="images/webchat_wjike.jpg">
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="menu2">
+                <dt>
+                    <div class="wrap_user_vip">
+                        <a href="http://www.wjike.com/user.php?act=logout"><span>退出</span></a>
+                        <div class="link2">|</div>
+                    </div>
+                </dt>
+            </dl>
+            <dl class="menu2">
+                <dt>
+                    <div class="wrap_user_vip">
+                        <a href="http://www.wjike.com/user.php"><span>{$user_info.username}</span></a>
+                        <!-- {if $is_members} -->
+                            <a href="http://www.wjike.com/vip.php?act=vip_info"><img src="images/vip_lq.png" height="18px" width="16px"   /></a>
+                        <!-- {/if} -->
+                    </div>
+                </dt>
+            </dl>
+</div>
+{else}
+ <div style="float:right;padding-top: 56px;">
+ <a class="lt" href="http://www.wjike.com/user.php">登录</a>
+ <span style="color:#ddd;font-size:10px;padding:0 8px; float:left;">|</span>
+ <a href="http://www.wjike.com/user.php?act=register">注册</a>
+ <span style="color:#ddd;font-size:10px;padding:0 8px; ">|</span>
+
+            <dl class="menu4" style="margin-top:0px;background-position-y: 8px;">
+                <dt style="padding-top:0px;padding-right:10px;">
+                    <div class="wrap_user_vip">
+                        <a href="#"><span>手机万集客</span></a>
+                    </div>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <div class="sm_ewm">扫描微信二维码</div>
+                            <img src="images/webchat_wjike.jpg">
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+ </div>
+{/if}

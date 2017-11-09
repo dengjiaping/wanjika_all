@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>忘记密码 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type="number"]{
+            -moz-appearance: textfield;
+        }
+    </style>
+<script type="text/javascript">
+	function submit(obj){
+		obj.submit();
+	}
+	function check(theForm){
+		if(theForm.phone.value == ""){
+			alert("请输入用户名!");theForm.phone.focus();return false;
+		}
+		if(theForm.password1.value == ""){
+			alert("请输入重置密码!");theForm.password1.focus();return false;
+		}
+        if(theForm.confirm_password.value == ""){
+            alert("请输入重置密码!");theForm.confirm_password.focus();return false;
+        }
+        if(theForm.vcode.value == ""){
+            alert("请输入验证码!");theForm.vcode.focus();return false;
+        }
+        theForm.submit();
+	}
+</script>
+
+</head>
+<body>
+{include file='head3.html'}
+{insert_scripts files='../../js/transport.js,../js/newutils.js,../js/utils.js'}
+<div class="login-reg mc radius">
+	<form onSubmit="javascript:return check(formUser);" action="user.php?act=act_forgetpassword" method="post" name="formUser">
+		<table width="100%">
+            <tr>
+                <td>
+                    <span id="username_notice" style="color:#ffa200"></span>
+                    <span id="test1" style="color:#ffa200">{$errormsg}</span>
+                    <span style="color:#ffa200" id="password_notice2"></span>
+                    <span style="color:#ffa200" id="password_notice"></span>
+                    <span style="color:#ffa200" id="password_notice1"></span>
+                </td>
+            </tr>
+			<tr>
+				<td>
+                    <input name="phone" type="tel" maxlength="11" id="phone" onkeyup="chkregname(this)" class="common-input" placeholder="请输入手机号"/>
+                </td>
+			</tr>
+            <tr>
+                <td>
+                    <!-- 判断是否启用验证码{if $enabled_captcha} -->
+                    <input type="text" maxlength="10" id="captcha" name="captcha" style="float:left;margin-right: -2px;width:65%;" class="common-input" placeholder="验证码" required/>
+                    <img class="yzm-btn" style="width: 34%;height: 40px;" src="captcha.php?{$rand}" alt="captcha" onClick="this.src='captcha.php?'+Math.random()" />
+                    <!--{/if}-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                    <input name="vcode" type="number" id="vcode" class="common-input" style="float:left;margin-right: -1px;width:65%;"  placeholder="请输入短信验证码"/>
+                    <input class="yzm-btn" style="width: 34.3%;" id="codebtn" type="button" onclick="getforcode(this)" value="获取验证码" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input name="password" type="password" id="password1" class="common-input"  placeholder="重置密码"/></td>
+            </tr>
+            <tr>
+                <td><input name="confirm_password" type="password" id="confirm_password" class="common-input" placeholder="确认重置密码"/></td>
+            </tr>
+			<tr>
+				<td></td>
+				<td><input name="act" type="hidden" value="act_forgetpassword" />
+					<input type="hidden" name="back_act" value="{$back_act}" />
+					<input name="Submit" type="submit" class="sub_btn" value="确认" /></td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>

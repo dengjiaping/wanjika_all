@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,newutils.js,zDialog.js'}
+<style type="text/css">
+/****************404 start****************/
+.fourzerofour_all{ width:100%; height:768px; background:url(../images/fourzfour.jpg) no-repeat center top; }
+.fourzerofour_all .fzf_main{ width:1200px; height:768px; margin:0 auto; background:url(../images/fourzfour_main.jpg) no-repeat center top; position:relative;}
+.fourzerofour_all .fzf_main .fzf_btn{ width:280px; height:44px; position:absolute; right:150px; top:450px; }
+.fourzerofour_all .fzf_main .fzf_btn .gethomepage{ padding:12px 25px; display:block; float:left; background-color:#45ba9f; color:#fff; font-size:16px;}
+.fourzerofour_all .fzf_main .fzf_btn .gethomepage:hover{ padding:10px 23px; border:2px solid #45ba9f; background-color:#eafffa; color:#45ba9f; }
+.fourzerofour_all .fzf_main .fzf_btn .getuppage{ padding:10px 25px; display:block; float:left; border:2px solid #45ba9f; background-color:#eafffa; color:#45ba9f; font-size:16px; margin-left:15px;}
+.fourzerofour_all .fzf_main .fzf_btn .getuppage:hover{ background-color:#45ba9f; color:#fff;}
+/****************404 end****************/
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="main-div">
+    <form method="POST" action="exceltool.php?act=update_use_goodsid" enctype="multipart/form-data">
+        <input type="file" name="upload_file" />
+        <input type="submit"  value="导入" />
+    </form>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

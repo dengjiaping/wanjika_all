@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$show_name} - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files="../../js/utils.js,../js/transport.js"}
+{insert_scripts files="../../js/region.js,../js/newutils.js"}
+{insert_scripts files='../shopping_flow.js'}
+<style>
+.my_coupons{
+    overflow: hidden;
+    padding: 20px 0;
+    font-size: 16px;
+    background:#fff;
+}
+.my_coupons li{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.my_coupons li a{
+    color: #7d7d7d;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.login-div{
+    position: relative;
+    margin-top: 10px;
+}
+.login-div input{
+    text-indent:58px !important;
+}
+.login-label{
+    position: absolute;
+    z-index: 3;
+    top: 8px;
+    left: 0px;
+    width: 50px;
+    height: 26px;
+    border-right: 1px solid #d0d0d0;
+}
+.login-name{
+    background: url(/mobile/images/add_gift_n.png) no-repeat;
+    background-size: 20px 19px;
+    background-position: 17px 4px;
+}
+.login-pw{
+    background: url(/mobile/images/add_gift_p.png) no-repeat;
+    background-size: 16px 19px;
+    background-position: 19px 4px;
+}
+</style>
+</head>
+<body>
+{include file='head3.html'}
+    {if $user_type eq 1}
+    <div class="consignee radius" style="background: #f2f0f1;margin: 0;">
+        <div name="selForm" id="selForm">
+                <!-- {foreach from=$gift item=gifts} -->
+                    <div style="display: block;margin: 10px 0 20px 0;background-color: #fff;">
+                        <div style="display: table-cell;vertical-align: middle;width: 38%;font-size:16px;color: #fff;text-align: center;{if $gifts.leave_money eq 0 || $gifts.gift_card_status eq 1}background: #cecece;{else}background: #37af93;{/if}">
+                            <div>余额</div>
+                            <div>￥{$gifts.leave_money}</div>
+                        </div>
+                        <div style="display: table-cell;vertical-align: middle;padding: 26px 20px;color: #7d7d7d;{if $gifts.leave_money eq 0 || $gifts.gift_card_status eq 1}background: url(/mobile/images/gift_bc0.png) no-repeat;{else}background: url(/mobile/images/gift_bc.png) no-repeat;{/if}background-position-x: -3px;background-size: contain;line-height: 20px;">
+                            <div>礼品卡金额：{$gifts.money}元</div>
+                            <div>有效时间：{$gifts.end_date}</div>
+                            <div>礼品卡序号：{$gifts.card_sn|default:N/A}</div>
+                        </div>
+                    </div>
+                <!-- {/foreach} -->
+                {if $pager}
+                <div style="text-align:center;margin-bottom: 10px;">
+                    {$pager}
+                </div>
+                {/if}
+                <a style="display: block;font-size:16px;text-align: center;height: 50px;line-height: 50px;background-color: #37af93;color: #fff;" href="user.php?act=gift_card&add_gift=add_gift">+添加礼品卡</a>
+        </div>
+    </div>
+    {elseif $user_type eq 2}
+    <div style="background: #f2f0f1;">
+            <div class="my_coupons">
+                <ul>
+                    <li style="padding: 10px 0;"><a href="user.php?act=coupons" {if $status eq 'avl'}class="color-db"{/if}>未使用<span>({$avl_count})</span></a></li>
+                    <li style="padding: 10px 0;"><a href="user.php?act=coupons&status=used" {if $status eq 'used'}class="color-db"{/if}>已使用<span>({$used_count})</span></a></li>
+                    <li style="padding: 10px 0;"><a href="user.php?act=coupons&status=unavl" {if $status eq 'unavl'}class="color-db"{/if}>已过期<span>({$unavl_count})</span></a></li>
+                </ul>
+            </div>
+            <!--{if $bonus}-->
+            <div style="padding: 10px;">
+                <!-- {foreach from=$bonus item=item} -->
+                <div style="display: block;margin: 10px 0 20px 0;background-color: #fff;">
+                    <div style="display: table-cell;vertical-align: middle;width: 38%;font-size:16px;color: #fff;text-align: center;{if $item.status eq '可使用'}background: url(/mobile/images/coupons1.png) no-repeat #37af93;background-size: contain;background-position: -14px -36px;{else}background: url(/mobile/images/coupons2.png) no-repeat #cecece;background-size: contain;background-position: -14px -36px;{/if}">
+                        <div style="font-size: 30px;">￥{$item.type_money}</div>
+                        <div style="font-size: 12px;">会员购物代金券</div>
+                    </div>
+                    <div style="display: table-cell;vertical-align: middle;padding: 26px 20px;color: #7d7d7d;{if $item.status eq '可使用'}background: url(/mobile/images/gift_bc.png) no-repeat;{else}background: url(/mobile/images/gift_bc0.png) no-repeat;{/if}background-position-x: -3px;background-size: contain;line-height: 20px;">
+                        <div>{$item.note}</div>
+                        <div>{$item.condition}</div>
+                        <div>有效期：{$item.use_startdate} 至 {$item.use_enddate}</div>
+                    </div>
+                </div>
+                <!-- {/foreach} -->
+                {if $pager}
+                <div style="text-align:center;margin-bottom: 10px;">
+                    {$pager}
+                </div>
+                {/if}
+                <a style="display: block;font-size:16px;text-align: center;height: 50px;line-height: 50px;background-color: #37af93;color: #fff;" href="user.php?act=coupons&add_coupons=add_coupons">+添加优惠券</a>
+            </div>
+            <!--{else}-->
+            <div style="padding:100px 0px; text-align:center;background: #f2f0f1;">
+                <img src="/mobile/images/coupons3.png" width="100">
+                <p style="padding: 20px 0;color: #7d7d7d;">没有可以使用的优惠劵</p>
+                <!--<a href="#" style="display: inline-block;margin-top:20px;padding:10px 20px;font-size:14px;border: 1px solid #38af93;color: #38af93;">立即领取</a>-->
+            </div>
+            <!--{/if}-->
+    </div>
+    {elseif $user_type eq 3}
+    <div style="background: #f2f0f1;padding-bottom: 10px;">
+        <!--{if $bonus}-->
+        <div style="padding: 10px;">
+            <!-- {foreach from=$bonus item=item} -->
+            <div style="display: block;margin: 10px 0 20px 0;background-color: #fff;" onclick="selectBonus({$item.bonus_id},{$address_id},{$gift_id})">
+                <div style="display: table-cell;vertical-align: middle;width: 38%;font-size:16px;color: #fff;text-align: center;{if $item.status eq '可使用'}background: url(/mobile/images/coupons1.png) no-repeat #37af93;background-size: contain;background-position: -14px -36px;{else}background: url(/mobile/images/coupons2.png) no-repeat #cecece;background-size: contain;background-position: -14px -36px;{/if}">
+                    <div style="font-size: 30px;">￥{$item.type_money}</div>
+                    <div style="font-size: 12px;">会员购物代金券</div>
+                </div>
+                <div style="display: table-cell;vertical-align: middle;padding: 26px 20px;color: #7d7d7d;{if $item.status eq '可使用'}background: url(/mobile/images/gift_bc.png) no-repeat;{else}background: url(/mobile/images/gift_bc0.png) no-repeat;{/if}background-position-x: -3px;background-size: contain;line-height: 20px;">
+                    <div>{$item.note}</div>
+                    <div>{$item.condition}</div>
+                    <div>有效期：{$item.use_startdate} 至 {$item.use_enddate}</div>
+                </div>
+            </div>
+            <!-- {/foreach} -->
+        </div>
+        <div style="margin: 10px auto;padding: 10px;background: #37af93;width: 90%;text-align: center;color: #fff;" onclick="selectBonus(0,{$address_id},{$gift_id})">不使用优惠券</div>
+        <!--{else}-->
+        <div style="padding:100px 0px; text-align:center;background: #f2f0f1;">
+            <img src="/mobile/images/coupons3.png" width="100">
+            <p style="padding: 20px 0;color: #7d7d7d;">没有可以使用的优惠劵</p>
+            <!--<a href="#" style="display: inline-block;margin-top:20px;padding:10px 20px;font-size:14px;border: 1px solid #38af93;color: #38af93;">立即领取</a>-->
+        </div>
+        <!--{/if}-->
+    </div>
+    {elseif $user_type eq 4}
+    <div class="login-reg mc radius">
+        <form name="addToGift" action="user.php" method="post" onsubmit="return addGift()">
+            {if $err_or}<div><span id="test1" style="color:#ffa200"><span style="background-color: #ffa200;padding: 0px 6px;border-radius: 8px;color: #fff;margin-right: 4px;">!</span>{$error}</span></div>{/if}
+            <div class="login-div">
+                <label class="login-label login-name"></label><input type="text" value="" name="gift_sn" id="gift_sn" style="background: #fff;" class="common-input" placeholder="输入礼品卡卡号" />
+            </div>
+            <div class="login-div">
+                <label class="login-label login-pw"></label><input class="common-input" type="password" name="gift_password" autocomplete="off" id="gift_password" placeholder="输入礼品卡密码"  />
+            </div>
+            <div>
+                <input type="hidden" name="back_act" value="{$back_act}" />
+                <input type="hidden" name="act" value="act_add_gift" />
+                <input type="submit" class="sub_btn"  value="绑定" />
+            </div>
+        </form>
+    </div>
+    {elseif $user_type eq 5}
+    <div class="consignee radius" style="background: #f2f0f1;margin: 0;">
+        <div name="selForm" id="selForm">
+            <!-- {foreach from=$gift item=gifts} -->
+            <div style="display: block;margin: 10px 0 20px 0;background-color: #fff;" onclick="selectBonus({$bonus_id},{$address_id},{$gifts.card_id})">
+                <div style="display: table-cell;vertical-align: middle;width: 38%;font-size:16px;color: #fff;text-align: center;{if $gifts.leave_money eq 0}background: #cecece;{else}background: #37af93;{/if}">
+                    <div>余额</div>
+                    <div>￥{$gifts.leave_money}</div>
+                </div>
+                <div style="display: table-cell;vertical-align: middle;padding: 26px 20px;color: #7d7d7d;{if $gifts.leave_money eq 0}background: url(/mobile/images/gift_bc0.png) no-repeat;{else}background: url(/mobile/images/gift_bc.png) no-repeat;{/if}background-position-x: -3px;background-size: contain;line-height: 20px;">
+                    <div>礼品卡金额：{$gifts.money}元</div>
+                    <div>有效时间：{$gifts.end_date}</div>
+                    <div>礼品卡序号：{$gifts.card_sn|default:N/A}</div>
+                </div>
+            </div>
+            <!-- {/foreach} -->
+        </div>
+        <div style="margin: 10px auto;padding: 10px;background: #37af93;width: 90%;text-align: center;color: #fff;" onclick="selectBonus({$bonus_id},{$address_id},0)">不使用礼品卡</div>
+    </div>
+    {elseif $user_type eq 6}
+    <div class="login-reg mc radius">
+        <form name="addToCoupons" action="user.php" method="post" onsubmit="return addCoupons()">
+            {if $err_or}<div><span id="test1" style="color:#ffa200"><span style="background-color: #ffa200;padding: 0px 6px;border-radius: 8px;color: #fff;margin-right: 4px;">!</span>{$error}</span></div>{/if}
+            <div class="login-div">
+                <label class="login-label login-pw"></label><input class="common-input" type="text" name="bonus_sn" autocomplete="off" id="bonus_sn" placeholder="输入优惠码"  />
+            </div>
+            <div>
+                <input type="hidden" name="back_act" value="{$back_act}" />
+                <input type="hidden" name="act" value="act_add_coupons" />
+                <input type="submit" class="sub_btn"  value="绑定" />
+            </div>
+        </form>
+    </div>
+    {elseif $user_type eq 7}
+    <div style="background: #f2f0f1;">
+        <div style="overflow: hidden;padding:10px;font-size: 16px;background: #fff;">
+            <div style="float: left;"><img src="/mobile/images/jifen_img.png" width="26" height="24" style="margin-right: 5px;"/><span>现在可用积分：<span style="color: #CC0000;">{$integral}</span></span></div>
+            <!--<div style="float: right;margin-top: 2px;font-size: 14px;"><a href="exchange.php">去兑换></a></div>-->
+        </div>
+        <div style="padding:10px;margin-top:10px;background-color: #f2f0f1;"><span>积分明细</span></div>
+        <div style="overflow: hidden;padding: 0 10px;font-size:10px;background: #fff;text-align: center;">
+            <div style="float: left;width: 100%;padding:10px 0;">
+                <span style="float: left;width: 25%;">日期</span>
+                <span style="float: left;width: 25%;">收入/支出</span>
+                <span style="float: left;width: 50%;">详细说明</span>
+            </div>
+            <!-- {foreach from=$account_log item=item} -->
+            <div style="border-top: 1px solid #d0d0d0;float: left;width: 100%;padding:10px 0;">
+                <span style="float: left;width: 25%;color: #999999;">{$item.change_time}</span>
+                <span style="float: left;width: 25%;color: {if $item.type eq 1}#37af93{else}#db2929{/if};">{$item.pay_points}</span>
+                <span style="float: left;width: 50%;color: #000000;">{$item.short_change_desc}</span>
+            </div>
+            <!-- {/foreach} -->
+            {if $pager}
+            <div style="text-align:center;margin-bottom: 10px;">
+                {$pager}
+            </div>
+            {/if}
+        </div>
+    </div>
+    {else}
+	<!--您还没有登陆<br>-->
+	<!--
+	您可以选择<a href='user.php?act=login' style="color:#F00;font-weight:bold;">会员登陆</a>或者<a href='user.php?act=register' style="color:#F00;font-weight:bold;">注册用户</a>
+	-->
+	{/if}
+
+{include file='foot.html'}
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+</script>
+</body>
+</html>

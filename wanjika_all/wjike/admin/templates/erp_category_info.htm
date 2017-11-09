@@ -1,0 +1,45 @@
+<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+{include file="pageheader.htm"}
+<!-- start add new category form -->
+<div class="main-div">
+  <form action="erp_category.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+  <table width="100%" id="general-table">
+      <tr>
+        <td class="label">ERP分类名称:</td>
+        <td>
+          <input type='text' name='erpcat_name' maxlength="20" value='{$cat_info.erpcat_name|escape:html}' size='27' /> <font color="red">*</font>
+        </td>
+      </tr>
+      <tr>
+          <td class="label">ERP分类编码:</td>
+          <td>
+              <input type='text' name='erpcat_code' maxlength="20" value='{$cat_info.erpcat_code|escape:html}' size='27' /> <font color="red">*</font>
+          </td>
+      </tr>
+      </table>
+      <div class="button-div">
+        <input type="submit" value="{$lang.button_submit}" />
+        <input type="reset" value="{$lang.button_reset}" />
+      </div>
+    <input type="hidden" name="act" value="{$form_act}" />
+    <input type="hidden" name="old_cat_name" value="{$cat_info.erpcat_name}" />
+    <input type="hidden" name="old_erpcat_code" value="{$cat_info.erpcat_code}" />
+    <input type="hidden" name="cat_id" value="{$cat_info.erpcat_id}" />
+  </form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="JavaScript">
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+  validator = new Validator("theForm");
+    validator.required("erpcat_name",      '名称为空');
+    validator.required("erpcat_code",      '编码为空');
+  return validator.passed();
+}
+</script>
+{/literal}
+{include file="pagefooter.htm"}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>提交订单 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files="shopping_flow.js"}
+<style>
+    .img_center{
+        margin: 30px 0;
+        text-align: center;
+    }
+    .order_detail{
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 0;
+        background: #eafffa;
+        color: #38af93;
+        width: 90%;
+        border: 1px solid #37af93;
+    }
+    .payment{
+        float: right;
+        margin-top: 6px;
+        background: url(/mobile/images/address_on.png);
+        background-size: contain;
+        height: 22px;
+        width: 22px;
+    }
+    .payments{
+        float: right;
+        margin-top: 6px;
+        background: url(/mobile/images/address_off.png);
+        background-size: contain;
+        height: 22px;
+        width: 22px;
+    }
+</style>
+</head>
+<body style="background-color: #f2f0f1;">
+{include file='head4.html'}
+<script>
+    ga('require', 'ecommerce');
+    ga('ecommerce:addTransaction', {
+        'id': '{$order.order_sn}',
+        'affiliation': 'wjike',
+        'revenue': '{$order.order_amount}',
+        'shipping': '{$order.shipping_fee}',
+        'tax': '0.00'
+    });
+
+    {foreach from=$goods_list item=item key=key}
+    ga('ecommerce:addItem', {
+        'id': '{$order.order_sn}',
+        'name': '{$item.goods_name}',
+        'sku': '{$item.goods_id}',
+        'category': '{$item.cat_name}',
+        'price': '{$item.goods_price}',
+        'quantity': '{$item.goods_number}'
+    });
+    {/foreach}
+    ga('ecommerce:send');
+    ga('ecommerce:clear');
+</script>
+<div class="mc radius" style="margin:0px;">
+    <div class="img_center"><img style="width: 50px;" src="/mobile/images/order_done.png"></div>
+    <div style="text-align:center;color: #7d7d7d;">
+        <p style="color: #868686;">{if $pay_online}{$tips}{else}订单已提交成功，请耐心等待商品{/if}</p>
+        {if $pay_online}
+        <p style="color: #868686;">请您在<span style="color:red;">2小时内</span>完成支付，否则订单会自动取消<a class="order_detail" href="user.php?act=order_list">订单详情</a></p>
+        <p style="margin-top: 30px;border-top: 1px dotted #999999;padding-top: 20px;color: #000000;">支付金额：<span style="color: #e20404;">{$total.amount_formated}</span></p>
+        {/if}
+    </div>
+</div>
+
+{if $pay_online}
+<form name="theForm" id="theForm" method="post" action="user.php" onSubmit="return combinSubmitPay(theForm)">
+<div class="mc radius" style="margin:10px 0px;padding-bottom: 0px;">
+    <h3 style="padding-bottom: 10px;border-bottom: 1px solid #f2f0f1;">选择支付方式</h3>
+    <table width="100%" border="0" cellpadding="5" cellspacing="1">
+        <!-- {foreach from=$payment_list item=payment key=key name=paymentit} -->
+        <!-- 循环支付方式 -->
+        <tr>
+            <td valign="middle">
+                <label>
+                <div style="border-bottom: 1px solid #f2f0f1;padding: 10px 0;" onclick="selectPayment({$payment.pay_id})">
+                <input style="opacity: 0;width:0px;" type="radio" name="pay_id" value="{$payment.pay_id}"{if $order.pay_id eq $payment.pay_id and ($cod_disabled and $payment.is_cod neq "1") || $key eq 0 || $is_wx} checked{/if} isCod="{$payment.is_cod}" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if} />
+                <img style="width: 110px;" src="/themes/default/images/{$payment.pay_code}.png">
+                <span id="sel_{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id and ($cod_disabled and $payment.is_cod neq "1") || $key eq 0 || $is_wx}class="payment"{else}class="payments"{/if}></span>
+                </div>
+                </label>
+            </td>
+        </tr>
+        <!-- {/foreach} 循环支付方式 -->
+    </table>
+</div>
+<div>
+    <input type="hidden" name="act" value="act_edit_payment" />
+    <input type="hidden" name="order_id" value="{$order.order_id}" />
+    <input class="sub_btn" type="submit" name="Submit" value="去支付" target="_blank"/>
+</div>
+</form>
+{else}
+<a class="order_detail" style="text-align: center;margin: 30px auto;display: block;" href="user.php?act=order_list">订单详情</a>
+{/if}
+</body>
+</html>

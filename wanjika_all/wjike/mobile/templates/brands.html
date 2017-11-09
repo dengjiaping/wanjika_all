@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$brand.brand_name} - 万集客，万集客狂欢节，进口食品，进口零食，进口生活用品，进口母婴产品-万集客商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files='../../js/transport.js,../js/utils.js'}
+{insert_scripts files='../common.js'}
+</head>
+
+<body>
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head4.html'}
+{if $brand_id}
+<div>
+    <div><img src="../../data/branddescimg/{$brand.brand_desc_img}" width="100%" /><img style="position: relative;left: 10px;top: -24px;border: 1px solid #efefef;" width="48" height="48" src="../../data/brandlogo/{$brand.brand_logo}" /><span style="overflow: hidden;margin-left: 20px;display: inline-block;height: 24px;">{$brand.brand_name}</span>
+        <div style="float: right;margin-top:5px;margin-right:10px;text-align: center;"><img style="width:25px; height:15px;" src="../../themes/default/images/{$brand.overseas_logo}.jpg" /><span style="text-align: center;">{$brand.overseas_logo_name}</span></div>
+    </div>
+    <div style="margin-top: -24px;padding: 10px;color: #5c5c5c;line-height: 19px;"><p>{$brand.brand_desc}</p></div>
+</div>
+<div style="height:6px;background-color: #f2f0f1;"></div>
+<div style="display: block;height: 30px;line-height: 30px;">
+    <a style="margin: 0 20px;{if $smarty.get.last eq 1 || $last_update eq 1}color: #db2929;{else}color: #000;{/if}" href='brands.php?b_id={$smarty.get.b_id}&last=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>默认</a>
+    <a style="margin-right: 20px;{if $smarty.get.salesnum eq 1}color: #db2929;{else}color: #000;{/if}" href='brands.php?b_id={$smarty.get.b_id}&salesnum=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>销量</a>
+    <a style="margin-right: 20px;{if $smarty.get.new_goods eq 1}color: #db2929;{else}color: #000;{/if}" href='brands.php?b_id={$smarty.get.b_id}&new_goods=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>新品</a>
+    {if $smarty.get.order_price eq 2}
+    <a style="margin-right: 20px;{if $smarty.get.order_price eq 2}color: #db2929;{else}color: #000;{/if}" href='brands.php?b_id={$smarty.get.b_id}&order_price=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>价格<em class="price_em price-u"></em></a>
+    {elseif $smarty.get.order_price eq 1}
+    <a style="margin-right: 20px;{if $smarty.get.order_price eq 1}color: #db2929;{else}color: #000;{/if}" href='brands.php?b_id={$smarty.get.b_id}&order_price=2{if $smarty.get.page}&page={$smarty.get.page}{/if}'>价格<em class="price_em price-d"></em></a>
+    {else}
+    <a style="margin-right: 20px;{if $smarty.get.order_price eq 1}color: #db2929;{else}color: #000;{/if}" href='brands.php?b_id={$smarty.get.b_id}&order_price=2{if $smarty.get.page}&page={$smarty.get.page}{/if}'>价格<em class="price_em price-m"></em></a>
+    {/if}
+</div>
+<div style="height:6px;background-color: #f2f0f1;"></div>
+<div style="overflow:hidden;background-color: #f2f0f1;">
+    <div class="t-lists" >
+        <ul id="test">
+            {foreach from=$goods_data item=best_data name=goo}
+            <li class="{if $smarty.foreach.goo.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                <a href="goods.php?id={$best_data.id}">
+                    <div class="default_div">
+                        <img src="/{$best_data.goods_img}"  width="100" height="100" alt=""/>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="display: inline-block;height: 20px;width: 100%;">
+                            {if $best_data.is_overseas eq 1}
+                            <div>{if $best_data.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$best_data.overseas_logo}.jpg"  style="margin: 2px 5px 0 0;width: 25px;height: 15px;"/>{/if}<p style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$best_data.overseas_logo_name}品牌 官方直供</p></div>
+                            {/if}
+                        </div>
+                        <div class="p-name default_pname" >{$best_data.name}<span color="red">{$best_data.goods_brief}</span> </div>
+                        <div class="p-detail" style="width:180px;height: 20px;"><span style="font-size: 18px;font-family:Arial;font-weight:bold;color: #db2929;">{if $promote_price}{$best_data.price}{else}{$best_data.price}{/if}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {foreachelse}
+            暂无此类商品
+            {/foreach}
+        </ul>
+    </div>
+</div>
+    {if $pagebar}
+        {$pagebar}<br/>
+    {/if}
+{/if}
+{include file='foot.html'}
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+            }
+        })
+    }
+</script>
+</body>
+</html>

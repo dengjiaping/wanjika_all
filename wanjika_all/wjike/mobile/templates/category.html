@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{if $all_cat}分类列表{else}{$cat_name}{/if} - 万集客，万集客狂欢节，进口食品，进口零食，进口生活用品，进口母婴产品-万集客商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    {insert_scripts files='../../js/transport.js,../js/utils.js'}
+    {insert_scripts files='../common.js'}
+     <style type="text/css">
+    #slideDown{margin-top: 0;width: 100%;}
+    #slideDown1,#slideDown2{width: 100%;height: 20px;display: none;}
+    #slideDown1{height: 20px;}
+    #slideDown1>p,#slideDown2>p,#slideDown3>p{margin: 20px auto;text-align:center;font-size: 14px;}
+    .my_overseas_div{
+        overflow: hidden;
+        margin-bottom: 4px;
+    }
+    .my_img{
+        margin: 2px 5px 0 0;
+        width: 25px;
+        height: 15px;
+    }
+         .my_p{
+             float: left;
+             color: #37af93;
+         }
+         .my_p_name{
+             margin-bottom:0px;
+             padding-bottom: 6px;
+             color: #3C3C3C;
+             font-size: 14px;
+         }
+         .my_p_detail{
+             float:left;
+             width:180px;
+             height: 40px;
+         }
+        .goback_top {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            width: 50px;
+            z-index: 999;
+        }
+        .goback_top .gb_img {
+            padding: 25px;
+            display: block;
+            background: url(/mobile/images/goback_top.png) no-repeat center center;
+            background-size: contain;
+            opacity: 1;
+        }
+    </style>
+    </head>
+<body>
+{if $all_cat}
+{include file='head6.html'}
+    <div style="display: block;overflow: hidden;width: 98%;text-align: center; padding:0 1%; ">
+        {foreach from=$cat_array item=cat_data}
+        <a style="float:left;padding: 0 1%;width:18%;color: #000;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;height: 32px;line-height: 32px;{if $f_id eq $cat_data.id}color: #dd3636;{/if}" href='category.php?cat_id={$cat_data.id}'>{$cat_data.name}</a>
+        {/foreach}
+    </div>
+	{foreach from=$cat_arr item=cat_data}
+    <div style="height:6px;background-color: #f2f0f1;"></div>
+    <div class="mc radius" style="margin:0;display: block;overflow: hidden;">
+        <div><h3><a href='category.php?c_id={$cat_data.id}' style="color: #000000;">{$cat_data.name}</a></h3></div>
+        <div style="display: block;">
+            {foreach from=$cat_data['cat_id'] item=ccat_data}
+            <div style="float:left;width: 29%;padding: 10px 2%;text-align: center;color: #546280;font-size: 14px;color: #000000;">
+                <a href='category.php?c_id={$ccat_data.id}'><img src="/mobile/images/cat_t_{$ccat_data.id}.jpg"  width="100" height="100" alt=""/>
+                    <span>{$ccat_data.name}</span></a>
+            </div>
+            {/foreach}
+        </div>
+    </div>
+    {/foreach}
+{else}
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head1.html'}
+<div style="display: block;height: 30px;line-height: 30px;">
+    <a style="margin: 0 20px;{if $smarty.get.last eq 1 || $last_update eq 1}color: #db2929;{else}color: #000;{/if}"  href='category.php?c_id={$smarty.get.c_id}&last=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>默认</a>
+    <a style="margin-right: 20px;{if $smarty.get.salesnum eq 1}color: #db2929;{else}color: #000;{/if}" href='category.php?c_id={$smarty.get.c_id}&salesnum=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>销量</a>
+    <a style="margin-right: 20px;{if $smarty.get.new_goods eq 1}color: #db2929;{else}color: #000;{/if}" href='category.php?c_id={$smarty.get.c_id}&new_goods=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>新品</a>
+    {if $smarty.get.order_price eq 2}
+    <a style="margin-right: 20px;{if $smarty.get.order_price eq 2}color: #db2929;{else}color: #000;{/if}" href='category.php?c_id={$smarty.get.c_id}&order_price=1{if $smarty.get.page}&page={$smarty.get.page}{/if}'>价格<em class="price_em price-u"></em></a>
+    {elseif $smarty.get.order_price eq 1}
+    <a style="margin-right: 20px;{if $smarty.get.order_price eq 1}color: #db2929;{else}color: #000;{/if}" href='category.php?c_id={$smarty.get.c_id}&order_price=2{if $smarty.get.page}&page={$smarty.get.page}{/if}'>价格<em class="price_em price-d"></em></a>
+    {else}
+    <a style="margin-right: 20px;{if $smarty.get.order_price eq 1}color: #db2929;{else}color: #000;{/if}" href='category.php?c_id={$smarty.get.c_id}&order_price=2{if $smarty.get.page}&page={$smarty.get.page}{/if}'>价格<em class="price_em price-m"></em></a>
+    {/if}
+</div>
+<div style="height:6px;background-color: #f2f0f1;"></div>
+<div style="overflow:hidden;background-color: #f2f0f1;">
+    <div class="t-lists" >
+        <ul id="test">
+            {foreach from=$goods_data item=best_data name=goo}
+            <li class="{if $smarty.foreach.goo.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                <a href="goods.php?id={$best_data.id}">
+                <div class="default_div">
+                    <img src="/{$best_data.thumb}"  width="100" height="100" alt=""/>
+                </div>
+                <div style="margin: 10px;">
+                    <div style="display: inline-block;height: 20px;width: 100%;">
+                        {if $best_data.is_overseas eq 1}
+                        <div class="fl">{if $best_data.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$best_data.overseas_logo}.jpg"  style="margin: 0px 5px 0 0;width: 25px;height: 15px;"/>{/if}</div><div style="height: 18px;line-height: 18px;"><span style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$best_data.overseas_logo_name}品牌 官方直供</span></div>
+                        {/if}
+                    </div>
+                    <div class="p-name default_pname" ><div style="height: 36px;">{$best_data.name}</div><span color="red">{$best_data.goods_brief}</span> </div>
+                    <div class="p-detail" style="width:180px;height: 20px;"><span style="font-size:18px;font-family:Arial;font-weight:bold;color: #db2929;">{if $promote_price}{$best_data.price}{else}{$best_data.price}{/if}</span>
+                    </div>
+                </div>
+                </a>
+            </li>
+            {foreachelse}
+            暂无此类商品
+            {/foreach}
+        </ul>
+    </div>
+
+    {if $slidedown neq 1}
+    <div id="slideDown">
+        <div id="slideDown1" style="display: block;">
+            <p>上滑加载</p>
+        </div>
+        <div id="slideDown2">
+            <p>正在加载 ...</p>
+        </div>
+        <div id="slideDown3" style="display: none;">
+            <p>暂无更多内容</p>
+        </div>
+    </div>
+    {/if}
+</div>
+
+<input type="hidden" id="c_id" value="{$c_id}" />
+<input type="hidden" id="pages1" value="{$pages1}" />
+
+<div class="goback_top" id="goback_top" style="display: none;">
+    <a target="_self" href="#" class="gb_img"></a>
+</div>
+{/if}
+{include file='foot.html'}
+</body>
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+            }
+        })
+    }
+    var temppage= sessionStorage.getItem("page");
+    var temptop= sessionStorage.getItem("top");
+    var pages2 = document.getElementById("pages1").value;
+    if(temppage > 1)
+    {
+        var tempcid = document.getElementById("c_id");
+        for(i=2;i<=temppage;i++)
+        {
+            if(i<=pages2)
+            {
+                Ajax.call('category.php?act=page', 'cid=' + tempcid.value+'&order_price=0'+'&page='+i, returnPage, 'POST', 'JSON',false);
+            }
+        }
+        page = temppage;
+    }
+    window.onscroll = function () {
+        var tempscrolltop = getDocumentTop();
+        sessionStorage.setItem("top",tempscrolltop);
+        var temptop= sessionStorage.getItem("top");
+
+        if(getDocumentTop()>getWindowHeight())
+        {
+            document.getElementById("goback_top").style.display = "block";
+        }
+        else
+        {
+            document.getElementById("goback_top").style.display = "none";
+        }
+        //监听事件内容
+        if(getScrollHeight() == getWindowHeight() + getDocumentTop()){
+                category_load();
+        }
+//        else
+//        {
+//            var page_number = (getDocumentTop()+getWindowHeight())/1310;
+//            if( (parseInt(page_number)+0.220) >page_number.toFixed(3) )
+//            {
+//                sessionStorage.setItem("page",parseInt(page_number));
+//            }
+//            else
+//            {
+//
+//                sessionStorage.setItem("page",parseInt(page_number)+1);
+//            }
+//        }
+    }
+    window.onload = scroll_to;
+    function scroll_to()
+    {
+        window.scrollTo(0,temptop);
+    }
+</script>
+</html>

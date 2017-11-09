@@ -1,0 +1,170 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--底部导航 start-->
+    <!--底部start-->
+    <div class="page_bottom_all">
+    	<div class="pb">
+    		<div class="security">
+            	<ul>
+                	<li>
+                    	<div class="sec_img"><img src="images/security1.png"></div>
+                    	<div class="sec_text">会员制权益<p>会员升级，尊贵特权</p></div>
+                    </li>
+                	<li>
+                    	<div class="sec_img"><img src="images/security2.png"></div>
+                    	<div class="sec_text">七天无条件退货<p>换货政策详见三包政策</p></div>
+                    </li>
+                	<li>
+                    	<div class="sec_img"><img src="images/security3.png"></div>
+                    	<div class="sec_text">正品保障<p>所有产品都是原装正品</p></div>
+                    </li>
+                	<li>
+                    	<div class="sec_img"><img src="images/security4.png"></div>
+                    	<div class="sec_text">新手指南<p>快速登录，简单易用</p></div>
+                    </li>
+                	<li>
+                    	<div class="sec_img"><img src="images/security5.png"></div>
+                    	<div class="sec_text">快捷物流<p>多仓配货，极速配送</p></div>
+                    </li>
+                </ul>
+        	</div>
+
+
+            <div class="help_link">
+            	<ul>
+            	<!--{if $helps}-->
+            	<!-- {foreach from=$helps item=help_cat} -->
+                	<li>
+                    	<div class="sec_text">
+                        	<a title="{$help_cat.cat_name}"><span style="font-size:18px;color:#000;">{$help_cat.cat_name}</span></a>
+                        	<!-- {foreach from=$help_cat.article item=item} -->
+                        	<a href="http://www.wjike.com/{$item.url}" target="_blank" title="{$item.title|escape:html}">{$item.short_title}</a>
+                        	<!-- {/foreach} -->
+                        </div>
+                    </li>
+                    <!-- {/foreach} -->
+<!--{/if}-->
+                </ul>
+        	</div>
+
+
+            <div class="about_wjike">
+            <!--
+            	<div class="aboutmy">
+                    <a href="#">关于万集客</a><span>|</span>
+                    <a href="#">友情链接</a><span>|</span>
+                    <a href="#">网站地图</a><span>|</span>
+                    <a href="#">加入我们</a><span>|</span>
+                    <a href="#">联系我们</a><span>|</span>
+                    <a href="#">常见问题</a><span>|</span>
+                    <a href="#">售后服务</a><span>|</span>
+                    <a href="#">VIP会员制</a><span>|</span>
+                    <a href="#">寻求合作</a><span>|</span>
+                    <a href="#">媒体聚焦</a>
+                </div>
+            -->
+            	<div class="ba">
+                	<p>Copyright © 2016 万集客商城  版权所有京ICP证110896号   京公网安备110105007400号</p>
+                	<p>公司名称：北京神州集客电子商务有限公司  公司地址:北京市朝阳区 联系电话：400-085-1115</p>
+                	<div style="display: inherit;">
+                    <a href="http://webscan.360.cn/index/checkwebsite/url/www.wjike.com"><img src="images/个人中心2_25.png"></a>
+                    <a href="http://www.bj.cyberpolice.cn/index.do"><img src="images/个人中心2_27.png"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--{if !$is_local }-->
+<script type="text/javascript">
+var _mvq = window._mvq || [];
+window._mvq = _mvq;
+_mvq.push(['$setAccount', 'm-190344-0']);
+
+_mvq.push(['$setGeneral', '', '', /*用户名*/ '', /*用户id*/ '']);
+_mvq.push(['$logConversion']);
+(function() {
+var mvl = document.createElement('script');
+mvl.type = 'text/javascript'; mvl.async = true;
+mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(mvl, s);
+})();
+</script>
+<!-- {/if} -->
+    <!--底部end-->
+
+
+    <!--
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="bNavList clearfix">
+   <div class="f_l">
+   <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <a href="http://www.wjike.com/{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+        <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+           -
+        <!-- {/if} -->
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+   </div>
+   <div class="f_r">
+   <a href="#top"><img src="images/bnt_top.gif" /></a> <a href="http://www.wjike.com/index.php"><img src="images/bnt_home.gif" /></a>
+   </div>
+  </div>
+ </div>
+</div>
+<!--底部导航 end-->
+<div class="blank"></div>
+<!--版权 start-->
+<div id="footer">
+ <div class="text">
+ {$copyright}<br />
+ {$shop_address} {$shop_postcode}
+ <!-- 客服电话{if $service_phone} -->
+      Tel: {$service_phone}
+ <!-- 结束客服电话{/if} -->
+ <!-- 邮件{if $service_email} -->
+      E-mail: {$service_email}<br />
+ <!-- 结束邮件{/if} -->
+ <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 结束淘宝旺旺 -->
+      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+      <!-- {if $im} -->
+      <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束Yahoo Messenger -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} --><br />
+  <!-- ICP 证书{if $icp_number} -->
+  {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a><br />
+  <!-- 结束ICP 证书{/if} -->
+  {insert name='query_info'}<br />
+  {foreach from=$lang.p_y item=pv}{$pv}{/foreach}{$licensed}<br />
+    {if $stats_code}
+    <div align="left">{$stats_code}</div>
+    {/if}
+    <div align="left"  id="rss"><a href="{$feed_url}"><img src="../images/xml_rss2.gif" alt="rss" /></a></div>
+ </div>
+</div>
+
+-->
+

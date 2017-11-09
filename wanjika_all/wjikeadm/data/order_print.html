@@ -1,0 +1,20 @@
+<p>姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话</p>
+<table cellpadding="1" width="100%">
+    <tbody>
+        <tr>
+            <!-- {foreach from=$goods_list item=goods key=key} -->
+            <td>{$order.consignee}&nbsp;<!-- 收件人姓名 --></td>
+            <td>{$order.tel}&nbsp; <!-- 連絡電話 --></td>
+            <td>{$order.mobile}<!-- 手機號碼 --></td>
+            <td>{$order.address}&nbsp;<!-- 收件人地址 --></td>
+            <td>{$order.order_time}<!-- 下訂單時間 --></td>
+            <td>{$order.pay_name}<!-- 付款方式 --></td>
+            <td>{$goods.goods_name}<!-- 商品名稱 --></td>
+            <td>{$goods.formated_goods_price}&nbsp;<!-- 商品單價 --></td>
+            <td>{$goods.goods_number}&nbsp;<!-- 商品數量 --></td>
+            <td>{$goods.formated_subtotal}&nbsp;<!-- 商品金額小計 --></td>
+            <td>{$order.order_sn}<!-- 訂單號 --></td>
+        </tr>
+        <!-- {/foreach} -->
+    </tbody>
+</table>

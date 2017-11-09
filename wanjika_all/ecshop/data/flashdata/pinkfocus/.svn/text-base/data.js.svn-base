@@ -1,0 +1,19 @@
+imgUrl1="data/afficheimg/20121212yqejwy.jpg";
+imgtext1="双立人 开普敦西餐具 ";
+imgLink1=escape("../goods.php?id=708");
+imgUrl2="data/afficheimg/20121212vhctbx.jpg";
+imgtext2="扣乐扣保温型手提套装";
+imgLink2=escape("../goods.php?id=718");
+imgUrl3="data/afficheimg/20121212tjvaet.jpg";
+imgtext3="";
+imgLink3=escape("../goods.php?id=724");
+imgUrl4="data/afficheimg/20121212tduwdd.jpg";
+imgtext4="乐扣乐扣便当盒套装（6件套）";
+imgLink4=escape("../goods.php?id=715");
+imgUrl5="data/afficheimg/20121212corksj.jpg";
+imgtext5="乐扣乐扣便当盒套装（5件套）";
+imgLink5=escape("../goods.php?id=710");
+
+var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3+"|"+imgUrl4+"|"+imgUrl5;
+var links=imgLink1+"|"+imgLink2+"|"+imgLink3+"|"+imgLink4+"|"+imgLink5;
+var texts=imgtext1+"|"+imgtext2+"|"+imgtext3+"|"+imgtext4+"|"+imgtext5;

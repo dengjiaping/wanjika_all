@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css">
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">分类管理</div>
+	
+	    <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	<form action="__GROUP__/Cate/sortcate" method="post" />
+	<table class="table table-bordered table-hover table-condensed">
+	  <tr>
+		<th>分类ID</th>
+		<th>分类名</th>
+		
+		<th>排序</th>
+		<th>分页数量</th>
+		<th>类型</th>	
+		<th>导航显示</th>	
+		<th>操作</th>	
+	
+	  </tr>
+	 
+	  <volist name="cate" id="vo">
+	  <tr>
+			<td class="font12">{$vo.id}</td>
+			<td class="font12"><a href="__GROUP__/Info/index/cid/{$vo.id}">{$vo.catename}</td>		
+			<td class="font12"><input type="text" name="{$vo.id}"  value="{$vo.sort}" /></td>
+			<td class="font12">{$vo.catepage}</td>
+			<td class="font12"><if condition="$vo[catetype] eq '1'">新闻<elseif condition="$vo['catetype'] eq '2'"  />产品<else />单页</if></td>		
+			<td class="font12"><if condition="$vo['menu'] eq '1'">是<else />否</if></td>		
+			<td class="font12"><a href="__GROUP__/Cate/edit/id/{$vo.id}" class="btn btn-info btn-sm">修改</a> &nbsp; <a href="__GROUP__/Cate/delete/id/{$vo.id}" class="btn btn-warning btn-sm" onclick='return confirm("真的要删除?不可恢复!并且会删除该分类下的所有文章");'>删除</a></td>
+	  </tr>
+	
+		<volist name="vo.sub" id="v">
+		<tr>
+			<td class="font12">{$v.id}</td>
+			<td class="font12"><a href="__GROUP__/Info/index/cid/{$v.id}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----{$v.catename}</td>		
+			<td class="font12"><input type="text" name="{$v.id}"  value="{$v.sort}" /></td>
+			<td class="font12">{$vo.catepage}</td>
+			<td class="font12"><if condition="$v[catetype] eq '1'">新闻<elseif condition="$v['catetype'] eq '2'"  />产品<else />单页</if></td>		
+			<td class="font12"><if condition="$v['menu'] eq '1'">是<else />否</if></td>	
+			<td>
+		 <a href="__GROUP__/Cate/edit/id/{$v.id}" class="btn btn-info btn-sm">修改</a> &nbsp; <a href="__GROUP__/Cate/delete/id/{$v.id}" class="btn btn-warning btn-sm" onclick='return confirm("真的要删除?不可恢复!并且会删除该分类下的所有文章");'>删除</a></td>
+	  </tr>
+	  
+	 </volist>
+	 
+	  </volist>
+	 
+	  
+	 
+	</table>
+	<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-4">
+						   <button type="subimt" class="btn btn-default" id="post">排序</button>
+						   <a href="__GROUP__/Cate/addcate" class="btn btn-primary">添加分类</a>
+						
+						</div>
+					  </div>
+	 </form>
+	
+		
+		   </div>
+		  
+				
+</div>
+			
+
+
+
+
+  </body>
+</html>

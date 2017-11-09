@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+<style>
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    .binding-div
+    {
+        padding: 50px 10px;
+        text-align: center;
+    }
+    .binding-p
+    {
+        font-size: 14px;
+    }
+    .binding-span
+    {
+        color: #37af93;
+    }
+    .binding-login
+    {
+        color: #37af93;
+        background-color: #eafffa;
+        border: 1px solid #37af93;
+    }
+</style>
+</head>
+<body>
+{include file='head3.html'}
+<div class="binding-div">
+    <p class="binding-p">您的微信帐号已绑定万集客帐号</p>
+    <p class="binding-p"><span class="binding-span">“{$user_name}”</span>，是否直接登陆？</p>
+    <a href="usertest.php?act=weixin_login" class="sub_btn">确认</a>
+    <a href="usertest.php?act=login&flag=true" class="sub_btn binding-login">使用其它帐号登录</a>
+</div>
+</body>
+</html>

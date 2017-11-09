@@ -1,0 +1,11 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{foreach from=$cat_goods item=goods}-->
+<li> <a href="{$goods.url}"
+title="{$goods.name|escape:html}" target="_blank"> <img src="{$goods.thumb}" /> <span>{$goods.short_name|escape:html|truncate:25}<em></em></span></a> <span style="color:red">{$goods.cuxiao}</span><span>集客价：<strong>
+  <!-- {if $goods.promote_price neq ""} -->
+  {$goods.promote_price}
+  <!-- {else}-->
+  {$goods.shop_price}
+  <!--{/if}-->
+  </strong></span></li>
+<!--{/foreach}-->

@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="w1200" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div align=center style="height:7948px;min-width:990px;background:url(../images/xianjushenghuo.jpg) no-repeat scroll center top;">
+<!-- ImageReady Slices (pg.psd) -->
+<table id="__01" width="1200" height="7949" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td colspan="10">
+        <a href="http://www.wjike.com/getbonus2.php" target="_blank"><img src="images/shenghuo_01.jpg" alt="" width="1200" height="544" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="9">
+        <img src="images/shenghuo_02.jpg" width="1199" height="59" alt=""></td>
+    <td>
+        <img src="images/shenghuo_03.jpg" width="1" height="59" alt=""></td>
+</tr>
+<tr>
+    <td colspan="2">
+        <a href="http://www.wjike.com/brand.php?id=130&cat=43" target="_blank"><img src="images/shenghuo_04.jpg" alt="" width="299" height="412" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLljYHlhavlrZDkvZwiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDA4OTU3MDQ0O30=" target="_blank"><img src="images/shenghuo_05.jpg" alt="" width="302" height="412" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/brand.php?id=129&cat=43" target="_blank"><img src="images/shenghuo_06.jpg" alt="" width="300" height="412" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/brand.php?id=175&cat=43" target="_blank"><img src="images/shenghuo_07.jpg" alt="" width="299" height="412" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3739" target="_blank"><img src="images/shenghuo_08.jpg" alt="" width="305" height="342" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=4435" target="_blank"><img src="images/shenghuo_09.jpg" alt="" width="296" height="342" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=4293" target="_blank"><img src="images/shenghuo_10.jpg" alt="" width="293" height="342" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=4279" target="_blank"><img src="images/shenghuo_11.jpg" alt="" width="306" height="342" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3732" target="_blank"><img src="images/shenghuo_12.jpg" alt="" width="305" height="347" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=3728" target="_blank"><img src="images/shenghuo_13.jpg" alt="" width="296" height="347" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=4475" target="_blank"><img src="images/shenghuo_14.jpg" alt="" width="293" height="347" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=3726" target="_blank"><img src="images/shenghuo_15.jpg" alt="" width="306" height="347" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_16.jpg" width="1200" height="47" alt=""></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_17.jpg" width="1200" height="62" alt=""></td>
+</tr>
+<tr>
+    <td>
+        <a href="http://www.wjike.com/category.php?id=86&brand=14&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_18.jpg" alt="" width="297" height="414" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/category.php?id=86&brand=134&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_19.jpg" alt="" width="303" height="414" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/category.php?id=86&brand=119&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_20.jpg" alt="" width="301" height="414" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/category.php?id=86&brand=115&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_21.jpg" alt="" width="299" height="414" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3615" target="_blank"><img src="images/shenghuo_22.jpg" alt="" width="305" height="338" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=3637" target="_blank"><img src="images/shenghuo_23.jpg" alt="" width="296" height="338" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=1484" target="_blank"><img src="images/shenghuo_24.jpg" alt="" width="293" height="338" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=1456" target="_blank"><img src="images/shenghuo_25.jpg" alt="" width="306" height="338" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=4371" target="_blank"><img src="images/shenghuo_26.jpg" alt="" width="305" height="347" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=4421" target="_blank"><img src="images/shenghuo_27.jpg" alt="" width="296" height="347" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=3602" target="_blank"><img src="images/shenghuo_28.jpg" alt="" width="293" height="347" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=1213" target="_blank"><img src="images/shenghuo_29.jpg" alt="" width="306" height="347" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_30.jpg" width="1200" height="50" alt=""></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_31.jpg" width="1200" height="60" alt=""></td>
+</tr>
+<tr>
+    <td>
+        <a href="http://www.wjike.com/category.php?id=81&brand=14&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_32.jpg" alt="" width="297" height="415" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/category.php?id=44&brand=134&price_min=0&price_max=0&page=1&sort=last_update&order=DESC" target="_blank"><img src="images/shenghuo_33.jpg" alt="" width="304" height="415" border="0"></a></td>
+    <td colspan="2"><a href="http://www.wjike.com/category.php?id=209&brand=114&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_34.jpg" alt="" width="300" height="415" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLnqbrpl7TlpKfluIgiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDA4OTUyNjkyO30=" target="_blank"><img src="images/shenghuo_35.jpg" alt="" width="299" height="415" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=2987" target="_blank"><img src="images/shenghuo_36.jpg" alt="" width="305" height="336" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=4622" target="_blank"><img src="images/shenghuo_37.jpg" alt="" width="296" height="336" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=1526" target="_blank"><img src="images/shenghuo_38.jpg" alt="" width="293" height="336" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=3530" target="_blank"><img src="images/shenghuo_39.jpg" alt="" width="306" height="336" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=1517" target="_blank"><img src="images/shenghuo_40.jpg" alt="" width="305" height="350" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=1506" target="_blank"><img src="images/shenghuo_41.jpg" alt="" width="296" height="350" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=4061" target="_blank"><img src="images/shenghuo_42.jpg" alt="" width="293" height="350" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=3850" target="_blank"><img src="images/shenghuo_43.jpg" alt="" width="306" height="350" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_44.jpg" width="1200" height="114" alt=""></td>
+</tr>
+<tr>
+    <td>
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLnqbrpl7TlpKfluIgiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDA4OTUyNjkyO30=" target="_blank"><img src="images/shenghuo_45.jpg" alt="" width="297" height="414" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjE1OiLnvo7ngbXmoLzojrHnvo4iO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDA4OTUzNDA2O30=" target="_blank"><img src="images/shenghuo_46.jpg" alt="" width="304" height="414" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLljZfluIzoia/lk4EiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDA4OTUzNDEzO30=" target="_blank"><img src="images/shenghuo_47.jpg" alt="" width="300" height="414" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjU6InNoLjEgIjtzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQwODk1Mzc0NDt9" target="_blank"><img src="images/shenghuo_48.jpg" alt="" width="299" height="414" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3008" target="_blank"><img src="images/shenghuo_49.jpg" alt="" width="305" height="336" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=3012" target="_blank"><img src="images/shenghuo_50.jpg" alt="" width="296" height="336" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=4015" target="_blank"><img src="images/shenghuo_51.jpg" alt="" width="293" height="336" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=4021" target="_blank"><img src="images/shenghuo_52.jpg" alt="" width="306" height="336" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=4576" target="_blank"><img src="images/shenghuo_53.jpg" alt="" width="305" height="349" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=4539" target="_blank"><img src="images/shenghuo_54.jpg" alt="" width="296" height="349" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=4176" target="_blank"><img src="images/shenghuo_55.jpg" alt="" width="293" height="349" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=4224" target="_blank"><img src="images/shenghuo_56.jpg" alt="" width="306" height="349" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_57.jpg" width="1200" height="65" alt=""></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_58.jpg" width="1200" height="71" alt=""></td>
+</tr>
+<tr>
+    <td colspan="2">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuiTneaciOS6riI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDg5NTY0NzQ7fQ==" target="_blank"><img src="images/shenghuo_59.jpg" alt="" width="299" height="405" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6Iua9mOWptyI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDg5NTY0ODI7fQ==" target="_blank"><img src="images/shenghuo_60.jpg" alt="" width="302" height="405" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/category.php?id=232&brand=136&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_61.jpg" alt="" width="304" height="405" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/category.php?id=247&brand=143&price_min=0&price_max=0" target="_blank"><img src="images/shenghuo_62.jpg" alt="" width="295" height="405" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3892" target="_blank"><img src="images/shenghuo_63.jpg" alt="" width="305" height="338" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=3951" target="_blank"><img src="images/shenghuo_64.jpg" alt="" width="296" height="338" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=3989" target="_blank"><img src="images/shenghuo_65.jpg" alt="" width="293" height="338" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=3954" target="_blank"><img src="images/shenghuo_66.jpg" alt="" width="306" height="338" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3968" target="_blank"><img src="images/shenghuo_67.jpg" alt="" width="305" height="347" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=3893" target="_blank"><img src="images/shenghuo_68.jpg" alt="" width="296" height="347" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=3998" target="_blank"><img src="images/shenghuo_69.jpg" alt="" width="293" height="347" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=4011" target="_blank"><img src="images/shenghuo_70.jpg" alt="" width="306" height="347" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_71.jpg" width="1200" height="68" alt=""></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_72.jpg" width="1200" height="70" alt=""></td>
+</tr>
+<tr>
+    <td>
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6IumHkee6uiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDg5NTY1MDU7fQ==" target="_blank"><img src="images/shenghuo_73.jpg" alt="" width="297" height="405" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6Iue7v%2bS5i%2ba6kCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDg5NTY1MjA7fQ==" target="_blank"><img src="images/shenghuo_74.jpg" alt="" width="304" height="405" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLkuZDoibrnlJ/mtLsiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDA4OTU2NTQyO30=" target="_blank"><img src="images/shenghuo_75.jpg" alt="" width="300" height="405" border="0"></a></td>
+    <td colspan="3">
+        <a href="http://www.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuiTneaciOS6riI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0MDg5NTY1NDg7fQ==" target="_blank"><img src="images/shenghuo_76.jpg" alt="" width="299" height="405" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3922" target="_blank"><img src="images/shenghuo_77.jpg" alt="" width="305" height="338" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=3918" target="_blank"><img src="images/shenghuo_78.jpg" alt="" width="296" height="338" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=4007" target="_blank"><img src="images/shenghuo_79.jpg" alt="" width="293" height="338" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=4009" target="_blank"><img src="images/shenghuo_80.jpg" alt="" width="306" height="338" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3">
+        <a href="http://www.wjike.com/goods.php?id=3915" target="_blank"><img src="images/shenghuo_81.jpg" alt="" width="305" height="347" border="0"></a></td>
+    <td colspan="2">
+        <a href="http://www.wjike.com/goods.php?id=4608" target="_blank"><img src="images/shenghuo_82.jpg" alt="" width="296" height="347" border="0"></a></td>
+    <td>
+        <a href="http://www.wjike.com/goods.php?id=1702" target="_blank"><img src="images/shenghuo_83.jpg" alt="" width="293" height="347" border="0"></a></td>
+    <td colspan="4">
+        <a href="http://www.wjike.com/goods.php?id=3976" target="_blank"><img src="images/shenghuo_84.jpg" alt="" width="306" height="347" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="10">
+        <img src="images/shenghuo_85.jpg" width="1200" height="158" alt=""></td>
+</tr>
+<tr>
+    <td>
+        <img src="images/分隔符.gif" width="297" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="2" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="6" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="295" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="1" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="293" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="7" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="4" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="294" height="1" alt=""></td>
+    <td>
+        <img src="images/分隔符.gif" width="1" height="1" alt=""></td>
+</tr>
+</table>
+<!-- End ImageReady Slices -->
+</div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

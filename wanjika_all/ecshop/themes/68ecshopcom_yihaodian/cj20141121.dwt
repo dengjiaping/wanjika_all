@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="w1200" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div align=center style="height:5000px;min-width:990px;background:url(../images/cj20141121.jpg) no-repeat scroll center top;">
+<!-- ImageReady Slices (pg.psd) -->
+<table id="__01" width="1200" height="5000" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_01.jpg" width="1200" height="414" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_02.jpg" width="1200" height="110" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4294" target="_blank"><img src="images/20141121_03.jpg" alt="" width="303" height="317" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4616" target="_blank"><img src="images/20141121_04.jpg" alt="" width="296" height="317" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=1792" target="_blank"><img src="images/20141121_05.jpg" alt="" width="295" height="317" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4472" target="_blank"><img src="images/20141121_06.jpg" alt="" width="306" height="317" border="0"></a></td>
+  </tr>
+	<tr>
+		<td><a href="http://www.wjike.com/goods.php?id=3764" target="_blank"><img src="images/20141121_07.jpg" alt="" width="303" height="317" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=3730" target="_blank"><img src="images/20141121_08.jpg" alt="" width="296" height="317" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1485" target="_blank"><img src="images/20141121_09.jpg" alt="" width="295" height="317" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3387" target="_blank"><img src="images/20141121_10.jpg" alt="" width="306" height="317" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_11.jpg" width="1200" height="115" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4479" target="_blank"><img src="images/20141121_12.jpg" alt="" width="303" height="311" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4475" target="_blank"><img src="images/20141121_13.jpg" alt="" width="296" height="311" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4467" target="_blank"><img src="images/20141121_14.jpg" alt="" width="295" height="311" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4425" target="_blank"><img src="images/20141121_15.jpg" alt="" width="306" height="311" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3760" target="_blank"><img src="images/20141121_16.jpg" alt="" width="303" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3436" target="_blank"><img src="images/20141121_17.jpg" alt="" width="296" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3729" target="_blank"><img src="images/20141121_18.jpg" alt="" width="295" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1221" target="_blank"><img src="images/20141121_19.jpg" alt="" width="306" height="315" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_20.jpg" width="1200" height="112" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1484" target="_blank"><img src="images/20141121_21.jpg" alt="" width="303" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4339" target="_blank"><img src="images/20141121_22.jpg" alt="" width="296" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3607" target="_blank"><img src="images/20141121_23.jpg" alt="" width="295" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1467" target="_blank"><img src="images/20141121_24.jpg" alt="" width="306" height="315" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1213" target="_blank"><img src="images/20141121_25.jpg" alt="" width="303" height="316" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1486" target="_blank"><img src="images/20141121_26.jpg" alt="" width="296" height="316" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=927" target="_blank"><img src="images/20141121_27.jpg" alt="" width="295" height="316" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2313" target="_blank"><img src="images/20141121_28.jpg" alt="" width="306" height="316" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_29.jpg" width="1200" height="112" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3499" target="_blank"><img src="images/20141121_30.jpg" alt="" width="303" height="313" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1813" target="_blank"><img src="images/20141121_31.jpg" alt="" width="296" height="313" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2527" target="_blank"><img src="images/20141121_32.jpg" alt="" width="295" height="313" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1963" target="_blank"><img src="images/20141121_33.jpg" alt="" width="306" height="313" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1781" target="_blank"><img src="images/20141121_34.jpg" alt="" width="303" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2778" target="_blank"><img src="images/20141121_35.jpg" alt="" width="296" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1969" target="_blank"><img src="images/20141121_36.jpg" alt="" width="295" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3493" target="_blank"><img src="images/20141121_37.jpg" alt="" width="306" height="315" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_38.jpg" width="1200" height="110" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2266" target="_blank"><img src="images/20141121_39.jpg" alt="" width="303" height="316" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3728" target="_blank"><img src="images/20141121_40.jpg" alt="" width="296" height="316" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1639" target="_blank"><img src="images/20141121_41.jpg" alt="" width="295" height="316" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4276" target="_blank"><img src="images/20141121_42.jpg" alt="" width="306" height="316" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3732" target="_blank"><img src="images/20141121_43.jpg" alt="" width="303" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3726" target="_blank"><img src="images/20141121_44.jpg" alt="" width="296" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=3698" target="_blank"><img src="images/20141121_45.jpg" alt="" width="295" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4271" target="_blank"><img src="images/20141121_46.jpg" alt="" width="306" height="315" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_47.jpg" width="1200" height="116" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1577" target="_blank"><img src="images/20141121_48.jpg" alt="" width="303" height="311" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1610" target="_blank"><img src="images/20141121_49.jpg" alt="" width="296" height="311" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2850" target="_blank"><img src="images/20141121_50.jpg" alt="" width="295" height="311" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2652" target="_blank"><img src="images/20141121_51.jpg" alt="" width="306" height="311" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2244" target="_blank"><img src="images/20141121_52.jpg" alt="" width="303" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2240" target="_blank"><img src="images/20141121_53.jpg" alt="" width="296" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2225" target="_blank"><img src="images/20141121_54.jpg" alt="" width="295" height="315" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=2790" target="_blank"><img src="images/20141121_55.jpg" alt="" width="306" height="315" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/20141121_56.jpg" width="1200" height="135" alt=""></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+</div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iphone 6s</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+/*Iphone 6s start*/
+.ip_one{ width:100%; background-color:#f0f0f0;}
+.ip_one .df_sty{ width:1200px; height:1010px; margin:0 auto; position:relative;}
+.ip_01{ width:1005px; height:1113px; position:absolute; right:-15%;}
+.ip_one .only_df { position:absolute; padding:170px 0 0 0px; z-index:2;}
+.ip_one .only_df .od{ padding-left:50px;text-align: center; width:249px; }
+.ip_one .only_df .wy_2{ width:249px; height:54px; background:url(../images/adimages/ip_01.jpg) no-repeat center center; margin-bottom:15px;}
+.ip_one .only_df .wz_2{ font-size:14px; color:#3e393a;}
+.ip_one .only_df .wy_3{ width:350px; height:183px; margin-bottom:20px; display:block; background:url(../images/adimages/ip_16.jpg) no-repeat center center;}
+.ip_one .only_df .have{ padding-top:60px;}
+.ip_one .only_df .wjk_bs{ width:78px; height:58px; display:block; background:url(../images/adimages/ip_12.jpg) no-repeat center center; float:left;}
+.ip_one .only_df .wz_3{ font-size:36px; line-height:58px; color:#51318f; padding-left:15px;}
+.ip_one .only_df .sel{ padding-top:65px; overflow:hidden;}
+.ip_one .only_df .sel li{ float:left;}
+.ip_one .only_df .sel .sel_line { float:left; border-right:1px dotted #535353; padding-right:28px; margin-right:28px;}
+.ip_one .only_df .sel .sel_one{ width:188px; height:66px; background:url(../images/adimages/ip_13.jpg) no-repeat center center; margin-bottom:40px; }
+.ip_one .only_df .sel .sel_two{ width:188px; height:66px; background:url(../images/adimages/ip_14.jpg) no-repeat center center; margin-bottom:40px; }
+.ip_one .only_df .sel .sel_color{ width:188px; height:26px; background:url(../images/adimages/ip_03.jpg) no-repeat center center; margin-bottom:36px; }
+.ip_one .only_df .sel .sel_size{ width:188px; height:15px; background:url(../images/adimages/ip_15.jpg) no-repeat center center; }
+
+.ip_one .only_df .df_buying{ padding: 20px 180px; background-color:#45ba9f; border-radius:6px; font-size:24px; color:#fff; display:block;}
+.ip_one .only_df .df_buying:hover{ background-color:#38ae93;}
+.ip_one .only_df .buying_top{ margin-top:55px;}
+.ip_two{ width:100%; background:url(../images/adimages/ip_04.jpg) no-repeat 20% bottom;}
+.ip_two .df_sty{ width:1200px; height:870px; margin:0 auto; position:relative;}
+.ip_two .df_sty .explain_01{ width:660px; color:#848d96; text-align:center; font-size:18px; line-height:30px; padding:60px 0 0 250px;}
+.ip_two .df_sty .explain_02{ width:450px; color:#343434; text-align:left; font-size:18px; line-height:36px; right:150px; top:350px; position:absolute;}
+.ip_two .df_sty .explain_02 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_two .df_sty .explain_02 span{ font-size:30px;}
+
+.ip_three{ width:100%; background-color:#f5f5f5; background:url(../images/adimages/ip_05.png) no-repeat 10% -232px; overflow:hidden;}
+.ip_three .df_sty{ width:1200px; height:655px; margin:0 auto; position:relative; }
+.ip_03{ width:538px; height:807px; position:absolute; right:0; bottom:-196px;}
+.ip_three .df_sty .explain_03{ width:450px; color:#343434; text-align:left; font-size:18px; line-height:36px; left:180px; top:100px; position:absolute;}
+.ip_three .df_sty .explain_03 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_three .df_sty .explain_03 span{ font-size:30px;}
+
+
+.ip_fours{ width:100%; background:url(../images/adimages/ip_07.jpg) no-repeat 10% center;}
+.ip_fours .df_sty{ width:1200px; height:610px; margin:0 auto;  position:relative; }
+.ip_fours .df_sty .explain_04{ width:450px; color:#343434; text-align:left; font-size:18px; line-height:36px; right:100px; top:150px; position:absolute;}
+.ip_fours .df_sty .explain_04 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_fours .df_sty .explain_04 span{ font-size:30px;}
+
+.ip_five{ width:100%; background:url(../images/adimages/ip_08.jpg) no-repeat 75% 23px;}
+.ip_five .df_sty{ width:1200px; height:655px; margin:0 auto; position:relative; }
+.ip_five .df_sty .explain_05{ width:450px; color:#343434; text-align:left; font-size:18px; line-height:36px; left:100px; top:160px; position:absolute;}
+.ip_five .df_sty .explain_05 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_five .df_sty .explain_05 span{ font-size:30px;}
+
+
+.ip_six{ width:100%; background:url(../images/adimages/ip_09.jpg) no-repeat 20% 10px;}
+.ip_six .df_sty{ width:1200px; height:650px; margin:0 auto; position:relative; }
+.ip_six .df_sty .explain_06{ width:430px; color:#343434; text-align:left; font-size:18px; line-height:36px; right:150px; top:150px; position:absolute;}
+.ip_six .df_sty .explain_06 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_six .df_sty .explain_06 span{ font-size:30px;}
+
+
+.ip_seven{ width:100%; background:url(../images/adimages/ip_10.jpg) no-repeat 60% 0px;}
+.ip_seven .df_sty{ width:1200px; height:655px; margin:0 auto; position:relative; }
+.ip_seven .df_sty{ width:1200px; height:655px; margin:0 auto; position:relative; }
+.ip_seven .df_sty .explain_07{ width:400px; color:#343434; text-align:left; font-size:18px; line-height:36px; left:100px; top:200px; position:absolute;}
+.ip_seven .df_sty .explain_07 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_seven .df_sty .explain_07 span{ font-size:30px;}
+
+.ip_eight{ width:100%; background:url(../images/adimages/ip_11.jpg) no-repeat 30% -512px;}
+.ip_eight .df_sty{ width:1200px; height:872px; margin:0 auto; position:relative; }
+.ip_eight .df_sty .explain_08{ width:400px; color:#343434; text-align:left; font-size:18px; line-height:36px; right:180px; top:320px; position:absolute;}
+.ip_eight .df_sty .explain_08 p{ font-size:24px; text-align:center; padding-bottom:20px;}
+.ip_eight .df_sty .explain_08 span{ font-size:30px;}
+
+/*Iphone 6s end*/
+.ip_tcc{ width:1060px; height:506px; margin:0 auto;}
+.ip_tcc_cl{ margin:0 auto; width:980px; height:500px; border:3px solid #ddd; background-color:#fff; font-size:18px; color:#3e393a; }
+.ip_tcc_cl .tcc_color1{ padding:12px 30px; border-radius:4px; background-color:#e3d0ba; font-size:18px; color:#3e393a; margin-right:5px;}
+.ip_tcc_cl .tcc_color2{ padding:12px 30px; border-radius:4px; background-color:#dddfde; font-size:18px; color:#3e393a; margin-right:5px;}
+.ip_tcc_cl .tcc_color3{ padding:12px 30px; border-radius:4px; background-color:#abaeb1; font-size:18px; color:#3e393a; margin-right:5px;}
+.ip_tcc_cl .tcc_color4{ padding:12px 30px; border-radius:4px; background-color:#edccbd; font-size:18px; color:#3e393a;}
+.ip_tcc_cl .tcc_size1{ font-size:28px; color:#000; height:50px;}
+.ip_tcc_cl .tcc_size2{ font-size:18px; color:#c5c5c5; height:30px;}
+.ip_tcc_cl .line1{ background-color:#eee;}
+.ip_tcc_cl .line2{ border-right:1px solid #ddd;}
+</style>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body style="background-color:#f3f3f3;">
+<div id="ad" style="margin-top:50px;position: fixed;z-index: 999999;width: 100%;text-align: center;display:none;">
+<a onclick="javascript:;closead()" style="position: fixed;right:0;top:0;"><img src="images/close_new.png"></a>
+<div class="ip_tcc">
+	<table class="ip_tcc_cl" cellpadding="0" cellspacing="0">
+    	<tr>
+        	<td align="center" colspan="4" class="tcc_size1 line2">iPhone 6s</td>
+        	<td align="center" colspan="4" class="tcc_size1">iPhone 6s Plus</td>
+        </tr>
+    	<tr>
+        	<td align="center" colspan="4" class="tcc_size2 line1 line2">16G</td>
+        	<td align="center" colspan="4" class="tcc_size2 line1">16G</td>
+        </tr>
+    	<tr>
+        	<td align="center" colspan="4" class="line2" style="height:70px;">
+            	<a class="tcc_color1" href="http://www.wjike.com/goods.php?id=9649" target="_blank">金色</a>
+            	<a class="tcc_color2" href="http://www.wjike.com/goods.php?id=9646">银色</a>
+            	<a class="tcc_color3" href="http://www.wjike.com/goods.php?id=9652">深空灰</a>
+            	<a class="tcc_color4" href="http://www.wjike.com/goods.php?id=9655">玫瑰金</a>
+            </td>
+        	<td align="center" colspan="4">
+            	<a class="tcc_color1" href="http://www.wjike.com/goods.php?id=9661">金色</a>
+            	<a class="tcc_color2" href="http://www.wjike.com/goods.php?id=9658">银色</a>
+            	<a class="tcc_color3" href="http://www.wjike.com/goods.php?id=9664">深空灰</a>
+            	<a class="tcc_color4" href="http://www.wjike.com/goods.php?id=9667">玫瑰金</a>
+            </td>
+        </tr>
+    	<tr>
+        	<td align="center" colspan="4" class="tcc_size2 line1 line2">64G</td>
+        	<td align="center" colspan="4" class="tcc_size2 line1">64G</td>
+        </tr>
+    	<tr>
+        	<td align="center" colspan="4" class="line2" style="height:70px;">
+            	<a class="tcc_color1" href="http://www.wjike.com/goods.php?id=9650">金色</a>
+            	<a class="tcc_color2" href="http://www.wjike.com/goods.php?id=9647">银色</a>
+            	<a class="tcc_color3" href="http://www.wjike.com/goods.php?id=9653">深空灰</a>
+            	<a class="tcc_color4" href="http://www.wjike.com/goods.php?id=9656">玫瑰金</a>
+            </td>
+        	<td align="center" colspan="4">
+            	<a class="tcc_color1" href="http://www.wjike.com/goods.php?id=9662">金色</a>
+            	<a class="tcc_color2" href="http://www.wjike.com/goods.php?id=9659">银色</a>
+            	<a class="tcc_color3" href="http://www.wjike.com/goods.php?id=9665">深空灰</a>
+            	<a class="tcc_color4" href="http://www.wjike.com/goods.php?id=9668">玫瑰金</a>
+            </td>
+        </tr>
+    	<tr>
+        	<td align="center" colspan="4" class="tcc_size2 line1 line2">128G</td>
+        	<td align="center" colspan="4" class="tcc_size2 line1">128G</td>
+        </tr>
+    	<tr>
+        	<td align="center" colspan="4" class="line2" style="height:70px;">
+            	<a class="tcc_color1" href="http://www.wjike.com/goods.php?id=9651">金色</a>
+            	<a class="tcc_color2" href="http://www.wjike.com/goods.php?id=9648">银色</a>
+            	<a class="tcc_color3" href="http://www.wjike.com/goods.php?id=9654">深空灰</a>
+            	<a class="tcc_color4" href="http://www.wjike.com/goods.php?id=9657">玫瑰金</a>
+            </td>
+        	<td align="center" colspan="4">
+            	<a class="tcc_color1" href="http://www.wjike.com/goods.php?id=9663">金色</a>
+            	<a class="tcc_color2" href="http://www.wjike.com/goods.php?id=9660">银色</a>
+            	<a class="tcc_color3" href="http://www.wjike.com/goods.php?id=9666">深空灰</a>
+            	<a class="tcc_color4" href="http://www.wjike.com/goods.php?id=9669">玫瑰金</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+<div id="bg" class="bg" style="display:none;"></div>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="oh" style="width:100%;">
+<!--第一张-->
+<div class="ip_one">
+	<div class="df_sty">
+    	<div class="only_df">
+        	<div class="od">
+                <h2 class="wy_2"></h2>
+                <span class="wz_2">唯一的不同，是处处都不同。</span>
+            </div>
+            <div class="have">
+                <div class="wy_3"></div>
+                <span class="wjk_bs"></span>
+                <span class="wz_3">万集客闪电发货</span>
+            </div>
+            <div class="sel">
+            	<ul>
+                	<li class="sel_line">
+                    	<div class="sel_one"></div>
+                    	<div class="sel_color"></div>
+                    	<div class="sel_size"></div>
+                    </li>
+                	<li>
+                    	<div class="sel_two"></div>
+                    	<div class="sel_color"></div>
+                    	<div class="sel_size"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="buying_top">
+                <a class="df_buying" onclick="ad();">去购买</a>
+            </div>
+        </div>
+    	<img class="ip_01" src="images/adimages/ip_02.png" />
+    </div>
+</div>
+
+<!--第二张-->
+<div class="ip_two" style=" background-color:#fcfcfc;">
+	<div class="df_sty">
+    	<div class="explain_01">
+        	从你开始使用 iPhone 6s 的那一刻起，你就会感觉到它是如此不同。<br />指尖一按，3D Touch 就能让你实现更多精彩。<br />
+            Live Photos 能以生动的方式，让你的回忆鲜活呈现。而所有这些，仅仅是个开始。<br />
+            你对 iPhone 6s 的了解越深入，你越会发觉它的创新层层面面，无处不在。
+		</div>
+        <div class="explain_02">
+        	<p>3D Touch<br /><span>新一代Multi-Touch</span></p>
+            第一代 iPhone 为全世界带来了 Multi-Touch 技术，从此改变了我们体验科技的方式。
+            而现在，3D Touch 技术的推出，让你可以做到许多过去无法实现的事情。它可以感应你按压显示屏的力度，让你更快速、更便捷地处理各种重要事务。同时，它还能通过全新的 Taptic Engine 产生轻微的触感，给予你实时的反馈。
+        </div>
+    </div>
+</div>
+
+<!--第三张-->
+<div class="ip_three">
+	<div class="df_sty">
+        <div class="explain_03">
+        	<p>相机<br /><span>1200 万像素照片、4K 视频、<br />Live Photos，<br />还有生动如初的记忆。</span></p>
+           人见人爱的相机，现在更进一步。iPhone 6s 拥有 1200 万像素 iSight 摄像头，可拍摄清晰锐利、细节生动的照片，以及精彩绝伦的 4K 视频，其分辨率可达 1080p HD 视频的四倍。
+           而全新的 500 万像素 FaceTime HD 摄像头，让你的自拍足以媲美艺术照。此外，iPhone 6s 还推出 Live Photos 功能，以全新方式让你的美好记忆生动再现。
+           通过它，你可以捕捉照片拍摄前后时刻的情景，指尖一按就能以动态方式重现。
+        </div>
+    	<img class="ip_03" src="images/adimages/ip_06.png" />
+    </div>	
+</div>
+
+<!--第四张-->
+<div class="ip_fours" style=" background-color:#fbfbfb;">
+	<div class="df_sty">
+        <div class="explain_04">
+        	<p>技术<br /><span>A9 芯片，<br />超前的智能手机芯片。</span></p>
+           特别打造的 64 位 A9 芯片，为 iPhone 6s 带来过去只有台式电脑才具备的性能。
+           你将在各种你喜爱的图形密集型游戏和 app 中，体验到比以往提速 70% 的中央处理器性能，以及提速 90% 之多的图形处理器性能。
+        </div>
+    </div>	
+</div>
+
+<!--第五张-->
+<div class="ip_five" style=" background-color:#f5f5f5; ">
+	<div class="df_sty">
+        <div class="explain_05">
+        	<p>设计<br /><span>突破性的设计，又有新突破。</span></p>
+           创新并非总是显而易见，但只要稍加留意，你就会发现 iPhone 6s 有了本质上的提升。
+           它的机身采用全新的 7000 系列铝金属打造，这种等级的合金同样应用于航天工业。
+           此外，它的表层玻璃在智能手机中具有出众的坚固性和耐用性。
+           而在外观颜色方面，除了深空灰色、银色和金色，现在更加入了全新的玫瑰金色。
+        </div>
+    </div>	
+</div>
+
+<!--第六张-->
+<div class="ip_six" style=" background-color:#fbfbfb;">
+	<div class="df_sty">
+        <div class="explain_06">
+        	<p>无线网络<br /><span>4G LTE 和无线网络，双<br />双提速。</span></p>
+            iPhone 6s 采用 4G LTE Advanced 技术，速度可达上一代技术的两倍*。
+            它可支持 23 个 LTE 频段，让你可以在世界各处连接上更多的高速 4G LTE 网络。
+            此外，当你连接上无线网络时，也同样能使用 iPhone 6s 以过去两倍的速度处理各种事情，比如浏览网页、下载 app 等等。
+        </div>
+    </div>	
+</div>
+
+<!--第七张-->
+<div class="ip_seven" style=" background-color:#f5f5f5;">
+	<div class="df_sty">
+        <div class="explain_07">
+        	<p>Touch ID<br /><span>先进的安全保护，<br />就在你指尖。</span></p>
+            Touch ID 采用先进的指纹识别传感器，比以往更快、更好用，让你轻松安全地解锁你的手机。
+        </div>
+    </div>	
+</div>
+
+<!--第八张-->
+<div class="ip_eight" style=" background-color:#fbfbfb;">
+	<div class="df_sty">
+        <div class="explain_08">
+        	<p>IOS 9<br /><span>用与众不同的手机，<br />体验与众不同。</span></p>
+            iOS 9 是先进、智能、安全的移动操作系统。众多强大的全新内置 app、Siri 中的先进功能，
+            以及遍布系统各处的提升，让 iOS 9 比以往都更智能，也更加重要。与 Apple 硬件的深度整合，
+            使一切运作都格外默契而顺畅。此外，App Store 更满载各种精彩 app，它们专为充分利用 iPhone 的各项功能而量身打造。
+        </div>
+    </div>	
+</div>
+</div>
+<script>
+function ad() {
+    document.getElementById('bg').style.display = "block";
+    document.getElementById('ad').style.display = "block";
+}
+function closead() {
+    document.getElementById('bg').style.display = "none";
+    document.getElementById('ad').style.display = "none";
+}
+</script>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

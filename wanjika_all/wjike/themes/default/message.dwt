@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="Description" content="{$description}" />
+{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<style type="text/css">
+p a{color:#006acd; text-decoration:underline;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="blank"></div>
+<div class="block" style="width:100%;">
+<!--{if $trans_flag eq 'reg_succeed'}-->
+<script type='text/javascript'>
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'operation',
+        eventAction: 'register',
+        eventLabel: '{$source}',
+        eventValue: {$user_name}
+    });
+</script>
+<div class="wrap-center-bg">
+        <div class="wrap wrap-center ta">
+            <div><img src="images/correct.png"></div>
+            <p class="fs-20 mt-20">恭喜您，注册成功！</p>
+            <p class="register">
+                尊敬的用户您已成为万集客网站用户，登录名为：<span style="color:#cf0f06;">{$message.content}</span>，目前您仅能用此帐号浏览网站，如果需要购物欢迎您购买网站会员，我们将为您提供优质的商品及服务。
+            </p>
+            <div class="mt-60 mb-60">
+                <a class="registerbtn" href="vip.php">什么是万集客会员</a>
+                <a class="register-btn ml-30 " href="vip.php?act=vip_info">我要成为万集客会员</a>
+            </div>
+        </div>
+    </div>
+<!-- {elseif $trans_flag eq 'being_members'} -->
+<div class="wrap-center-bg">
+    <div class="wrap wrap-center ta">
+        <div style="margin:50px 0 30px 0;"><img src="images/refuse.png"></div>
+        <p class="fs-20 mt-20">您还未成为本网站会员,如需购物欢迎您购买网站会员！</p>
+        <div class="mt-60 mb-60">
+            <a class="registerbtn" href="vip.php">什么是万集客会员</a>
+            <a class="register-btn ml-30 " href="vip.php?act=vip_info">我要成为万集客会员</a>
+        </div>
+    </div>
+</div>
+<!-- {elseif $trans_flag eq 'forget_succeed'} -->
+<div class="wrap-center-bg">
+        <div class="wrap wrap-center ta">
+            <div><img src="images/correct.png"></div>
+            <p class="fs-20 mt-20">恭喜您，密码修改成功！</p>
+        </div>
+    </div>
+<!-- {elseif $trans_flag eq 'ytyhq'} -->
+<div class="wrap-center-bg" style="text-align:center;margin:50px 0 0 0 ;background-color:#fff;">
+
+    <img style="width: 40px;" src="/mobile/images/{if $error eq 0}lq.png{else}lqsb.png{/if}" />
+    <p style="overflow:hidden;margin: 10px;color: #979797;">{$message.content}</p>
+    <a class="btn-ff" style="margin-top: 10px;float:none;display: inline-block;" href="index.php">立即前往购物</a>
+    <img style="display:block;margin: 40px auto;width: 150px;" src="/mobile/images/wjk_dy.png" />
+    <p style="margin-top: 10px;">更多优惠信息</p>
+    <p>关注“万集客商城”订阅号</p>
+    </div>
+<!--{else}-->
+<div class="wrap-center-bg">
+  <div class="wrap wrap-center ta">
+    <!--<h3><span>{$lang.system_info}</span></h3>-->
+    </br>
+    <div class="boxCenterList RelaArticle" align="center">
+      <div style="margin:20px auto;">
+      <p style="font-size: 14px; font-weight:bold; color: red;">{$message.content}</p>
+        <!-- {if $message.url_info} -->
+          <!--{foreach from=$message.url_info key=info item=url}-->
+          <p><a href="{$url}">{$info}</a></p>
+          <!--{/foreach}-->
+        <!--{/if}-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- {/if} -->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</div>
+</body>
+</html>

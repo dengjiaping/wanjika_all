@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>双11手机专场</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.shuang_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#ff9900; }
+.shuang_all .shuang_01{ width:100%; height:146px; background:url(images/adimages/1111_01.jpg) no-repeat center center; margin:0 auto;}
+.shuang_all .shuang_02{ width:100%; height:146px; background:url(images/adimages/1111_02.jpg) no-repeat center center; margin:0 auto;}
+.shuang_all .shuang_03{ width:100%; height:145px; background:url(images/adimages/1111_03.jpg) no-repeat center center; margin:0 auto;}
+.shuang_all .shuang_04{ width:100%; height:146px; background:url(images/adimages/1111_04.jpg) no-repeat center center; margin:0 auto;}
+.shuang_all .shuang_05{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/1111_16.jpg) no-repeat center center;}
+.shuang_all .shuang_051{ width:994px; overflow:hidden; margin:0 auto;}
+
+.shuang_all .shuang_06{ width:100%; overflow:hidden; margin:0 auto; background-color:#54308e;}
+.shuang_all .shuang_061{ width:994px; overflow:hidden; margin:0 auto;}
+
+.fm_two{ width:100%; height:400px; margin:0 auto; background-color:#45ba9f;}
+.fm_two .fm_st{ width:1200px; margin:0 auto; padding-top:75px; overflow:hidden;}
+.fm_two .fm_st li{ float:left; text-align:center; padding:0 44px;}
+.fm_two .fm_st p{ font-size:18px; color:#fff; padding-top:30px;}
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--双11手机专场start-->
+<div class="shuang_all">
+	<div class="shuang_01"></div>   
+	<div class="shuang_02"></div>  
+	<div class="shuang_03"></div>  
+	<div class="shuang_04"></div> 
+     
+  <div class="shuang_05">
+    	<div class="shuang_051">
+            <img src="images/adimages/1111_06.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="73,33,277,356" href="goods.php?id=9886" />
+              <area shape="rect" coords="290,35,493,355" href="goods.php?id=9889" />
+              <area shape="rect" coords="503,33,708,356" href="goods.php?id=9882" />
+              <area shape="rect" coords="719,35,924,355" href="goods.php?id=9900" />
+              <area shape="rect" coords="73,365,275,686" href="goods.php?id=9902" />
+              <area shape="rect" coords="288,365,492,684" href="goods.php?id=9904" />
+              <area shape="rect" coords="505,364,708,685" href="goods.php?id=9424" />
+              <area shape="rect" coords="719,365,923,684" href="goods.php?id=9909" />
+            </map>
+            <img src="images/adimages/1111_10.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="73,5,277,323" href="goods.php?id=9911" />
+              <area shape="rect" coords="288,5,490,322" href="goods.php?id=9912" />
+              <area shape="rect" coords="505,5,706,322" href="goods.php?id=9918" />
+              <area shape="rect" coords="721,3,924,322" href="goods.php?id=9919" />
+              <area shape="rect" coords="72,332,277,652" href="goods.php?id=9921" />
+              <area shape="rect" coords="289,330,492,655" href="goods.php?id=9924" />
+              <area shape="rect" coords="505,333,707,650" href="goods.php?id=9937" />
+              <area shape="rect" coords="720,333,924,651" href="goods.php?id=9938" />
+            </map>
+            <img src="images/adimages/1111_13.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="73,3,278,324" href="goods.php?id=9939" />
+              <area shape="rect" coords="289,4,493,323" href="goods.php?id=9661" />
+              <area shape="rect" coords="505,5,708,324" href="goods.php?id=9647" />
+              <area shape="rect" coords="720,4,922,324" href="goods.php?id=9309" />
+            </map>
+      </div>
+    </div>
+    
+  <div class="shuang_06">
+    	<div class="shuang_061">
+    		<img src="images/adimages/1111_15.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="29,138,251,292" href="category.php?id=356&amp;brand=255&amp;price_min=0&amp;price_max=0" />
+              <area shape="rect" coords="266,139,487,290" href="category.php?id=356&amp;brand=256&amp;price_min=0&amp;price_max=0" />
+              <area shape="rect" coords="506,140,727,291" href="category.php?id=356&amp;brand=337&amp;price_min=0&amp;price_max=0" />
+              <area shape="rect" coords="742,139,964,291" href="category.php?id=356&amp;brand=257&amp;price_min=0&amp;price_max=0" />
+            </map>
+      </div>
+    </div>
+    
+</div>
+
+
+
+<div class="fm_two">
+    <div class="fm_st">
+        <ul>
+            <li><img src="images/adimages/fm_02.png" /><p>正品保证</p></li>
+            <li><img src="images/adimages/fm_03.png" /><p>底价专供</p></li>
+            <li><img src="images/adimages/fm_04.png" /><p>7天无忧退</p></li>
+            <li><img src="images/adimages/fm_05.png" /><p>急速配送</p></li>
+        </ul>
+    </div>
+</div>
+
+<!--双11手机专场end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

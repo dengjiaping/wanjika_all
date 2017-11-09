@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css">
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">关键词管理</div>
+	
+	    <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	
+	<table class="table table-bordered table-hover table-condensed">
+	  <tr>
+		<th>ID</th>
+		<th width="30%">关键词</th>
+		<th>点击数据</th>	
+		<th>状态</th>		
+		<th>时间</th>
+		
+	  </tr>
+	  <form action="__GROUP__/Search/edit" method="post" >
+	  <volist name="key" id="vo">
+	  <tr>
+			<td class="font12"><input type="checkbox" name="id[]" value="{$vo.id}">{$vo.id}</td>
+			<td class="font12">{$vo.key}</td>
+			
+			<td class="font12">{$vo.hits}</td>
+		
+			<td class="font12"><if condition="$vo['status'] eq 0">待审<else />已审</if></td>
+			<td class="font12">{:date('Y-m-d H:i:s',$vo['time'])}</td>
+			
+			
+	  </tr>
+	  </volist>
+	 
+	  
+	 
+	</table>
+	<div class="form-group">
+						<div class="col-sm-offset col-sm-12">
+						  <button type="button" id="btn1" class="btn btn-default">全选</button> 
+							<button type="button" id="btn2" class="btn btn-default">取消全选</button> 
+							<button type="button" id="btn4" class="btn btn-default">返选</button> 
+							<label><input type="radio" value="1" name="del" />删除</label>
+							<label><input type="radio" value="2" name="del" />审核</label>									 
+							<label><input type="radio" value="3" name="del" />隐藏</label>					 
+											 
+						   <button type="subimt" class="btn btn-default">提交</button>
+						  
+						</div>
+					  </div>
+	 </form>
+	
+		<ul class="pagination">
+			{$page}
+		</ul>
+		   </div>
+		  
+				
+</div>
+			
+
+
+
+<script type="text/javascript"> 
+jQuery(function($){ 
+//全选 
+$("#btn1").click(function(){ 
+$("input[type='checkbox']").attr("checked","true"); 
+}) 
+//取消全选 
+$("#btn2").click(function(){ 
+$("input[type='checkbox']").removeAttr("checked"); 
+}) 
+
+
+//反选 
+$("#btn4").click(function(){ 
+$("input[type='checkbox']").each(function(){ 
+if($(this).attr("checked")) 
+{ 
+$(this).removeAttr("checked"); 
+} 
+else 
+{ 
+$(this).attr("checked","true"); 
+} 
+}) 
+})
+});
+
+//删除
+
+
+</script> 
+  </body>
+</html>

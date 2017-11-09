@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>品牌专区 - 万集客，万集客狂欢节，进口食品，进口零食，进口生活用品，进口母婴产品-万集客商城</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files='../../js/transport.js,../js/utils.js'}
+{insert_scripts files='../common.js'}
+</head>
+
+<body>
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head1.html'}
+<div style="display: block;text-align: center;height: 30px;line-height: 30px;">
+    <a style="float: left;width:20%;color: #000;" onclick="window.location.href='brand_zone.php#0F'" target="_blank">{$arr[0].floor_name[0]}</a>
+
+    <!-- {foreach from=$arr[2] item=category name=name} -->
+    <a style="float: left;width:20%;color: #000;" onclick="window.location.href='brand_zone.php#{$smarty.foreach.name.iteration}F'" target="_blank">{$category.floor_name}</a>
+    <!-- {/foreach}-->
+</div>
+<div style="height:6px;background-color: #f2f0f1;"></div>
+
+<div style="overflow:hidden;background-color: #f2f0f1;">
+    <div class="t-lists" >
+        <ul>
+            <li  id="0F" name="0F" style="display: inline-block;width:100%;color: #45ba9f;text-align: center;margin: 0 0 10px 0;background:url(../../mobile/images/btb.png);background-repeat: no-repeat;background-size: 50%;background-position: 50% 50%;"><span style="font-size: 18px;">{$arr[0].floor_name[0]}</span></li>
+            <!-- {foreach from=$arr[1] item=brand key=key name=name} -->
+            <li class="{if $smarty.foreach.name.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                <a href="brands.php?b_id={$brand.floor_href}">
+                    <img src="../../{$brand.floor_img}"  width="100%" alt=""/>
+                </a>
+            </li>
+            <!-- {/foreach}-->
+        </ul>
+    </div>
+</div>
+<div style="overflow:hidden;background-color: #f2f0f1;">
+    <div class="t-lists" >
+        <ul id="test">
+            {foreach from=$arr[2] item=category name=name}
+            <li  id="{$smarty.foreach.name.iteration}F" name="{$smarty.foreach.name.iteration}F" style="display: inline-block;color: #45ba9f;width:100%;text-align: center;margin: 0 0 10px 0;background:url(../../mobile/images/btb.png);background-repeat: no-repeat;background-size: 50%;background-position: 50% 50%;"><span style="font-size: 18px;">{$category.floor_name}</span></li>
+            {foreach from=$category.cat item=cat name=n}
+            <li class="{if $smarty.foreach.n.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                <a href="brands.php?b_id={$cat.floor_name}">
+                    <div style="float: left;padding: 5px;width: 100%;"><img src="../../data/brandlogo/{$cat.brand_logo}"  width="40" height="40" alt="" style="float: left;border: 1px solid #efefef;margin-right: 5px;"/><span style="overflow: hidden;float: left;width: 68%;height: 40px;line-height: 40px;">{$cat.brand_name}</span></div>
+                    <img src="../../data/branddescimg/{$cat.brand_desc_img}"  width="100%" height="85" alt=""/>
+                </a>
+            </li>
+            {/foreach}
+            {foreachelse}
+            暂无此类商品
+            {/foreach}
+        </ul>
+    </div>
+</div>
+{include file='foot.html'}
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+            }
+        })
+    }
+</script>
+</body>
+</html>

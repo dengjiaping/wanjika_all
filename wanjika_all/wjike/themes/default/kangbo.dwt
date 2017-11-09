@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>康博益电池式自动真空保鲜盒</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.kangbo_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/kangbo_01.jpg) no-repeat center center #fff; }
+.kangbo_all .kangbo_one{ width:100%; overflow:hidden; margin:0 auto; }
+.kangbo_all .kangbo_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.kangbo_all .kangbo_01{ width:1200px; height:364px; background:url(images/adimages/kangbo_02.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_all .kangbo_02{ width:1200px; height:377px; background:url(images/adimages/kangbo_04.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_all .kangbo_03{ width:1200px; height:3216px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--康博益电池式自动真空保鲜盒start-->
+<div class="kangbo_all">
+	<div class="kangbo_one">
+        <div class="kangbo_01"></div>
+        <div class="kangbo_02"></div>
+    </div>
+
+	<div class="kangbo_two">
+        <div class="kangbo_03">
+        	<img src="images/adimages/kangbo_05.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="85,137,581,369" href="goods.php?id=10024" target="_blank" />
+              <area shape="rect" coords="86,395,578,661" href="goods.php?id=10025" target="_blank" />
+              <area shape="rect" coords="616,186,1124,607" href="goods.php?id=10026" target="_blank" />
+            </map>
+        	<img src="images/adimages/kangbo_06.jpg" />
+        	<img src="images/adimages/kangbo_07.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="189,185,441,582" href="goods.php?id=10027" target="_blank" />
+              <area shape="rect" coords="472,186,725,582" href="goods.php?id=10028" target="_blank" />
+              <area shape="rect" coords="755,185,1009,581" href="goods.php?id=10029" target="_blank" />
+            </map>
+        	<img src="images/adimages/kangbo_08.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="188,206,444,602" href="goods.php?id=10030" target="_blank" />
+              <area shape="rect" coords="472,204,726,602" href="goods.php?id=10031" target="_blank" />
+              <area shape="rect" coords="754,205,1009,602" href="goods.php?id=10032" target="_blank" />
+            </map>
+        	<img src="images/adimages/kangbo_09.jpg" />
+        </div>
+    </div>
+</div>
+<!--康博益电池式自动真空保鲜盒end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

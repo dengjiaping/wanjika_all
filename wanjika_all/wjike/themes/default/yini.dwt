@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>亿觅/emie移动电源</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.yini_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/yini_01.jpg) no-repeat top center #fff; }
+.yini_all .yini_one{ width:100%; overflow:hidden; margin:0 auto; }
+.yini_all .yini_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.yini_all .yini_01{ width:1200px; height:314px; background:url(images/adimages/yini_02.jpg) no-repeat center center; margin:0 auto; }
+.yini_all .yini_02{ width:1200px; height:336px; background:url(images/adimages/yini_04.jpg) no-repeat center center; margin:0 auto; }
+.yini_all .yini_03{ width:1200px; height:4247px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--亿觅/emie移动电源start-->
+<div class="yini_all">
+	<div class="yini_one">
+        <div class="yini_01"></div>
+        <div class="yini_02"></div>
+    </div>
+
+	<div class="yini_two">
+        <div class="yini_03">
+        	<img src="images/adimages/yini_05.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="77,206,335,834" href="http://www.wjike.com/goods.php?id=10178" target="_blank" />
+              <area shape="rect" coords="338,207,597,834" href="http://www.wjike.com/goods.php?id=10177" target="_blank" />
+              <area shape="rect" coords="602,208,856,835" href="http://www.wjike.com/goods.php?id=10185" target="_blank" />
+              <area shape="rect" coords="860,208,1120,835" href="http://www.wjike.com/goods.php?id=10186" target="_blank" />
+            </map>
+        	<img src="images/adimages/yini_06.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="78,212,330,837" href="http://www.wjike.com/goods.php?id=10188" target="_blank" />
+              <area shape="rect" coords="342,212,594,837" href="http://www.wjike.com/goods.php?id=10187" target="_blank" />
+              <area shape="rect" coords="604,214,854,838" href="http://www.wjike.com/goods.php?id=10189" target="_blank" />
+              <area shape="rect" coords="864,214,1121,840" href="http://www.wjike.com/goods.php?id=10190" target="_blank" />
+            </map>
+        	<img src="images/adimages/yini_07.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="77,204,328,828" href="http://www.wjike.com/goods.php?id=10180" target="_blank" />
+              <area shape="rect" coords="341,203,592,829" href="http://www.wjike.com/goods.php?id=10181" target="_blank" />
+              <area shape="rect" coords="603,203,854,827" href="http://www.wjike.com/goods.php?id=10179" target="_blank" />
+              <area shape="rect" coords="858,204,1122,829" href="http://www.wjike.com/goods.php?id=10183" target="_blank" />
+            </map>
+        	<img src="images/adimages/yini_08.jpg" />
+        	<a href="http://www.wjike.com/vip.php?act=vip_info" target="_blank"><img src="images/adimages/yini_09.jpg" /></a>
+      </div>
+    </div>
+
+</div>
+<!--亿觅/emie移动电源end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

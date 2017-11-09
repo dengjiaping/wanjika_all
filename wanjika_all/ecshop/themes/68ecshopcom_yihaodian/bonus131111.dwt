@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="w1200">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div align="center">
+	<!-- {if $get_bonus_res eq ''} -->
+		<div>
+			<table id="__01" width="940" height="1690" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="3">
+						<img src="images/youhuiquan_01.jpg" width="940" height="425" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<a href="sale1111.php"><img src="images/sale1111_banner.jpg" width="940" height="89" alt=""></as></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<img src="images/youhuiquan_02.jpg" width="940" height="268" alt=""></td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/youhuiquan_03.jpg" width="741" height="75" alt=""></td>
+					<td>
+						<a href="bonus131111.php?act=getbonus&index=1"><img src="images/youhuiquan_04.jpg" width="119" height="36" alt=""></a></td>
+					<td rowspan="2">
+						<img src="images/youhuiquan_05.jpg" width="80" height="75" alt=""></td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/youhuiquan_06.jpg" width="119" height="39" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<img src="images/youhuiquan_07.jpg" width="940" height="245" alt=""></td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/youhuiquan_08.jpg" width="741" height="77" alt=""></td>
+					<td>
+						<a href="bonus131111.php?act=getbonus&index=2"><img src="images/youhuiquan_09.jpg" width="119" height="38" alt=""></a></td>
+					<td rowspan="2">
+						<img src="images/youhuiquan_10.jpg" width="80" height="77" alt=""></td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/youhuiquan_11.jpg" width="119" height="39" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<img src="images/youhuiquan_12.jpg" width="940" height="249" alt=""></td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/youhuiquan_13.jpg" width="741" height="71" alt=""></td>
+					<td>
+						<a href="bonus131111.php?act=getbonus&index=3"><img src="images/youhuiquan_14.jpg" width="119" height="36" alt=""></a></td>
+					<td rowspan="2">
+						<img src="images/youhuiquan_15.jpg" width="80" height="71" alt=""></td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/youhuiquan_16.jpg" width="119" height="35" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<img src="images/youhuiquan_17.jpg" width="940" height="201" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<a href="sale1111.php"><img src="images/sale1111_banner.jpg" width="940" height="89" alt=""></as></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<img src="images/youhuiquan_18.jpg" width="940" height="79" alt=""></td>
+				</tr>
+			</table>
+		</div>
+	 <!-- {else}-->
+	 	<!-- {if $get_bonus_res eq 'succ'} -->
+	 		<div style="margin-top: 50px; margin-bottom: 50px;"><h3>领取成功！</h3><br /><a style="text-decoration:underline;" href="bonus131111.php">返回领取页面</a></div>
+	 	<!-- {elseif $get_bonus_res eq 'fail'} -->
+	 		<div style="margin-top: 50px; margin-bottom: 50px;"><h3>已经领过了！</h3><br /><a style="text-decoration:underline;" href="bonus131111.php">返回领取页面</a></div>
+	 	<!-- {else} -->
+	 		<div style="margin-top: 50px; margin-bottom: 50px;"><h3>活动已结束！</h3><br /><a style="text-decoration:underline;" href="bonus131111.php">返回领取页面</a></div>
+	 	<!-- {/if} -->
+	 <!-- {/if} -->
+</div>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

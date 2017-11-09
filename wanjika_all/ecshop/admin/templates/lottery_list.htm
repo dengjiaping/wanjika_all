@@ -1,0 +1,63 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="form-div">
+    <form action="lottery.php?act=list" method="post">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        订单号<input name="order_sn" type="text" id="order_sn" size="15" value={$order_sn}>
+        用户名<input name="user_name" type="text" id="user_name" size="15" value={$user_name}>
+        <select name="reward_id" id="reward_id">
+            <option value="-1">请选择</option>
+            <option value="0" {if $reward_id==0 && $reward_id != null}selected="selected"{/if}>未中奖</option>
+            <option value="1" {if $reward_id==1}selected="selected"{/if}>一等奖</option>
+            <option value="2" {if $reward_id==2}selected="selected"{/if}>二等奖</option>
+            <option value="3" {if $reward_id==3}selected="selected"{/if}>三等奖</option>
+            <option value="4" {if $reward_id==4}selected="selected"{/if}>四等奖</option>
+            <option value="5" {if $reward_id==5}selected="selected"{/if}>五等奖</option>
+        </select>
+        <input type="submit" value="{$lang.button_search}" class="button" />
+    </form>
+</div>
+
+<div class="list-div" id="listDiv">
+{/if}
+    <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>
+                    <a href="javascript:listTable.sort('order_sn', 'DESC'); ">订单号</a>{$sort_order_sn}
+                </th>
+                <th>用户ID</th>
+                <th>用户名</th>
+                <th>中奖名称</th>
+                <th><a href="javascript:listTable.sort('add_time', 'DESC'); ">添加时间</a>{$sort_order_time}</th>
+            </tr>
+                {foreach from=$lottery_list item=lottery key=okey}
+            <tr>
+                <td align="center" valign="top" nowrap="nowrap">{$lottery.order_sn}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$lottery.user_id}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$lottery.user_name}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$lottery.reward_name}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$lottery.short_order_time}</td>
+            </tr>
+            {/foreach}
+        </table>
+    <table id="page-table" cellspacing="0">
+            <tr>
+                <td align="right" nowrap="true">
+                    {include file="page.htm"}
+                </td>
+            </tr>
+        </table>
+{if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

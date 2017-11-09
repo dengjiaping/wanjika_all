@@ -1,0 +1,188 @@
+<?php
+/* 代码增加_start Byjdy */
+$is_category_index=$GLOBALS['db']->getOne("select category_index from ". $GLOBALS['ecs']->table('category') ." where cat_id=". $GLOBALS['smarty']->_var['category']);
+if ( $is_category_index == '1' and !$_REQUEST['price_min'] and !$_REQUEST['price_max'] and !$_REQUEST['brand'] and !$_REQUEST['filter_attr'])
+{
+	require_once ("themes/". $GLOBALS['_CFG']['template'] ."/lib_category_index.php" );	
+}
+/* 代码增加_end Byjdy */
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/search_new.css" rel="stylesheet" type="text/css" />
+<script src="themes/68ecshopcom_yihaodian/js/left_goodslist.js"></script>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,transport.js'}
+
+</head>
+<BODY>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<SCRIPT type=text/javascript>
+var choosedAttrItemsCar = "";
+var searchCarUrl = "#";
+var cateType = "0";
+var isWidescreen = 0;
+if(screen.width>=1280){isWidescreen = 1;document.body.className="w1200";}
+</SCRIPT>
+
+
+
+<DIV class="searchwrap wrap clearfix">
+<div class="bannerad">
+<!-- TemplateBeginEditable name="头部下广告" -->
+<!-- TemplateEndEditable -->
+</div>
+<DIV class=searchCrumb><!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+</DIV>
+<DIV class="searchColSub fl" id=searchColSub>
+<!-- #BeginLibraryItem "/library/category_tree2.lbi" --><!-- #EndLibraryItem -->
+  <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+  <div class="mt10">
+<!-- TemplateBeginEditable name="分类左侧广告位1" -->
+<!-- TemplateEndEditable -->
+
+</div>
+<div class="mt10">
+<!-- TemplateBeginEditable name="分类左侧广告位2" -->
+<!-- TemplateEndEditable -->
+</div>
+
+
+</DIV><!--sidebarleft-->
+<DIV class="searchColMain fr" id=bodyRight>
+
+  <!-- {if $best_goods} -->
+<DIV class="hotSaleRecommend mb" id=hotcontainer>
+<!-- #BeginLibraryItem "/library/recommend_catbest.lbi" --><!-- #EndLibraryItem -->
+ </DIV>
+   <!-- {/if} -->
+ 
+<DIV id=search_result>
+<DIV class="searchColMainItem searchResultOp" id=group_attr> 
+  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
+ 	<!--{if $brands.1}-->
+    <DL  class="clearfix ">
+  <DT>{$lang.brand}：</DT>
+  <DD>
+  <UL class=selection >
+  <!--{foreach from=$brands item=brand}-->
+					<!-- {if $brand.selected} -->
+     <LI >
+   <SPAN class="cur">{$brand.brand_name}</SPAN> 
+  
+    </LI>
+				
+					<!-- {else} -->
+			 <LI><A 
+    href="{$brand.url}"><SPAN>{$brand.brand_name}</SPAN> 
+    </A></LI>
+    
+					<!-- {/if} -->
+				<!--{/foreach}-->
+  
+   
+  
+  
+  
+  </UL></DD>
+  </DL>
+<!--{/if}-->
+
+
+
+  <!--{if $price_grade.1}-->          
+<DL class="clearfix ">
+  <DT>{$lang.price}：</DT>
+  <DD>
+  <UL class=selection>
+  
+  	<!--{foreach from=$price_grade item=grade}-->
+  	<!-- {if $grade.selected} -->
+				 <LI ><span  class="cur">{$grade.price_range}</span></LI>
+				<!-- {else} -->
+                  <LI>
+    <DIV><A class="" 
+    href="{$grade.url}"><SPAN>{$grade.price_range}</SPAN> 
+    </A></DIV></LI>
+    
+				<!-- {/if} -->
+                <!--{/foreach}-->
+  
+  
+  
+  
+  </UL></DD></DL>
+    	<!--{/if}-->
+
+      
+    <!--{foreach from=$filter_attr_list item=filter_attr}-->     
+<DL class="clearfix ">
+  <DT>{$filter_attr.filter_attr_name|escape:html}：</DT>
+  <DD>
+  <UL class=selection>
+  <!--{foreach from=$filter_attr.attr_list item=attr}-->
+				<!-- {if $attr.selected} -->
+    <LI >
+    <DIV><SPAN  class="cur">{$attr.attr_value}</SPAN> 
+    </DIV></LI>
+    
+    	<!-- {else} -->
+                
+      <LI>
+    <DIV><A class="" 
+    href="{$attr.url}"><SPAN>{$attr.attr_value}</SPAN> 
+    </A></DIV></LI>
+
+				<!-- {/if} -->
+			<!--{/foreach}-->
+  
+    
+    
+    
+    </UL></DD></DL>
+
+        <!--{/foreach}-->
+     <!-- {/if} -->
+</DIV>
+
+
+  <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
+
+  <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+
+
+
+
+
+</DIV>
+
+
+
+</DIV><!--middle--></DIV>
+
+
+
+
+
+  <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --><DIV class="fixedRight show"><A href="message.php" 
+target=_blank><SPAN>用户反馈</SPAN></A> <A class="toTop" 
+href="#headertop">回到顶部</A> 
+</BODY>
+</html>
+
+

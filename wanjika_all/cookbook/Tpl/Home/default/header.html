@@ -1,0 +1,28 @@
+<script type="text/javascript">
+		$(function(){
+			 $('#image').swipeSlide({autoPlay:3,delay:0.4});
+		});
+</script>
+	<div class="web980">
+	<div class="header">
+		<h1><a href="/">{$webname}</a></h1>
+		
+	</div>
+	  <div id="banner" class="banner">
+	  <div id="image" class="swipe" style="visibility: visible;">
+			<div class="swipe-wrap" data-id="0">				
+ <adlist id="1,2,3">				
+				<div class="swipe-item">
+					 <a href="{$adlist['adurl']}">					 
+					 <img align="absmiddle" src="{$adlist['adpic']}">					 
+					 </a>
+					 <div class="bottom"><div class="title">{$adlist['adremak']}</div></div>
+				</div>	
+  </adlist>					
+					
+			</div>
+		</div>
+
+    
+        <ul id="bannerNum" class="hd"></ul>
+	 </div>

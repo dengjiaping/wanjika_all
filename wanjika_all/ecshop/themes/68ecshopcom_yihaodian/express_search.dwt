@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/link/reset.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/link/type.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/link/960.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/link/grid_12_logistics.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="themes/68ecshopcom_yihaodian/js/jquery.js">
+<script language="javascript" src="themes/68ecshopcom_yihaodian/link/company.js">
+</script>
+<script language="javascript" src="themes/68ecshopcom_yihaodian/link/json2.js">
+</script>
+<script language="javascript" >
+ns4 = (document.layers) ? true : false;
+ie4 = (document.all) ? true : false;
+document.onkeydown = clearfield2;
+document.oncontextmenu =clearfield2;
+
+var titleorder=1;
+</script>
+
+<script language="javascript" src="themes/68ecshopcom_yihaodian/link/ajax.js">
+</script>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,user.js,../../js/transport.js'}
+</head>
+<body class="w1200" onload="clear();"  onunload='setCookie("inputpostid","")'>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="container_12">
+    <div class="grid_5" style="margin-bottom: 17px;">
+        <h2 class="l-title"></h2>
+        <dl>
+			<dt class="stock"></dt>
+			<dd class="dd1"><h3><input name="posttype" type="radio" value="申通快递" onclick="showcom(this)" /><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">申通</font></h3><h3><input name="posttype" type="radio" value="EMS"  onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">EMS</font></h3><h3><input name="posttype" type="radio" value="顺丰速运"  onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">顺丰</font></h3><h3><input name="posttype" type="radio" value="圆通速递" onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">圆通</font></h3></dd>
+        </dl>
+        <dl style="border:none;">
+			<dt class="space">&nbsp;</dt>
+			<dd class="dd1"><h3><input name="posttype" type="radio" value="韵达快递" onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">韵达</font></h3><h3><input name="posttype" type="radio" value="中通速递" onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">中通</font></h3><h3><input name="posttype" type="radio" value="天天快递" onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">天天</font></h3><h3><input name="posttype" type="radio" value="宅急送" onclick="showcom(this)"/><font name=classcompany style="cursor:pointer" onclick="showcom(this.parentNode.firstChild)">宅急送</font></h3></dd>
+        </dl>
+  	</div>
+    <div class="grid_7" style="margin-bottom: 5px;">
+        <h2 class="r-title"></h2>
+		<p id="companyinfo" class="phone" ><em id="companyname"><a href="#" target="_blank" class="orange f14"></a></em><span id="tel"></span></p>
+        <div class="search" >
+        	<div class="search-t"></div>
+            <div class="search-m">
+                <div style="padding:6px 9px 4px 9px;float:left;display:block;">
+                    <span class="odd"><input name="postid" type="text" class="input1" id="postid"  onFocus="clearfield1(this)" value="请输入您要查询的单号" onclick="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999" style="font-size:14px" onkeydown=' this.style.fontSize = "24px";
+            ' maxlength="26"/><a class="query" onclick="loadXMLDoc()" id="lika"></a></span>
+                </div>
+            </div>
+        	<div class="search-b"></div>
+        </div>
+    </div>
+    <br/>
+            <div class="blank"></div>
+           	<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+           	<tr>
+           		<td bgcolor="#ffffff"><div id="retData"></div></td>
+           	</tr>
+           	</table>
+
+
+</div>
+<script language="javascript">
+      function loadXMLDoc()
+      {
+
+          var expressid = $('input[name="posttype"]:checked').val();
+      	  var expressno = $("#postid").val();
+
+      	  if(expressid == null)
+      	  {
+      	    alert('请选择快递公司');
+      	    return false;
+      	  }
+      	  if(expressno == false ||expressno == '请输入您要查询的单号')
+      	  {
+      	    alert('请输入您要查询的单号');
+            return false;
+      	  }
+
+      	  Ajax.call('plugins/kuaidi100/kuaidi100_post.php?com='+ expressid+'&nu=' + expressno,'showtest=showtest', function(data){document.getElementById("retData").innerHTML=data;}, 'GET', 'TEXT');
+      }
+      </script>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

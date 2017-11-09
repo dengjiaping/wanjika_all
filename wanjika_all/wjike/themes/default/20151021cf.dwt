@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美好生活 从厨房开始</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.kitchen_all{ width:100%; margin:0 auto; overflow:hidden; }
+.kitchen_all .kitchen_01{ width:100%; height:107px; background:url(images/adimages/kitchen_01.jpg) no-repeat center center;}
+.kitchen_all .kitchen_02{ width:100%; height:107px; background:url(images/adimages/kitchen_02.jpg) no-repeat center center;}
+.kitchen_all .kitchen_03{ width:100%; height:107px; background:url(images/adimages/kitchen_03.jpg) no-repeat center center;}
+.kitchen_all .kitchen_04{ width:100%; height:107px; background:url(images/adimages/kitchen_04.jpg) no-repeat center center;}
+.kitchen_all .kitchen_05{ width:100%; height:107px; background:url(images/adimages/kitchen_05.jpg) no-repeat center center;}
+.kitchen_all .kitchen_06{ width:100%; height:76px; background-color:#ee7624; }
+.kitchen_all .kitchen_061{ width:1200px; height:76px; margin:0 auto;}
+.kitchen_all .kitchen_07{ width:100%; height:558px; background:url(images/adimages/kitchen_83.jpg) no-repeat center center; }
+.kitchen_all .kitchen_071{ width:1200px; height:399px; margin:0 auto; padding:80px 0;}
+.kitchen_all .kitchen_071 ul{ padding: 0 117px;}
+.kitchen_all .kitchen_071 li{ width:302px; height:399px; float:left;}
+
+.kitchen_all .kitchen_08{ width:100%; height:781px; background:url(images/adimages/kitchen_86.jpg) no-repeat center center; }
+.kitchen_all .kitchen_09{ width:100%; height:781px; background:url(images/adimages/kitchen_85.jpg) no-repeat center center; }
+.kitchen_all .kitchen_091{ width:1200px; height:700px; margin:0 auto; padding:40px 0;}
+.kitchen_all .kitchen_091 ul{ padding: 0 126px;}
+.kitchen_all .kitchen_091 li{ width:296px; height:335px; float:left;}
+
+.kitchen_all .kitchen_10{ width:100%; height:685px; background-color:#fff5c8; }
+.kitchen_all .kitchen_101{ width:1200px; height:574px; margin:0 auto; padding:55px 0;}
+.kitchen_all .kitchen_101 ul{ padding: 0 96px;}
+.kitchen_all .kitchen_101 li{ width:499px; height:282px; float:left;}
+.right_10{ margin-right:10px;}
+.bottom_10{ margin-bottom:10px;}
+.right_30{ margin-right:30px;}
+.bottom_30{ margin-bottom:30px;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--美好生活 从厨房开始start-->
+<div class="kitchen_all">
+	<div class="kitchen_01"></div>
+	<div class="kitchen_02"></div>
+	<div class="kitchen_03"></div>
+	<div class="kitchen_04"></div>
+	<div class="kitchen_05"></div>
+	<div class="kitchen_06">
+    	<div class="kitchen_061"><img src="images/adimages/kitchen_78.jpg" /></div>
+    </div>
+    
+    <div class="kitchen_07">
+    	<div class="kitchen_071">
+        	<ul>
+            	<li class="right_30"><a href="goods.php?id=3757"><img src="images/adimages/kitchen_08.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=3726"><img src="images/adimages/kitchen_10.jpg" /></a></li>
+            	<li><a href="goods.php?id=9510"><img src="images/adimages/kitchen_12.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="kitchen_06">
+    	<div class="kitchen_061"><img src="images/adimages/kitchen_79.jpg" /></div>
+    </div>
+            
+    <div class="kitchen_08">
+    	<div class="kitchen_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=3773"><img src="images/adimages/kitchen_18.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=4437"><img src="images/adimages/kitchen_20.jpg" /></li>
+            	<li class="bottom_30"><a href="goods.php?id=6025"><img src="images/adimages/kitchen_22.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=9464"><img src="images/adimages/kitchen_27.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=9468"><img src="images/adimages/kitchen_28.jpg" /></a></li>
+            	<li class="bottom_30"><a href="goods.php?id=9508"><img src="images/adimages/kitchen_29.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="kitchen_06">
+    	<div class="kitchen_061"><img src="images/adimages/kitchen_80.jpg" /></div>
+    </div>
+                        
+    <div class="kitchen_09">
+    	<div class="kitchen_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=1510"><img src="images/adimages/kitchen_33.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=1517"><img src="images/adimages/kitchen_34.jpg" /></li>
+            	<li class="bottom_30"><a href="goods.php?id=9506"><img src="images/adimages/kitchen_35.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=9624"><img src="images/adimages/kitchen_39.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=9620"><img src="images/adimages/kitchen_40.jpg" /></a></li>
+            	<li class="bottom_30"><a href="goods.php?id=9623"><img src="images/adimages/kitchen_41.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+	<div class="kitchen_06">
+    	<div class="kitchen_061"><img src="images/adimages/kitchen_81.jpg" /></div>
+    </div>
+    
+                
+    <div class="kitchen_08">
+    	<div class="kitchen_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=3715"><img src="images/adimages/kitchen_45.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=4262"><img src="images/adimages/kitchen_46.jpg" /></li>
+            	<li class="bottom_30"><a href="goods.php?id=4261"><img src="images/adimages/kitchen_47.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=4320"><img src="images/adimages/kitchen_51.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=4315"><img src="images/adimages/kitchen_52.jpg" /></a></li>
+            	<li class="bottom_30"><a href="goods.php?id=4259"><img src="images/adimages/kitchen_53.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>    
+    
+	<div class="kitchen_06">
+    	<div class="kitchen_061"><img src="images/adimages/kitchen_82.jpg" /></div>
+    </div>
+            
+    <div class="kitchen_09">
+    	<div class="kitchen_091">
+        	<ul>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=6502"><img src="images/adimages/kitchen_57.jpg" /></a></li>
+            	<li class="right_30 bottom_30"><a href="goods.php?id=6513"><img src="images/adimages/kitchen_58.jpg" /></li>
+            	<li class="bottom_30"><a href="goods.php?id=6520"><img src="images/adimages/kitchen_59.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=9353"><img src="images/adimages/kitchen_63.jpg" /></a></li>
+            	<li class="right_30"><a href="goods.php?id=9354"><img src="images/adimages/kitchen_64.jpg" /></a></li>
+            	<li class="bottom_30"><a href="goods.php?id=9355"><img src="images/adimages/kitchen_65.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+            
+    <div class="kitchen_10">
+    	<div class="kitchen_101">
+        	<ul>
+            	<li class="right_10 bottom_10"><a href="http://wjike.com/category.php?id=44&brand=273&price_min=0&price_max=0"><img src="images/adimages/kitchen_70.jpg" /></a></li>
+            	<li class="bottom_10"><a href="http://wjike.com/category.php?id=44&brand=129&price_min=0&price_max=0"><img src="images/adimages/kitchen_72.jpg" /></a></li>
+            	<li class="right_10 bottom_10"><a href="http://wjike.com/category.php?id=44&brand=14&price_min=0&price_max=0"><img src="images/adimages/kitchen_76.jpg" /></a></li>
+            	<li class="bottom_10"><a href="http://wjike.com/category.php?id=44&brand=130&price_min=0&price_max=0"><img src="images/adimages/kitchen_77.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</div>
+<!--美好生活 从厨房开始end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

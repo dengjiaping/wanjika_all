@@ -1,0 +1,60 @@
+<!-- $Id: batch_card_gift_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+{include file="pageheader.htm"}
+
+<div class="main-div">
+<form method="post" action="phone_card.php" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+<table cellspacing="1" cellpadding="3" width="100%">
+  <tr>
+    <td class="label">{$lang.patchNum}</td>
+    <td><input type="text" name="patchNum" maxlength="60" size="6" value="1000" />{$lang.require_field}</td>
+  </tr>
+  <tr>
+    <td class="label">{$lang.validDate}</td>
+    <td><input type="text" name="validDate" maxlength="60" size="20" value="" />{$lang.require_field}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><br />
+      <input type="submit" class="button" value="{$lang.button_submit}" />
+      <input type="reset" class="button" value="{$lang.button_reset}" />
+      <input type="hidden" name="act" value="batch_confirm_phone" />
+      <input type="hidden" name="goods_id" value="{$goods_id}" />
+    </td>
+  </tr>
+</table>
+
+</form>
+<table cellspacing="1" cellpadding="3" width="100%">
+  <tr>
+    <td>&nbsp;</td>
+    <td width="80%">{$lang.use_help}</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+</div>
+
+<script language="javascript" src="js/validator.js"></script>
+<script language="JavaScript">
+<!--
+{literal}
+document.forms['theForm'].elements['separator'].focus();
+
+onload = function()
+{
+  startCheckOrder();
+}
+
+/**
+ * 妫�煡琛ㄥ崟杈撳叆鐨勬暟鎹�
+ */
+function validate()
+{
+  validator = new Validator("theForm");
+  validator.required("patchNum",  separator_not_null);
+  validator.required("validDate", uploadfile_not_null);
+  return validator.passed();
+}
+//-->
+{/literal}
+</script>
+{include file="pagefooter.htm"}

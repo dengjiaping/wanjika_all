@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+	
+	
+
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">微信管理</div>
+	
+ <div class="panel-body">
+		   <form class="form-horizontal" action="__GROUP__/Weixin/eidt" method="post" role="form" >
+			 
+				<div class="form-group">
+						<label for="leixin" class="col-sm-3 control-label">回复类型:</label>
+						<div class="col-sm-4">
+							<label><input type="radio" value="1" name="leixin"  <if condition="$v['leixin'] eq 1">checked</if> />文本</label>
+							<label><input type="radio" value="0" name="leixin" <if condition="$v['leixin'] eq 0">checked</if> />图文</label>						
+						</div> 
+					  </div>
+					  <div class="form-group">
+						<label for="title" class="col-sm-3 control-label">图文标题():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="title" name="title" value="{$v['title']}" placeholder="选择图文时填写">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="url" class="col-sm-3 control-label">跳转链接():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="url" name="url" value="{$v['url']}" placeholder="跳转链接">
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="pic" class="col-sm-3 control-label">图片():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="logo" name="pic" value="{$v['pic']}"  placeholder="图片可以是远程链接也可以本地上传选择图文时填写">
+						</div>
+						 <div class="col-sm-3">
+								 	<iframe src="__GROUP__/Upload" height="40"  frameborder="0" scrolling="no" ></iframe>
+						</div>
+
+					  </div>
+					  
+					   <div class="form-group">
+						<label for="text" class="col-sm-3 control-label">文本回复内容(text):</label>
+						<div class="col-sm-4">
+						  <textarea type="text" class="form-control" id="text" name="text" >{$v['text']}</textarea>
+						</div>
+						</div>
+						 <div class="form-group">
+						<label for="sorts" class="col-sm-3 control-label">排序():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="sorts" name="sorts" value="{$v['sorts']}" />
+						  <input type="hidden" name="id" value="{$v['id']}" />
+						</div>
+					  </div>
+						 <div class="form-group">
+						<label for="star" class="col-sm-3 control-label">是否启动:</label>
+						<div class="col-sm-4">
+							<label><input type="radio" value="1" name="star" <if condition="$v['star'] eq 1">checked</if> />启动</label>
+							<label><input type="radio" value="0" name="star" <if condition="$v['star'] eq 0">checked</if> />关闭</label>						
+						</div> 
+					  </div>
+					 
+					  
+						 <div class="form-group">
+											<div class="col-sm-offset-3 col-sm-4">
+											  <button type="submit" class="btn btn-default" id="post">添加</button>
+											</div>
+						 </div>
+						</form>
+					  
+				</div>
+			</div>
+		  
+		  
+		
+		
+		  
+				
+</div>
+
+
+
+  </body>
+</html>

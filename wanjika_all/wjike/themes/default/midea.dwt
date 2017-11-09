@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美的 演绎生活智慧</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.midea_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#ff9900; }
+.midea_all .midea_01{ width:100%; height:139px; background:url(images/adimages/midea_01.jpg) no-repeat center center;}
+.midea_all .midea_02{ width:100%; height:138px; background:url(images/adimages/midea_02.jpg) no-repeat center center;}
+.midea_all .midea_03{ width:100%; height:139px; background:url(images/adimages/midea_03.jpg) no-repeat center center;}
+.midea_all .midea_04{ width:100%; height:138px; background:url(images/adimages/midea_04.jpg) no-repeat center center;}
+.midea_all .midea_05{ width:100%; height:139px; background:url(images/adimages/midea_05.jpg) no-repeat center center;}
+.midea_all .midea_06{ width:1000px; overflow:hidden; margin:0 auto;}
+.midea_all .midea_07{ width:1000px; overflow:hidden; margin:0 auto;}
+.midea_all .midea_08{ width:1000px; overflow:hidden; margin:0 auto;}
+.midea_all .midea_09{ width:1000px; overflow:hidden; margin:0 auto;}
+.midea_all .midea_10{ width:1000px; overflow:hidden; margin:0 auto;}
+.midea_all .midea_11{ width:100%; overflow:hidden; margin:0 auto;background-color:#ffcc00; }
+.midea_all .midea_111{ width:1000px; overflow:hidden; margin:0 auto; padding-top:42px;}
+.midea_all .midea_11 li{ float:left; padding:0 21px 42px 21px;}
+.midea_all .midea_12{ width:100%; overflow:hidden; margin:0 auto; background-color:#dcbea6;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--买手挑好货 手机购start-->
+<div class="midea_all">
+	<div class="midea_01"></div>
+	<div class="midea_02"></div>
+	<div class="midea_03"></div>
+	<div class="midea_04"></div>
+	<div class="midea_05"></div>
+	<div class="midea_06">
+    	<a href="goods.php?id=9555"><img src="images/adimages/midea_07.jpg" /></a>
+    </div>
+	<div class="midea_07">
+    	<a href="goods.php?id=9596"><img src="images/adimages/midea_09.jpg" /></a>
+    </div>
+	<div class="midea_08">
+    	<a href="goods.php?id=9563"><img src="images/adimages/midea_10.jpg" /></a>
+    </div>
+	<div class="midea_09">
+    	<a href="goods.php?id=9544"><img src="images/adimages/midea_11.jpg" /></a>
+    </div>
+	<div class="midea_10">
+    	<a href="goods.php?id=9550"><img src="images/adimages/midea_12.jpg" /></a>
+    </div>
+	<div class="midea_11">
+    	<div class="midea_111">
+            <ul>
+                <li><a href="goods.php?id=9542"><img src="images/adimages/midea_15.jpg" /></a></li>
+                <li><a href="goods.php?id=9605"><img src="images/adimages/midea_17.jpg" /></a></li>
+                <li><a href="goods.php?id=9547"><img src="images/adimages/midea_19.jpg" /></a></li>
+                <li><a href="goods.php?id=9557"><img src="images/adimages/midea_24.jpg" /></a></li>
+                <li><a href="goods.php?id=9591"><img src="images/adimages/midea_25.jpg" /></a></li>
+                <li><a href="goods.php?id=9594"><img src="images/adimages/midea_26.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+
+	<div class="midea_12">
+    	<a href="http://www.wjike.com/category.php?id=311&brand=231&price_min=0&price_max=0"><img src="images/adimages/midea_30.jpg" /></a>
+    </div>
+
+</div>
+
+
+
+<!--买手挑好货 手机购end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

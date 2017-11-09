@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css">
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">报价管理</div>
+	
+	    <div class="panel-body">
+		    <div class="alert alert-warning alert-dismissable hidden" id="tishi">
+		
+			</div>
+	<!-- Nav tabs -->
+	
+	<table class="table table-bordered table-hover table-condensed">
+	  <tr>
+		<th>ID</th>
+		<th>姓名</th>
+		<th>电话</th>	
+		<th>QQ</th>	
+		<th>多少套礼服</th>
+		<th>多少个放大相框</th>		
+		<th>多少本相册</th>		
+		<th>什么样的风格</th>
+		<th>拍摄外景</th>	
+		<th>拍摄特色</th>	
+		<th>需要补充</th>	
+		<th>提交时间</th>
+	  </tr>
+
+	  <volist name="info" id="vo">
+	  <tr>
+			<td class="font12">{$vo.id}</td>
+			<td class="font12">{$vo.name}</td>			
+			<td class="font12">{$vo.tel}</td>		
+			<td class="font12">{$vo.qq}</td>
+			<td class="font12">{$vo.tao}</td>			
+			<td class="font12">{$vo.xiangkuan}</td>			
+			<td class="font12">{$vo.xiangce}</td>			
+			<td class="font12">{$vo.fenge}</td>			
+			<td class="font12">{$vo.waijin}</td>			
+			<td class="font12">{$vo.tese}</td>					
+			<td class="font12">{$vo.remark}</td>			
+			<td class="font12">
+				{$vo.time|date="y-m-d h:i:s",###}
+			</td>
+			
+	  </tr>
+	  </volist>
+	 
+	  
+	 
+	</table>
+	
+	 </form>
+	
+		<ul class="pagination">
+			{$page}
+		</ul>
+		   </div>
+		  
+				
+</div>
+			
+
+
+
+  </body>
+</html>

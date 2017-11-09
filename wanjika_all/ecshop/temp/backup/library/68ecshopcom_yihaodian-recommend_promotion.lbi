@@ -1,0 +1,127 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- {if $promotion_goods} -->
+
+<script >
+
+var Tday = new Array();
+
+var daysms = 24 * 60 * 60 * 1000
+
+var hoursms = 60 * 60 * 1000
+
+var Secondms = 60 * 1000
+
+var microsecond = 1000
+
+var DifferHour = -1
+
+var DifferMinute = -1
+
+var DifferSecond = -1
+
+function clock(key)
+
+  {
+
+   var time = new Date()
+
+   var hour = time.getHours()
+
+   var minute = time.getMinutes()
+
+   var second = time.getSeconds()
+
+   var timevalue = ""+((hour > 12) ? hour-12:hour)
+
+   timevalue +=((minute < 10) ? ":0":":")+minute
+
+   timevalue +=((second < 10) ? ":0":":")+second
+
+   timevalue +=((hour >12 ) ? " PM":" AM")
+
+   var convertHour = DifferHour
+
+   var convertMinute = DifferMinute
+
+   var convertSecond = DifferSecond
+
+   var Diffms = Tday[key].getTime() - time.getTime()
+
+   DifferHour = Math.floor(Diffms / daysms)
+
+   Diffms -= DifferHour * daysms
+
+   DifferMinute = Math.floor(Diffms / hoursms)
+
+   Diffms -= DifferMinute * hoursms
+
+   DifferSecond = Math.floor(Diffms / Secondms)
+
+   Diffms -= DifferSecond * Secondms
+
+   var dSecs = Math.floor(Diffms / microsecond)
+
+   
+
+   if(convertHour != DifferHour) a="剩余："+DifferHour+"天";
+
+   if(convertMinute != DifferMinute) b=DifferMinute+"时&nbsp;";
+
+   if(convertSecond != DifferSecond) c=DifferSecond+"分"
+
+     d=dSecs+"秒"
+
+     if (DifferHour>0) {a=a} 
+
+     else {a=''}
+
+   document.getElementById("leftTime"+key).innerHTML = a + b + c + d; //显示倒计时信息
+
+  
+
+  }
+
+</script>
+
+<script>
+
+Tday[{$key}] = new Date("{$goods.gmt_end_time}");   
+
+window.setInterval(function()     
+
+{clock({$key});}, 1000);     
+
+</script>
+
+
+
+
+<UL class="tab_content clearfix time_buying" id=limitBuy>
+    <!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}-->
+      <!--{if $smarty.foreach.promotion_foreach.iteration lt 6}-->
+
+  <LI><A class=pro_img title="{$goods.name|escape:html}" href="{$goods.url}" target=_blank 
+><IMG src="{$goods.thumb}" ></A> 
+  <A class=pro_name title="{$goods.name|escape:html}"   href="{$goods.url}" target=_blank >{$goods.short_name|escape:html}</A>
+  <span style="float:left;color:red">&nbsp{$goods.cuxiao}</span>&nbsp
+  <P class=tl><STRONG>{$goods.promote_price}</STRONG><DEL>{$goods.shop_price}</DEL></P>
+  <P class=last_time id="leftTime{$key}">{$lang.please_waiting}</P>  
+  </LI>
+  
+    <!--{/if}-->
+    
+    <script>
+Tday[{$key}] = new Date("{$goods.gmt_end_time}");  
+window.setInterval(function()    
+{clock({$key});}, 1000);    
+</script>
+
+      <!--{/foreach}-->
+
+  
+  </UL>
+  
+
+
+<!-- {/if} -->

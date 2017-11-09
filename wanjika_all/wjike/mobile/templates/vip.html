@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>领取会员 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+<style>
+    .activity_all { width:100%; overflow:hidden; margin:0 auto; }
+    .activity_all .act_pic{ width:100%; text-align:center;}
+    .activity_all .act_pic a{ margin-bottom:0px; display:block;}
+    .activity_all .act_pic .j_img_top{ width:100%;}
+</style>
+</head>
+<body>
+{include file='head4.html'}
+{insert_scripts files='common.js,../js/transport.js,../js/utils.js'}
+
+
+<!--购买万集客会员start-->
+<div class="activity_all">
+    <div class="act_pic">
+        <img class="j_img_top" src="/mobile/images/vippay_01.jpg" />
+        <a onclick="return freemembers()"><img class="j_img_top" src="/mobile/images/vippay_02.jpg" /></a>
+        <a href="javascript:addToCart({$goods_id_three})"><img class="j_img_top" src="/mobile/images/vippay_03.jpg" /></a>
+        <a href="javascript:addToCart({$goods_id_four})"><img class="j_img_top" src="/mobile/images/vippay_04.jpg" /></a>
+        <a href="javascript:addToCart({$goods_id_one})"><img class="j_img_top" src="/mobile/images/vippay_05.jpg" /></a>
+        <a href="javascript:addToCart({$goods_id_two})"><img class="j_img_top" src="/mobile/images/vippay_06.jpg" /></a>
+        <img class="j_img_top" src="/mobile/images/vippay_07.jpg" />
+
+    </div>
+</div>
+<!--购买万集客会员end-->
+{include file='foot.html'}
+</body>
+</html>

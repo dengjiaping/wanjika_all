@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户中心 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+<script src="/mobile/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/mobile/dist/sweetalert.css">
+<script src="/mobile/js/common.js"></script>
+{insert_scripts files='../../js/transport.js'}
+    <style>
+        a {
+            text-decoration: none;
+            color: #0f0f0f;
+        }
+        .home{
+            background: #fff !important;
+        }
+        .home_bottom{
+            padding: 10px 0;
+            margin-bottom:4px ;
+        }
+        .home_img{
+            width: 5em;
+            height: 5em;
+            border-radius: 4em;
+            /*border: .125em solid #dedede;*/
+            /*box-shadow: inset 0 1px 8px rgba(0,0,0,0.2);*/
+            box-shadow: 0 0 0 2px #dedede;
+            margin-top: .5em;
+            margin-bottom: .25em;
+            display: inline-block;
+            overflow: hidden;
+            background-size: cover;
+            background: url('/mobile/images/user_photo.png');
+            background-size:66px 66px;
+        }
+        .home_name{
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+        .home_money{
+            padding: 4px 14px;
+            background: #37af93;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 15px;
+        }
+        .home_vip{
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 10px;
+            color: #ff8243;
+            padding: 3px 8px;
+            background: #ffffff;
+            border: 1px solid #ff8243;
+        }
+        .home_blank{
+            height: 10px;
+            background: #f2f0f1;
+        }
+        .userinfo .mc table{
+            text-align: left;
+        }
+        .home_order{
+            font-weight:normal;
+            font-size: 16px;
+        }
+        .home_order_right{
+            float: right;
+            color: #9c9c9c;
+            font-size: 14px;
+        }
+        .userinfo .mc table{
+            margin: 0px;
+        }
+        .userinfo .mc th{
+            font-weight: normal;
+            border-bottom: 1px solid #f2f0f1;
+        }
+        .userinfo .mc td{
+            padding: 10px 0 0 0;
+            text-align: center;
+            width: 33%;
+        }
+        .userinfo .mc td img{
+            margin: 10px 0 4px 0;
+        }
+        .wx_binding{
+            float: right;
+            margin-top: -4px;
+            padding: 6px 10px;
+            border-radius: 2px;
+            background: #37af93;
+            color: #ffffff;
+        }
+        </style>
+</head>
+<body class="userinfo">
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head4.html'}
+<div class="home clear home_bottom">
+	<div style="text-align: center;width: 100%;">
+        <span class="home_img"></span>
+        <p class="home_name">{$user_name}</p>
+		<!--<span class="level">{$rank_name}</span><br>-->
+		<!--<span class="level">积分：{$user_info.user_points}</span><br>-->
+        <span class="home_money">余额：{$user_info.user_money}</span><br>
+        {if $is_members}<span>会员状态：<img src="/mobile/images/user_vip.png" style="width: 18px;height: 17px;margin-right: 6px;margin-top: -4px;"/></span><span style="color: #ff8243;">{$levelname}<a class="home_vip" href="vip.php?act=vip_info">立即续费</a></span><br>{else}<span style="display: inline-block;margin-top: 10px;">您还不是万集客会员</span><a class="home_vip" href="vip.php?act=vip_info">立即成为会员</a><br>{/if}
+        {if $is_members}<span style="display:inline-block;margin-top: 10px;color: #979797;">到期时间:{$time}</span>{/if}
+    </div>
+</div>
+<div class="home_blank"></div>
+<div class="mc" style="padding: 0;">
+	<table cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+		<tr>
+			<th colspan="3" class="home_order">我的订单<a href='user.php?act=order_list' class="home_order_right">查看全部订单</a></th>
+		</tr>
+		<tr>
+            <td><a href="user.php?act=order_list&status=unpay"><img {if $unpay_count gt 0}style="margin-left: 16px;"{/if} src="/mobile/images/order_01.png" height="32">{if $unpay_count gt 0}<i class="icon-c" style="position: relative;display: inline-block;right: 6px;top: -10px;color:#ffffff;">{$unpay_count}</i>{/if}<p>待付款</p></a></td>
+            <td><a href="user.php?act=order_list&status=deliveryd"><img {if $deliveryd_count gt 0}style="margin-left: 16px;"{/if} src="/mobile/images/order_02.png" height="32">{if $deliveryd_count gt 0}<i class="icon-c" style="position: relative;display: inline-block;right: 6px;top: -10px;color:#ffffff;">{$deliveryd_count}</i>{/if}<p>待收货</p></a></td>
+            <td><a href="user.php?act=order_list&status=complete"><img src="/mobile/images/order_03.png" height="32"><p>交易成功</p></a></td>
+		</tr>
+	</table>
+    <div class="home_blank"></div>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2"><a href='user.php?act=address_list' style="display: block;padding: 2px;"><img src="/mobile/images/address_img.png" width="26" height="27" style="margin-right: 10px;font-weight: normal;"/>收货地址管理<img src="/mobile/images/user_right.png" style="float: right;height: 26px;"/></a></th>
+        </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2"><a href='user.php?act=gift_card' style="display: block;padding: 2px;"><img src="/mobile/images/user_gift.png" width="26" height="27" style="margin-right: 10px;font-weight: normal;"/>我的礼品卡<span style="float: right;color: #979797;">{$gift_count}张可用<img src="/mobile/images/user_right.png" style="margin-left:10px;height: 26px;"/></span></a></th>
+        </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2"><a href='user.php?act=coupons' style="display: block;padding: 2px;"><img src="/mobile/images/user_coupons.png" width="26" height="27" style="margin-right: 10px;font-weight: normal;"/>我的优惠券<span style="float: right;color: #979797;">{$coupons_count}张未使用<img src="/mobile/images/user_right.png" style="margin-left:10px;height: 26px;"/></span></a></th>
+        </tr>
+    </table>
+	<table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2"><a href='user.php?act=follow' style="display: block;padding: 2px;"><img src="/mobile/images/user_follow.png" width="26" height="27" style="margin-right: 10px;font-weight: normal;"/>我的关注<img src="/mobile/images/user_right.png" style="float: right;height: 26px;"/></a></th>
+        </tr>
+	</table>
+	<table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2"><a href='user.php?act=integral' style="display: block;padding: 2px;"><img src="/mobile/images/jifen_img.png" width="26" height="27" style="margin-right: 10px;font-weight: normal;"/>我的积分<img src="/mobile/images/user_right.png" style="float: right;height: 26px;"/></a></th>
+        </tr>
+	</table>
+    {if $is_show}
+	<table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2"><img src="/mobile/images/weixin2.png" width="28" height="24" style="margin-right: 6px;font-weight: normal;"/>绑定微信<a href="javascript:is_binding()"><span id="wx_bd" class="wx_binding"/>{if $is_binding}解除绑定{else}绑定微信{/if}</span></a></th>
+        </tr>
+	</table>
+    {/if}
+</div>
+{include file='foot.html'}
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+            }
+        })
+    }
+</script>
+</body>
+</html>

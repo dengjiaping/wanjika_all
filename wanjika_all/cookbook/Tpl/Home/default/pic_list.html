@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><if condition="$seotitle">{$seotitle}<else />{$title}</if>-{$webname}</title>
+	<meta name="keywords" content="{$key}">
+	<meta name="description" content="{$desc}">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/swipe.css" />
+	<script src="__PUBLIC__/default/js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/default/js/swipe.js" type="text/javascript" charset="utf-8"></script>
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>
+<body>
+<include file=":header" />
+	
+	 <div class="list">
+			
+			<ul>
+				
+					<volist name="list" id="list">
+						<li>
+						<a href="{$list[url]}"><img src="{$list.pic}"></a>
+						<p><a href="{$list[url]}">{$list.name|msubstr=###,0,10,'utf-8',false}</a></p>						
+						</li>
+					</volist>
+				
+			
+			</ul>
+		 </div>
+	
+	
+		
+		<ul class="pagination">
+			{$page}
+		</ul>
+	
+	
+	
+
+</div>
+
+<include file=":footer" />

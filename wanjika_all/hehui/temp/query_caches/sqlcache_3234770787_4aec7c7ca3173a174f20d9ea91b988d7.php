@@ -1,0 +1,1 @@
+<?php exit;?>1510188447a:4:{i:0;a:2:{s:10:"article_id";s:2:"16";s:5:"title";s:12:"正品保障";}i:1;a:2:{s:10:"article_id";s:2:"15";s:5:"title";s:12:"客服中心";}i:2;a:2:{s:10:"article_id";s:2:"14";s:5:"title";s:12:"支付方式";}i:3;a:2:{s:10:"article_id";s:2:"13";s:5:"title";s:21:"商品验货与签收";}}

@@ -1,0 +1,49 @@
+{include file="pageheader.htm"}
+<!-- start add new category form -->
+<div class="main-div">
+  <form action="grasp_dataconfig.php" method="post" name="theForm" enctype="multipart/form-data">
+  <table width="100%" id="general-table">
+      <tr>
+        <td class="label">抓取关键字:</td>
+        <td>
+          <input type='text' name='keywords' maxlength="20" value='{$config_info.keywords|escape:html}' size='27' />
+        </td>
+      </tr>
+      <tr>
+        <td class="label">排序类型:</td>
+        <td>
+          <select name="sorttype">
+              <option value="1" {if $config_info.sorttype eq 1}selected{/if}>相关度</option>
+              <option value="2" {if $config_info.sorttype eq 2}selected{/if}>销量</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">抓取页数:</td>
+        <td>
+          <input type="text" name='page' value='{$config_info.page|escape:html}' size="5" />
+        </td>
+      </tr>
+      <!--<tr>-->
+        <!--<td class="label">抓取页面链接地址:</td>-->
+        <!--<td>-->
+          <!--<textarea name='link' rows="4" cols="48">{$config_info.link}</textarea>-->
+        <!--</td>-->
+      <!--</tr>-->
+      </table>
+      <div class="button-div">
+        <input type="submit" value="{$lang.button_submit}" />
+        <input type="reset" value="{$lang.button_reset}" />
+      </div>
+    <input type="hidden" name="act" value="{$form_act}" />
+    <input type="hidden" name="config_id" value="{$config_id}" />
+  </form>
+</div>
+{literal}
+<script language="JavaScript">
+<!--
+document.forms['theForm'].elements['keywords'].focus();
+//-->
+</script>
+{/literal}
+{include file="pagefooter.htm"}

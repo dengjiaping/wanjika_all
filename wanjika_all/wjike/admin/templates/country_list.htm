@@ -1,0 +1,33 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+<!-- start ad position list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+<table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+  <tr>
+    <th>商品国家名称</th>
+    <th>商品国家编码</th>
+    <th>商品国家编码</th>
+    <th>{$lang.handler}</th>
+  </tr>
+  {foreach from=$country_list item=country}
+  <tr align="center" id="{$country.country_id}">
+    <td align="25%" class="first-cell" >{$country.country_name}</td>
+    <td width="25%">{$country.country_code}</td>
+    <td width="25%"><img src="{$country.country_img}" height="22px;"/></td>
+    <td width="25%" align="center">
+      <a href="goods.php?act=edit_country&amp;country_id={$country.country_id}">{$lang.edit}</a> |
+      <a href="javascript:;" onclick="listTable.remove({$country.country_id}, '{$lang.drop_confirm}','remove_country')" title="{$lang.remove}">{$lang.remove}</a>
+    </td>
+  </tr>
+  {/foreach}
+</table>
+{if $full_page}
+</div>
+</form>
+{include file="pagefooter.htm"}
+{/if}

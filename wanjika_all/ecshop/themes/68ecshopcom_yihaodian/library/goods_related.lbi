@@ -1,0 +1,29 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $related_goods} -->
+
+     
+<div class="mod2con">
+<!--{foreach from=$related_goods item=releated_goods_data}-->
+<ul class="attribute">
+<li>
+      <a href="{$releated_goods_data.url}" target="_blank" class="fl"><img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name}" align="left" /></a>
+			<p class="fl"><a href="{$releated_goods_data.url}" target="_blank" title="{$releated_goods_data.goods_name}" >{$releated_goods_data.short_name}</a><br />
+            
+        <!-- {if $releated_goods_data.promote_price neq 0} -->
+        {$lang.promote_price}<b class="f1">{$releated_goods_data.formated_promote_price}</b>
+        <!-- {else} -->
+        {$lang.shop_price}<b class="f1">{$releated_goods_data.shop_price}</b>
+        <!-- {/if} --></br>
+        {$lang.market_price}<b class="f1 market" style="color:#999">{$releated_goods_data.market_price}</b>
+       </p>
+</li>      
+</ul>  
+<!-- {/foreach} -->
+</div>
+
+
+<!-- {/if} -->
+
+
+
+

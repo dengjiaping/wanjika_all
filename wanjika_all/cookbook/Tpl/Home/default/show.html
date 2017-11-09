@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><if condition="$seotitle">{$seotitle}<else />{$title}</if>-{$webname}</title>
+	<meta name="keywords" content="{$key}">
+	<meta name="description" content="{$desc}">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/css.css" />
+	<script src="__PUBLIC__/default/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/default/js/slide.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/default/js/pcwap.js" type="text/javascript" charset="utf-8"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+
+<div class="web980">
+
+	<div class="list_left">		
+			<div class="content">
+				<div class="title">
+				<h2>{$title}</h2>
+				<div class="time">
+					<span>{$time}</span><a href="/">首页</a> > {$daohan}			
+				</div>
+				</div>
+				<div class="con">
+				{$content}
+				</div>
+				
+				<img src="__PUBLIC__/pcwap/images/0.jpg" />
+				<div class="lianxi">
+				
+			<p><span></span>{$webname}</p>			
+			<p><span>电话：</span><a href="tel:{$tel}">{$tel}</a></p>
+			<p><span>Q  Q：</span>{$qq[0]}</p>
+			<p><span>地址：</span>{$address}</p>
+			
+		</div>
+		<img src="__PUBLIC__/pcwap/images/1.jpg" />
+			<div class="prev">
+				<a href="{$prev[url]}">上一篇</a>
+			</div>
+			<div class="next">
+				<a href="{$next[url]}">下一篇</a>
+			</div>
+			<if condition="$book">
+			<div class="revlist">
+				<h3><span>已有 <font color="red">{$revs}</font> 条评论</span>评论列表</h3>
+				<volist name="book" id="vo">
+				<dl>
+					<dt><span>{:date('Y-m-d',$vo['time'])}</span>{$i}楼 #{$vo.name}</dt>
+					<dd>{$vo.content}</dd>
+					<if condition="$vo['reply']">
+					<dd class="red">管理员回复：{$vo.reply}</dd>
+					</if>
+				</dl>
+				</volist>
+				
+			</div>
+			</if>
+			<if condition="$isrev eq 1">
+			<div class="book">
+				
+				<form action="__GROUP__/book.php" method="post" >
+					<label><span>联系人：</span><input type="text" name="name" /></label>
+					<label><span>电话：</span><input type="text" name="tel" /></label>
+					<label><span>邮箱：</span><input type="text" name="email" /></label>
+					<input type="hidden" name="infoid" value="{$infoid}" />				
+					<label><span>备注：</span><textarea type="text" name="content" id="con" /></textarea></label>
+					<label><button type="button" id="postrev" onclick="postrev('__GROUP__/Book')">提交</button></label>
+				</form>
+			</div>
+			</if>
+			</div>
+		
+		
+	</div>
+	
+	
+
+</div>
+
+<include file=":footer" />

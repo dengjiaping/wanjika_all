@@ -1,0 +1,162 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php
+require_once ("themes/". $GLOBALS['_CFG']['template'] ."/library/get_fenlei.php" );
+$fenlei_1=get_fenlei(1);
+$fenlei_2=get_fenlei(2);
+$fenlei_3=get_fenlei(3);
+$fenlei_4=get_fenlei(4);
+$fenlei_5=get_fenlei(5);
+
+$GLOBALS['smarty']->assign('fenlei1_1' , $fenlei_1);
+$GLOBALS['smarty']->assign('fenlei1_2' , $fenlei_2);
+$GLOBALS['smarty']->assign('fenlei1_3' , $fenlei_3);
+$GLOBALS['smarty']->assign('fenlei1_4' , $fenlei_4);
+$GLOBALS['smarty']->assign('fenlei1_5' , $fenlei_5);
+
+
+
+?>
+
+  <LI flag="1"> 
+   {foreach from=$fenlei1_1 item=fenleiitem name=fenlei}
+  {if $smarty.foreach.fenlei.iteration eq 1}<A class=big_pic 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> <DIV class="mini_promo clearfix">
+  {/if}
+  
+    {if $smarty.foreach.fenlei.iteration eq 2} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}
+     {if $smarty.foreach.fenlei.iteration eq 3} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}    {if $smarty.foreach.fenlei.iteration eq 4} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> </DIV>
+ {/if}
+   {/foreach}
+  </LI>
+  
+  
+  
+    <LI flag="2"> 
+   {foreach from=$fenlei1_2 item=fenleiitem name=fenlei}
+  {if $smarty.foreach.fenlei.iteration eq 1}<A class=big_pic 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> <DIV class="mini_promo clearfix">
+  {/if}
+  
+    {if $smarty.foreach.fenlei.iteration eq 2} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}
+     {if $smarty.foreach.fenlei.iteration eq 3} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}    {if $smarty.foreach.fenlei.iteration eq 4} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> </DIV>
+ {/if}
+   {/foreach}
+  </LI>
+  
+    
+    <LI flag="3"> 
+   {foreach from=$fenlei1_3 item=fenleiitem name=fenlei}
+  {if $smarty.foreach.fenlei.iteration eq 1}<A class=big_pic 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> <DIV class="mini_promo clearfix">
+  {/if}
+  
+    {if $smarty.foreach.fenlei.iteration eq 2} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}
+     {if $smarty.foreach.fenlei.iteration eq 3} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}    {if $smarty.foreach.fenlei.iteration eq 4} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> </DIV>
+ {/if}
+   {/foreach}
+  </LI>
+  
+  
+  <LI flag="4"> 
+   {foreach from=$fenlei1_4 item=fenleiitem name=fenlei}
+  {if $smarty.foreach.fenlei.iteration eq 1}<A class=big_pic 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> <DIV class="mini_promo clearfix">
+  {/if}
+  
+    {if $smarty.foreach.fenlei.iteration eq 2} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}
+     {if $smarty.foreach.fenlei.iteration eq 3} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}    {if $smarty.foreach.fenlei.iteration eq 4} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> </DIV>
+ {/if}
+   {/foreach}
+  </LI>
+  
+  <LI flag="5"> 
+   {foreach from=$fenlei1_5 item=fenleiitem name=fenlei}
+  {if $smarty.foreach.fenlei.iteration eq 1}<A class=big_pic 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> <DIV class="mini_promo clearfix">
+  {/if}
+  
+    {if $smarty.foreach.fenlei.iteration eq 2} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}
+     {if $smarty.foreach.fenlei.iteration eq 3} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> 
+ {/if}    {if $smarty.foreach.fenlei.iteration eq 4} 
+   <A 
+  href="{$fenleiitem.href}" target=_blank >
+   <img  src="{$fenleiitem.src}">
+  </A> </DIV>
+ {/if}
+   {/foreach}
+  </LI>

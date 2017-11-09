@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js,lrtk.js'}
+</head>
+<body>
+<div id="ad" style="margin-top:100px;position: fixed;z-index: 999999;width: 100%;text-align: center;display:none;">
+<a onclick="javascript:;closead()" style="position: fixed;right:0;top:0;"><img src="images/close_new.png"></a>
+<a href="flexible.php" target="_blank"><img width=1200 height=700 src="首页弹屏.png" /></a></div>
+<div id="bg" class="bg" style="display:none;"></div>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="blank"></div>
+<div class="vip_lbt">
+
+<!-- 轮播代码 开始 -->
+  <script type="text/javascript" src="data/flashdata/{$flash_theme}/cycle_image.js"></script>
+<!-- 代码 结束 -->
+
+	<div class="vipcome">
+    	<div class="lqcome">
+            <a class="whatvip" href="vip.php?act=vip_info" target="_blank"></a>
+            <a href="vip.php?act=vipinfo" style="position: absolute; right: 85px;" target="_blank">成为会员有什么好处？</a>
+        </div>
+    	<img src="images/vipcome.jpg">
+    </div>
+</div>
+
+<div class="classcolumns">
+	<div class="cc_head">
+    	<div class="food_class"></div>
+    	<div class="tab_class">
+        	<a href="category.php?id=573" target="_blank">牛奶乳品</a><span></span>
+        	<a href="category.php?id=574" target="_blank">饼干点心</a><span></span>
+        	<a href="category.php?id=575" target="_blank">休闲零食</a><span></span>
+        	<a href="category.php?id=576" target="_blank">粮油副食</a><span></span>
+        	<a href="category.php?id=577" target="_blank">咖啡茶饮</a>
+        </div>
+    </div>
+
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_one">
+                <div class="goodsInfo">
+                	<a class="tl">德国 德亚 低脂牛奶1l</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9389" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="德国 德亚 低脂牛奶1L" href="goods.php?id=9389" target="_blank"><img src="data/afficheimg/万集客首页780-345广告德国 德亚 低脂牛奶.jpg"></a>
+            </li>
+    		<li class="float_two">
+                <div class="goodsInfo">
+                	<a class="tl">意大利 曼吉 天然矿泉水 优质水 500ml</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9487" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="意大利 曼吉 天然矿泉水 优质水 500ml" href="goods.php?id=9487" target="_blank"><img src="data/afficheimg/10万集客首页415-345广告意大利曼吉天然矿泉水.jpg"></a>
+            </li>
+        </ul>
+    </div>
+
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_three">
+                <div class="goodsInfo">
+                	<a class="tl">西班牙 谷优 低糖粗麦消化饼 400g</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9290" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="西班牙 谷优 低糖粗麦消化饼 400g" href="goods.php?id=9290" target="_blank"><img src="data/afficheimg/万集客首页415-345广告西班牙 谷优 低糖粗麦消化饼 .jpg"></a>
+            </li>
+    		<li class="float_four">
+                <div class="goodsInfo">
+                	<a class="tl">哥伦比亚 哥氏 经典卡布奇诺咖啡 108g/盒</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9556" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="哥伦比亚 哥氏 经典卡布奇诺咖啡 108g/盒" href="goods.php?id=9556" target="_blank"><img src="data/afficheimg/12万集客首页780-345广告哥伦比亚哥氏经典卡布奇诺咖啡.jpg"></a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="classcolumns">
+	<div class="cc_head">
+    	<div class="col_class"></div>
+    	<div class="tab_class">
+        	<a href="category.php?id=74" target="_blank">家纺用品</a><span></span>
+        	<a href="category.php?id=118" target="_blank">生活家具</a><span></span>
+        	<a href="category.php?id=120" target="_blank">生活日用</a><span></span>
+        	<a href="category.php?id=84" target="_blank">清洁用品</a>
+        </div>
+    </div>
+
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_one">
+                <div class="goodsInfo">
+                	<a class="tl">美厨maxcook 迷你熊系列 定时器 MCMX-12</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9497" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="美厨maxcook 迷你熊系列 定时器 MCMX-12" href="goods.php?id=9497" target="_blank"><img src="data/afficheimg/1万集客首页780-345广告迷你熊定时器.jpg"></a>
+            </li>
+    		<li class="float_two">
+                <div class="goodsInfo">
+                	<a class="tl">好事达 晶彩边几(绿色)</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9337" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="好事达 晶彩边几(绿色)" href="goods.php?id=9337" target="_blank"><img src="data/afficheimg/2万集客首页415-345广告好事达晶彩边几.jpg"></a>
+            </li>
+        </ul>
+    </div>
+
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_three">
+                <div class="goodsInfo">
+                	<a class="tl">美厨maxcook 虹彩系列 削皮器 MCBF-105</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9495" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="美厨maxcook 虹彩系列 削皮器 MCBF-105" href="goods.php?id=9495" target="_blank"><img src="data/afficheimg/3万集客首页415-345广告美厨多功能削皮器.jpg"></a>
+            </li>
+    		<li class="float_four">
+                <div class="goodsInfo">
+                	<a class="tl">美厨maxcook 丽晶 真不锈 炒锅 30cm  MDB-30</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=6523" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="美厨maxcook 丽晶 真不锈 炒锅 30cm  MDB-30" href="goods.php?id=6523" target="_blank"><img src="data/afficheimg/4万集客首页780-345广告美厨真不锈炒锅.jpg"></a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="classcolumns">
+	<div class="cc_head">
+    	<div class="dq_class"></div>
+    	<div class="tab_class">
+        </div>
+    </div>
+
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_one">
+                <div class="goodsInfo">
+                	<a class="tl">美的 空气炸锅 TN20A</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9559" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="美的 空气炸锅 TN20A" href="goods.php?id=9559" target="_blank"><img src="data/afficheimg/1万集客首页780-345广告美的空气炸锅.jpg"></a>
+            </li>
+    		<li class="float_two">
+                <div class="goodsInfo">
+                	<a class="tl">博朗BRAUN 电动剃须刀 单刀头 全身水洗 cruZer3</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9566" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="博朗BRAUN 电动剃须刀 单刀头 全身水洗 cruZer3" href="goods.php?id=9566" target="_blank"><img src="data/afficheimg/2万集客首页415-345广告博朗 全身水洗电动剃须刀.jpg"></a>
+            </li>
+        </ul>
+    </div>
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_three">
+                <div class="goodsInfo">
+                	<a class="tl">飞利浦 家用电吹风 可折叠 BHC010</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9565" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="飞利浦 家用电吹风 可折叠 BHC010" href="goods.php?id=9565" target="_blank"><img src="data/afficheimg/3万集客首页415-345广告飞利浦折叠电吹风.jpg"></a>
+            </li>
+    		<li class="float_four">
+                <div class="goodsInfo">
+                	<a class="tl">九阳（Joyoung）豆浆机多功能无网易清洗 DJ12B-A10</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9602" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="九阳（Joyoung）豆浆机多功能无网易清洗 DJ12B-A10" href="goods.php?id=9602" target="_blank"><img src="data/afficheimg/4万集客首页780-345广告九阳多功能豆浆机.jpg"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="classcolumns" style="margin-bottom:60px;">
+	<div class="cc_head">
+    	<div class="phone_class"></div>
+    	<div class="tab_class">
+        </div>
+    </div>
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_one">
+                <div class="goodsInfo">
+                	<a class="tl">三星 Samsung Galaxy S6 Edge （G9250）雪白金 移动联通电信4G 32GB</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9419" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="三星 Samsung Galaxy S6 Edge （G9250）雪白金 移动联通电信4G 32GB" href="goods.php?id=9419" target="_blank"><img src="data/afficheimg/5万集客首页780-345广告三星Galaxy S6 Edge.jpg"></a>
+            </li>
+    		<li class="float_two">
+                <div class="goodsInfo">
+                	<a class="tl">小米xiaomi 小米note 天然竹 移动联通4G 16GB</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9466" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="小米xiaomi 小米note 天然竹 移动联通4G 16GB" href="goods.php?id=9466" target="_blank"><img src="data/afficheimg/6万集客首页415-345广告小米note 天然竹.jpg"></a>
+            </li>
+        </ul>
+    </div>
+	<div class="fl_up">
+    	<ul>
+        	<li class="float_three">
+                <div class="goodsInfo">
+                	<a class="tl">乐视Letv  乐1Pro 银白色 联通移动4G 32GB</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9388" target="_blank">查看详情</a>
+                    </div>
+                </div>
+                <a title="乐视Letv  乐1Pro 银白色 联通移动4G 32GB" href="goods.php?id=9388" target="_blank"><img src="data/afficheimg/7万集客首页415-345广告乐视乐1pro.jpg"></a>
+            </li>
+    		<li class="float_four">
+                <div class="goodsInfo">
+                	<a class="tl">苹果(apple)iphone 6 Plus 金色 移动联通电信4G 16GB</a>
+                	<a class="xq"></a>
+                    <div class="btn_buy">
+                    	<a class="xq_btn" href="goods.php?id=9360" target="_blank">查看详情</a>
+                    </div>
+                </div>
+            	<a title="苹果(apple)iphone 6 Plus 金色 移动联通电信4G 16GB" href="goods.php?id=9360" target="_blank"><img src="data/afficheimg/8万集客首页780-345广告苹果iphone 6 Plus.jpg"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="blank"></div>
+<script>
+function setCookie(name,value,days){
+        var exp=new Date();
+        exp.setTime(exp.getTime() + days*24*60*60*1000);
+        var arr=document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+        document.cookie=name+"="+escape(value)+";expires="+exp.toGMTString();
+}
+function getCookie(name){
+        var arr=document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+        if(arr!=null){
+                return unescape(arr[2]);
+                return null;
+        }
+}
+function delCookie(name){
+        var exp=new Date();
+        exp.setTime(exp.getTime()-1);
+        var cval=getCookie(name);
+
+        if(cval!=null){
+                document.cookie=name+"="+cval+";expires="+exp.toGMTString();
+        }
+}
+function out(){
+        if(getCookie("out")!="yes"){
+               setCookie("out","yes",1);
+               setTimeout("ad()",1500);
+        }
+}
+out();
+function ad() {
+    document.getElementById('bg').style.display = "block";
+    document.getElementById('ad').style.display = "block";
+}
+function closead() {
+    document.getElementById('bg').style.display = "none";
+    document.getElementById('ad').style.display = "none";
+}
+</script>
+<style>
+.page_bottom_all{background-color:#f3f3f3;}
+</style>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

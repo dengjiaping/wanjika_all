@@ -1,0 +1,5 @@
+alter table ecs_brand add `is_show_on_suggest` tinyint(1) unsigned NOT NULL default '1';
+
+alter table ecs_order_info add `eps_order_sn` varchar(50) NOT NULL default '';
+
+alter table ecs_goods add `goods_cuxiao` varchar(500) NOT NULL default '';

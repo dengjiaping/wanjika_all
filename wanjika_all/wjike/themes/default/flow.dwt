@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,shopping_flow.js'}
+<script language="javascript" type="text/javascript">
+    function goods_cut($val){
+        var num_val=document.getElementById('number'+$val);
+        var new_num=num_val.value;
+        if(isNaN(new_num)){alert('请输入数字');return false}
+        var Num = parseInt(new_num);
+        if(Num>1)Num=Num-1;
+        num_val.value=Num;
+        document.getElementById('updatecart').click();
+    }
+    function goods_add($val,t){
+        var num_val=document.getElementById('number'+$val);
+        var new_num=num_val.value;
+        if(isNaN(new_num)){alert('请输入数字');return false}
+        var Num = parseInt(new_num);
+        if(t>0)
+        {
+            if(Num+1>t)
+            {
+                Num=t;
+            }
+            else
+            {
+                Num=Num+1;
+            }
+        }
+        else
+        {
+            Num=Num+1;
+        }
+        num_val.value=Num;
+        document.getElementById('updatecart').click();
+    }
+</script>
+<style>
+#olpayicons input
+{
+    line-height: 25px;
+    height: 25px;
+}
+#olpayicons img
+{
+    vertical-align: sub;
+}
+#olpayicons label
+{
+    width:160px;
+}
+.payment{
+    position: relative;
+    border: 1px solid red;
+    padding: 10px 20px;
+}
+.payments{
+    border: 1px solid #e2e2e2;
+    padding: 10px 20px;
+}
+.pay_sel{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background: url(themes/default/images/pay_sel.png);
+    background-size: contain;
+}
+</style>
+</head>
+<body style="background-color: rgb(243, 243, 243);">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--当前位置 start-->
+<!--
+<div class="block box">
+ <div id="ur_here">
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+ </div>
+</div>
+-->
+<!--当前位置 end-->
+<div class="blank"></div>
+<div class="block">
+<!-- {if $step eq "cart"} -->
+<script type="text/javascript">
+function selectsign()
+{
+    returnflow(1);
+}
+window.onload = selectsign;
+</script>
+{insert_scripts files='newutils.js'}
+<div class="block">
+<div class="wrap-center-bg">
+          <div class="wrap wrap-center">
+              <div><img src="images/gw.png"><span class="my_flow">我的购物车</span></div>
+              <div>
+              <form id="formCart" name="formCart" method="post" action="flow.php">
+                  <div class="wrap-quan-tab">
+  			        <div class="wrap-od">
+  				        <div class="wrap-ul bg-col">
+  					        <div class="fl w140">
+                                  <label for="select">全选</label>
+                                  <input name="selectall" onclick="selectAll()"  class="wrap-allsel" style="position: absolute;" type="checkbox">
+
+  					        </div>
+  					        <div class="fl ta w430 wrap-info-left">商品信息</div>
+  					        <div class="fl w140 ta">单价（元）</div>
+                              <div class="fl w140 ta">数量</div>
+                              <div class="fl w140 ta">小计</div>
+                              <div class="fl w140 ta">操作</div>
+  				        </div>
+  				        <!-- {foreach from=$goods_list item=goods key=val} -->
+                          <div class="wrap-ul" style="position:relative;">
+                          {if $goods.is_overseas eq 1}<img src="images/bsc_jb.png"  style="position:absolute;right:1px;top:1px;"/>{/if}
+                              <div class="fl w140"><input type="checkbox" name="select" value="{$goods.goods_id}" class="mt-30" onclick="returnflow(1)" {if $goods.is_selected}checked="checked"{/if} /></div>
+  					        <div class="fl w430 ta">
+  					              {if $goods.extension_code eq 'package_buy'}<img class="lt" src="{$goods.goods_thumb}" style="width:80px;height:80px;" title="{$goods.goods_name|escape:html}">{else}<a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6"><img class="lt" src="{$goods.goods_thumb}" style="width:80px;height:80px;" title="{$goods.goods_name|escape:html}"></a>{/if}
+                                  {if $goods.extension_code eq 'package_buy'}<span class="wrap-product" style="display:table !important;text-align: center !;">{$goods.goods_name}</span>{else}<a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6"><span class="wrap-product" style="display:table !important;text-align: center !;">{$goods.goods_name}</span></a>{/if}
+  					        </div>
+  					        <div class="fl w140 ta lh-60 color-red">{$goods.goods_price}</div>
+                              <div class="fl w140 mt-20">
+                                  <a class="shop-j fl ml-30" onclick="goods_cut('{$goods.rec_id}');">-</a>
+                                  <input class="shop-n fl w30 ta " type="text" name="goods_number[{$goods.rec_id}][goods_number]" id="number{$goods.rec_id}" value="{$goods.goods_number}" size="4" class="number" onblur="if(isNaN(this.value)){alert('请输入数字');return false}else{document.getElementById('updatecart').click();}" onkeyup="value=value.replace(/[^\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" title="{$lang.goods_number_tip}"/>
+                                  <input type="hidden" name="goods_number[{$goods.rec_id}][is_overseas]" value="{$goods.is_overseas}" />
+                                  <input type="hidden" name="goods_number[{$goods.rec_id}][max_number]" value="{$goods.max_number}" />
+                                  <a class="shop-j fl"  onclick="goods_add('{$goods.rec_id}',{$goods.max_number});">+</a>
+                                 {if $goods.max_number gt 0}<span class="fl" style="width: 140px;color: #e61c44;padding-left: 14px;text-align: center;">每单限购{$goods.max_number}件</span>{/if}
+                              </div>
+                              <div class="fl w140 ta lh-60">{$goods.subtotal|default:0}</div>
+                              <div class="fl w140 ta lh-60">
+                              <a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; " class="f6">{$lang.drop}</a>
+                              </div>
+                          </div>
+                          <!-- {/foreach} -->
+  			        </div>
+                      <div class="wrap-shop-end" style="text-align: right;">
+                          <div class="wrap-shop-del"><a value="{$lang.clear_cart}" href="javascript:;" onclick="location.href='flow.php?step=clear'"><img class="wrap-del" src="images/del.png">{$lang.clear_cart}</a></div>
+                          <div class="wrap-shop-amount">
+                              <p class="wrap-shop-total">已选商品<b id="selnum" class="color-red">{$str}</b>件， 商品应付合计（不含运费）：<b id="seltotal" class="color-red" style="display: inline-block;padding-right: 20px;width: 120px;color:#d42222;font-size:24px;">{$shopping_money}</b>
+                              <p id="yourdiscount" style="display:{if $formatdiscount}block{else}none{/if};">活动优惠：<b id="discount" class="color-red" style="display: inline-block;padding-right:20px;width: 120px;">-{$discount}</b></p>
+                          </div>
+                      </div>
+                      <div>
+                          <div class="lt"><a class="shop-return" href="./">&lt;返回继续购物</a></div>
+                          <div class="rt"><a class="shop-btn" href="javascript:returnflow()">去结算</a></div>
+                          <input name="submit" type="submit" style="display:none;" id="updatecart" value="{$lang.update_cart}" />
+                          <input type="hidden" name="step" value="update_cart" />
+                      </div>
+                  </div>
+              </div>
+              </form>
+          </div>
+      </div>
+ <!-- {/if} -->
+<!-- {if $step eq "checkout"} 开始订单确认界面 -->
+<form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkOrderForm(this,{$is_real})">
+{insert_scripts files='shopping_flow.js,newutils.js,region.js,zDialog.js'}
+<script type="text/javascript">
+              region.isAdmin = false;
+              {foreach from=$lang.flow_js item=item key=key}
+              var {$key} = "{$item}";
+              {/foreach}
+              {literal}
+              onload = function() {
+                if (!document.all)
+                {
+                  document.forms['theForm'].reset();
+                }
+              }
+              {/literal}
+            </script>
+<script language="javascript" type="text/javascript">
+                    function click_a(divDisplay)
+                    {
+                        if(document.getElementById(divDisplay).style.display != "block")
+                        {
+                            document.getElementById(divDisplay).style.display = "block";
+                            document.getElementById('bg').style.display = "block";
+                        }
+                        else
+                        {
+                            document.getElementById(divDisplay).style.display = "none";
+                            document.getElementById('bg').style.display = "none";
+                        }
+                    }
+                    function click_b(id)
+                    {
+                        var show='show'+id;
+                        document.getElementById(show).style.display = "block";
+                        document.getElementById('bg').style.display = "block";
+                    }
+                    function click_c(id)
+                    {
+                        var show='show'+id;
+                        document.getElementById(show).style.display = "none";
+                        document.getElementById('bg').style.display = "none";
+                    }
+                </script>
+    <div class="wrap-center-bg">
+        <!--{if $is_real}-->
+        <div class="wrap wrap-center-order color-66 wrap-oder-border">
+            <p class="fs-18 color-hs">收货人信息</p>
+            <!-- 如果有收货地址，循环显示用户的收获地址 -->
+            <!-- {foreach from=$consignee_list item=consignee key=sn} -->
+            <!--{if $consignee_id eq 0}-->
+            <div class="address_none" style="display:block;">
+                <div class="mt-20 ml-40">
+                    <label for="address"></label>
+                    <input type="radio" name="address_id" value="{$consignee.address_id}" onclick="selectConsignee(this)" />
+                    <input type="hidden" name="overseas" value="{$consignee.is_overseas}" />
+                    <input type="hidden" name="id_card" value="{$consignee.id_card}" />
+                    <span class="fw-700 mr-10">{$consignee.consignee|escape}</span>
+                    <span class="mr-10">{$consignee.address|escape}</span>
+                    <span class="mr-10">{$consignee.mobile|escape}</span>
+                    <a href="javascript:;" onclick="return updateconsignee('{$consignee.address_id}')" class="color-005 mr-10">设为默认</a>
+                    <a href="javascript:;" onclick="return click_b('{$consignee.address_id}')" class="color-005 mr-10">编辑</a>
+                    <a href="javascript:;" class="color-005" onclick="if (confirm('{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}&flowconsignee_id=1'">删除</a>
+                    <!--{if $consignee_id eq $consignee.address_id and $sn eq 0}--><a class="address_block" href="javascript:useaddress(1)">使用其他地址</a>
+                    <!--{elseif $sn eq 0}--><a class="address_block" href="javascript:useaddress()">使用其他地址</a>
+                    <!--{elseif  $consignee_id eq $consignee.address_id}-->
+                    <a id="address_block" style="inline-block" href="javascript:useaddress()" >使用其他地址</a>
+                    <!--{/if}-->
+                </div>
+            </div>
+            <!--{elseif $consignee_id gt 0}-->
+            <div  <!--{if $consignee_id neq $consignee.address_id}-->class="address_none" style="display:none;"<!--{/if}-->>
+                <div class="mt-20 ml-40">
+                    <label for="address"></label>
+                    <input type="radio" name="address_id" value="{$consignee.address_id}" onclick="selectConsignee(this)" {if $consignee_id eq $consignee.address_id}checked="true"{/if} />
+                    <input id="overseas" type="hidden" name="overseas" value="{$consignee.is_overseas}" />
+                    <input type="hidden" name="id_card" value="{$consignee.id_card}" />
+                    <span class="fw-700 mr-10">{$consignee.consignee|escape}</span>
+                    <span class="mr-10">{$consignee.address|escape}</span>
+                    <span class="mr-10">{$consignee.mobile|escape}</span>
+                    <!--{if $default_id neq $consignee.address_id}--><a href="javascript:;" onclick="return updateconsignee('{$consignee.address_id}')" class="color-005 mr-10">设为默认</a><!--{else}--><span class="color-fc">默认地址</span><!--{/if}-->
+
+                    <a href="javascript:;" onclick="return click_b('{$consignee.address_id}')" class="color-005 mr-10">编辑</a>
+                    <a href="javascript:;" class="color-005" onclick="if (confirm('{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}&flowconsignee_id=1'">删除</a>
+                    <!--{if $consignee_id eq $consignee.address_id and $sn eq 0}--><a class="address_block" href="javascript:useaddress(1)">使用其他地址</a>
+                    <!--{elseif $sn eq 0}--><a class="address_block" href="javascript:useaddress()">使用其他地址</a>
+                    <!--{elseif  $consignee_id eq $consignee.address_id}-->
+                    <a id="address_block" style="inline-block" href="javascript:useaddress()" >使用其他地址</a>
+                    <!--{/if}-->
+                </div>
+            </div>
+            <!--{/if}-->
+            <input type="hidden" name="overseas" value="{$consignee.id_card}" />
+            <div id="show{$consignee.address_id}" class="mydiv wrap-address-p fs-12" style="display:none;">
+                <div class="wrap-address-list">
+                    <div class="wrap-address-li">
+                        <label ><b>*</b>收货人：</label><input id="consignee_{$sn}" name="consignee" value="{$consignee.consignee|escape}" >
+                    </div>
+                    {if $consignee.is_overseas}
+                    <div class="wrap-address-li">
+                        <label ><b>*</b>身份证：</label><input id="id_card_{$sn}" name="id_card" value="{$consignee.id_card|escape}" >
+                    </div>
+                    {/if}
+                    <div class="wrap-address-li">
+                        <label><b>*</b>所在地区：</label>
+                        <div style="float:left;margin-top:-4px;">
+                                <select class="upaddress" name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')">
+                                  <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                                  <!-- {foreach from=$shop_province_list item=province} -->
+                                  <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+                                  <!-- {/foreach} -->
+                                </select>
+                                <select class="upaddress" name="city" id="selCities_{$sn}" onchange="region.changed(this, 3, 'selDistricts_{$sn}')">
+                                  <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+                                  <!-- {foreach from=$city_list.$sn item=city} -->
+                                  <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+                                  <!-- {/foreach} -->
+                                </select>
+                                <select class="upaddress" name="district" id="selDistricts_{$sn}" {if !$district_list.$sn}style="display:none"{/if}>
+                                  <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+                                  <!-- {foreach from=$district_list.$sn item=district} -->
+                                  <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+                                  <!-- {/foreach} -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="wrap-address-li">
+                        <label><b>*</b>详细地址：</label><input id="address_{$sn}" name="address" value="{$consignee.address}">
+                    </div>
+                    <!--
+                    <div class="wrap-address-li">
+                        <label><b></b>邮编：</label><input id="zipcode_{$sn}" onkeyup="this.value=this.value.replace(/\D/g,'')" name="zipcode" value="{$consignee.zipcode|escape}">
+                    </div>
+                    -->
+                    <div class="wrap-address-li">
+                        <label><b>*</b>联系方式：</label><input id="tel_{$sn}" onkeyup="this.value=this.value.replace(/[^\d\-]/g,'')" name="tel" value="{$consignee.tel|escape}">
+                    </div>
+                    <div class="wrap-address-li ml-120">
+                        <button type="button" onclick="editaddress('{$consignee.address_id}','{$sn}',{$consignee.is_overseas})" name="submit" class="btn">确认修改</button>
+                        <a onclick="return click_c('{$consignee.address_id}')" class="btn-close">取消</a>
+                    </div>
+                    {if $consignee.is_overseas}
+                    <div style="display: block;overflow: hidden;width: 90%;background-color:#fff6db;border:1px solid #f5d8a7;">
+                        <p style="color:#cf0f06;"><img style="vertical-align: sub;padding-right:4px;" src="images/prompt.png" />因清关所需，请务必填写真实信息，万集客将保证您的信息安全，请放心填写！</p>
+                    </div>
+                    {/if}
+                </div>
+            </div>
+            <!-- {/foreach} -->
+            <div class="mt-20 ml-40">
+            <!--{if $consignee_id eq -1}-->
+            <script type="text/javascript">
+                function two(){
+                    click_a('divOne_1');
+                }
+                window.onload = two;
+            </script>
+            <!--{/if}-->
+                <!--{if $address_count neq 1}-->
+                <label for="address"></label>
+                <span style="cursor:pointer;" id="wwwzzjsnet" onclick="return click_a('divOne_1')">使用新地址</span>
+                <div  id="divOne_1" style="display:none;" class="mydiv">
+                    <div class="wrap-address-list">
+                        <div class="wrap-address-li">
+                            <label ><b>*</b>收货人：</label><input id="adconsignee" name="consignee" value="" />
+                        </div>
+                        {if $consignee.is_overseas}
+                        <div class="wrap-address-li">
+                            <label ><b>*</b>身份证：</label><input id="id_card" name="id_card" value="" />
+                        </div>
+                        {/if}
+                        <div class="wrap-address-li">
+                            <label><b>*</b>所在地区：</label>
+                            <div style="float:left;margin-top:-4px;">
+                                <select class="upaddress" name="province" id="selProvinces_99" onchange="region.changed(this, 2, 'selCities_99')">
+                                  <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                                  <!-- {foreach from=$shop_province_list item=province} -->
+                                  <option value="{$province.region_id}">{$province.region_name}</option>
+                                  <!-- {/foreach} -->
+                                </select>
+                                <select class="upaddress" name="city" id="selCities_99" onchange="region.changed(this, 3, 'selDistricts_99')" {if !$city_list.$sn}style="display:none"{/if}>
+                                  <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+                                  <!-- {foreach from=$city_list.$sn item=city} -->
+                                  <option value="{$city.region_id}">{$city.region_name}</option>
+                                  <!-- {/foreach} -->
+                                </select>
+                                <select class="upaddress" name="district" id="selDistricts_99" {if !$district_list.$sn}style="display:none"{/if}>
+                                  <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+                                  <!-- {foreach from=$district_list.$sn item=district} -->
+                                  <option value="{$district.region_id}" >{$district.region_name}</option>
+                                  <!-- {/foreach} -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="wrap-address-li">
+                            <label><b>*</b>详细地址：</label><input id="adaddress" name="address" value="" />
+                        </div>
+                        <!--
+                        <div class="wrap-address-li">
+                            <label><b></b>邮编：</label><input id="adzipcode" name="zipcode" value="" />
+                        </div>
+                        -->
+                        <div class="wrap-address-li">
+                            <label><b>*</b>联系方式：</label><input id="adtel" name="tel" value="" />
+                        </div>
+                        <div class="wrap-address-li ml-120">
+                            <label></label><button type="button" onclick="editaddress(0,1,{$consignee.is_overseas})" name="submit" class="btn">保存</button>
+                            <a onclick="return click_a('divOne_1')" class="btn-close">取消</a>
+                        </div>
+                        {if $consignee.is_overseas}
+                        <div style="display: block;overflow: hidden;width: 90%;background-color:#fff6db;border:1px solid #f5d8a7;">
+                            <p style="color:#cf0f06;"><img style="vertical-align: sub;padding-right:4px;" src="images/prompt.png" />因清关所需，请务必填写真实信息，万集客将保证您的信息安全，请放心填写！</p>
+                        </div>
+                        {/if}
+                    </div>
+                </div>
+                <!--{/if}-->
+                <div id="bg" class="bg" style="display:none;"></div>
+            </div>
+        </div>
+        <!--
+        <div class="wrap wrap-center-order color-66 wrap-order-border1">
+            <p class="fs-18 color-hs mb-60">配送方式</p>
+            <!-- {foreach from=$shipping_list item=shipping} 循环配送方式 -->
+                <div>
+                  <div class="lt"><input name="shipping" type="radio" value="{$shipping.shipping_id}" checked="true" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
+                  </div>
+                  <div class="lt"><strong>{$shipping.shipping_name}</strong></div>
+                </div>
+            <!-- {/foreach} 循环配送方式 -->
+        </div>
+        -->
+        <!--{/if}-->
+        <!--{if $is_real}-->
+        <div class="wrap wrap-center-order color-66 wrap-order-border1">
+            <p class="fs-18 color-hs mb-30">商品清单</p>
+            <div class="wrap-od">
+				<div class="wrap-ul bg-col">
+					<div class="fl ta w700 wrap-info-left">商品信息</div>
+					<div class="fl w200 ta">单价（元）</div>
+                    <div class="fl w200 ta">数量</div>
+				</div>
+				<!-- {foreach from=$goods_list item=goods} -->
+				<div class="wrap-ul" style="position:relative;">
+                    {if $goods.is_overseas eq 1}<img src="images/bsc_jb.png"  style="position:absolute;right:0px;top:1px;"/>{/if}
+                    <input id="is_overseas" type="hidden" name="is_overseas" value="{$goods.is_overseas}" />
+                    <div class="fl w700 ta">
+                    {if $goods.extension_code eq 'package_buy'}
+                    <img class="lt" style="width:80px;height:80px;" src="{$goods.goods_thumb}">
+                    <span class="lt wrap-product">{$goods.goods_name}</span>
+                    {else}
+                    <a href="goods.php?id={$goods.goods_id}" target="_blank">
+                    <img class="lt" style="width:80px;height:80px;" src="{$goods.goods_thumb}">
+                        <span class="lt wrap-product">{$goods.goods_name}</span></a>
+                    {/if}
+                    </div>
+                    <div class="fl w200 ta lh-60 color-red">￥{$goods.goods_price}</div>
+                    <div class="fl w200 mt-20 ta"><span>{$goods.goods_number}</span></div>
+                </div>
+                <!-- {/foreach} -->
+			</div>
+        </div>
+        <!--{/if}-->
+        <div class="wrap wrap-center-order color-66 wrap-order-border1">
+            <div class="lt w700">
+             <!-- {if !$is_exchange_goods} 是否兑换积分商品 -->
+             <!-- {if $allow_use_surplus} 是否使用余额 -->
+             <div class="wrap-order-c w700">
+                 <label for="contacts">使用余额：</label>
+                 <input name="surplus" type="text" class="order-js" id="ECS_SURPLUS" size="10" value="{$order.surplus|default:0}" onblur="changeSurplus(this.value)" {if $disable_surplus}disabled="disabled"{/if} />
+
+                 <span class="ml-10">您的账户余额为：</span><span class="color-f9">{$your_surplus|default:0}元</span><span id="ECS_SURPLUS_NOTICE" class="notice"></span>
+             </div>
+            <!-- {/if} 是否使用余额 -->
+            <!-- {if $allow_use_integral} 是否使用积分 -->
+            <div class="wrap-order-c w700">
+                <label for="contacts">使用积分：</label>
+                <input name="integral" type="text" class="order-js" id="ECS_INTEGRAL" onblur="changeIntegral(this.value)" value="{$order.integral|default:0}" size="10" />
+                <span class="ml-10">您的账户积分为：</span><span class="color-f9">{$your_integral|default:0}积分</span>
+                <span class="ml-10">本次可使用积分为：</span><span class="color-f9">{$order_max_integral}积分</span><span id="ECS_INTEGRAL_NOTICE" class="notice"></span>
+            </div>
+            <!-- {/if} 是否使用积分 -->
+            <!-- {if $allow_use_bonus} 是否使用红包 -->
+            <div class="wrap-order-c w700">
+            <label for="contacts">优惠券：</label>
+            <select class="order-js" name="bonus" onchange="changeBonus(1,this.value,form.gift.value)" id="ECS_BONUS">
+              <option value="0" {if $order.bonus_id eq 0}selected{/if}>{$lang.please_select}</option>
+              <!-- {foreach from=$bonus_list item=bonus} -->
+              <option value="{$bonus.bonus_id}" {if $order.bonus_id eq $bonus.bonus_id}selected{/if}>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+              <!-- {/foreach} -->
+            </select>
+            <span class="ml-20 color-red" id="msg">{$str}</span>
+            </div>
+            <!-- {/if} 是否使用红包 -->
+            <!-- {if $allow_use_gift} 是否使用礼品卡 -->
+             <div class="wrap-order-c w700">
+            <label for="contacts">礼品卡：</label>
+            <select class="order-js" name="gift" onchange="changeBonus(2,form.bonus.value,this.value)" id="ECS_GIFT">
+              <option value="0" {if $order.gift_id eq 0}selected{/if}>{$lang.please_select}</option>
+              <!-- {foreach from=$gift_list item=gift} -->
+                <option value="{$gift.card_id}" {if $order.gift_id eq $gift.card_id} selected {/if}>{$gift.card_sn}[{$gift.leave_money}]</option>
+              <!-- {/foreach} -->
+            </select>
+            </div>
+            <!--
+            <input type="hidden" name="use_gift" value="{$total.use_gift}" />
+                {$lang.input_gift_no}
+                <input name="card_sn" type="text" class="inputBg" size="15" value="{$order.gift_sn}" />
+                <input name="validate_gift" type="button" class="bnt_blue_1" value="{$lang.validate_gift}" onclick="validateGift(document.forms['theForm'].elements['gift_sn'].value)" style="vertical-align:middle;" />
+            -->
+            <!-- {/if} 是否使用礼品卡 -->
+            <!-- {else} 是否兑换积分商品 -->
+             <div class="wrap-order-c w700">
+                 <label for="contacts">您的积分：</label><span class="color-f9">{$your_integral|default:0}积分</span>
+             </div>
+            <!-- {/if} 是否兑换积分商品 -->
+            </div>
+             <!-- {if !$is_exchange_goods} 是否兑换积分商品 -->
+                <!-- #BeginLibraryItem "/Library/order_total.lbi" --><!-- #EndLibraryItem -->
+                <input name="submitform" class="wrap-order-btn cp" type="submit" value="提交订单" />
+             <!-- {else} 是否兑换积分商品 -->
+            <div id="ECS_ORDERTOTAL">
+                <div class="lt w480">
+                    <div class="wrap-order-c w480">
+                        <p class="wrap-shop-total t-r">
+                        订单应付积分：
+                        <span class="wrap-order-mt-4 fs-20">{$total.exchange_integral}</span></p>
+                    </div>
+                </div>
+            </div>
+            <input name="submitform" class="wrap-order-btn cp" type="submit" value="立即兑换" />
+             <!-- {/if} 是否兑换积分商品 -->
+                <input type="hidden" name="step" value="done" />
+                <input type="hidden" name="dis_goodslist" value="{$dis_goodslist}" />
+                <input type="hidden" name="dis_total_amount" value="{$dis_total_amount}" />
+                <input type="hidden" id="amount_formated" value="{$total.total_order_amount}" />
+            </div>
+        </div>
+    </div>
+    </form>
+     <!-- {/if} -->
+        <!-- {if $step eq "done"} -->
+        <!-- 订单提交成功 -->
+        {insert_scripts files='zDialog.js'}
+        <script type="text/javascript">
+        function add()
+        {
+            Dialog.confirm('请您在新打开的页面上完成付款？',function(){location.href="user.php?act=order_list";},function(){Dialog.close();},300,100,true);
+        }
+        </script>
+        <script>
+            ga('require', 'ecommerce');
+            ga('ecommerce:addTransaction', {
+              'id': '{$order.order_sn}',
+              'affiliation': 'wjike',
+              'revenue': '{$order.order_amount}',
+              'shipping': '{$order.shipping_fee}',
+              'tax': '0.00'
+            });
+
+        {foreach from=$goods_list item=item key=key}
+            ga('ecommerce:addItem', {
+              'id': '{$order.order_sn}',
+              'name': '{$item.goods_name}',
+              'sku': '{$item.goods_id}',
+              'category': '{$item.cat_name}',
+              'price': '{$item.goods_price}',
+              'quantity': '{$item.goods_number}'
+            });
+        {/foreach}
+            ga('ecommerce:send');
+            ga('ecommerce:clear');
+        </script>
+        <div class="wrap-center-bg">
+            <div class="wrap wrap-center ta" style="margin-bottom:30px;">
+                <div style="display: inline-block;"><img style="margin-right: 10px;margin-bottom: -5px;width:50px;" src="./images/ddsuccess.png"/></div>
+                <div style="display: inline-block;text-align: left;">
+                <p class="fs-20 mt-10">订单已提交成功，{if $pay_online}请您尽快支付{else}请耐心等待商品{/if}</p>
+                {if $pay_online}<p class="fs-12 mt-10">请您在<span style="color:red;">2小时内</span>完成支付，否则订单会自动取消</p>{/if}
+                </div>
+                <p style="padding-bottom: 30px;border-bottom: 1px solid #f3f3f3;"></p>
+                <div style="margin-top: 30px;margin-bottom: 10px;overflow: hidden;color:#666666;">
+                    <div style="float: left;width: 50%;text-align: left;">
+                    <span style="display:block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{$goods_names}</span>
+                    {if $is_real}<span>收货信息：{$order.address_name}     联系方式：{$order.tel}</span>{/if}
+                    </div>
+                    <div style="float: right;line-height: 30px;">
+                    <span><a href="user.php?act=order_detail&order_id={$order.order_id}">查看订单</a><span>
+                    </div>
+                </div>
+                <!--
+                <p class="mt-20 fs-12 color-99">
+                    订单号：<span class="color-hs mr-20">{$order.order_sn}</span>
+                    应付金额：<span class="color-hs mr-20">{$total.amount_formated}</span>
+                    <!-- {if $show_pay neq 1} -->
+                    支付方式：<span class="color-hs mr-20">{$order.pay_name}</span>
+                    <!-- {/if} -->
+                </p>
+                <p class="fs-12 mt-20">{$order.pay_desc}</p>
+                <!-- {if $pay_online} -->
+                <!-- 如果是线上支付则显示支付按钮 -->
+                <div style="display: table;margin-top:20px;padding-left: 15px;">{$pay_online}</div>
+                <!-- {/if} -->
+                <div class="mt-60 mb-60">
+                    <a href="user.php?act=order_detail&order_id={$order.order_id}" class="wrap-vieworder color-hs">查看订单</a>
+                    <a href="index.php" class="wrap-vieworder ml-30 color-hs">继续购物</a>
+                </div>
+                -->
+            </div>
+            {if $pay_online}
+            <div class="wrap wrap-center-order color-66 wrap-order-border1">
+            <form name="payment" method="post" action="user.php" target="_blank">
+                <p class="fs-12 color-hs mb-30">支付金额:<span style="font-size:16px;color:#dc0034;">{$total.amount_formated}</span><input type="hidden" name="act" value="act_edit_payment" /><input type="hidden" name="order_id" value="{$order.order_id}" /><input class="btn-pay cp" onclick='add();' style="float:none;margin-left: 30px;border-radius: 4px;" type="submit" name="Submit" value="去支付" /></p>
+                <div class="oh">
+                <!-- {foreach from=$payment_list item=payment} -->
+                <!-- 循环支付方式 -->
+                    <div class="oh" style="display:inline-block;">
+                      <div {if $order.pay_id eq $payment.pay_id}class="payment"{else}class="payments"{/if}  id="{$payment.pay_id}" >
+                      <label>
+                      <input style="opacity: 0;width:0px;" type="radio" name="pay_id" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/>
+                      <img style="vertical-align: middle;" src="images/{$payment.pay_code}.png">
+                      <i id="sel_{$payment.pay_id}" class="pay_sel" {if $order.pay_id neq $payment.pay_id}style="display:none;"{/if}></i>
+                      </label>
+                      </div>
+                    </div>
+                <!-- {/foreach} 循环支付方式 -->
+
+                        <div id="olpayicons" style="<!--{if $order.pay_id eq 16}-->display:block;<!--{else}-->display:none;<!--{/if}-->float:left;margin-top:30px;padding: 20px;background-color: #f3f3f3;">
+                                <!--
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="jsyh" name="bankradios" id="jsyhrdo" checked=true />
+                                    <img src="images/jsyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="gsyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/gsyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="yzcx" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/yzcx.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="nyyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/nyyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="zgyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/zgyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="pfyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/pfyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="jtyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/jtyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="zsyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/zsyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="msyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/msyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="fzyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/fzyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="zxyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/zxyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="gfyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/gfyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="hxyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/hxyh.png" />
+                                </label>
+                                <label style="display:inline;float:left;width:160px;border:1px solid #CCCCCC;cursor:pointer;margin:5px 10px 5px 0;padding:5px;background-color: #fff;">
+                                    <input type="radio" value="xyyh" name="bankradios" id="jsyhrdo"/>
+                                    <img src="images/xyyh.png" />
+                                </label>
+                                -->
+                                <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="zxyh" name="bankradios" id="zxyhrdo" />
+                                      <img src="images/zxyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="gsyh" name="bankradios" id="gsyhrdo" />
+                                      <img src="images/gsyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="nyyh" name="bankradios" id="nyyhrdo" />
+                                      <img src="images/nyyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="jsyh" name="bankradios" id="jsyhrdo" checked="true" />
+                                      <img src="images/jsyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="jtyh" name="bankradios" id="jtyhrdo" />
+                                      <img src="images/jtyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="yzcx" name="bankradios" id="yzcxrdo" />
+                                      <img src="images/yzcx.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="zgyh" name="bankradios" id="zgyhrdo" />
+                                      <img src="images/zgyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="hxyh" name="bankradios" id="hxyhrdo" />
+                                      <img src="images/hxyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="gfyh" name="bankradios" id="gfyhrdo" />
+                                      <img src="images/gfyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="zsyh" name="bankradios" id="zsyhrdo" />
+                                      <img src="images/zsyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="xyyh" name="bankradios" id="xyyhrdo" />
+                                      <img src="images/xyyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="pfyh" name="bankradios" id="pfyhrdo" />
+                                      <img src="images/pfyh.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="yzcx" name="bankradios" id="yzcxrdo" />
+                                      <img src="images/yzcx.png" />
+                                  </label>
+                                  <label style="display: inline; float: left; width: 160px; border: 1px solid #CCCCCC; cursor: pointer; margin: 5px 10px 5px 0; padding: 5px;background-color: #fff;">
+                                      <input type="radio" value="msyh" name="bankradios" id="msyhrdo" />
+                                      <img src="images/msyh.png" />
+                                  </label>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+            {/if}
+        </div>
+        <!--
+        <div class="flowBox" style="margin:30px auto 70px auto;">
+
+          <!--{if $virtual_card}-->
+          <div style="text-align:center;overflow:hidden;border:1px solid #E2C822;background:#FFF9D7;margin:10px;padding:10px 50px 30px;">
+          <!--{foreach from=$virtual_card item=vgoods}-->
+            <h3 style="color:#2359B1; font-size:12px;">{$vgoods.goods_name}</h3>
+            <!--{foreach from=$vgoods.info item=card}-->
+              <ul style="list-style:none;padding:0;margin:0;clear:both">
+              <!--{if $card.card_sn}-->
+              <li style="margin-right:50px;float:left;">
+              <strong>{$lang.card_sn}:</strong><span style="color:red;">{$card.card_sn}</span>
+              </li><!--{/if}-->
+              <!--{if $card.card_password}-->
+              <li style="margin-right:50px;float:left;">
+              <strong>{$lang.card_password}:</strong><span style="color:red;">{$card.card_password}</span>
+              </li><!--{/if}-->
+              <!--{if $card.end_date}-->
+              <li style="float:left;">
+              <strong>{$lang.end_date}:</strong>{$card.end_date}
+              </li><!--{/if}-->
+              </ul>
+            <!--{/foreach}-->
+          <!--{/foreach}-->
+          </div>
+          <!--{/if}-->
+          <p style="text-align:center; margin-bottom:20px;">{$order_submit_back}</p>
+        </div>
+        -->
+        <!-- {/if} -->
+        <!-- {if $step eq "login"} -->
+        {insert_scripts files='utils.js,user.js,zDialog.js'}
+        <script type="text/javascript">
+        {foreach from=$lang.flow_login_register item=item key=key}
+          var {$key} = "{$item}";
+        {/foreach}
+        </script>
+        <!-- 开始用户登录注册界面 -->
+        <div class="login_window">
+        	<div class="lw">
+                <div class="activity">
+                    <img src="images/activitypage.png">
+                </div>
+                    <div class="login_input">
+                        <div class="promptInfor" style="display:none;"><span></span></div>
+                        <!-- {if $errormsg}-->
+                        <div class="promptInfor" ><span>{$errormsg}！</span></div>
+                        <!-- {/if}-->
+                        <div class="if_login">
+                            <p>如有账号，请登录</p>
+                            <a href="user.php?act=register">注册</a>
+                        </div>
+                        <div class="input_btn">
+                            <!--<input type="text" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')"  name="username" class="tel_name" placeholder="请输入手机号或账号">-->
+                            <input type="text"   name="username" class="tel_name" placeholder="请输入手机号或账号">
+                            <input type="password" name="password" class="user_pass" placeholder="密码">
+                            <!-- 判断是否启用验证码{if $enabled_login_captcha} -->
+                            <input type="text" maxlength="10" name="captcha" class="yz_number" placeholder="{$lang.comment_captcha}">
+                            <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;top: 140px;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" />
+                            <!--{/if}-->
+                            <!--<input type="text" maxlength="10" class="yz_number" placeholder="验证码"><img src="images/yanzhengma.png">-->
+                            <p style="margin-bottom: 15px;color:#999;">看不清楚？点击图片刷新</p>
+                            <input type="button" class="login_sub" onclick="checkloginflow()" value="登录">
+                            <a href="user.php?act=forget_password" class="forget_pass">忘记密码？</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!-- 结束用户登录注册界面 -->
+        <!-- {/if} -->
+</div>
+</div>
+</div>
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$keywords}_{$page_title}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}_{$page_title}" />
+<meta name="Description" content="{$description}_{$page_title}" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    {insert_scripts files='../../js/transport.js,../js/utils.js'}
+    {insert_scripts files='../common.js'}
+    </head>
+<body style="background: #f5f5f5;">
+{include file='head5.html'}
+{if $sign_page}
+<div style="background:url(../../mobile/images/sign.png);background-repeat: round;position: relative;padding:20px 0;height:70px;text-align:center;font-size: 14px;color: #fff;">
+    <img src="../../mobile/images/sign_logo.png" width="70" height="70" style="float:left;vertical-align: middle;margin-left: 10px;border-radius: 35px;"/>
+    <div style="float: left;margin-left:5px;height: inherit;text-align: left;">
+        <p style="height: 35px;line-height: 35px;">我的积分：<span style="font-size: 16px;">{$user_points}</span></p>
+        <p style="height: 35px;line-height: 35px;"><a href="user.php?act=integral"><img src="../../mobile/images/cxmx.png" width="14" style="margin-top: -2px;"/><span style="margin-left: 5px;color: #fff;">查询明细</span></a>
+            <!--<a href="exchange.php"><img src="../../mobile/images/jfdh.png" width="14" style="margin-left: 10px;margin-top: -2px;"/><span style="margin-left: 5px;color: #fff;">积分兑换</span></a>-->
+        </p>
+    </div>
+    <div style="float: right;margin-right:10px;height: inherit;"><a href="javascript:;" id="sign_btn" {if $is_sign neq '已签到'}onclick="return returnshowSign(this);"{/if}  style="height: 70px;line-height: 70px;color: #19ab89;background: #fff;border-radius: 10px;padding: 10px;">{$is_sign}</a></div>
+</div>
+{else}
+<div>
+    <img src="../../mobile/images/jf.png" width="100%" />
+</div>
+<div style="display: block;margin:10px 0;padding:10px 0;background:#fff;height: 30px;line-height: 30px;">
+    <a style="margin: 0 20px;color: #000;" href="#">默认</a>
+    <a style="margin-right: 20px;color: #000;" href="#">销量</a>
+    <a style="margin-right: 20px;color: #000;" href="#">新品</a>
+    <a style="margin-right: 20px;color: #000;" href="#">价格</a>
+</div>
+{/if}
+
+<div class="block clearfix">
+    <div class="">
+        {if !$sign_page}
+        <div style="overflow:hidden;background-color: #f2f0f1;">
+            <div class="t-lists" >
+                <ul id="test">
+                    {foreach from=$goods_list item=goods name=goo}
+                    <li class="{if $smarty.foreach.goo.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                        <a href="goods.php?id={$goods.id}">
+                            <div class="default_div">
+                                <img src="/{$goods.goods_thumb}"  width="100" height="100" alt=""/>
+                            </div>
+                            <div style="margin: 10px;">
+                                <div style="display: inline-block;height: 20px;width: 100%;">
+                                    {if $goods.overseas_logo neq ''}
+                                    <div>{if $goods.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$goods.overseas_logo}.jpg"  style="margin: 2px 5px 0 0;width: 25px;height: 15px;"/>{/if}<p style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$goods.overseas_logo_name}品牌 官方直供</p></div>
+                                    {/if}
+                                </div>
+                                <div class="p-name default_pname" >{$goods.name}<span color="red">{$goods.goods_brief}</span> </div>
+                                <div class="p-detail" style="width:180px;height: 20px;"><span style="font-family:Arial;font-weight:bold;color: #db2929;">{if $promote_price}{$goods.exchange_integral}{else}{$goods.exchange_integral}{/if}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {foreachelse}
+                    暂无此类商品
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        {else}
+            <!-- {if $hot_goods}-->
+            <div class="newarrivals_cg" style="overflow:hidden;background-color: #f2f0f1;">
+                <div class="nr_til">
+                    <span style="display: block;padding:10px 0;text-align: center;background:url(../../mobile/images/btb.png);background-repeat: no-repeat;background-size: 50%;background-position: 50% 50%;color: #45ba9f;">{$exchange_name.name}</span>
+                </div>
+                <div class="t-lists">
+                    <ul>
+                        <!-- {foreach from=$hot_goods item=goods key=key name=go} -->
+                        <li class="{if $smarty.foreach.go.index % 2 ==0}default_fl{else}default_fr{/if} default" >
+                            <a href="goods.php?id={$goods.id}">
+                                <div class="default_div">
+                                    <img src="/{$goods.goods_img}"  width="100" height="100" alt=""/>
+                                </div>
+                                <div style="margin: 10px;">
+                                    <div style="display: inline-block;height: 20px;width: 100%;">
+                                        {if $goods.is_overseas eq 1}
+                                        <div>{if $goods.overseas_logo neq 'taiwan'}<img class="fl" src="../../themes/default/images/{$goods.overseas_logo}.jpg"  style="margin: 2px 5px 0 0;width: 25px;height: 15px;"/>{/if}<p style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$goods.overseas_logo_name}品牌 官方直供</p></div>
+                                        {/if}
+                                    </div>
+                                    <div class="p-name default_pname" >{$goods.name}<span color="red">{$goods.goods_brief}</span> </div>
+                                    <div class="p-detail" style="width:180px;height: 20px;"><span style="font-family:Arial;font-weight:bold;color: #db2929;">{if $promote_price}{$goods.exchange_integral}{else}{$goods.exchange_integral}{/if}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- {/foreach}-->
+                    </ul>
+                </div>
+            </div>
+            <!-- {/if} -->
+        {/if}
+        <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+    </div>
+</div>
+{include file='foot.html'}
+</body>
+</html>

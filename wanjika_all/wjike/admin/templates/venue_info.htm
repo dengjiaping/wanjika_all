@@ -1,0 +1,175 @@
+<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}" xmlns="http://www.w3.org/1999/html"></script>
+<!-- start add new category form -->
+<div class="main-div list-div" id="listDiv">
+    <!-- tab bar -->
+    <div id="tabbar-div">
+        <p>
+            <span class="tab-front" id="general-tab">通用信息</span>
+            <span class="tab-back" id="mix-tab">楼层管理</span>
+            {if $action_link_special}<span class="tab-back" id="detail-tab">轮播图管理</span>{/if}
+        </p>
+    </div>
+    <!-- tab body -->
+  <form action="venue.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+  <table width="100%" id="general-table">
+      <tr>
+        <td class="label">场馆名称:</td>
+        <td>
+          <input type='text' name='venue_name' maxlength="20" value='{$venue_info.venue_name|escape:html}' size='27' /> <font color="red">*</font>
+        </td>
+      </tr>
+  </table>
+  <table width="90%" id="detail-table" style="display:none">
+      <tr>
+          <th width="400px">轮播图片地址</th>
+          <th>轮播图片链接</th>
+          <th>图片说明</th>
+          <th>排序</th>
+          <th>平台</th>
+          <th width="70px">操作</th>
+      </tr>
+      {foreach from=$playerdb item=item key=key}
+      <tr>
+          <td><a href="{$item.src}" target="_blank">{$item.src}</a></td>
+          <td align="left"><a href="{$item.url}" target="_blank">{$item.url}</a></td>
+          <td align="left">{$item.text}</td>
+          <td align="left">{$item.sort}</td>
+          <td align="left">{if $item.platform eq 1}WAP{else}PC{/if}</td>
+          <td align="center">
+              <a href="venue.php?act=venue_edit&id={$key}&venue_id={$venue_info.venue_id}" title="{$lang.edit}"><img src="images/icon_edit.gif" width="16" height="16" border="0" /></a>
+              <a href="venue.php?act=venue_del&id={$key}&venue_id={$venue_info.venue_id}" onclick="return check_del();" title="{$lang.trash_img}"><img src="images/icon_drop.gif" width="16" height="16" border="0" /></a>
+          </td>
+      </tr>
+      {/foreach}
+      <tr>
+          <td>
+              <a href="{$action_link_special.href}" class="button">{$action_link_special.text}</a>
+          </td>
+      </tr>
+  </table>
+  <table width="90%" id="mix-table" style="display:none">
+      <tr>
+          <th width="20px">ID</th>
+          <th>楼层名称</th>
+          <th>楼层图片</th>
+          <th>图片预览</th>
+          <th>商品ID组</th>
+          <th>楼层分类名称组</th>
+          <th>楼层分类链接</th>
+          <th>排序</th>
+          <th>样式</th>
+          <th>是否显示</th>
+          <th width="70px">操作</th>
+      </tr>
+      {foreach from=$floor_info item=floor key=i}
+      <tr id="gallery_{$floor.floor_id}">
+          <td>{$floor.floor_id}</td>
+          <td><textarea rows="2" cols="30" name="floor[desc][]" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');" >{$floor.floor_desc}</textarea></td>
+          <td><input type="file" name="floor[url][]"/></td>
+          <td><a target="_blank" href="../{$floor.floor_img}"><img style="vertical-align: middle;width: 160px;height: 50px;" src="../{$floor.floor_img}"/></a></td>
+          <td><textarea rows="2" cols="30" name="floor[goods][]" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');value=value.replace(/[^\d,]/g,'')">{$floor.goods_ids}</textarea></td>
+          <td><textarea rows="2" cols="30" name="floor[floors][]" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');">{$floor.floor_ids}</textarea>
+              <input type="hidden" name="floor[floor_id][]" value="{$floor.floor_id}">
+              <input type="hidden" name="old_img[]" value="{$floor.floor_img}">
+          </td>
+          <td><textarea rows="2" cols="30" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');" name="floor[file][]">{$floor.floor_href}</textarea></td>
+          <td><input type="text"  value="{$floor.floor_sort}" size="2" name="floor[floor_sort][]"/></td>
+          <td><select name="floor[floor_style][]">
+                <option value="1"  {if $floor.floor_style eq 1}selected="selected"{/if}>新品、热销</option>
+                <option value="2"  {if $floor.floor_style eq 2}selected="selected"{/if}>普通楼层</option>
+              </select>
+          </td>
+          <td><select name="floor[is_show][]">
+              <option value="0"  {if $floor.is_show eq 0}selected="selected"{/if}>不显示</option>
+              <option value="1"  {if $floor.is_show eq 1}selected="selected"{/if}>显示</option>
+          </select>
+          </td>
+          <!--<td align="center"><a href="venue.php?act=del_floor&floor_id={$floor.floor_id}">删除</a></td>-->
+          <td align="center"><a href="javascript:;" onclick="if (confirm('您确实要删除该图片吗？')) dropImg('{$floor.floor_id}');" title="{$lang.remove}">删除</a></td>
+      </tr>
+      {/foreach}
+      <tr>
+          <td><a href="javascript:;" onclick="addImg(this)">[+]</a></td>
+          <td><textarea rows="2" cols="30" name="floor[desc][]"  onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');"></textarea></td>
+          <td><input type="file" name="floor[url][]"/></td>
+          <td></td>
+          <td><textarea rows="2" cols="30" name="floor[goods][]" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');value=value.replace(/[^\d,]/g,'')"></textarea></td>
+          <td><textarea rows="2" cols="30" name="floor[floors][]" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');"></textarea></td>
+          <td><textarea rows="2" cols="30" onkeyup="JavaScript:this.value=this.value.replace(/，/ig,',');" name="floor[file][]"></textarea></td>
+          <td><input type="text"  value="" size="2" name="floor[floor_sort][]"/></td>
+          <td><select name="floor[floor_style][]">
+              <option value="1" >新品、热销</option>
+              <option value="2" >普通楼层</option>
+          </select></td>
+          <td><select name="floor[is_show][]">
+              <option value="0" >不显示</option>
+              <option value="1" >显示</option>
+          </select></td>
+          <td></td>
+      </tr>
+  </table>
+      <input type="hidden" name="act" value="{$form_act}" />
+      <input type="hidden" name="old_venue_name" value="{$venue_info.venue_name}" />
+      <input type="hidden" name="cat_id" value="{$cat_info.erpcat_id}" />
+      <input type="hidden" name="venue_id" value="{$venue_info.venue_id}">
+      <input type="hidden" name="act" value="{$form_act}">
+      <input type="submit" value=" 确定 " class="button" onclick="validate('3322')">
+      <input type="reset" value=" 重置 " class="button">
+  </form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js,tab.js"}
+{literal}
+<script language="JavaScript">
+/**
+ * 检查表单输入的数据
+ */
+function check_del()
+{
+    if (confirm('{$lang.trash_img_confirm}'))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+function validate()
+{
+  validator = new Validator("theForm");
+    validator.required("venue_name",      '名称为空');
+  return validator.passed();
+}
+function addImg(obj)
+{
+    var src  = obj.parentNode.parentNode;
+    var idx  = rowindex(src);
+    var tbl  = document.getElementById('mix-table');
+    var row  = tbl.insertRow(idx + 1);
+    row.innerHTML = src.innerHTML.replace(/(.*)(addImg)(.*)(\[)(\+)/i, "$1removeImg$3$4-");
+}
+function removeImg(obj)
+{
+    var row = rowindex(obj.parentNode.parentNode);
+    var tbl = document.getElementById('mix-table');
+
+    tbl.deleteRow(row);
+}
+
+function dropImg(imgId)
+{
+    Ajax.call('venue.php?is_ajax=1&act=del_floor', "id="+imgId, dropImgResponse, "GET", "JSON");
+}
+function dropImgResponse(result)
+{
+    if (result.error == 0)
+    {
+        document.getElementById('gallery_' + result.content).style.display = 'none';
+    }
+}
+</script>
+{/literal}
+{include file="pagefooter.htm"}

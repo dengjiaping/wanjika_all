@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="w1200" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div align=center style="height:4293px;min-width:990px;background:url(../images/sale1111.jpg) no-repeat scroll center top;">
+<table id="__01" width="1201" height="4294" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_01.jpg" width="1200" height="210" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="210" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_02.jpg" width="1200" height="197" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="197" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_03.jpg" width="1200" height="144" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="144" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_04.jpg" width="1200" height="153" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="153" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_05.jpg" width="1200" height="90" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="90" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<a href="http://www.wjike.com/goods.php?id=977" target="_blank"><img src="images/1111z_06.jpg" alt="" width="404" height="358" border="0"></a></td>
+<td colspan="3">
+			<a href="http://www.wjike.com/goods.php?id=969" target="_blank"><img src="images/1111z_07.jpg" alt="" width="390" height="358" border="0"></a></td>
+<td colspan="3">
+			<a href="http://www.wjike.com/goods.php?id=1142" target="_blank"><img src="images/1111z_08.jpg" alt="" width="406" height="358" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="358" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_09.jpg" width="1200" height="71" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="71" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="4">
+			<a href="http://www.wjike.com/goods.php?id=839" target="_blank"><img src="images/1111z_10.jpg" alt="" width="335" height="556" border="0"></a></td>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=844" target="_blank"><img src="images/1111z_11.jpg" alt="" width="298" height="278" border="0"></a></td>
+<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1027" target="_blank"><img src="images/1111z_12.jpg" alt="" width="297" height="278" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=946" target="_blank"><img src="images/1111z_13.jpg" alt="" width="270" height="187" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="187" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=931" target="_blank"><img src="images/1111z_14.jpg" alt="" width="270" height="181" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="91" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=912" target="_blank"><img src="images/1111z_15.jpg" alt="" width="298" height="278" border="0"></a></td>
+<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1282" target="_blank"><img src="images/1111z_16.jpg" alt="" width="297" height="278" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="90" alt=""></td>
+	</tr>
+	<tr>
+		<td>		  <a href="http://www.wjike.com/goods.php?id=930" target="_blank"><img src="images/1111z_17.jpg" alt="" width="270" height="188" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="188" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_18.jpg" width="1200" height="74" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="74" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1078" target="_blank"><img src="images/1111z_19.jpg" alt="" width="268" height="184" border="0"></a></td>
+<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1090" target="_blank"><img src="images/1111z_20.jpg" alt="" width="300" height="277" border="0"></a></td>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1210" target="_blank"><img src="images/1111z_21.jpg" alt="" width="298" height="277" border="0"></a></td>
+<td colspan="2" rowspan="4">
+			<a href="http://www.wjike.com/goods.php?id=986" target="_blank"><img src="images/1111z_22.jpg" alt="" width="334" height="555" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="184" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1079" target="_blank"><img src="images/1111z_23.jpg" alt="" width="268" height="182" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="93" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=983" target="_blank"><img src="images/1111z_24.jpg" alt="" width="300" height="278" border="0"></a></td>
+<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1097" target="_blank"><img src="images/1111z_25.jpg" alt="" width="298" height="278" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="89" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1074" target="_blank"><img src="images/1111z_26.jpg" alt="" width="268" height="189" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="189" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_27.jpg" width="1200" height="72" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="72" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="4">
+			<a href="http://www.wjike.com/goods.php?id=927" target="_blank"><img src="images/1111z_28.jpg" alt="" width="335" height="558" border="0"></a></td>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=929" target="_blank"><img src="images/1111z_29.jpg" alt="" width="298" height="279" border="0"></a></td>
+<td colspan="3" rowspan="2">	  <a href="http://www.wjike.com/goods.php?id=992" target="_blank"><img src="images/1111z_30.jpg" alt="" width="297" height="279" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=926" target="_blank"><img src="images/1111z_31.jpg" alt="" width="270" height="185" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="185" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1203" target="_blank"><img src="images/1111z_32.jpg" alt="" width="270" height="181" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="94" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=988" target="_blank"><img src="images/1111z_33.jpg" alt="" width="298" height="279" border="0"></a></td>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=989" target="_blank"><img src="images/1111z_34.jpg" alt="" width="297" height="279" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="87" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1161" target="_blank"><img src="images/1111z_35.jpg" alt="" width="270" height="192" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="192" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_36.jpg" width="1200" height="70" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="70" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1110" target="_blank"><img src="images/1111z_37.jpg" alt="" width="268" height="184" border="0"></a></td>
+<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1120" target="_blank"><img src="images/1111z_38.jpg" alt="" width="300" height="278" border="0"></a></td>
+		<td colspan="3" rowspan="3">
+			<a href="http://www.wjike.com/goods.php?id=1118" target="_blank"><img src="images/1111z_39.jpg" alt="" width="298" height="279" border="0"></a></td>
+<td colspan="2" rowspan="5">
+			<a href="http://www.wjike.com/goods.php?id=1115" target="_blank"><img src="images/1111z_40.jpg" alt="" width="334" height="555" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="184" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+			<a href="http://www.wjike.com/goods.php?id=1179" target="_blank"><img src="images/1111z_41.jpg" alt="" width="268" height="183" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="94" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="3">
+			<a href="http://www.wjike.com/goods.php?id=1119" target="_blank"><img src="images/1111z_42.jpg" alt="" width="300" height="277" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=1000" target="_blank"><img src="images/1111z_43.jpg" alt="" width="298" height="276" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="88" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=1195" target="_blank"><img src="images/1111z_44.jpg" alt="" width="268" height="188" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="188" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<img src="images/1111z_45.jpg" width="1200" height="72" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="1" height="72" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="3">
+			<a href="http://www.wjike.com/goods.php?id=1493" target="_blank"><img src="images/1111z_46.jpg" alt="" width="335" height="558" border="0"></a></td>
+		<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=596" target="_blank"><img src="images/1111z_47.jpg" alt="" width="298" height="279" border="0"></a></td>
+<td colspan="3" rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=679" target="_blank"><img src="images/1111z_48.jpg" alt="" width="297" height="279" border="0"></a></td>
+<td>	  <a href="http://www.wjike.com/goods.php?id=611" target="_blank"><img src="images/1111z_49.jpg" alt="" width="270" height="186" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="186" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<a href="http://www.wjike.com/goods.php?id=551" target="_blank"><img src="images/1111z_50.jpg" alt="" width="270" height="372" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="93" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<a href="http://www.wjike.com/goods.php?id=616" target="_blank"><img src="images/1111z_51.jpg" alt="" width="298" height="279" border="0"></a></td>
+<td colspan="3">
+			<a href="http://www.wjike.com/goods.php?id=649" target="_blank"><img src="images/1111z_52.jpg" alt="" width="297" height="279" border="0"></a></td>
+<td>
+			<img src="images/分隔符.gif" width="1" height="279" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/分隔符.gif" width="268" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="67" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="69" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="164" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="65" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="161" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="72" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="64" height="1" alt=""></td>
+		<td>
+			<img src="images/分隔符.gif" width="270" height="1" alt=""></td>
+		<td></td>
+	</tr>
+</table>
+</div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

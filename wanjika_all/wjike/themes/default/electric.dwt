@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>小家电金秋惠享</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.electric_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#e7e7e7; }
+.electric_all .electric_01{ width:100%; height:158px; background:url(images/adimages/electric_01.jpg) no-repeat center center;}
+.electric_all .electric_02{ width:100%; height:159px; background:url(images/adimages/electric_02.jpg) no-repeat center center;}
+.electric_all .electric_03{ width:100%; height:158px; background:url(images/adimages/electric_03.jpg) no-repeat center center;}
+.electric_all .electric_04{ width:100%; height:158px; background:url(images/adimages/electric_04.jpg) no-repeat center center;}
+
+.electric_all .electric_05{ width:100%; height:458px; background:url(images/adimages/electric_05.jpg) no-repeat center center;}
+.electric_all .electric_051{ width:1200px; height:458px;}
+.electric_all .electric_051 a{ padding:229px 0; display:block;}
+
+.electric_all .electric_06{ width:100%; height:442px; background:url(images/adimages/electric_06.jpg) no-repeat center center;}
+.electric_all .electric_061{ width:1200px; height:458px;}
+.electric_all .electric_061 a{ padding:229px 0; display:block;}
+
+.electric_all .electric_07{ width:100%; height:299px; background:url(images/adimages/electric_07.jpg) no-repeat center center;}
+.electric_all .electric_071{ width:1200px; height:458px;}
+.electric_all .electric_071 a{ padding:229px 0; display:block;}
+
+.electric_all .electric_08{ width:100%; height:337px; background:url(images/adimages/electric_08.jpg) no-repeat center center;}
+.electric_all .electric_081{ width:1200px; height:458px;}
+.electric_all .electric_081 a{ padding:229px 0; display:block;}
+
+.electric_all .electric_09{ width:100%; height:328px; background:url(images/adimages/electric_09.jpg) no-repeat center center;}
+.electric_all .electric_091{ width:1200px; height:458px;}
+.electric_all .electric_091 a{ padding:229px 0; display:block;}
+
+.electric_all .electric_10{ width:1200px; height:150px; margin:0 auto;}
+.electric_all .electric_11{ width:1200px; height:469px; margin:0 auto;}
+.electric_all .electric_12{ width:1200px; height:492px; margin:0 auto;}
+.electric_all .electric_13{ width:1200px; height:567px; margin:0 auto;}
+.electric_all .electric_14{ width:1200px; height:621px; margin:0 auto;}
+.electric_all .electric_15{ width:1200px; height:498px; margin:0 auto;}
+.electric_all .electric_16{ width:1200px; height:529px; margin:0 auto;}
+.electric_all .electric_17{ width:1200px; height:184px; margin:0 auto;}
+.electric_all .electric_18{ width:1200px; height:484px; margin:0 auto;}
+.electric_all .electric_19{ width:1200px; height:552px; margin:0 auto;}
+.electric_all .electric_20{ width:1200px; height:499px; margin:0 auto;}
+
+
+.fm_two{ width:100%; height:400px; margin:0 auto; background-color:#45ba9f;}
+.fm_two .fm_st{ width:1200px; margin:0 auto; padding-top:75px; overflow:hidden;}
+.fm_two .fm_st li{ float:left; text-align:center; padding:0 44px;}
+.fm_two .fm_st p{ font-size:18px; color:#fff; padding-top:30px;}
+
+</style></head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--小家电金秋惠享start-->
+<div class="electric_all">
+	<div class="electric_01"></div>
+	<div class="electric_02"></div>
+	<div class="electric_03"></div>
+	<div class="electric_04"></div>
+	<div class="electric_05">
+   	  <div class="electric_051"><a href="goods.php?id=9533"></a></div>
+    </div>
+	<div class="electric_06">
+    	<div class="electric_061"><a href="goods.php?id=9608"></a></div>
+    </div>
+	<div class="electric_07">
+    	<div class="electric_071"><a href="goods.php?id=9534"></a></div>
+    </div>
+  <div class="electric_08">
+    	<div class="electric_081"><a href="goods.php?id=9525"></a></div>
+  </div>
+	<div class="electric_09">
+    	<div class="electric_091"><a href="goods.php?id=9532"></a></div>
+    </div>
+    
+  <div class="electric_10"><img src="images/adimages/electric_11.png" /></div>
+    <div class="electric_11">
+    	<img src="images/adimages/electric_13.png" usemap="#Map" border="0" />
+        <map name="Map" id="Map">
+          <area shape="rect" coords="140,6,427,454" href="goods.php?id=9529" />
+          <area shape="rect" coords="456,8,745,454" href="goods.php?id=7374" />
+          <area shape="rect" coords="771,6,1059,457" href="goods.php?id=9526" />
+        </map>
+    </div>
+    <div class="electric_12">
+   	  <img src="images/adimages/electric_14.png" usemap="#Map2" border="0" />
+      <map name="Map2" id="Map2">
+        <area shape="rect" coords="139,14,430,476" href="goods.php?id=9527" />
+        <area shape="rect" coords="455,13,746,473" href="goods.php?id=9547" />
+        <area shape="rect" coords="768,15,1062,472" href="goods.php?id=9548" />
+      </map>
+    </div>
+    <div class="electric_13">
+   	  <img src="images/adimages/electric_15.png" usemap="#Map3" border="0" />
+      <map name="Map3" id="Map3">
+        <area shape="rect" coords="135,22,433,488" href="goods.php?id=9557" />
+        <area shape="rect" coords="454,22,747,488" href="goods.php?id=9603" />
+        <area shape="rect" coords="769,19,1061,486" href="goods.php?id=9602" />
+      </map>
+    </div>
+    <div class="electric_14">
+   	  <img src="images/adimages/electric_16.png" usemap="#Map4" border="0" />
+      <map name="Map4" id="Map4">
+        <area shape="rect" coords="135,151,432,610" href="goods.php?id=9567" />
+        <area shape="rect" coords="452,150,748,608" href="goods.php?id=9566" />
+        <area shape="rect" coords="767,152,1063,606" href="goods.php?id=6620" />
+      </map>
+    </div>
+    <div class="electric_15">
+   	  <img src="images/adimages/electric_17.png" usemap="#Map5" border="0" />
+      <map name="Map5" id="Map5">
+        <area shape="rect" coords="137,16,432,483" href="goods.php?id=6675" />
+        <area shape="rect" coords="453,17,746,480" href="goods.php?id=9535" />
+        <area shape="rect" coords="769,20,1063,478" href="goods.php?id=9586" />
+      </map>
+    </div>
+    <div class="electric_16">
+   	  <img src="images/adimages/electric_18.png" usemap="#Map6" border="0" />
+      <map name="Map6" id="Map6">
+        <area shape="rect" coords="136,18,431,487" href="goods.php?id=9585" />
+        <area shape="rect" coords="454,20,744,485" href="goods.php?id=9584" />
+        <area shape="rect" coords="769,19,1061,482" href="goods.php?id=9583" />
+      </map>
+    </div>
+    <div class="electric_17">
+   	  <img src="images/adimages/electric_19.png" />
+    </div>
+    <div class="electric_18">
+   	  <img src="images/adimages/electric_20.png" usemap="#Map7" border="0" />
+      <map name="Map7" id="Map7">
+        <area shape="rect" coords="136,10,430,464" href="goods.php?id=9582" />
+        <area shape="rect" coords="452,11,747,463" href="goods.php?id=9581" />
+        <area shape="rect" coords="769,12,1060,463" href="goods.php?id=9580" />
+      </map>
+    </div>
+    <div class="electric_19">
+   	  <img src="images/adimages/electric_21.png" usemap="#Map8" border="0" />
+      <map name="Map8" id="Map8">
+        <area shape="rect" coords="136,13,433,470" href="goods.php?id=9600" />
+        <area shape="rect" coords="451,13,746,469" href="goods.php?id=9599" />
+        <area shape="rect" coords="769,13,1060,468" href="goods.php?id=4942" />
+      </map>
+    </div>
+    <div class="electric_20">
+   	  <img src="images/adimages/electric_22.png" usemap="#Map9" border="0" />
+      <map name="Map9" id="Map9">
+        <area shape="rect" coords="72,175,331,355" href="category.php?id=311&amp;brand=214&amp;price_min=0&amp;price_max=0" />
+        <area shape="rect" coords="343,175,594,354" href="category.php?id=311&amp;brand=231&amp;price_min=0&amp;price_max=0" />
+        <area shape="rect" coords="607,176,859,354" href="category.php?id=311&amp;brand=222&amp;price_min=0&amp;price_max=0" />
+        <area shape="rect" coords="871,177,1123,354" href="category.php?id=311&brand=288&price_min=0&price_max=0" />
+      </map>
+    </div>
+    
+</div>
+
+<div class="fm_two">
+    <div class="fm_st">
+        <ul>
+            <li><img src="images/fm_02.png" /><p>正品保证</p></li>
+            <li><img src="images/fm_03.png" /><p>底价专供</p></li>
+            <li><img src="images/fm_04.png" /><p>7天无忧退</p></li>
+            <li><img src="images/fm_05.png" /><p>急速配送</p></li>
+        </ul>
+    </div>
+</div>
+<!--小家电金秋惠享end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

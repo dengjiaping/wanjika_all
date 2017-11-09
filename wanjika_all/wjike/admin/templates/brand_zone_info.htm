@@ -1,0 +1,74 @@
+<!-- $Id: category_list.htm 17019 2010-01-29 10:10:34Z liuhui $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+    <!-- start ad position list -->
+    <div class="list-div" id="listDiv">
+        {/if}
+        <table width="100%" cellspacing="1" cellpadding="2" id="mix-table">
+            <tr>
+                <th>ID</th>
+                <th>品牌ID</th>
+                <th>排序</th>
+                <th>{$lang.handler}</th>
+            </tr>
+            {foreach from=$brand_zone_info item=zone}
+            <tr align="center">
+                <td align="center"><input type="hidden" name="cat[brand_id][]" value="{$zone.brand_id}" />{$zone.brand_id}</td>
+                <td><input style="width: 96%;" type="text"  value="{$zone.floor_name}" name="cat[floor_name][]"/></td>
+                <td><input style="width: 96%;" type="text"  value="{$zone.floor_sort}" name="cat[floor_sort][]"/></td>
+                <td align="center">
+                    <a href="javascript:;" onclick="listTable.remove({$zone.brand_id}, '您确认要删除场馆下所有数据以及图片吗？')" title="{$lang.remove}">{$lang.remove}</a>
+                </td>
+            </tr>
+            {/foreach}
+            <tr>
+                <td align="center"><input type="hidden" name="cat[brand_id][]" /><a href="javascript:;" onclick="addImg(this,'mix-table')">[+]</a></td>
+                <td align="center"><input type="text" style="width: 96%;" value="" name="cat[floor_name][]"/></td>
+                <td align="center"><input type="text" style="width: 96%;" value="" name="cat[floor_sort][]"/></td>
+                <td></td>
+            </tr>
+        </table>{if $full_page}
+    </div>
+    <input type="hidden" name="act" value="{$form_act}" />
+    <input type="hidden" name="brand_id" value="{$brand_id}">
+    <input type="submit" value=" 确定 " class="button">
+    <input type="reset" value=" 重置 " class="button">
+</form>
+
+{literal}
+<script language="JavaScript">
+    /**
+     * 检查表单输入的数据
+     */
+    function check_del()
+    {
+        if (confirm('{$lang.trash_img_confirm}'))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    function addImg(obj,id)
+    {
+        var src  = obj.parentNode.parentNode;
+        var idx  = rowindex(src);
+        var tbl  = document.getElementById(id);
+        var row  = tbl.insertRow(idx + 1);
+        row.innerHTML = src.innerHTML.replace(/(.*)(addImg)(.*)(\[)(\+)/i, "$1removeImg$3$4-");
+    }
+    function removeImg(obj,id)
+    {
+        var row = rowindex(obj.parentNode.parentNode);
+        var tbl = document.getElementById(id);
+
+        tbl.deleteRow(row);
+    }
+</script>
+{/literal}
+{include file="pagefooter.htm"}{/if}

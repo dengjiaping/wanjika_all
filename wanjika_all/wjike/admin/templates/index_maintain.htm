@@ -1,0 +1,176 @@
+<!-- $Id: template_library.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<form method="post" onsubmit="return false">
+    <div class="form-div">
+        请选择一个库项目:
+        <select id="selLib" onchange="loadLibrary()">{$curr_template}
+            {html_options options=$libraries selected="$curr_library"}
+        </select>
+    </div>
+    <div class="main-div">
+        <div class="button-div ">
+            <textarea id="libContent" rows="20" style="font-family: Courier New; width:95%">{$library_html|escape:html}</textarea>
+            <input type="button" value="{$lang.button_submit}" class="button" onclick="updateLibrary()" />
+            <input type="button" value="还原到上次修改" class="button" onclick="restoreLibrary()" />
+        </div>
+    </div>
+</form>
+<form enctype="multipart/form-data" method="post" action="flashplay.php" >
+    <table width="90%" id="gallery-table" align="center">
+        <tr>
+            <td>
+                {foreach from=$img_list item=img key=i}
+                <div id="gallery_{$img.img_id}" style="float:left; text-align:center; border: 1px solid #DADADA; margin: 4px; padding:2px;">
+                    <a href="javascript:;" onclick="if (confirm('确定要删除图片吗')) dropImg('{$img.img_id}')">[-]</a><br />
+                    <a href="goods.php?act=show_image&img_url={$img.img_url}" target="_blank">
+                        <img src="../{if $img.thumb_url}{$img.thumb_url}{else}{$img.img_url}{/if}" {if $thumb_width neq 0}width="{$thumb_width}"{/if} {if $thumb_height neq 0}height="{$thumb_height}"{/if} border="0" />
+                    </a><br />
+                    <input type="text" value="{$img.img_url|escape}" size="15" name="old_img_desc[{$img.img_id}]" />
+                </div>
+                {/foreach}
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr>
+            <td>
+                <a href="javascript:;" onclick="addImg(this)">[+]</a>
+                {$lang.img_desc} <input type="text" name="img_desc[]" size="20" />
+                {$lang.img_url} <input type="file" name="img_url[]" /><span style="color: red;">*文件名禁止出现中文</span></td>
+        </tr>
+    </table>
+    <div class="button-div">
+        <input type="submit" value=" 确定 " class="button" >
+        <input type="reset" value=" 重置 " class="button">
+        <input type="hidden" name="act" value="update">
+    </div>
+</form>
+<script language="JavaScript">
+    <!--
+    {literal}
+
+    var currLibrary = "{$curr_library}";
+    var content = '';
+    onload = function()
+    {
+        document.getElementById('libContent').focus();
+        // 开始检查订单
+        startCheckOrder();
+    }
+    /**
+     * 载入库项目内容
+     */
+    function loadLibrary()
+    {
+        curContent = document.getElementById('libContent').value;
+
+        if (content != curContent && content != '')
+        {
+            if (!confirm(save_confirm))
+            {
+                return;
+            }
+        }
+
+        selLib  = document.getElementById('selLib');
+        currLib = selLib.options[selLib.selectedIndex].value;
+
+        Ajax.call('flashplay.php?is_ajax=1&act=load_library', 'lib='+ currLib, loadLibraryResponse, "GET", "JSON");
+    }
+
+    /**
+     * 还原库项目内容
+     */
+    function restoreLibrary()
+    {
+        selLib  = document.getElementById('selLib');
+        currLib = selLib.options[selLib.selectedIndex].value;
+
+        Ajax.call('flashplay.php?is_ajax=1&act=restore_library', "lib="+currLib, loadLibraryResponse, "GET", "JSON");
+    }
+
+    /**
+     * 更新库项目内容
+     */
+    function updateLibrary()
+    {
+        selLib  = document.getElementById('selLib');
+        currLib = selLib.options[selLib.selectedIndex].value;
+        content = document.getElementById('libContent').value;
+
+        if (Utils.trim(content) == "")
+        {
+            alert(empty_content);
+            return;
+        }
+        Ajax.call('flashplay.php?act=update_library&is_ajax=1','lib=' + currLib + '&html=' + encodeURIComponent(content), updateLibraryResponse, "POST", "JSON");
+    }
+
+    /**
+     * 处理载入的反馈信息
+     */
+    function loadLibraryResponse(result)
+    {
+        if (result.error == 0)
+        {
+            document.getElementById('libContent').value=result.content;
+        }
+
+        if (result.message.length > 0)
+        {
+            alert(result.message);
+        }
+    }
+    /**
+     * 鏂板?涓€涓?浘鐗
+     */
+    function addImg(obj)
+    {
+        var src  = obj.parentNode.parentNode;
+        var idx  = rowindex(src);
+        var tbl  = document.getElementById('gallery-table');
+        var row  = tbl.insertRow(idx + 1);
+        var cell = row.insertCell(-1);
+        cell.innerHTML = src.cells[0].innerHTML.replace(/(.*)(addImg)(.*)(\[)(\+)/i, "$1removeImg$3$4-");
+    }
+
+    /**
+     * 鍒犻櫎鍥剧墖涓婁紶
+     */
+    function removeImg(obj)
+    {
+        var row = rowindex(obj.parentNode.parentNode);
+        var tbl = document.getElementById('gallery-table');
+
+        tbl.deleteRow(row);
+    }
+
+    /**
+     * 鍒犻櫎鍥剧墖
+     */
+    function dropImg(imgId)
+    {
+        Ajax.call('flashplay.php?is_ajax=1&act=drop_image', "img_id="+imgId, dropImgResponse, "GET", "JSON");
+    }
+
+    function dropImgResponse(result)
+    {
+        if (result.error == 0)
+        {
+            document.getElementById('gallery_' + result.content).style.display = 'none';
+        }
+    }
+    /**
+     * 处理更新的反馈信息
+     */
+    function updateLibraryResponse(result)
+    {
+        if (result.message.length > 0)
+        {
+            alert(result.message);
+        }
+    }
+    {/literal}
+    //-->
+</script>
+{include file="pagefooter.htm"}

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<div class="list-div" id="listDiv">
+  <form action="phone_card.php" method="post">
+    <table cellspacing='1' cellpadding='3'>
+      <tr>
+        <th><input type="checkbox" checked onclick="listTable.selectAll(this, 'checked')" />{$lang.lab_card_id}</th>
+        <th>{$lang.lab_card_sn}</th>
+        <th>{$lang.lab_card_money}</th>
+        <th>{$lang.lab_leave_money}</th>
+        <th>{$lang.lab_end_date}</th>
+      </tr>
+      {foreach from=$list key=key item=card}
+      <tr>
+        <td><input type="checkbox" name="checked[]" value="{$card.card_id}" checked  /> {$card.card_id} </td>
+        <td><input type="text" name="card_sn[{$key}]" value="{$card.card_sn}" size="20" disabled="true" /></td>
+        <td><input type="text" name="card_money[{$key}]" value="{$card.money}" size="10" disabled="true" /></td>
+        <td><input type="text" name="card_leave_money[{$key}]" value="{$card.leave_money}" size="20" disabled="true" /></td>
+        <td><input type="text" name="end_date[{$key}]" value="{$card.end_date}" size="15" disabled="true" /></td>
+      </tr>
+      {/foreach}
+      <tr>
+        <td>合并到：<td><input type="text" name="to_card_sn" value="" size="20" /> 请在这里输入卡片序号</td>
+        </tr>
+      <tr align="center">
+        <td colspan="6">
+          <input type="hidden" name="act" value="merge_card" />
+          <input type="submit" name="submit" value="{$lang.button_submit}" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+{include file="pagefooter.htm"}

@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if $helps}-->
+<div class="help">
+<!-- {foreach from=$helps item=help_cat name=name} -->
+	<div class="guide{$smarty.foreach.name.iteration} image_bg">
+		<dl>
+			<dt><strong>{$help_cat.cat_name}</strong></dt>
+			<dd>
+             <!-- {foreach from=$help_cat.article item=item} -->
+             <a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a>
+             <!-- {/foreach} -->
+            </dd>
+		</dl>
+	</div>
+<!-- {/foreach} -->
+
+</div>
+<!--{/if}-->
+<div class="blank"></div>

@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{if $helps}-->
+<div class="servicelefttopbg">帮助中心</div>
+<div class="serviceleft">
+    
+   <div class="serviceleftBbg">
+    <dl>
+    
+    <!-- {foreach from=$helps item=help_cat name=name} -->
+    <dt {if $smarty.foreach.name.first}style="margin-top:0px"{/if}>{$help_cat.cat_name}</dt>
+     <!-- {foreach from=$help_cat.article item=item name=name1} -->
+      <dd {if $smarty.foreach.name1.last} style="border-bottom:none;"{/if} {if $item.title eq $article.title} class="cur"{/if}><a  href="help.php?id={$item.article_id}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+        <!-- {/foreach} -->
+   
+  <!-- {/foreach} -->
+  </dl>
+   </div>
+	<div class="blank"></div>
+  </div>
+  <!--{/if}-->
+    

@@ -1,0 +1,52 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<DIV class=itemChoose id="category_tree">
+<H2 style=" text-align:center">商品分类</H2>
+ <div id="cate" style="padding-top:10px;">
+  
+	<!--{foreach from=get_categories_tree(0) item=cat name=cat}-->
+    <dl >
+		<dt onclick="tab({$smarty.foreach.cat.index})">
+		<a href="{$cat.url}" class="fl">&nbsp;{$cat.name|escape:html}</a>
+		<span class="fr"><img src="images/btn_fold.gif" style="padding-top:3px; padding-right:6px;cursor:pointer;"></span>
+ <div style="height:0px; line-height:0px; clear:both;"></div>
+		</dt>
+        <ul style="display:none;">
+		  <!--{foreach from=$cat.cat_id item=child}-->
+		<dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
+		<!--{/foreach}-->
+        <dd style="height:0px; line-height:0px; clear:both;"></dd>
+        
+		</ul>
+   <div style="height:0px; line-height:0px; clear:both;"></div>
+    </dl>
+<!--{/foreach}--> 
+ 
+  
+</div>
+
+<div style="height:0px; line-height:0px; clear:both;"></div></DIV>
+    
+
+
+<script type="text/javascript">
+obj_h4 = document.getElementById("cate").getElementsByTagName("dt")
+obj_ul = document.getElementById("cate").getElementsByTagName("ul")
+obj_img = document.getElementById("cate").getElementsByTagName("img")
+function tab(id)
+{ 
+		if(obj_ul.item(id).style.display == "block")
+		{
+			obj_ul.item(id).style.display = "none"
+			obj_img.item(id).src = "images/btn_fold.gif"
+			return false;
+		}
+		else(obj_ul.item(id).style.display == "none")
+		{
+			obj_ul.item(id).style.display = "block"
+			obj_img.item(id).src = "images/btn_unfold.gif"
+		}
+}
+</script>
+<div class="blank"></div>

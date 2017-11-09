@@ -1,0 +1,160 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<DIV id=plist>  
+
+<DIV class="rankOp clearfix mt" id=rankOpDiv>
+
+
+<form method="GET"  name="listform" >
+ 
+<UL class="rank clearfix" orderby="1"><!-- 排序方式 -->
+  <LI class=normal><A onClick="return false;" href="javascript:void(0);" 
+>商品排序</A> </LI>
+  
+  <LI class=<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->><A 
+  href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list" 
+  ><SPAN>上架时间</SPAN></A> 
+  </LI>
+  <LI class=<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->><A 
+  href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list" 
+><SPAN>价格</SPAN></A> 
+  </LI>
+  <LI class=<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->><A 
+  href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list" 
+  ><SPAN>更新时间</SPAN></A> 
+  </LI>
+  
+  <LI class=<!-- {if $pager.sort == 'click_count'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->><A 
+  href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=click_count&order=<!-- {if $pager.sort == 'click_count' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list" 
+  ><SPAN>点击人气</SPAN></A> 
+  </LI>
+
+  
+  </UL>
+
+<UL class="page clearfix">
+    <LI>
+          <!-- {if $pager.page_prev} -->
+          <a class="prev " href="{$pager.page_prev}"></a>
+           <!-- {else} -->
+            <a class="prev prevNo" href="javascript:void(0);"></a>
+          <!-- {/if} -->
+          <!-- {if $pager.page_next} -->
+          <a class="next" href="{$pager.page_next}"></a>
+          <!-- {else} -->
+            <a class="next nextNo" href="javascript:void(0);"></a>
+          <!-- {/if} -->
+          
+   </LI>       
+
+</UL>
+    <input type="hidden" name="category" value="{$category}" />
+  <input type="hidden" name="display" value="{$pager.display}" id="display" />
+  <input type="hidden" name="brand" value="{$brand_id}" />
+  <input type="hidden" name="price_min" value="{$price_min}" />
+  <input type="hidden" name="price_max" value="{$price_max}" />
+  <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+  <input type="hidden" name="page" value="{$pager.page}" />
+  <input type="hidden" name="sort" value="{$pager.sort}" />
+  <input type="hidden" name="order" value="{$pager.order}" />
+  </form>
+  
+  </DIV>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<DIV id=search_table>
+<DIV class="itemSearchResult clearfix ">
+
+    <!-- {if $category > 0} -->
+  <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+    <!-- {/if} -->
+ <UL class=itemSearchList>
+ 
+            <!--{foreach from=$goods_list item=goods name=name}-->
+    <!-- {if $goods.goods_id} -->
+ 
+  <LI >
+  <DIV class="itemSearchResultCon" onMouseOver="this.className='itemSearchResultCon cur'" onMouseOut="this.className='itemSearchResultCon'"> <A 
+  class=product_pic
+  href="{$goods.url}" target=_blank><IMG 
+  title="{$goods.goods_name}" 
+  src="{$goods.goods_thumb}"> </A><A 
+  class=title title="{$goods.goods_name}" 
+  href="{$goods.url}" target=_blank>{$goods.goods_name}</A><span style="color:red">&nbsp{$goods.cuxiao}</span>
+  <P class=price><!--<A class=comment
+  href="{$goods.url}" 
+  target=_blank>{$goods.comment_count}条评价</A>--> <SPAN><STRONG>  <!--{if $goods.promote_price neq "" } -->
+         {$goods.promote_price}
+            <!--{else}-->
+          {$goods.shop_price}
+            <!--{/if}--></STRONG> <DEL >{$goods.market_price}</DEL> </SPAN></P>
+
+  <DIV class=appraise>
+	<!--{if $goods.is_new eq "1" } -->
+         <A class="infoIcon yi" ></A>
+          <!--{/if}-->
+    <!--{if $goods.is_hot eq "1" } -->
+         <A class="infoIcon shang" ></A>
+          <!--{/if}-->
+            <!--{if $goods.is_best eq "1" } -->
+         <A class="infoIcon ding" ></A>
+          <!--{/if}-->
+    <!--{if $goods.goods_number eq 0 } -->
+    	<font color="red">暂时无货</font>
+	<!--{/if}-->
+  
+   </DIV>
+  <DIV class=buyInfo><a class="buy toDetail"  onclick="javascript:addToCart({$goods.goods_id})" >立即购买</a> </DIV>
+  
+
+  </DIV></LI>
+      <!--{/if}-->
+    <!--{/foreach}-->
+  </UL>
+
+ 
+  <!-- {if $category > 0} -->
+  </form>
+  <!-- {/if} -->
+  
+  
+
+  
+  </DIV>
+</DIV>
+</DIV>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>

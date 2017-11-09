@@ -1,0 +1,63 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<!--<div class="form-div">-->
+    <!--<form action="lottery.php?act=list" method="post">-->
+        <!--<img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />-->
+        <!--订单号<input name="order_sn" type="text" id="order_sn" size="15" value={$order_sn}>-->
+        <!--用户名<input name="user_name" type="text" id="user_name" size="15" value={$user_name}>-->
+        <!--<select name="reward_id" id="reward_id">-->
+            <!--<option value="-1">请选择</option>-->
+            <!--<option value="0" {if $reward_id==0 && $reward_id != null}selected="selected"{/if}>未中奖</option>-->
+            <!--<option value="1" {if $reward_id==1}selected="selected"{/if}>一等奖</option>-->
+            <!--<option value="2" {if $reward_id==2}selected="selected"{/if}>二等奖</option>-->
+            <!--<option value="3" {if $reward_id==3}selected="selected"{/if}>三等奖</option>-->
+            <!--<option value="4" {if $reward_id==4}selected="selected"{/if}>四等奖</option>-->
+            <!--<option value="5" {if $reward_id==5}selected="selected"{/if}>五等奖</option>-->
+        <!--</select>-->
+        <!--<input type="submit" value="{$lang.button_search}" class="button" />-->
+    <!--</form>-->
+<!--</div>-->
+
+<div class="list-div" id="listDiv">
+    {/if}
+    <table cellpadding="3" cellspacing="1">
+        <tr>
+            <th>会员等级</th>
+            <th>充值天数</th>
+            <th>充值价格</th>
+            <th>关联商品</th>
+            <th>操作</th>
+        </tr>
+        {foreach from=$members_list item=members key=okey}
+        <tr>
+            <td align="center" valign="top" nowrap="nowrap">{$members.levelname}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$members.days}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$members.price}</td>
+            <td align="center" valign="top" nowrap="nowrap"><a href="goods.php?act=edit&extension_code=goods_members&goods_id={$members.goods_id}">{$members.goods_name}</a></td>
+            <td align="center">
+                <a href="users.php?act=members_add&members_id={$members.id}" title="{$lang.edit}"><img src="images/icon_edit.gif" border="0" height="16" width="16" /></a>
+            </td>
+        </tr>
+        {/foreach}
+    </table>
+    <table id="page-table" cellspacing="0">
+        <tr>
+            <td align="right" nowrap="true">
+                {include file="page.htm"}
+            </td>
+        </tr>
+    </table>
+    {if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

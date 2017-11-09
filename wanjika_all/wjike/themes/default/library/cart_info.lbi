@@ -1,0 +1,45 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="wrap-jiesuan" style=" width:auto;">
+            	<dl>
+            	<a href="flow.php" style="padding:0px;color:#fff;">
+                    <dt>
+                        <div class="buying">
+                        <img src="images/shopping.png" height="15" />
+                        <p style=" float:left;">购物车</p>
+                        <span>{$number}</span>
+                        <p style=" float:left;">件</p></div>
+                    </dt>
+                </a>
+                <!--{if $number eq 0}-->
+                    <!--购物车为空时start-->
+                    <dd class="buyingshop">
+                        <div class="buy_none">购物车中还没有商品，赶紧选购吧！</div>
+                    </dd>
+                    <!--购物车为空时end-->
+                <!--{else}-->
+                    <!--购物车有商品时start-->
+                    <dd class="buyingshop">
+                    {foreach from=$goods_list item=goods}
+                       <div class="pb_bs">
+                          <div class="pb_img">
+                              <a href="http://item.wjike.com/{$goods.goods_id}.html" target="_blank"><img style="padding:0;width:60px;height:60px;" src="{$goods.goods_thumb}" title="{$goods.goods_name|escape:html}"/></a>
+                          </div>
+                          <div class="pb_title">
+                              <p><a class="flow_mini"  href="http://item.wjike.com/{$goods.goods_id}.html" target="_blank" >{$goods.goods_name}</a></p>
+                              <b class="lt">{$goods.goods_price}</b><span>数量 x{$goods.goods_number}</span>
+                          </div>
+                          <div class="dl"><a href="javascript:if (confirm('您确定要把该商品移除购物车吗？')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; ">删除</a></div>
+                       </div>
+                    {/foreach}
+
+                       <div class="shop_car">
+                          <span>商品总数：<i>{$number}</i></span>
+                          <span>共计：<i>{$amount}</i></span>
+                          <div class="go_js"><a href="flow.php">去购物车结算</a></div>
+                       </div>
+
+                    </dd>
+                    <!--购物车有商品时end-->
+                <!--{/if}-->
+                </dl>
+            </div>

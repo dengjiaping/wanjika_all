@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="w1200" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div align=center style="min-width:990px;">
+<!-- ImageReady Slices (pg.psd) -->
+
+<table id="__01" width="980" height="3437" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<img src="images/Home_01.jpg" width="254" height="459" alt=""></td>
+		<td>
+			<img src="images/Home_02.jpg" width="235" height="459" alt=""></td>
+		<td>
+			<img src="images/Home_03.jpg" width="236" height="459" alt=""></td>
+		<td>
+			<img src="images/Home_04.jpg" width="255" height="459" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/Home_05.jpg" width="980" height="82" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4172" target="_blank"><img src="images/Home_06.jpg" alt="" width="254" height="277" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4561" target="_blank"><img src="images/Home_07.jpg" alt="" width="235" height="277" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4176" target="_blank"><img src="images/Home_08.jpg" alt="" width="236" height="277" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4194" target="_blank"><img src="images/Home_09.jpg" alt="" width="255" height="277" border="0"></a></td>
+  </tr>
+	<tr>
+		<td><a href="http://www.wjike.com/goods.php?id=4580" target="_blank"><img src="images/Home_10.jpg" alt="" width="254" height="273" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4600" target="_blank"><img src="images/Home_11.jpg" alt="" width="235" height="273" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4604" target="_blank"><img src="images/Home_12.jpg" alt="" width="236" height="273" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4602" target="_blank"><img src="images/Home_13.jpg" alt="" width="255" height="273" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/Home_14.jpg" width="980" height="82" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4400" target="_blank"><img src="images/Home_15.jpg" alt="" width="254" height="275" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4407" target="_blank"><img src="images/Home_16.jpg" alt="" width="235" height="275" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4402" target="_blank"><img src="images/Home_17.jpg" alt="" width="236" height="275" border="0"></a></td>
+		<td><a href="http://www.wjike.com/goods.php?id=5318" target="_blank"><img src="images/Home_18.jpg" alt="" width="255" height="275" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4395" target="_blank"><img src="images/Home_19.jpg" alt="" width="254" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4380" target="_blank"><img src="images/Home_20.jpg" alt="" width="235" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4398" target="_blank"><img src="images/Home_21.jpg" alt="" width="236" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4386" target="_blank"><img src="images/Home_22.jpg" alt="" width="255" height="274" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/Home_23.jpg" width="980" height="86" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4179" target="_blank"><img src="images/Home_24.jpg" alt="" width="254" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4194" target="_blank"><img src="images/Home_25.jpg" alt="" width="235" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4190" target="_blank"><img src="images/Home_26.jpg" alt="" width="236" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4191" target="_blank"><img src="images/Home_27.jpg" alt="" width="255" height="274" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4200" target="_blank"><img src="images/Home_28.jpg" alt="" width="254" height="273" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4207" target="_blank"><img src="images/Home_29.jpg" alt="" width="235" height="273" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=5291" target="_blank"><img src="images/Home_30.jpg" alt="" width="236" height="273" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4303" target="_blank"><img src="images/Home_31.jpg" alt="" width="255" height="273" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/Home_32.jpg" width="980" height="86" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=6336" target="_blank"><img src="images/Home_33.jpg" alt="" width="254" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=6340" target="_blank"><img src="images/Home_34.jpg" alt="" width="235" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4227" target="_blank"><img src="images/Home_35.jpg" alt="" width="236" height="274" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4221" target="_blank"><img src="images/Home_36.jpg" alt="" width="255" height="274" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4311" target="_blank"><img src="images/Home_37.jpg" alt="" width="254" height="275" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4349" target="_blank"><img src="images/Home_38.jpg" alt="" width="235" height="275" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=5111" target="_blank"><img src="images/Home_39.jpg" alt="" width="236" height="275" border="0"></a></td>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=5105" target="_blank"><img src="images/Home_40.jpg" alt="" width="255" height="275" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/Home_41.jpg" width="980" height="99" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="http://www.wjike.com/goods.php?id=4224" target="_blank"><img src="images/Home_42.jpg" alt="" width="254" height="265" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4283" target="_blank"><img src="images/Home_43.jpg" alt="" width="235" height="265" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4364" target="_blank"><img src="images/Home_44.jpg" alt="" width="236" height="265" border="0"></a></td>
+<td>
+			<a href="http://www.wjike.com/goods.php?id=4362" target="_blank"><img src="images/Home_45.jpg" alt="" width="255" height="265" border="0"></a></td>
+  </tr>
+	<tr>
+		<td colspan="4">
+			<img src="images/Home_46.jpg" width="980" height="83" alt=""></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+</div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

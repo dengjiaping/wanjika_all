@@ -1,0 +1,42 @@
+<!-- $Id: warehouse_list.htm 17019 2016-04-06 11:43:34Z mali $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+<!-- start ad position list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+<table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+  <tr>
+    <th>ID</th>
+    <th>仓库</th>
+    <th>类型</th>
+    <th>快递名称</th>
+    <th>是否海淘</th>
+    <th>是否直邮</th>
+    <th>负责人</th>
+    <th>{$lang.handler}</th>
+  </tr>
+  {foreach from=$warehouse_list item=warehouse}
+  <tr align="center" id="{$warehouse.type_id}">
+    <td width="10%">{$warehouse.type_id}</td>
+    <td align="20%" class="first-cell" >{$warehouse.warehouse_type}</td>
+    <td width="10%">{$warehouse.supplier_type}</td>
+    <td width="10%">{$warehouse.shipping_name}</td>
+    <td width="10%">{if $warehouse.is_overseas}是{else}否{/if}</td>
+    <td width="10%">{if $warehouse.is_dds}是{else}否{/if}</td>
+    <td width="20%">{$warehouse.person_charge}</td>
+    <td width="20%" align="center">
+      <a href="goods.php?act=edit_warehouse&amp;warehouse_id={$warehouse.type_id}">{$lang.edit}</a> |
+      <a href="javascript:;" onclick="listTable.remove({$warehouse.type_id}, '{$lang.drop_confirm}','remove_warehouse')" title="{$lang.remove}">{$lang.remove}</a>
+    </td>
+  </tr>
+  {/foreach}
+</table>
+{if $full_page}
+</div>
+</form>
+{include file="pagefooter.htm"}
+{/if}

@@ -1,0 +1,74 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<div class="form-div">
+    <form action="order.php?act=refundlist" method="post">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        订单号<input name="order_sn" type="text" id="order_sn" size="15" value={$order_sn}>
+        用户名<input name="user_name" type="text" id="user_name" size="15" value={$user_name}>
+        <input type="submit" value="{$lang.button_search}" class="button" />
+        <a href="order.php?act=refundlist&status=1">处理中</a>
+        <a href="order.php?act=refundlist&status=2">拒绝申请</a>
+        <a href="order.php?act=refundlist&status=3">退款成功</a>
+        <a href="order.php?act=refundlist&status=4">退款失败</a>
+    </form>
+</div>
+
+<div class="list-div" id="listDiv">
+    {/if}
+    <table cellpadding="3" cellspacing="1">
+        <tr>
+            <th>订单号</th>
+            <th>退款订单号</th>
+            <th>用户名</th>
+            <th>退款状态</th>
+            <th>退款理由</th>
+            <th>添加时间</th>
+            <th>操作人</th>
+            <th>退款操作时间</th>
+            <th>操作</th>
+        </tr>
+        {foreach from=$refund_list item=refund key=okey}
+        <tr>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.order_sn}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.refordno}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.username}</td>
+            <td align="center" valign="top" nowrap="nowrap">
+                {if $refund.status == 1}处理中
+                {elseif $refund.status == 2}拒绝申请
+                {elseif $refund.status == 3}退款成功
+                {else}退款失败{/if}
+            </td>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.refund_reason}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.short_order_time}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.action_user}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$refund.short_refund_time}</td>
+            <td align="center" valign="top"  nowrap="nowrap">
+                {if $refund.status == 1}
+                <a onclick="{if(confirm('确定要退款吗？')){return true;}return false;}" href="order.php?act=suixing_refund&id={$refund.id}">退款</a>
+                <a onclick="{if(confirm('确定要拒绝申请吗？')){return true;}return false;}" href="order.php?act=refuse_refund&id={$refund.id}">拒绝申请</a>
+                {else}已处理{/if}
+            </td>
+        </tr>
+        {/foreach}
+    </table>
+    <table id="page-table" cellspacing="0">
+        <tr>
+            <td align="right" nowrap="true">
+                {include file="page.htm"}
+            </td>
+        </tr>
+    </table>
+    {if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

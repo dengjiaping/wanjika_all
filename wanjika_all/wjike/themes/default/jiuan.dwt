@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>九安血压计 健康送好礼</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.jiuan_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/jiuan_01.jpg) no-repeat top center #fff; }
+.jiuan_all .jiuan_one{ width:100%; overflow:hidden; margin:0 auto; }
+.jiuan_all .jiuan_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.jiuan_all .jiuan_01{ width:1000px; height:148px; background:url(images/adimages/jiuan_02.jpg) no-repeat center center; margin:0 auto; }
+.jiuan_all .jiuan_02{ width:1000px; height:148px; background:url(images/adimages/jiuan_04.jpg) no-repeat center center; margin:0 auto; }
+.jiuan_all .jiuan_03{ width:1000px; height:147px; background:url(images/adimages/jiuan_05.jpg) no-repeat center center; margin:0 auto; }
+.jiuan_all .jiuan_04{ width:1000px; height:148px; background:url(images/adimages/jiuan_06.jpg) no-repeat center center; margin:0 auto; }
+.jiuan_all .jiuan_05{ width:1000px; height:2739px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--九安血压计 健康送好礼start-->
+<div class="jiuan_all">
+	<div class="jiuan_one">
+        <div class="jiuan_01"></div>
+        <div class="jiuan_02"></div>
+        <div class="jiuan_03"></div>
+        <div class="jiuan_04"></div>
+    </div>
+
+	<div class="jiuan_two">
+        <div class="jiuan_05">
+        	<a href="http://wjike.com/goods.php?id=10118" target="_blank"><img src="images/adimages/jiuan_07.jpg" /></a>
+        	<a href="http://wjike.com/goods.php?id=10119" target="_blank"><img src="images/adimages/jiuan_08.jpg" /></a>
+        	<a href="http://wjike.com/goods.php?id=10120" target="_blank"><img src="images/adimages/jiuan_09.jpg" /></a>
+        	<a href="http://wjike.com/goods.php?id=10121" target="_blank"><img src="images/adimages/jiuan_10.jpg" /></a>
+            <img src="images/adimages/jiuan_11.jpg" usemap="#Map" border="0" />
+          <map name="Map" id="Map">
+              <area shape="rect" coords="46,9,493,456" href="http://wjike.com/goods.php?id=10122" target="_blank" />
+              <area shape="rect" coords="507,10,953,455" href="http://wjike.com/goods.php?id=10123" target="_blank" />
+            </map>
+            <img src="images/adimages/jiuan_12.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="47,11,490,456" href="http://wjike.com/goods.php?id=9599" target="_blank" />
+              <area shape="rect" coords="508,11,954,454" href="http://wjike.com/goods.php?id=9600" target="_blank" />
+            </map>
+            <img src="images/adimages/jiuan_13.jpg" />
+    </div>
+
+</div>
+
+<!--九安血压计 健康送好礼end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

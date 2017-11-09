@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百万元红包豪礼相送</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.millions_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/millions_01.jpg) no-repeat top center #fff; }
+.millions_all .millions_one{ width:100%; overflow:hidden; margin:0 auto; }
+.millions_all .millions_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.millions_all .millions_01{ width:1200px; height:220px; background:url(images/adimages/millions_02.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_02{ width:1200px; height:219px; background:url(images/adimages/millions_04.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_03{ width:1200px; height:220px; background:url(images/adimages/millions_05.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_04{ width:1200px; height:219px; background:url(images/adimages/millions_06.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_05{ width:1200px; height:439px; background:url(images/adimages/millions_07.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_06{ width:1200px; height:439px; background:url(images/adimages/millions_08.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_07{ width:1200px; height:364px; margin:0 auto; }
+.millions_all .millions_08{ width:1200px; height:513px; background:url(images/adimages/millions_10.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_09{ width:1200px; height:287px; margin:0 auto; }
+.millions_all .millions_10{ width:1200px; height:950px; background:url(images/adimages/millions_12.jpg) no-repeat center center; margin:0 auto; }
+.millions_all .millions_11{ width:1200px; height:519px; background:url(images/adimages/millions_13.jpg) no-repeat center center; margin:0 auto; }
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--百万元红包豪礼相送start-->
+<div class="millions_all">
+	<div class="millions_one">
+        <div class="millions_01"></div>   
+        <div class="millions_02"></div> 
+        <div class="millions_03"></div>   
+        <div class="millions_04"></div> 
+        <div class="millions_05"></div> 
+        <div class="millions_06"></div>   
+        <div class="millions_07">
+        	<a href="http://www.wjike.com/user.php?act=register" target="_blank"><img src="images/adimages/millions_09.jpg" /></a>
+        </div> 
+        <div class="millions_08"></div> 
+        <div class="millions_09">
+        	<a href="http://www.wjike.com/vip.php?act=vip_info" target="_blank"><img src="images/adimages/millions_11.jpg" /></a>
+        </div> 
+        <div class="millions_10"></div> 
+        <div class="millions_11"></div> 
+        
+    </div> 
+</div>
+<!--百万元红包豪礼相送end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

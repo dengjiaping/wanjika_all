@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>日本馆——东方文化与时尚的融合</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.japanhome_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#04285d; }
+.japanhome_all .japanhome_01{ width:100%; height:188px; background:url(images/adimages/japanhome_01.jpg) no-repeat center center;}
+.japanhome_all .japanhome_02{ width:100%; height:187px; background:url(images/adimages/japanhome_02.jpg) no-repeat center center;}
+.japanhome_all .japanhome_03{ width:100%; height:188px; background:url(images/adimages/japanhome_03.jpg) no-repeat center center;}
+.japanhome_all .japanhome_04{ width:100%; height:187px; background:url(images/adimages/japanhome_04.jpg) no-repeat center center;}
+.japanhome_all .japanhome_05{ width:100%; height:188px; background:url(images/adimages/japanhome_05.jpg) no-repeat center center;}
+.japanhome_all .japanhome_06,.japanhome_all .japanhome_07,.japanhome_all .japanhome_08,.japanhome_all .japanhome_09,
+.japanhome_all .japanhome_10,.japanhome_all .japanhome_11,.japanhome_all .japanhome_12,.japanhome_all .japanhome_13,
+.japanhome_all .japanhome_14,.japanhome_all .japanhome_15{ width:998px; overflow:hidden; margin:0 auto;}
+.japanhome_all .japanhome_18{ width:100%; overflow:hidden; background:url(images/adimages/japanhome_06.jpg) no-repeat top center;}
+
+.japanhome_all .japanhome_19{ width:100%; overflow:hidden; background:url(images/adimages/japanhome_20.jpg) no-repeat top center;}
+.japanhome_all .japanhome_16{ width:998px; overflow:hidden; margin:0 auto;}
+
+.japanhome_all .japanhome_17{ width:100%; height:391px; background:url(images/adimages/japanhome_19.jpg) no-repeat center center;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--买手挑好货 手机购start-->
+<div class="japanhome_all">
+	<div class="japanhome_01"></div>
+	<div class="japanhome_02"></div>
+	<div class="japanhome_03"></div>
+	<div class="japanhome_04"></div>
+	<div class="japanhome_05"></div>
+
+  <div class="japanhome_18">
+        <div class="japanhome_06">
+            <img src="images/adimages/japanhome_07.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" target="_blank" coords="53,3,493,365" href="goods.php?id=9742" />
+              <area shape="rect" target="_blank" coords="501,4,942,363" href="goods.php?id=9737" />
+            </map>
+      </div>
+        <div class="japanhome_09">
+            <img src="images/adimages/japanhome_11.jpg" />
+        </div>
+
+        <div class="japanhome_10">
+            <img src="images/adimages/japanhome_12.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" target="_blank" coords="56,2,494,366" href="goods.php?id=9766" />
+              <area shape="rect" target="_blank" coords="501,3,943,365" href="goods.php?id=9822" />
+            </map>
+        </div>
+
+        <div class="japanhome_11">
+            <img src="images/adimages/japanhome_13.jpg" usemap="#Map5" border="0" />
+            <map name="Map5" id="Map5">
+              <area shape="rect" target="_blank" coords="55,3,343,385" href="goods.php?id=9761" />
+              <area shape="rect" target="_blank" coords="356,4,644,385" href="goods.php?id=9762" />
+              <area shape="rect" target="_blank" coords="656,7,945,385" href="goods.php?id=9769" />
+              <area shape="rect" target="_blank" coords="54,397,343,785" href="goods.php?id=9813" />
+              <area shape="rect" target="_blank" coords="355,398,643,783" href="goods.php?id=9820" />
+              <area shape="rect" target="_blank" coords="656,398,943,783" href="goods.php?id=9792" />
+            </map>
+        </div>
+
+        <div class="japanhome_12">
+            <img src="images/adimages/japanhome_14.jpg" usemap="#Map6" border="0" />
+            <map name="Map6" id="Map6">
+              <area shape="rect" target="_blank" coords="54,4,342,385" href="goods.php?id=9781" />
+              <area shape="rect" target="_blank" coords="357,4,644,385" href="goods.php?id=9764" />
+              <area shape="rect" target="_blank" coords="656,5,944,384" href="goods.php?id=9768" />
+            </map>
+        </div>
+
+        <div class="japanhome_13">
+            <img src="images/adimages/japanhome_15.jpg" />
+        </div>
+
+        <div class="japanhome_14">
+            <img src="images/adimages/japanhome_16.jpg" usemap="#Map7" border="0" />
+            <map name="Map7" id="Map7">
+              <area shape="rect" target="_blank" coords="54,11,493,377" href="goods.php?id=9803" />
+              <area shape="rect" target="_blank" coords="501,13,943,377" href="goods.php?id=9806" />
+            </map>
+        </div>
+
+        <div class="japanhome_15">
+            <img src="images/adimages/japanhome_17.jpg" usemap="#Map8" border="0" />
+            <map name="Map8" id="Map8">
+              <area shape="rect" target="_blank" coords="53,5,342,384" href="goods.php?id=9849" />
+              <area shape="rect" target="_blank" coords="356,4,644,385" href="goods.php?id=9690" />
+              <area shape="rect" target="_blank" coords="657,5,943,385" href="goods.php?id=9721" />
+              <area shape="rect" target="_blank" coords="54,397,342,784" href="goods.php?id=9847" />
+              <area shape="rect" target="_blank" coords="357,399,643,783" href="goods.php?id=9803" />
+              <area shape="rect" target="_blank" coords="655,397,944,783" href="goods.php?id=9806" />
+            </map>
+        </div>
+     </div>
+
+  <div class="japanhome_19">
+        <div class="japanhome_16">
+            <img src="images/adimages/japanhome_18.jpg" usemap="#Map9" border="0" />
+            <map name="Map9" id="Map9">
+              <area shape="rect" target="_blank" coords="41,307,263,470" href="category.php?id=84&amp;brand=294&amp;price_min=0&amp;price_max=0" />
+              <area shape="rect" target="_blank" coords="272,308,493,470" href="category.php?id=120&amp;brand=297&amp;price_min=0&amp;price_max=0" />
+              <area shape="rect" target="_blank" coords="501,309,723,470" href="search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjc6IklOT01BVEEiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDQ3NzQ5NzM0O30=" />
+              <area shape="rect" target="_blank" coords="731,309,955,471" href="search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLlsbHnlLDljJblraYiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDQ3NzUwMDM3O30=" />
+            </map>
+        </div>
+     </div>
+
+     <div class="japanhome_17"></div>
+
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

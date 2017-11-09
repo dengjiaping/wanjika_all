@@ -1,0 +1,25 @@
+﻿<footer style="margin-bottom: 50px;">
+	{if $user_name}
+	<a href='user.php?act=user_center'>用户中心</a>|<a href='user.php?act=logout'>退出</a>
+	{else}
+	<a href='user.php?act=login'>登录</a>|<a href='user.php?act=register'>注册</a>
+	{/if}|
+	<a href="kefu.php">客服</a>
+	<div class="copyright">Copyright &copy; 2016 wjike.com</div>
+    <div style="position: fixed;bottom: 0;width: 100%;background: #fff;border-top: 1px solid #efefef;">
+        <ul>
+            <li style="float: left;width: 25%;height: 50px;line-height: 50px;">
+                <a href="index.php"><img src="../../mobile/images/foot1.png" width="22" /></a>
+            </li>
+            <li style="float: left;width: 25%;height: 50px;line-height: 50px;">
+                <a href="category.php"><img src="../../mobile/images/foot2.png" width="22" /></a>
+            </li>
+            <li style="float: left;width: 25%;height: 50px;line-height: 50px;">
+                <a href="cart.php"><img src="../../mobile/images/foot3.png" width="30" /></a>
+            </li>
+            <li style="float: left;width: 25%;height: 50px;line-height: 50px;">
+                <a href="user.php?act=user_center"><img src="../../mobile/images/foot4.png" width="20" /></a>
+            </li>
+        </ul>
+    </div>
+</footer>

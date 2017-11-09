@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>康博益自动真空保鲜罐礼品套装</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.kangbo_new_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/kangbo_new_01.jpg) no-repeat center center #fff; }
+.kangbo_new_all .kangbo_new_one{ width:100%; overflow:hidden; margin:0 auto; }
+.kangbo_new_all .kangbo_new_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.kangbo_new_all .kangbo_new_01{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_02.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_02{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_04.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_03{ width:1200px; height:468px; background:url(images/adimages/kangbo_new_05.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_04{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_06.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_05{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_07.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_06{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_08.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_07{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_09.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_08{ width:1200px; height:468px; background:url(images/adimages/kangbo_new_10.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_09{ width:1200px; height:469px; background:url(images/adimages/kangbo_new_11.jpg) no-repeat center center; margin:0 auto; }
+.kangbo_new_all .kangbo_new_10{ width:1200px; height:469px; margin:0 auto; }
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--康博益自动真空保鲜罐礼品套装start-->
+<div class="kangbo_new_all">
+	<div class="kangbo_new_one">
+        <div class="kangbo_new_01"></div>   
+        <div class="kangbo_new_02"></div> 
+        <div class="kangbo_new_03"></div>   
+        <div class="kangbo_new_04"></div> 
+        <div class="kangbo_new_05"></div>   
+        <div class="kangbo_new_06"></div> 
+        <div class="kangbo_new_07"></div>   
+        <div class="kangbo_new_08"></div>  
+        <div class="kangbo_new_09"></div> 
+    </div> 
+    
+	<div class="kangbo_new_two">
+        <div class="kangbo_new_10">
+        	<a href="http://www.wjike.com/goods.php?id=10026" target="_blank"><img src="images/adimages/kangbo_new_12.jpg" /></a>
+        </div>
+    </div> 
+</div>
+<!--康博益自动真空保鲜罐礼品套装end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

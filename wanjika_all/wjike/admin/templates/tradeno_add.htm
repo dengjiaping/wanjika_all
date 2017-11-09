@@ -1,0 +1,69 @@
+<!-- $Id: sms_send_ui.htm 16697 2009-09-24 03:57:47Z liuhui $ -->
+{include file="pageheader.htm"}
+
+<div class="main-div" id="tradeno">
+    <form method="POST" action="pay_tradeno_list.php?act=insert_tradeno" name="tradeno" onsubmit="return validate();">
+        <table >
+            <tr>
+                <td class="label"></td>
+                <td>注：批量添加支付流水号用半角逗号分隔。例如：123123,456456</td>
+            </tr>
+            <tr>
+                <td class="label">支付流水号:</td>
+                <td><textarea name="tno" rows="10" cols="100"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="submit" value="{$lang.button_submit}" class="button" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="main-div" id="maketradeno">
+    <form method="POST" action="pay_tradeno_list.php?act=make_tradeno" name="maketradeno" onsubmit="return validatenum();">
+        <table >
+            <tr>
+                <td class="label">支付流水号生成个数:</td>
+                <td><input name="mtno">
+                    <input type="submit" name="submit" value="生成" class="button" />、
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script type="text/javascript" language="JavaScript">
+    <!--
+    {literal}
+    function  validate() {
+        var f = document['tradeno'];
+        var tradeno = f.elements['tno'].value;
+        if(tradeno=='')
+        {
+            alert("支付流水号不能为空");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function  validatenum() {
+        var f = document['maketradeno'];
+        var tradeno = f.elements['mtno'].value;
+        if(tradeno=='')
+        {
+            alert("支付流水号个数不能为空");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    {/literal}
+    //-->
+</script>
+{include file="pagefooter.htm"}

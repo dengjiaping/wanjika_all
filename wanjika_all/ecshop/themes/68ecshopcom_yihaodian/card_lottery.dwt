@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+<style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,article,aside,canvas,details,figcaption,figure, 
+        footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;}
+        table{ border-collapse:collapse;border-spacing:0;}
+        fieldest,img{border:0;}
+        address,caption,cite,code,dfn,em,strong,th,var{ font-style:normal;font-weight:normal;}
+        ol,ul{list-style:none;}
+        caption,th{text-align:left;}
+        h1,h2,h3,h4,h5,h6{font-size:100%;}
+        p:before,q:after{content:''}
+        abbr,acronym{border:0;}
+		body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'Hiragino Sans GB',sans-serif;}
+        .main-t{
+	        background-color:#124b7b;
+	        background-size: cover;
+	        background-image:url(images/activity_01.jpg);
+	        background-position: center center;
+        }
+        .main-t .main-ti{
+	        background-size: cover;
+	        background-image:url(images/activity_01.jpg);
+	        background-position: center center;
+	        height:1271px;
+        }
+        .main-t .main-ti .main-tn{
+            position:relative;
+	        margin:0 auto;
+	        width:1202px;
+        }
+            .main-t .main-ti .main-tn .draw
+            {
+                position:absolute;
+                top:835px;
+                left:755px;
+                width:409px;
+                height:409px;
+                background:url(images/activity_03.jpg) no-repeat;
+            }
+        .pointer
+        {
+            margin:46px 123px 123px;
+            width:164px;
+            height:320px;
+            background:url(images/activity_06.png) no-repeat;
+            cursor:pointer;
+        }
+        .main-c{
+            background:#22c8fc url(images/activity_08.jpg) no-repeat top center;
+        }
+        .main-ci
+        {
+            width:1202px;
+            margin:0 auto;
+            padding-top:20px;
+        }
+        .award-one
+        {
+            padding-top:907px;
+			padding-bottom:20px;
+            width:1202px;
+            background:url(images/activity_04.jpg) no-repeat #fff;
+        }
+        .award-two
+        {
+            margin-top:20px;
+			padding-bottom:20px;
+            padding-top:1011px;
+            width:1202px;
+            background:url(images/activity_07.jpg) no-repeat #fff;
+        }
+        .award-three
+        {
+            margin-top:20px;
+            padding-top:1105px;
+            width:1202px;
+            background:url(images/activity_11.jpg) no-repeat #fff;
+        }
+        .award-four
+        {
+            margin-top:20px;
+            padding-bottom:20px;
+            width:1202px;
+            background:#fff;
+        }
+		.award-one,.award-two,.award-three,.award-four{
+			position:relative;
+		}
+		.absoult-map{
+			position:absolute;
+			top:20px;
+			left:20px;
+			width:1155px;
+			height:240px;
+		}
+		.absoult-map ul{
+			width:1155px;
+			height:240px;
+			overflow:hidden;
+		}
+		.absoult-map ul li{
+			float:left;
+			margin-right:20px;
+			width:272px;
+			height:240px;
+		}
+		.absoult-map ul li a{
+			display:block;
+			width:272px;
+			height:240px;
+		}
+		.absoult-map ul li.last{
+			margin:0;
+		}
+        .four-1 .title
+        {
+            width:1202px;
+            height:468px;
+            background:url(images/activity_13.jpg) no-repeat;
+        }
+        .four-2 .title
+        {
+            width:1202px;
+            height:175px;
+            background:url(images/activity_36.jpg) no-repeat;
+        }
+        .four-3 .title
+        {
+            width:1202px;
+            height:176px;
+            background:url(images/activity_51.jpg) no-repeat;
+        }
+        .four-4 .title
+        {
+            width:1202px;
+            height:169px;
+            background:url(images/activity_69.jpg) no-repeat;
+        }
+        .four-5 .title
+        {
+            width:1202px;
+            height:181px;
+            background:url(images/activity_87.jpg) no-repeat;
+        }
+        .four-6 .title
+        {
+            width:1202px;
+            height:173px;
+            background:url(images/activity_105.jpg) no-repeat;
+        }
+        .four-7 .title
+        {
+            width:1202px;
+            height:145px;
+            background:url(images/activity_123.jpg) no-repeat;
+        }
+        .four-8 .title
+        {
+            width:1202px;
+            height:153px;
+            background:url(images/activity_141.jpg) no-repeat;
+        }
+        .four-1 .content,.four-2 .content,.four-3 .content,.four-4 .content,.four-5 .content,.four-6 .content,.four-7 .content,.four-8 .content
+        {
+            padding:15px 10px 0 10px;
+        }
+        .award-four .content,.award-four .content ul
+        {
+            overflow:hidden;
+        }
+        .award-four .content ul
+        {
+            margin-top:5px;
+        }
+        
+        .award-four ul li
+        {
+            float:left;
+        }
+        .award-four ul.three li
+        {
+            width:33.3333%;
+        }
+        .award-four ul.four li
+        {
+            width:25%;
+        }
+        .award-four ul.five li
+        {
+            width:20%;
+        }
+        .award-four ul li img
+        {
+            margin-left:5px;
+            border:1px solid #c1c1c1;
+        }
+		.introduce{
+			padding:0 20px;
+			overflow:hidden;
+		}
+		.h200{
+			height:200px;
+		}
+		.introduce h2{
+			text-align:center;
+			font-size:16px;
+		}
+		.introduce h3{
+			font-size:14px;
+		}
+		.introduce p{
+			margin:5px 0;
+			font-size:12px;
+			text-indent: 2em;
+		}
+        .footer
+        {
+            height:200px;
+        }
+        .leftwin
+        {
+            position: fixed;
+            top:100px;
+            right:10px;
+            padding:4px;
+            width:65px;
+            background:#017cc0;
+        }
+		a.more{
+			margin-left:20px;
+			font-size:12px;
+			text-decoration:none;
+			color:#eb6101;
+		}
+</style>
+</head>
+<body class="w1200">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+    <div class="main-t">
+        <div class="main-ti">
+            <div class="main-tn">
+                <div class="draw">
+                    <div class="pointer" id="startbtn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-c">
+        <div class="main-ci">
+            <a name="title_1" id="title_1"></a>
+            <div class="award-one">
+				<div class="absoult-map">
+					<ul>
+						<li><a href="#title_1"></a></li>
+						<li><a href="#title_2"></a></li>
+						<li><a href="#title_3"></a></li>
+						<li class="last"><a href="#title_4"></a></li>
+					</ul>
+				</div>
+                <div class="introduce h200">
+					<h2>港澳四天三晚豪华双人游</h2>
+					<h3>行程特点</h3>
+					<ul>
+						<li>1、游览景点：会展中心金紫荆广场/海洋公园/太平山/浅水湾/黄大仙//星光大道/夜游维多利亚港/大三巴牌坊/妈祖庙/渔人码头（威尼斯人度假村）/葡京赌场等。</li>
+						<li>2、港段：深圳领队及香港导游陪同讲解；澳段：指定香港导游带领乘船至澳门及澳门导游陪同讲解服务；</li>
+						<li>3、合理的行程及时间安排、优质的酒店及餐饮保障、让游客安心畅游香港。</li>
+					</ul>
+					<h3>行程安排</h3>
+					
+					<h4>第一天：深圳—香港 （包中、晚餐）  参考酒店：盛逸/华逸/青逸</h4>
+					<p>	   早上9：00以前于皇岗口岸三楼出境大厅集合，抵港后乘豪华巴士参观香港会议展览中心、金紫荆广场（约30分钟）—1997回归中国之场地。午餐于中国大酒楼，餐后前往闻名世界的海洋公园（约4小时，包票），您可看到全世界最大的水族馆、鲨鱼馆及海洋剧场中海豚、海狮、杀人鲸等精彩特技表演，还有如过山车、摩天轮、海盗船等各式各样的机动游乐设施，而后前往参观香港著名的风水宝地—浅水湾，浅水湾风光秀丽，是香港众多优美海滩之一。前往太平山（约20分钟）欣赏东方之珠,中银大厦，汇丰总行大厦，海港政府大楼；晚餐后在九龙码头乘观光游轮夜游美丽的维多丽亚海港（约45分钟，包票），沿着九龙半岛及港岛北面海岸畅游维多利亚港观赏香港华丽的夜景，游毕乘车返回酒店休息。
+					</p>
+
+					<h4>第二天：香港  （包早、中、晚餐）   参考酒店：盛逸/华逸/青逸</h4>
+					<p>早餐后，参观黄大仙（约20分钟）—全港香火最旺盛的庙宇之一，并为香港首间获批举行婚礼的法定庙宇。庙内装璜雄伟、宫殿气派，别具特色，所供奉的黄大仙，据说有求必应，故每天前往膜拜的善信如鲫，之后坐车前往参观珠宝展示中心，国际名表行，免税百货商场，在这里可以感受到香港“购物天堂”的无穷魅力。之后前往香港著名的“星光大道”（约30分钟）参观—此长廊全长440公尺，展现了香港电影百年发展历史，沿途可见的香港电影名人手印和牌匾，在这里可对香港艺人做更进一步了解。晚餐后乘船欣赏维多利亚港美丽夜景（船程约40分钟）游后送回酒店。</p>
+
+					<h4>第三天：香港—澳门（含早/中/晚餐）   参考酒店：环球酒店或同级</h4>    
+					<p>早餐后于乘大型豪华快艇过澳门（包船票），抵澳门后市区酒楼吃中餐，餐后坐车游览澳门各大名胜，包括：盛世莲花、大三巴牌坊、妈祖庙、澳门大桥、渔人码头、免税店。，晚餐后往葡京赌场一试运气，后乘车返回酒店休息。</p>
+
+					<h4>第四天：澳门—拱北（含早餐）</h4>                               
+					<p> 珠海导游带领大家用早餐，早餐后车游珠海市标志性建筑一九洲城，看气势恢宏的城楼，领略富丽堂皇和绚丽夺目的诱人景色。进入市区参观，乘车沿着情侣路观珠海标志渔女像，午餐后驱车前往深圳（深圳世界之窗）或是广州（广州东站）</p>
+					<h3>费用包含：</h3>
+					<ul>
+					<li>1、景点：行程表内所列的景点门票（全程无自费）</li>
+					<li>2、交通：全程豪华旅游观光巴士</li>
+					<li>3、用餐：六正三早餐(正餐七菜一汤)</li>
+					<li>4、旅行社10万责任保险</li>
+					<li>5、住宿：标准三星级酒店（遇单男单女可根据情况调整夫妻用房或加床处理或补单房差）</li>
+					</ul>
+					<h3>费用不含</h3>
+					<ul>
+					<li>1、交通：游客往返深圳行程路费</li>
+					<li>2、行程外私人所产生的个人费用； </li>
+					<li>3、香港澳门导游及司机小费：230元</li>
+					<ul>
+				</div>
+				<a class="more" href="javascript:;">展开更多</a>
+            </div>
+            <a name="title_2" id="title_2"></a>
+            <div class="award-two">
+				<div class="absoult-map">
+					<ul>
+						<li><a href="#title_1"></a></li>
+						<li><a href="#title_2"></a></li>
+						<li><a href="#title_3"></a></li>
+						<li class="last"><a href="#title_4"></a></li>
+					</ul>
+				</div>
+				<div class="introduce h200">
+					<h2>浪漫海南五天四晚五星豪华双人游</h2>
+					 <h3>行程安排 </h3>
+					 <h4>第一天：抵达海口（接待汽车 火车飞机</h4>
+					 <p>您预约的时间定时乘坐汽车，火车，飞机，到达的时间地点提前通知，我社安排专人专车恭候您。沿途欣赏国际旅游岛省会城市迷人的热带风光，迎接第二天的浪漫之旅。</p>
+					<h4>第二天：海口-博鳌-兴隆（含早中晚餐）</h4>
+					<p>早餐后乘车前往兴隆，沿途观赏海南母亲河---万泉河风光。车览红色娘子军塑像。
+					游览中国最大的热带飞禽园---海南飞禽世界公园（含门票98元）
+					沿途乘车观赏海南母亲河---（万泉河风光）后参加万泉河竹筏漂流（含门票68元）万泉河是中国未受污染，生态环境优良的热带河流，被誉为中国的“亚马逊河”
+					游览亚洲论坛会址---独占山水精华之博鳌水城外景，这里是博览天下，独占鳌头的风水宝地。团友可乘船游览被誉为世界上最完美的江河入海口之处玉带滩（含门票80元）
+					后游览古朴的民风，神秘的习俗，令人耳目一新，海南本土的风情黎村苗寨（含门票60元）歌舞表演或中国最有特色的村庄多河文化馆。
+					参观花木品种繁多的---兴隆热带植物花园（含门票30元），观赏珍稀热带植物，感受鸟语花香，清新世界令人心旷神怡。免费品尝兴隆咖啡，晚上可自费参加红艺人表演，后回酒店免费天然温泉浴。</p>
+					<h4>第三天兴隆---三亚（含早中餐）</h4>
+					<p>早餐后乘车前往三亚，途径陵水，沿途观赏观音岛，远眺第十一届亚运会中国南端点火会，游览尤部落（含门票158一人）
+					后前往有“福如东海长流水”之称的大东海风景区，可自费参与各项海上活动（如潜水，拉伞等），大东海拥有丰富的海洋资源，年平均水温在21摄氏度至25摄氏度，度假区内旅游设备齐全，是最专业，最理想的潜水旅游的好去处，到五彩缤纷的海底世界探寻罕见的热带鱼群及奇丽的珊瑚群。（潜水费用自理），在大东海感受到椰风，海韵，海水年平均水温在在21摄氏度至28摄氏度在是海底观光的最佳去处。在海底观看到绚丽多姿的珊瑚，千奇百态的鱼，柔软的藻类植物，感受天之涯海之角的境界。景区内有“天涯”海角“”南天一柱“船游自古被誉为”天之尽头，海之角落“的（天涯海角风景区（含门票68元一人），海判南天的巨石雄寺南海之滨，为海南一绝，后参观南海最具有特色的海洋资源---南海珍珠文化馆。免费品尝海南名茶并欣赏独特的茶艺表演。</p>
+					<h4>第四天三亚---海口（含早中晚餐）</h4>
+					<p>早餐三亚所住酒店餐厅，后参观（海润水晶工厂）
+					游览“不是夏威夷，胜似夏威夷“的天下第一湾---（亚龙湾沙滩）约游览30分钟，亲身感受大自然赋予人类的阳光，沙滩，蓝天，碧海，绿椰，白纱之美景，具备世界上五大旅游要素，游览---亚龙湾中心广场，贝壳馆（含门票138一人）
+					游览蝴蝶谷（含门票98元）
+					后游览南天生态大观园（自费参加），途中参加（海南土特产市场）返回海口。晚上自由活动。</p>
+					<h4> 第五天：海口---目的地（含早餐）</h4>
+					<p>自由活动（含早餐）根据自己的航班时间，提前赶往机场。</p>
+					<h3>支付380元一人</h3>
+					　　<h4>费用包含</h4>
+					<ul>
+					　　<li>1景点：行程表内所列的景点门票</li>                    <li> 2交通：全程旅游观光巴士</li>
+					　　<li>3用餐：五正餐四早餐</li>                             <li> 4保险：旅行社责任保险（10万）</li>
+					　　<li>5住宿：入住酒店或三星同级酒店（全程不提供自然单间）</li>  <li>6海南政府调节基金</li>
+					</ul>
+				 </div>
+				 <a class="more" href="javascript:;">展开更多</a>
+            </div>
+            <a name="title_3" id="title_3"></a>
+            <div class="award-three">
+				<div class="absoult-map">
+					<ul>
+						<li><a href="#title_1"></a></li>
+						<li><a href="#title_2"></a></li>
+						<li><a href="#title_3"></a></li>
+						<li class="last"><a href="#title_4"></a></li>
+					</ul>
+				</div>
+            </div>
+            <div class="award-four">
+                <a name="title_4" id="title_4"></a>
+				<div class="absoult-map">
+					<ul>
+						<li><a href="#title_1"></a></li>
+						<li><a href="#title_2"></a></li>
+						<li><a href="#title_3"></a></li>
+						<li class="last"><a href="#title_4"></a></li>
+					</ul>
+				</div>
+                <div class="four-1">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="four">
+                            <li>
+                                <a target="_blank" target="_blank" href="http://www.wjike.com/goods.php?id=3218"><img src="images/activity_16.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3216"><img src="images/activity_18.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3219"><img src="images/activity_20.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3220"><img src="images/activity_22.jpg"/></a>
+                            </li>
+                        </ul>
+                        <ul class="three">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3221"><img src="images/activity_28.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3222"><img src="images/activity_30.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3223"><img src="images/activity_32.jpg"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="four-2">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="four">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1414"><img src="images/activity_39.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1415"><img src="images/activity_41.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1416"><img src="images/activity_43.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1417"><img src="images/activity_45.jpg"/></a>
+                            </li>
+                        </ul>
+                        <ul class="three">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1418"><img src="images/activity_28.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1419"><img src="images/activity_30.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1420"><img src="images/activity_32.jpg"/></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                
+                <a name="title_5" id="title_5"></a>
+                <div class="four-3">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="five">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3334"><img src="images/activity_54.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1434"><img src="images/activity_56.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1435"><img src="images/activity_58.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1436"><img src="images/activity_60.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1437"><img src="images/activity_62.jpg"/></a>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+                
+                <div class="four-4">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="five">
+                             <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3230"><img src="images/activity_90.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3228"><img src="images/activity_92.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3229"><img src="images/activity_94.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3231"><img src="images/activity_96.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3232"><img src="images/activity_98.jpg"/></a>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+                <a name="title_6" id="title_6"></a>
+                
+                <div class="four-5">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="five">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3236"><img src="images/activity_108.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3237"><img src="images/activity_110.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3238"><img src="images/activity_112.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3239"><img src="images/activity_114.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3235"><img src="images/activity_116.jpg"/></a>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+
+                <div class="four-6">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="five">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1533"><img src="images/activity_108.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1532"><img src="images/activity_110.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1531"><img src="images/activity_112.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1530"><img src="images/activity_114.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1529"><img src="images/activity_116.jpg"/></a>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+                <a name="title_7" id="title_7"></a>
+                <div class="four-7">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="three">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3339"><img src="images/activity_126.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3234"><img src="images/activity_128.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3233"><img src="images/activity_130.jpg"/></a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3340"><img src="images/activity_135.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3341"><img src="images/activity_136.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3342"><img src="images/activity_137.jpg"/></a>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+
+                <div class="four-8">
+                    <div class="title">
+
+                    </div>
+                    <div class="content">
+                        <ul class="three">
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3338"><img src="images/activity_144.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1508"><img src="images/activity_146.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=1507"><img src="images/activity_148.jpg"/></a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3335"><img src="images/activity_153.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3336"><img src="images/activity_154.jpg"/></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.wjike.com/goods.php?id=3337"><img src="images/activity_155.jpg"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="leftwin">
+        <ul>
+            <li><a href="#title_1"><img src="images/ch_03.png" /></a></li>
+            <li><a href="#title_2"><img src="images/ch_06.png" /></a></li>
+            <li><a href="#title_3"><img src="images/ch_08.png" /></a></li>
+            <li><a href="#title_4"><img src="images/ch_10.png" /></a></li>
+            <li><a href="#title_5"><img src="images/ch_12.png" /></a></li>
+            <li><a href="#title_6"><img src="images/ch_14.png" /></a></li>
+            <li><a href="#title_7"><img src="images/ch_16.png" /></a></li>
+        </ul>
+    </div>
+	<script src="themes/68ecshopcom_yihaodian/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="themes/68ecshopcom_yihaodian/js/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript" src="themes/68ecshopcom_yihaodian/js/jquery.easing.min.js"></script>
+	<script>
+		$(window).resize(function(){
+			setwin();
+		});
+		function setwin(){
+			var w = ($("body").width()-1202)/4-35;
+			$(".leftwin").css("right",w);
+		} 
+		setwin();
+		
+		$(".more").on("click",function(){
+			$(this).prev().toggleClass("h200");
+			if($(this).text()=="关闭"){
+				$(this).text("展开更多");
+			}else{
+				$(this).text("关闭");
+			}
+		});
+		
+		var in_lottery = false;
+		
+		$(function(){
+			$("#startbtn").click(function()
+			{
+				lottery();
+			});
+			
+			function lottery()
+			{
+				if (!in_lottery)
+				{
+					in_lottery = true;
+					Ajax.call('card_lottery.php?act=lottery', '',lotteryResponse, 'GET', 'JSON');
+				}
+			}
+			
+			function lotteryResponse(obj)
+			{
+	            var a = obj.angle; //角度 
+	            if (a > 0)
+	            {
+		            $("#startbtn").rotate({ 
+		                duration:3000, //转动时间 
+		                angle: 0, 
+		                animateTo:1800+a, //转动角度 
+		                easing: $.easing.easeOutSine, 
+		                callback: function(){ 
+		                    alert(obj.msg);
+		                    in_lottery = false;
+		                } 
+		            }); 
+	            }
+	            else
+	            {
+	            	alert(obj.msg);
+	            	in_lottery = false;
+	            }
+			}
+		});
+</script>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

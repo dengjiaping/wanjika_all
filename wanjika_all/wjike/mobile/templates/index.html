@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{$shop_name}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="ecdaddy.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    <link rel="stylesheet" type="text/css" href="style/swiper.min.css">
+    <script src="/mobile/js/jquery-1.6.2.min.js"></script>
+    <script src="/mobile/js/common2.js"></script>
+    <script src="/mobile/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        function setTab(m,n){
+            var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+            var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+            for(i=0;i<tli.length;i++){
+                tli[i].className=i==n?"hover":"";
+                mli[i].style.display=i==n?"block":"none";
+            }
+        }
+    </script>
+    <style>
+        .ad {
+            margin: 0 auto;
+            max-width: 640px;
+            width: 100%;
+        }
+        .ad .adscroller img {
+            height: auto;
+            max-height: 240px;
+            max-width: 640px;
+            min-height: 132px;
+            min-width: 320px;
+            width: 100%;
+        }
+
+        .activity_all { width:100%; overflow:hidden; margin:0 auto; }
+        .activity_all .act_pic{ width:100%; text-align:center;}
+        .activity_all .act_pic a{ display:block;}
+        .activity_all .act_pic img{ height: auto;max-height: 240px;max-width: 640px;min-height: 132px;min-width: 320px;width: 100%;}
+        .arror-right{
+            position: relative;
+            width: 0px;
+            height: 0px;
+            top: 30px;
+            left: 13px;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid #51318f;
+        }
+        #demo1 a{display: block;}
+        #YSF-BTN-HOLDER{display: none;}
+    </style>
+</head>
+<body>
+{if $user_id > 0}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js?uid={$user_id}&name={$user_name}" charset="UTF-8"></script>
+{else}
+<script src="https://qiyukf.com/script/2c9515b187a3462988d645b56a5bd3b8.js" charset="UTF-8"></script>
+{/if}
+{include file='head.html'}
+<div class="swiper-container">
+    <div class="swiper-wrapper ad">
+        {foreach from=$ads item=aditem name=ad}
+        <div class="swiper-slide blue-slide adscroller">
+            <a href="http://www.wjike.com/{$aditem.href}" style="display: block;" target=_blank>
+                <img src="http://www.wjike.com/{$aditem.src}"/>
+            </a>
+        </div>
+        {/foreach}
+    </div>
+</div>
+<!--<form name="searchForm" method="get" action="search.php" class="search">-->
+<!--<input name="keywords" id="keyword" type="text" class="keyword" value="" placeholder="请输入关键词">-->
+<!--<input type="submit" value="搜索" class="search-button" onclick="search_session()">-->
+<!--</form>-->
+<!--品牌和分类start-->
+<div style="overflow:hidden;display: block;padding:10px 0 0 0 ;width: 100%;background: #f5f5f5;">
+    <ul>
+        <li style="float: left;width: 20%;text-align: center;"><a href="venue.php?venue_id=4" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}><img style="display: block;margin: 0 auto;margin-bottom: 5px;" src="/mobile/images/ya.png" width="50" height="50" onclick="search_session()"><span style="display: block;height: 32px;">亚洲馆</span></a></li>
+        <li style="float: left;width: 20%;text-align: center;"><a href="venue.php?venue_id=3" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}><img style="display: block;margin: 0 auto;margin-bottom: 5px;" src="/mobile/images/ou.png" width="50" height="50" onclick="search_session()"><span style="display: block;height: 32px;">欧洲馆</span></a></li>
+        <li style="float: left;width: 20%;text-align: center;"><a href="venue.php?venue_id=1" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}><img style="display: block;margin: 0 auto;margin-bottom: 5px;" src="/mobile/images/ax.png" width="50" height="50" onclick="search_session()"><span style="display: block;height: 32px;">澳新馆</span></a></li>
+        <li style="float: left;width: 20%;text-align: center;"><a href="venue.php?venue_id=2" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}><img style="display: block;margin: 0 auto;margin-bottom: 5px;" src="/mobile/images/bm.png" width="50" height="50" onclick="search_session()"><span style="display: block;height: 32px;">北美馆</span></a></li>
+        <li style="float: left;width: 20%;text-align: center;"><a href="brand_zone.php" {if $venues.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}><img style="display: block;margin: 0 auto;margin-bottom: 5px;" src="/mobile/images/dp.png" width="50" height="50" onclick="search_session()"><span style="display: block;height: 32px;">品牌专区</span></a></li>
+        <!--{foreach from=$pcat_array item=cat name=cat0}-->
+        <li style="float: left;width: 20%;text-align: center;">
+            <a href="category.php?c_id={$cat.id}" {if $cat.opennew eq 1}target="_blank" {/if} {if $cat.active eq 1} class="cur"{/if}><img style="display: block;margin: 0 auto;margin-bottom: 5px;" src="/mobile/images/{$cat.cat_img}" width="50" height="50" onclick="search_session()"><span style="display: block;height: 32px;">{$cat.name|escape:html}</span></a></li>
+        <!-- {/foreach} -->
+    </ul>
+</div>
+<!--品牌和分类end-->
+<!--公告和签到start-->
+<div style="overflow: hidden;margin: 0 10px;height: 36px;line-height: 36px;">
+    <div style="display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;margin: 3px 0;width: 70%;border-right: 1px solid #efefef;height: 30px;line-height: 30px;"><img src="/mobile/images/gg.png" width="40" style="margin-right: 5px;margin-top: -20px;" />
+        <div id="demo" style="overflow:hidden;height:30px;display: inline-block;width: 77%;white-space: initial;">
+            <table align=top>
+                <tr>
+                    <td id=demo1 valign=top>
+                        <!--{foreach from=$article_array item=article name=article}-->
+                        <a href="article.php?act=detail&a_id={$article.article_id}"><span>{$article.title}</span></a>
+                        <!-- {/foreach} -->
+                    </td>
+                </tr>
+                <tr>
+                    <td id=demo2 valign=top></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div style="float: right;"><a href="exchange.php?sign=1"><img src="/mobile/images/qd.png" width="16" style="margin-right: 5px;margin-top: -3px;"/><span>签到赚积分</span></a></div>
+    <script>
+        var speed=100;
+        demo2.innerHTML=demo1.innerHTML;//克隆demo1为demo2
+        function Marquee(){
+            if(demo2.offsetHeight-demo.scrollTop<=0)//当滚动至demo1与demo2交界时
+                demo.scrollTop-=demo1.offsetHeight;//demo跳到最顶端
+            else{
+                demo.scrollTop++;  //如果是横向的 将 所有的 height top 改成 width left
+            }
+        }
+        var MyMar=setInterval(Marquee,speed);//设置定时器
+        demo.onmouseover=function() {clearInterval(MyMar);}//鼠标移上时清除定时器达到滚动停止的目的
+        demo.onmouseout=function() {MyMar=setInterval(Marquee,speed);}//鼠标移开时重设定时器
+    </script>
+</div>
+<!--公告和签到end-->
+<div style="height:6px;background-color: #f2f0f1;"></div>
+<!--介绍start-->
+<div class="activity_all" style="background-color: #f2f0f1;">
+    <div style="float:left;width: 33.33%;">
+        <a href="http://www.wjike.com/mobile/templates/aboutus.html"><img style="width: 100%;" src="./images/entrance_01.jpg" /></a>
+    </div>
+    <div style="float:left;width: 33.33%;">
+        <a href="http://www.wjike.com/mobile/vip.php?act=vip_info"><img style="width: 100%;" src="./images/entrance_02.jpg" /></a>
+    </div>
+    <div style="float:left;width: 33.33%;">
+        <a href="http://www.wjike.com/mobile/templates/purchaser.html"><img style="width: 100%;" src="./images/entrance_03.jpg" /></a>
+    </div>
+</div>
+<!--介绍end-->
+<div style="height:6px;background-color: #f2f0f1;"></div>
+<!--热销品牌start-->
+<div style="height: 104px;">
+    <div style="display: inline-block;background: #ede5fd; color: #51318f;border-right: 1px solid #51318f;"><span style="float:left;width:15px;height: 95px;padding: 10px;padding-bottom:0;line-height: 20px;letter-spacing: 10px;">热销品牌</span></div>
+
+    <div style="display: inline-block;position: absolute;">
+        <div style="display: inline-block;margin-left: -13px;" class="arror-right"></div>
+        <!--{foreach from=$brand_array item=brand name=brand}-->
+        <div style="display: inline-block;padding: 2px 0;width: 23%;text-align: center;">
+            <a href="brands.php?b_id={$brand.brand_id}"><img src="../../data/brandlogo/{$brand.brand_logo}" width="48" height="48"/></a>
+        </div>
+        <!-- {/foreach} -->
+    </div>
+</div>
+<!--热销品牌end-->
+<div style="padding: 10px 40px;background-color: #f2f0f1;color: #999999;text-align: center;">
+    <div style="background: url(./images/tj.png) no-repeat;background-size: contain;background-position: 0px;">为您推荐以下商品</div>
+</div>
+<div style="overflow:hidden;background-color: #f2f0f1;">
+    <div class="t-lists" >
+        <ul>
+            {if $best_num > 0}
+            {foreach from=$best_goods item=best_data name=goo}
+            <li style="float:{if $smarty.foreach.goo.index % 2 ==0}left{else}right{/if};margin-bottom:8px;width: 49%;background-color: #fff;">
+                <a href="goods.php?id={$best_data.id}">
+                <div style="border-bottom: 0px solid #d0d0d0;text-align: center;margin: 10px 10px 0px;padding-bottom: 10px;">
+                    <img src="../../{$best_data.goods_img}" width="100%" alt=""/>
+                </div>
+                <div style="margin: 10px 10px 7px 10px;">
+                    <div style="display: inline-block;height: 20px;width: 100%;">
+                        {if $best_data.is_overseas eq 1}
+                        <div class="fl">{if $best_data.overseas_logo neq 'taiwan'}<img src="../../themes/default/images/{$best_data.overseas_logo}.jpg"  style="margin: 0px 5px 0 0;width: 25px;height: 15px;"/>{/if}</div><div style="height: 18px;line-height: 18px;"><span style="width: 76%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;float: left;color: #9c9c9c;">{$best_data.overseas_logo_name}品牌 官方直供</span></div>
+                        {/if}
+                    </div>
+                    <div class="p-name" style="overflow: hidden;text-overflow: -o-ellipsis-lastline;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;margin-bottom:5px;height: 36px;line-height: 18px;color: #3C3C3C;font-size: 1em;" ><div style="height: 36px;">{$best_data.name}</div><span color="red">{$best_data.goods_brief}</span> </div>
+                    <div class="p-detail" style="width:180px;height: 20px;"><span style="font-size:18px;font-family:Arial;font-weight:bold;color: #db2929;">￥{if $promote_price}{$best_data.promote_price}{else}{$best_data.shop_price}{/if}</span>
+                    </div>
+                </div>
+                </a>
+            </li>
+            {/foreach}
+            {/if}
+        </ul>
+    </div>
+</div>
+{include file='foot.html'}
+<script type="text/javascript">
+    function zxkf()
+    {
+        ysf.open({
+            'onload': function(){
+//                ysf.config({
+//                    uid:'123123',
+//                    name:'333222'
+//                });
+            }
+        })
+    }
+    function search_session()
+    {
+        sessionStorage.setItem("page",1);
+        sessionStorage.setItem("top",0);
+    }
+    var mySwiper = new Swiper('.swiper-container',{
+        loop: true,
+        autoplay: 3000,
+    });
+</script>
+</body>
+</html>

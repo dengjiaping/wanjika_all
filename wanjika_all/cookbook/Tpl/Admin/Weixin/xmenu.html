@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+	
+	
+
+  </head>
+  <body>
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">微信管理</div>
+	
+ <div class="panel-body">
+		   <form class="form-horizontal" action="__GROUP__/Weixin/xmenu" method="post" role="form" >
+					 
+					  <div class="form-group">
+						<label for="title" class="col-sm-3 control-label">菜单标题():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="title" name="title" value="{$men['title']}" placeholder="自定义菜单不超过16个字节一个中文两个字节">
+						</div>
+					  </div>
+					 <div class="form-group">
+						<label for="leixin" class="col-sm-3 control-label">菜单类型:</label>
+						<div class="col-sm-4">					
+							<label><input type="radio" value="2" name="leixin" <if condition="$men['leixin'] eq 2">checked</if> />主菜单(设置为主菜单后面的不用填)</label>
+							<label><input type="radio" value="1" name="leixin" <if condition="$men['leixin'] eq 1">checked</if> />点击(点击型需要设置关键词，点击后的内容可以用关键词回复内容)</label>
+							<label><input type="radio" value="0" name="leixin" <if condition="$men['leixin'] eq 0">checked</if> />链接(如果选择链接只需要填写跳转链接)</label>						
+						</div> 
+					  </div>
+					 
+					  <div class="form-group">
+						<label for="url" class="col-sm-3 control-label">跳转链接():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="url" name="url" value="{$men['url']}" placeholder="跳转链接">
+						</div>
+					  </div>
+					   <div class="form-group">
+						<label for="keys" class="col-sm-3 control-label">关键词():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="keys" name="keys" value="{$men['keys']}" placeholder="点击关键词">
+						  <input type="hidden" class="form-control" id="pid" name="pid" value="{$men['pid']}" >
+						  <input type="hidden" class="form-control" id="id" name="id" value="{$men['id']}" >
+						</div>
+					  </div>
+					  
+
+						<div class="form-group">
+						<label for="sorts" class="col-sm-3 control-label">排序():</label>
+						<div class="col-sm-4">
+						  <input type="text" class="form-control" id="sorts" name="sorts" value="{$men['sorts']}" />
+						</div>
+					  </div>
+					 
+						
+					 
+					  
+						 <div class="form-group">
+											<div class="col-sm-offset-3 col-sm-4">
+											  <button type="submit" class="btn btn-default" id="post">修改</button>
+											  说明：点击类型相当于用户发送了关键词
+											</div>
+						 </div>
+						</form>
+					  
+				</div>
+			</div>
+		  
+		  
+		
+		
+		  
+				
+</div>
+
+
+
+  </body>
+</html>

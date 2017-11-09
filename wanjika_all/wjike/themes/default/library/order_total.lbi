@@ -1,0 +1,72 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert_scripts files='transport.js,utils.js'}
+<div id="ECS_ORDERTOTAL">
+            <div class="lt w480">
+                <div class="wrap-order-c w480">
+                    <p class="t-r">商品总金额：<span class="w180 rt color-red">{$total.goods_price_formated}</span></p>
+                </div>
+                <div class="wrap-order-c w480">
+                    <p class="t-r">运费：<span class="w180 rt color-red">+{$total.shipping_fee_formated}</span></p>
+                </div>
+
+                <!-- {if $total.surplus > 0} 使用余额 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">使用余额：<span class="w180 rt color-red">-{$total.surplus_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.bonus > 0} 使用优惠券 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">使用优惠券：<span class="w180 rt color-red">-{$total.bonus_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.use_gift > 0} 使用礼品卡 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">使用礼品卡：<span class="w180 rt color-red">-{$total.use_gift_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.integral > 0} 使用积分 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">使用积分：<span class="w180 rt color-red">-{$total.integral_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.discount gt 0} 优惠 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">优惠：<span class="w180 rt color-red">-{$total.discount_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.tax gt 0} 税 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">税：<span class="w180 rt color-red">+{$total.tax_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.shipping_insure > 0} 保价费用 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">保价费用：<span class="w180 rt color-red">+{$total.shipping_insure_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.pay_fee > 0} 支付费用 -->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">支付手续费：<span class="w180 rt color-red">+{$total.pay_fee_formated}</span></p>
+                    <p class="t-r color-red w300">( * 手续费在发生退货时不予退还。)</p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.pack_fee > 0} 包装费用-->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">包装费用：<span class="w180 rt color-red">+{$total.pack_fee_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <!-- {if $total.card_fee > 0} 贺卡费用-->
+                <div class="wrap-order-c w480">
+                    <p class="t-r">包装费用：<span class="w180 rt color-red">+{$total.card_fee_formated}</span></p>
+                </div>
+                <!-- {/if} -->
+                <div class="wrap-order-c w480">
+                    <p class="wrap-shop-total t-r">
+                        订单应付金额：
+                        <span class="wrap-order-mt-4 fs-20">{$total.amount_formated}</span></p>
+                </div>
+                <div class="w480" style="float: right;width: 272px;background-color: #fffbf2;overflow: hidden;padding: 10px;border: 1px solid #fbdec1;">
+                    <p class="color-red">优惠券不能和其他促销活动同时享用</p>
+                </div>
+            </div>
+</div>

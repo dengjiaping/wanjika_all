@@ -1,0 +1,74 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<div class="form-div">
+    <form action="charge.php?act=list" method="post">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        面值：<input name="facevalue" type="text" id="facevalue" size="10" value={$facevalue}>
+        省份：<input name="province" type="text" id="province" size="10" value={$province}>
+        运营商：<select name="catname" id="catname">
+            <option value="">请选择</option>
+            <option value='中国移动' {if $catname=='中国移动'}selected="selected"{/if}>中国移动</option>
+            <option value='中国联通' {if $catname=='中国联通'}selected="selected"{/if}>中国联通</option>
+            <option value='中国电信' {if $catname=='中国电信'}selected="selected"{/if}>中国电信</option>
+        </select>
+        <input type="submit" value="{$lang.button_search}" class="button" />
+    </form>
+</div>
+
+<div class="list-div" id="listDiv">
+{/if}
+    <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>ID</th>
+                <th>面值</th>
+                <th>价格</th>
+                <th>省份</th>
+                <th>运营商</th>
+                <th>操作</th>
+            </tr>
+                {foreach from=$chargeconfig_list item=item key=okey}
+            <tr>
+                <td align="center" valign="top" nowrap="nowrap">{$item.id}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$item.facevalue}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$item.price}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$item.province}</td>
+                <td align="center" valign="top" nowrap="nowrap">{$item.catname}</td>
+                <td align="center">
+                    <a href="charge.php?act=edit&id={$item.id}" title="{$lang.edit}"><img src="images/icon_edit.gif" width="16" height="16" border="0" /></a>
+                    <a href="javascript:;" onclick="resend('{$item.id}');"><img src="images/icon_trash.gif" width="16" height="16" border="0" /></a>
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+    <table id="page-table" cellspacing="0">
+            <tr>
+                <td align="right" nowrap="true">
+                    {include file="page.htm"}
+                </td>
+            </tr>
+        </table>
+{if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+
+
+    function resend(id)
+    {
+        var returnVal = window.confirm("是否确定删除该信息？");
+        if(returnVal) {
+            window.location.href='charge.php?act=delete&id='+id;
+        }
+    }
+</script>
+{include file="pagefooter.htm"}
+{/if}

@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于我们_关于万集客介绍-万集客官网</title>
+<meta name="Keywords" content="关于我们_关于万集客介绍" />
+<meta name="Description" content="万集客-生活优选会员制商城，定位于打造一个有特色的、开放的、以人为本的卓越的社会化电商平台，致力于为老百姓提供优质的进口食品，美妆个护，母婴用品，家居家电，手机数码等商品。" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+</head>
+<style>
+.wjkfreevip{ width:100%; margin:0 auto; overflow:hidden; text-align:center; background:url(./images/online_bg.jpg) no-repeat center center;}
+.wjkfreevip .fv_center{ width:1200px; margin:0 auto; overflow:hidden; text-align:center;}
+.wjkfreevip .fv_center img{ margin:0 auto; padding:0;}
+.vip_online{ width:100%; margin:0 auto;  text-align:center; background:url(./images/viponline_bg.jpg) no-repeat top center;}
+.vip_online .vo_center{ width:1200px; margin:0 auto; overflow:hidden; text-align:center; position:relative;}
+.vip_online .vo_center img{ margin:0 auto; padding:0; float:left;}
+.vip_online .vp_01{ width:1200px; height:248px; background:url(./images/viponline_01.jpg) no-repeat center center; }
+.vip_online .vp_02{ width:1200px; height:248px; background:url(./images/viponline_02.jpg) no-repeat center center; }
+.vip_online .vp_03{ width:1200px; height:248px; background:url(./images/viponline_03.jpg) no-repeat center center; }
+.vip_online .vp_04{ width:1200px; height:248px; background:url(./images/viponline_04.jpg) no-repeat center center; }
+.vip_online .vp_05{ width:1200px; height:248px; background:url(./images/viponline_05.jpg) no-repeat center center; }
+.vip_online .vp_06{ width:1200px; height:248px; background:url(./images/viponline_06.jpg) no-repeat center center; }
+.vip_online .vp_07{ width:1200px; height:248px; background:url(./images/viponline_07.jpg) no-repeat center center; }
+.vip_online .vp_08{ width:1200px; height:247px; background:url(./images/viponline_08.jpg) no-repeat center center; }
+.vip_online .vp_09{ width:1200px; height:248px; background:url(./images/viponline_09.jpg) no-repeat center center; }
+.vip_online .vp_10{ width:1200px; height:248px; background:url(./images/viponline_10.jpg) no-repeat center center; }
+.vip_online .vp_11{ width:1200px; height:248px; background:url(./images/viponline_11.jpg) no-repeat center center; }
+.vip_online .vp_12{ width:1200px; height:248px; background:url(./images/viponline_12.jpg) no-repeat center center; }
+.vip_online .vp_13{ width:1200px; height:248px; background:url(./images/viponline_13.jpg) no-repeat center center; }
+.vip_online .vp_14{ width:1200px; height:496px; background:url(./images/viponline_14.jpg) no-repeat center center; }
+.vip_online .vc{width: 1200px; height:96px; text-align:center; }
+.vip_online .online_lq_btn{ width:418px; height:96px; padding:40px 209px; display:block; margin: 0 auto; background:url(./images/freevip_btn.png) no-repeat center center;}
+.vip_online .online_lq_btn:hover{ background:url(./images/freevip_btn_hover.png) no-repeat center center;}
+.vip_online p{ padding-top:140px;}
+
+.freemore{ width:100%; background-color:#fff; overflow:hidden;}
+.fm_one{ width:100%; height:751px; margin:0 auto; background:url(./images/fm_01.jpg) no-repeat center center;}
+.fm_one .fm_am{ width:752px; margin:0 auto; text-align:center; padding-top:450px;}
+.fm_one .addmy{ width:260px; height:64px;  display:block; background:url(./images/fm_14.png) no-repeat center center #45ba9f;margin:0 auto; }
+.fm_one .addmy:hover{ background-color:#32a58a;}
+.fm_one .fm_am p{ color:#fff; font-size:18px; padding-top:40px;}
+
+.fm_two{ width:100%; height:400px; margin:0 auto; background-color:#45ba9f;}
+.fm_two .fm_st{ width:1200px; margin:0 auto; padding-top:75px; overflow:hidden;}
+.fm_two .fm_st li{ float:left; text-align:center; padding:0 44px;}
+.fm_two .fm_st p{ font-size:18px; color:#fff; padding-top:30px;}
+
+.fm_three{ width:1200px; margin:0 auto; overflow:hidden; text-align:center; font-size:24px; color:#818181; padding:50px 0 20px 0;}
+.fm_three p{ padding:40px 0 20px 0; line-height:40px;}
+.fm_three span{ color:#51318f; font-size:36px;}
+
+.fm_four{ width:100%; height:500px; margin:0 auto; background:url(./images/fm_09.jpg) no-repeat center center;margin-top: 60px;}
+.fm_four .fm_instr{ width:1200px; margin:0 auto;}
+.fm_four .instr{ width:350px; padding:70px 100px 0 0; float:right;}
+.fm_four p{ color:#fff; font-size:18px; line-height:36px; padding:40px 0 30px 0;}
+
+.fm_five{ width:100%; height:500px; margin:0 auto; background:url(./images/fm_12.jpg) no-repeat center center;}
+.fm_five .fm_instr{ width:1200px; margin:0 auto;}
+.fm_five .instr{ width:400px; padding:70px 0 0 165px;}
+.fm_five p{ color:#fff; font-size:18px; line-height:36px; padding-top:30px;}
+
+.fm_six{ width:100%; height:280px; margin:0 auto; background:url(./images/fm_13.jpg) no-repeat center center;}
+.fm_six .fs .fm_vip{ width:0px; padding:40px 235px; background:url(./images/fm_15.png) no-repeat center center #45ba9f; margin:0 auto; border-radius:5px; display:block;}
+.fm_six .fs .fm_vip:hover{ background-color:#32a58a;}
+.fm_six .fs{ padding-top:110px;}
+.about_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/about_01.jpg) no-repeat top center #fff; }
+.about_all .about_one{ width:100%; overflow:hidden; margin:0 auto; }
+.about_all .about_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.about_all .about_01{ width:1200px; height:197px; background:url(images/adimages/about_02.jpg) no-repeat center center; margin:0 auto; }
+.about_all .about_02{ width:1200px; height:197px; background:url(images/adimages/about_04.jpg) no-repeat center center; margin:0 auto; }
+.about_all .about_03{ width:1200px; height:196px; background:url(images/adimages/about_05.jpg) no-repeat center center; margin:0 auto; }
+.about_all .about_04{ width:1200px; height:197px; background:url(images/adimages/about_06.jpg) no-repeat center center; margin:0 auto; }
+.about_all .about_05{ width:1200px; height:476px; background:url(images/adimages/about_07.jpg) no-repeat center center; margin:0 auto; }
+.about_all .about_06{ width:1200px; height:2140px; margin:0 auto; }
+
+</style>
+<body style="margin:0px;">
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--{if $newvip}-->
+<!--
+<div class="vip_online">
+    <div class="vo_center">
+    	<div class="vp_01"></div>
+        <div class="vp_02"></div>
+        <div class="vp_03"></div>
+        <div class="vp_04"></div>
+        <div class="vp_05"></div>
+        <div class="vp_06"></div>
+        <div class="vp_07"></div>
+        <div class="vp_08"></div>
+        <div class="vp_09"></div>
+        <div class="vp_10"></div>
+        <div class="vp_11"></div>
+        <div class="vp_12"></div>
+        <div class="vp_13"></div>
+        <div class="vp_14">
+        	<p style="margin-top:0px;"><a href="vip.php?act=vip_info" class="online_lq_btn"></a></p>
+       	</div>
+    </div>
+</div>
+-->
+
+<!--省时省钱 领取会员start-->
+<div class="freemore">
+    <div class="fm_one">
+    	<div class="fm_am">
+        	<a href="vip.php?act=vip_info" class="addmy"></a>
+            <p>万集客——精选全球商品的会员制直购平台来了！立即加入我们吧！</p>
+        </div>
+    </div>
+    <div class="fm_two">
+    	<div class="fm_st">
+        	<ul>
+            	<li><img src="./images/fm_02.png" /><p>正品保证</p></li>
+            	<li><img src="./images/fm_03.png" /><p>底价专供</p></li>
+            	<li><img src="./images/fm_04.png" /><p>7天无忧退</p></li>
+            	<li><img src="./images/fm_05.png" /><p>急速配送</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="fm_three">
+        <img src="./images/fm_06.png" />
+        <p>专业买手为消费者精心挑选品质优秀、品种丰富的商品，为您省去挑选商品的时间</p>
+    </div>
+    <div class="fm_three">
+        <img src="./images/fm_07.png" />
+        <p>传统的销售方式是：国外品牌商品通过国内流通渠道，层层代理，到达消费者<br />
+时的价格已经包含了中间各个环节的费用和利润。<br />
+万集客省去中间各个环节，通过国际贸易供应链体系直接向海外品牌采购，<br />
+同时以<span>0利润</span>的方式销售给消费者，每年为您剩下超过<span>30%</span>的费用</p>
+    </div>
+    <div class="fm_three">
+        <img src="./images/fm_08.png" />
+        <p>万集客承诺所有商品均是正规渠道进货，<span>100%原装正品。</span><br />
+万集客实施严格的采购管理，全程跟踪商品来源和物流状态。<br />
+通过在线客服或致电客服热线4000-851-115，会有专人为你处理售后，<br />
+退换货流程简单快捷，让万集客成为您品质生活的好买手！</p>
+    </div>
+
+    <div class="fm_four">
+    	<div class="fm_instr">
+        	<div class="instr">
+                <img src="./images/fm_10.png" />
+                <p>万集客用户按年支付会员费即可成为万集客正式会员。<br />
+				只有成为会员后才可享受商品的会员专供价格，
+                万集客还会定期推出针对个人和家庭的采购管家定制服务。</p>
+                <img src="./images/fm_11.png" />
+			</div>
+        </div>
+    </div>
+    <div class="fm_five">
+    	<div class="fm_instr">
+        	<div class="instr">
+                <img src="./images/fm_12.png" />
+                <p>万集客，国内新型电子商务服务平台，买手深入世界各地，精选全球物美价廉的生活必需品，以成本价将商品送到会员手中。<br />
+    			万集客帮助会员快速的买到性价比最优的产品，省去会员查找、筛选、比价的过程。
+                万集客以服务为导向，最终将推出个人和家庭采购管家定制服务，
+                打造全方位的、便捷的、物美价廉的一站式购物服务平台。</p>
+			</div>
+        </div>
+    </div>
+    <div class="fm_six">
+    	<div class="fs"><a href="vip.php?act=vip_info" class="fm_vip"></a></div>
+    </div>
+</div>
+<!--省时省钱 领取会员end-->
+<!--{else}-->
+
+<!--关于万集客start-->
+<div class="about_all">
+	<div class="about_one">
+        <div class="about_01"></div>
+        <div class="about_02"></div>
+        <div class="about_03"></div>
+        <div class="about_04"></div>
+        <div class="about_05"></div>
+    </div>
+
+	<div class="about_two">
+        <div class="about_06">
+        	<a href="http://www.wjike.com/vip.php?act=vip_info">
+            	<img src="images/adimages/about_08.jpg" />
+            </a>
+        	<img src="images/adimages/about_09.jpg" />
+        	<img src="images/adimages/about_10.jpg" />
+        	<img src="images/adimages/about_11.jpg" />
+        	<img src="images/adimages/about_12.jpg" />
+        	<img src="images/adimages/about_13.jpg" />
+        	<a href="http://www.wjike.com/vip.php?act=vip_info">
+        		<img src="images/adimages/about_14.jpg" />
+            </a>
+      </div>
+    </div>
+</div>
+<!--关于万集客end-->
+<!--{/if}-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	 <title>{$webtitle}--{$webname}</title> 
+	  <meta name="Keywords" content="{$webkey}" /> 
+	  <meta name="Description" content="{$webdesc}" />  
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/css.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/swipe.css" />
+	<script src="__PUBLIC__/default/js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/default/js/swipe.js" type="text/javascript" charset="utf-8"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<include file=":header" />
+	 <div class="tel">
+		电话：<a href="tel:{$tel}">{$tel}</a>
+	 </div>
+	 
+	 <div class="menu_home">
+		<ul>
+		<volist name="menu" id="v1" >
+			<li><a href="{$v1['url']}"><img src="{$v1['catelogo']}" /><br />{$v1.catename}</a></li>
+				<volist name="v1[sub]" id="v2">
+					<li><a href="{$v2[url]}"><img src="{$v2['catelogo']}" /><br />{$v2.catename}</a></li>
+					
+				</volist>
+			</volist>
+			
+		</ul>
+	 
+	 </div>
+	<div class="clear"></div>
+	
+	<include file=":footer" />
+
+</div>
+	<script type="text/javascript">
+	var len = $("#banner>ul").find("li").length;
+	for (var i=0;i<len;i++){
+		$("#bannerNum").append('<li></li>');
+	};
+	$("#bannerNum>li").eq(0).addClass("on");
+	/*鼠标移过，左右按钮显示*/
+	jQuery("#banner").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+	/*SuperSlide图片切换*/
+	jQuery("#banner").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});
+</script>
+</body>
+</html>

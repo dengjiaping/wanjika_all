@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" -->
+
+<!-- TemplateEndEditable --><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/68ecshopcom_yihaodian/global_site_index.css" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/global_site_base.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="w1200">
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div align="center">
+	<h5 style="border-bottom:0"><span>{$lang.label_order}</span></h5>
+		<form style="margin: 10px 0 10px 0" action="filtermyorder.php">
+			起始时间<input type="input" name="stime" value="{$stime}"/>（格式2013-11-10 00:00:00）
+			结束时间<input type="input" name="etime" value="{$etime}"/>（格式2013-12-10 00:00:00）
+			订单状态<select name="order_status" id="ECS_BONUS" style="border:1px solid #ccc;">
+		                  <option value="0" {if $order_status eq 0}selected{/if}>请选择…</option>
+		                  <!-- {foreach from=$order_status_list item=status} -->
+		                  <option value="{$status.status_id}" {if $order_status eq $status.status_id}selected{/if}>{$status.status_name}</option>
+		                  <!-- {/foreach} -->
+		                </select>
+		     付款状态<select name="pay_status" id="ECS_BONUS" style="border:1px solid #ccc;">
+		                  <option value="0" {if $pay_status eq 0}selected{/if}>请选择…</option>
+		                  <!-- {foreach from=$pay_status_list item=status} -->
+		                  <option value="{$status.status_id}" {if $pay_status eq $status.status_id}selected{/if}>{$status.status_name}</option>
+		                  <!-- {/foreach} -->
+		                </select>
+		     <input type="submit" name="submit" value="查询" />
+		</form>
+       <table width="80%" border="0" cellpadding="5" cellspacing="1" bgcolor="#EDD28B">
+          <tr align="center">
+            <td bgcolor="#ffffff">订单号</td>
+            <td bgcolor="#ffffff">下单时间</td>
+            <td bgcolor="#ffffff">订单金额</td>
+            <td bgcolor="#ffffff">订单状态</td>
+          </tr>
+          <!--{foreach from=$orders item=item}-->
+          <tr>
+            <td align="center" bgcolor="#ffffff"><a href="user.php?act=order_detail&order_id={$item.order_id}" class="f6">{$item.order_sn}</a></td>
+            <td align="center" bgcolor="#ffffff">{$item.order_time}</td>
+            <td align="right" bgcolor="#ffffff">{$item.total_fee}</td>
+            <td align="center" bgcolor="#ffffff">{$item.order_status}</td>
+            <td align="center" bgcolor="#ffffff"><font class="f6">{$item.handler}</font></td>
+          </tr>
+          <!--{/foreach}-->
+          </table>
+          <div style="margin: 10px 0 10px 0">已付款总金额：{$total_price}</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

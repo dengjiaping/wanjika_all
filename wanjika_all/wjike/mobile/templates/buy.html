@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>填写订单 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files="../../js/utils.js,../js/transport.js"}
+{insert_scripts files="../../js/region.js,../js/newutils.js"}
+<script type="text/javascript">
+	region.isAdmin=true;
+	function submit(obj){
+		obj.submit();
+	}
+	function check(theForm){
+        if(theForm.is_overseas.value==1)
+        {
+            if(theForm.id_card.value == ""){
+                alert("请输入身份证号");theForm.id_card.focus();return false;
+            }
+            else
+            {
+                // 身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X
+                var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+                if(reg.test(theForm.id_card.value) === false)
+                {
+                    alert('请输入正确的身份证号码。');
+                    theForm.id_card.focus();return false;
+                }
+            }
+
+        }
+		if(theForm.selProvinces.value == 0){
+			alert("请选择省");theForm.selProvinces.focus();return false;
+		}
+		if(theForm.selCities.value == 0){
+			alert("请选择市");theForm.selCities.focus();return false;
+		}
+		if(theForm.consignee.value==""){
+			alert("请输入收货人姓名!");theForm.consignee.focus();return false;
+		}
+		if(theForm.address.value==""){
+			alert("请输入您的详细地址!");theForm.address.focus();return false;
+		}
+		if(theForm.mobile.value==""){
+			alert("请输入收货人手机!");theForm.mobile.focus();return false;
+		}
+		theform.submit();
+	}
+    function seladdress(selForm)
+    {
+        var checked=false;
+        var length=selForm.add_id.length;
+        if(selForm.add_id.value=="")
+        {
+            alert("请选择收货地址!");
+            return false;
+        }
+        if(typeof(length) != "undefined")
+        {
+            for(var i = 0;i < selForm.add_id.length; i++) {
+                if(selForm.add_id[i].checked)
+                {
+                    if(selForm.is_overseas[i].value == 1)
+                    {
+                        if(selForm.id_card[i].value.length < 15)
+                        {
+                            alert('请填写身份证');
+                            return false;
+                        }
+                        else
+                        {
+                            // 身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X
+                            var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+                            if(reg.test(selForm.id_card[i].value) === false)
+                            {
+                                alert('请输入正确的身份证号码。');
+                                return  false;
+                            }
+                        }
+                    }
+                    checked=true;
+                }
+            }
+        }
+        else
+        {
+            if(selForm.add_id.checked)
+            {
+                checked=true;
+            }
+        }
+        if(!checked)
+        {
+            alert("请选择收货地址!");
+            return false;
+        }
+    }
+</script>
+</head>
+<body>
+{include file='head3.html'}
+<div class="consignee radius">
+    {if $buy_type eq 1}
+	<h3 style="margin-bottom:10px; line-height:35px;border-bottom: 1px solid #DED6C9;">收货人信息</h3>
+	<form onSubmit="javascript:return check(theForm);" action="order.php?act=order_lise" method="post" name="theForm" id="theForm">
+		<ul>
+			<li>
+				<select name="province" id="selProvinces" onChange="region.changed(this, 2, 'selCities')">
+					<option value="0">请选择省</option>
+					<!-- {foreach from=$province_list item=province} -->
+                    {if $province.region_id == $consignee.province}
+                        <option value="{$province.region_id}" selected="selected">{$province.region_name}</option>
+                    {else}
+					    <option value="{$province.region_id}">{$province.region_name}</option>
+                    {/if}
+					<!-- {/foreach} -->
+				</select><span style="color:#F00;">(必填)</span>
+			</li>
+			<li>
+				<select name="city" id="selCities" onChange="region.changed(this, 3, 'selDistricts')">
+					<option value="0">请选择市</option>
+					<!-- {foreach from=$city_list item=city} -->
+                    {if $city.region_id == $consignee.city}
+					    <option value="{$city.region_id}" selected="selected">{$city.region_name}</option>
+                    {else}
+                        <option value="{$city.region_id}" >{$city.region_name}</option>
+                    {/if}
+					<!-- {/foreach} -->
+				</select><span style="color:#F00;">(必填)</span>
+			</li>
+			<li>
+				<select name="district" id="selDistricts">
+					<option value="0">请选择区</option>
+					<!-- {foreach from=$district_list item=district} -->
+                    {if $district.region_id == $consignee.district}
+					    <option value="{$district.region_id}" selected="selected">{$district.region_name}</option>
+                    {else}
+                        <option value="{$district.region_id}">{$district.region_name}</option>
+                    {/if}
+					<!-- {/foreach} -->
+				</select>
+			</li>
+			<li>
+				<label>详细地址<span style="color:#F00;">(必填)</span>:</label>
+				<br>
+				<input name="address" type="text" class="common-input"  id="address" value="{$consignee.address|escape}" style="width:99%;height:auto;margin-top:10px;" />
+			</li>
+			<li>
+				<label>收货人姓名<span style="color:#F00;">(必填)</span>:</label>
+				<br>
+				<input name="consignee" type="text" class="common-input" id="consignee" value="{$consignee.consignee|escape}" style="width:99%;height:auto;margin-top:10px;" />
+			</li>
+			<li>
+				<label>身份证<span style="color:#F00;">(海淘购物必填)</span>:</label>
+				<br>
+				<input name="id_card" id="id_card" type="text" class="common-input" value="{$consignee.id_card|escape}" style="width:99%;height:auto;margin-top:10px;" />
+                <input name="is_overseas" type="hidden" class="common-input" id="is_overseas" value="{$consignee.is_overseas|escape}" />
+			</li>
+			<li>
+				<label>联系方式:<span style="color:#F00;">
+				(电话或者手机，必填)</span></label>
+				<br>
+				<input name="tel" type="text" class="common-input"  id="tel" value="{$consignee.tel|escape}" style="width:99%;height:auto;margin-top:10px;" />
+			</li>
+			<li>
+				<input type="submit" name="Submit" id="address_submit" class="sub_btn" value="配送这个地址" autocomplete="off" style="width:100%; margin-left:0" />
+			</li>
+			<li>
+				<input name="address_id" type="hidden" value="{$consignee.address_id|0}" />
+			</li>
+		</ul>
+	</form>
+    {elseif $buy_type eq 2}
+    您还未成为本站付费会员<br>
+    您可以选择到万集客网站去开通会员。<a href='http://www.wjike.com/mobile/vip.php?act=vip_info' style="color:#F00;font-weight:bold;">支付开通</a>
+    {elseif $buy_type eq 3}
+    <form onSubmit="javascript:return seladdress(selForm);" action="order.php?act=order_lise" method="post" name="selForm" id="selForm">
+        <div><h3>收货地址<!--{if $countconsignee lt 5}--><a style="float: right;" href="buy.php?act=checkout&addaddress=1">添加新地址</a><!--{/if}--></h3>
+        </div>
+        <div>
+            <!-- {foreach from=$consignee_list item=consignee} -->
+            <div>
+                <input type="radio" name="add_id" id="add_id" value="{$consignee.address_id}" />
+                <input type="hidden" name="is_overseas" id="is_overseas" value="{$consignee.is_overseas}" />
+                <input type="hidden" name="id_card" id="id_card" value="{$consignee.id_card}" />
+                <span>{$consignee.address_name}</span>
+                <a href="javascript:;" onclick="if (confirm('您确定要删除收货地址吗？'))location.href='buy.php?act=drop_consignee&id={$consignee.address_id}&flowconsignee_id=1'">删除</a>
+                <a href="javascript:;" onclick="location.href='buy.php?act=edit_address&id={$consignee.address_id}&flowconsignee_id=1'">修改</a>
+            </div>
+            <!-- {/foreach} -->
+            <input type="submit" name="Submit" id="addressid_submit" class="sub_btn" value="配送这个地址" autocomplete="off" style="width:100%; margin-left:0" />
+        </div>
+    </form>
+    {else}
+	您还没有登陆<br>
+	您可以选择<a href='user.php?act=login' style="color:#F00;font-weight:bold;">会员登陆</a>或者<a href='user.php?act=register' style="color:#F00;font-weight:bold;">注册用户</a> {/if} </div>
+{include file='foot.html'}
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+</script>
+</body>
+</html>

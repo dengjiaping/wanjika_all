@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>买手挑好货 手机购</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.ipshop_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#020a15; }
+.ipshop_all .ipshop_01{ width:100%; height:201px; background:url(images/iphonebuy_01.jpg) no-repeat center center;}
+.ipshop_all .ipshop_02{ width:100%; height:202px; background:url(images/iphonebuy_02.jpg) no-repeat center center;}
+.ipshop_all .ipshop_03{ width:100%; height:201px; background:url(images/iphonebuy_03.jpg) no-repeat center center;}
+.ipshop_all .ipshop_04{ width:100%; height:201px; background:url(images/iphonebuy_04.jpg) no-repeat center center;}
+.ipshop_all .ipshop_05{ width:100%; height:376px; background:url(images/iphonebuy_05.jpg) no-repeat center center;}
+.ipshop_all .ipshop_051{ padding:188px 0; display:block;}
+.ipshop_all .ipshop_06{ width:100%; height:419px; background:url(images/iphonebuy_06.jpg) no-repeat center center;}
+.ipshop_all .ipshop_061{ padding:208px 0; display:block;}
+.ipshop_all .ipshop_07{ width:100%; height:412px; background-color:#011820;}
+.ipshop_all .ipshop_071{ width:1000px; margin:0 auto;}
+.ipshop_all .ipshop_08{ width:100%; height:540px; background:url(images/iphonebuy_08.jpg) no-repeat center center;}
+.ipshop_all .ipshop_081{ padding:270px 0; display:block;}
+.ipshop_all .ipshop_09{ width:100%; height:414px; background:url(images/iphonebuy_09.jpg) no-repeat center center;}
+.ipshop_all .ipshop_091{ padding:207px 0; display:block;}
+.ipshop_all .ipshop_10{ width:100%; height:413px; background-color:#3e1f4e;}
+.ipshop_all .ipshop_11{ width:100%; height:413px; background-color:#3e1f4e;}
+.ipshop_all .ipshop_12{ width:100%; height:430px; background-color:#020a15;}
+.ipshop_all .ipshop_13{ width:100%; height:479px; background:url(images/iphonebuy_13.jpg) no-repeat center center; background-color:#51318f;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--买手挑好货 手机购start-->
+<div class="ipshop_all">
+	<div class="ipshop_01"></div>   
+	<div class="ipshop_02"></div>  
+	<div class="ipshop_03"></div>  
+	<div class="ipshop_04"></div>  
+	<div class="ipshop_05"><a href="goods.php?id=9667" class="ipshop_051"></a></div>
+	<div class="ipshop_06"><a href="goods.php?id=9659" class="ipshop_061"></a></div>
+	<div class="ipshop_07">
+    	<div class="ipshop_071">
+    		<img src="images/iphonebuy_07.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="3,24,231,385" href="goods.php?id=9657" />
+              <area shape="rect" coords="256,24,487,391" href="goods.php?id=9646" />
+              <area shape="rect" coords="512,24,743,391" href="goods.php?id=9651" />
+              <area shape="rect" coords="768,24,997,391" href="goods.php?id=9372" />
+            </map>
+        </div>
+    </div>
+	<div class="ipshop_08"><a href="goods.php?id=9375" class="ipshop_081"></a></div>
+	<div class="ipshop_09"><a href="goods.php?id=9423" class="ipshop_091"></a></div>
+  <div class="ipshop_10">
+    	<div class="ipshop_071">
+    		<img src="images/iphonebuy_10.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="4,31,230,399" href="goods.php?id=9430" />
+              <area shape="rect" coords="255,28,487,404" href="goods.php?id=9447" />
+              <area shape="rect" coords="511,28,744,402" href="goods.php?id=9452" />
+              <area shape="rect" coords="767,28,995,401" href="goods.php?id=9470" />
+            </map>
+      </div>
+  </div>
+	<div class="ipshop_11">
+    	<div class="ipshop_071">
+    		<img src="images/iphonebuy_11.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="4,10,231,383" href="goods.php?id=9303" />
+              <area shape="rect" coords="254,10,487,383" href="goods.php?id=9319" />
+              <area shape="rect" coords="511,10,744,381" href="goods.php?id=9382" />
+              <area shape="rect" coords="767,10,996,379" href="goods.php?id=9471" />
+            </map>
+        </div>
+    </div>
+	<div class="ipshop_12">
+    	<div class="ipshop_071">
+    		<img src="images/iphonebuy_12.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="33,180,253,333" href="category.php?id=139&brand=255&price_min=0&price_max=0" />
+              <area shape="rect" coords="272,182,491,332" href="category.php?id=356&brand=256&price_min=0&price_max=0" />
+              <area shape="rect" coords="510,182,729,332" href="category.php?id=139&brand=257&price_min=0&price_max=0" />
+              <area shape="rect" coords="748,182,967,332" href="category.php?id=139&brand=262&price_min=0&price_max=0" />
+            </map>
+    	</div>
+  </div>  
+	<div class="ipshop_13"></div>  
+</div>
+<!--买手挑好货 手机购end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

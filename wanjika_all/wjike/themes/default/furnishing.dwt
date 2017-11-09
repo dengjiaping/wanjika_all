@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>清洁家居</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.furnishing_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#ff9900; }
+.furnishing_all .furnishing_01{ width:100%; height:286px; background:url(images/adimages/furnishing_01.jpg) no-repeat center center;}
+.furnishing_all .furnishing_02{ width:100%; height:286px; background:url(images/adimages/furnishing_02.jpg) no-repeat center center;}
+.furnishing_all .furnishing_03{ width:100%; height:275px; background:url(images/adimages/furnishing_03.jpg) no-repeat center center;}
+
+.furnishing_all .furnishing_05_10{ width:100%; overflow:hidden; background:url(images/adimages/furnishing_04.jpg) no-repeat top center;}
+
+.furnishing_all .furnishing_05{ width:1199px; height:389px; margin:0 auto;}
+.furnishing_all .furnishing_07{ width:1199px; height:330px; margin:0 auto;}
+.furnishing_all .furnishing_08{ width:1199px; height:332px; margin:0 auto;}
+.furnishing_all .furnishing_09{ width:1199px; height:329px; margin:0 auto;}
+.furnishing_all .furnishing_10{ width:1199px; height:388px; margin:0 auto;}
+
+.furnishing_all .furnishing_11{ width:100%; overflow:hidden; background:url(images/adimages/furnishing_14.jpg) no-repeat top center;}
+.furnishing_all .furnishing_111{ width:1199px; height:819px; margin:0 auto;}
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--清洁家居start-->
+
+<div class="furnishing_all">
+	<div class="furnishing_01"></div>   
+	<div class="furnishing_02"></div>  
+	<div class="furnishing_03"></div>  
+    
+  <div class="furnishing_05_10">
+        <div class="furnishing_05">  
+            <img src="images/adimages/furnishing_05.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="176,62,377,378" href="goods.php?id=9562" />
+              <area shape="rect" coords="391,63,595,381" href="goods.php?id=9568" />
+              <area shape="rect" coords="608,63,809,378" href="goods.php?id=9569" />
+              <area shape="rect" coords="822,62,1024,380" href="goods.php?id=9570" />
+            </map>
+      </div>  
+        
+    <div class="furnishing_07">  
+            <img src="images/adimages/furnishing_07.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="176,4,375,320" href="goods.php?id=9571" />
+              <area shape="rect" coords="392,4,594,321" href="goods.php?id=9572" />
+              <area shape="rect" coords="606,4,809,321" href="goods.php?id=9573" />
+              <area shape="rect" coords="822,4,1025,320" href="goods.php?id=9574" />
+            </map>
+        </div>    
+        
+        <div class="furnishing_08">  
+            <div class="furnishing_081">
+                <img src="images/adimages/furnishing_08.jpg" usemap="#Map3" border="0" />
+                <map name="Map3" id="Map3">
+                  <area shape="rect" coords="175,6,379,325" href="goods.php?id=9575" />
+                  <area shape="rect" coords="391,5,593,325" href="goods.php?id=9576" />
+                  <area shape="rect" coords="606,5,810,325" href="goods.php?id=9577" />
+                  <area shape="rect" coords="821,6,1025,325" href="goods.php?id=9578" />
+                </map>
+            </div>
+        </div>    
+        
+        <div class="furnishing_09">  
+            <img src="images/adimages/furnishing_09.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="176,5,379,322" href="goods.php?id=9579" />
+              <area shape="rect" coords="392,4,594,322" href="goods.php?id=9625" />
+              <area shape="rect" coords="607,3,810,322" href="goods.php?id=9626" />
+              <area shape="rect" coords="823,4,1022,319" href="goods.php?id=9627" />
+            </map>
+        </div>    
+        
+        <div class="furnishing_10">  
+            <img src="images/adimages/furnishing_10.jpg" usemap="#Map5" border="0" />
+            <map name="Map5" id="Map5">
+              <area shape="rect" coords="177,5,378,322" href="goods.php?id=9628" />
+              <area shape="rect" coords="391,6,594,322" href="goods.php?id=9629" />
+              <area shape="rect" coords="608,6,809,322" href="goods.php?id=9630" />
+              <area shape="rect" coords="823,5,1024,323" href="goods.php?id=9631" />
+            </map>
+        </div>    
+    </div>
+    
+    
+  <div class="furnishing_11">  
+    	<div class="furnishing_111">
+        	<img src="images/adimages/furnishing_12.jpg" usemap="#Map6" border="0" />
+            <map name="Map6" id="Map6">
+              <area shape="rect" coords="47,199,406,560" href="category.php?id=211" />
+              <area shape="rect" coords="422,200,779,559" href="category.php?id=212" />
+              <area shape="rect" coords="796,203,1155,558" href="category.php?id=209" />
+            </map>
+      </div>
+    </div> 
+    
+</div>
+
+<!--清洁家居end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

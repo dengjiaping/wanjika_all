@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,newutils.js,zDialog.js'}
+<style type="text/css">
+
+/*会员付费及介绍start*/
+.intro_img{ width:100%; overflow:hidden; margin:0 auto; height:300px; background:url(./images/26.jpg) no-repeat center center;}
+.vippay_introduce{ width:100%; margin:0 auto; background-color:#f9f9f9; padding:30px 0 70px 0;}
+.vippay_introduce .introduce_text{ width:1200px; margin:0 auto;}
+.vippay_introduce .introduce_text p{ text-align:center; padding:30px 0 20px 0; font-size:36px; color:#000; }
+.vippay_introduce .in_te{  width:1200px; border:1px solid #eaeaea; border-right:0;}
+.vippay_introduce .in_te td{ height:60px; text-align:center;border-bottom:1px solid #eaeaea; color:#000;  }
+.vippay_introduce .in_te .gray_bg{ background-color:#efefef; font-size:18px; color:#000; font-weight:100; }
+.vippay_introduce .in_te .gray_bg2{ background-color:#efefef; font-size:18px; color:#000; font-weight:100; border-right:1px solid #eaeaea;}
+.vippay_introduce .in_te .gray_bg3{ background-color:#efefef; font-size:18px; color:#000; font-weight:100; border-right:1px solid #dadada;}
+.vippay_introduce .in_te .white_bg{ background-color:#fff; font-size:18px; color:#000;}
+.vippay_introduce .in_te .white_bg2{ background-color:#fff; font-size:18px; color:#000; border-right: 1px solid #eaeaea;}
+.vippay_introduce .in_te .white_bg4{border-bottom:0; }
+.vippay_introduce .in_te .wz_title{ font-size:16px;}
+.vippay_introduce .in_te .kt_btn2{ padding:10px 50px; background-color:#45ba9f; border-radius:4px; color:#fff; font-size:18px;}
+.vippay_introduce .in_te .kt_btn2:hover{background-color:#21ab8b;}
+.vippay_introduce .in_te .kt_btn3{ padding:10px 50px; background-color:#ddd; border-radius:4px; color:#fff; font-size:18px;}
+.vippay_introduce .in_te img{ padding-top:10px;}
+.vippay_introduce .in_te .bx{ height:80px; line-height:80px;}
+.vippay_introduce .in_te .bx span{ color:#21ab8b; font-size:22px; padding:0 5px;}
+.vippay_introduce .in_te .bx2{ font-size:16px; padding:15px 0;}
+.vippay_introduce .in_te .bx2 span{color:#21ab8b;}
+.vippay_introduce .in_te .bx2 a{color:#21ab8b; text-decoration:underline}
+.vippay_introduce .in_te .bx3{font-size:15px;}
+.vippay_introduce .in_te .bx4{border-right: 1px solid #eaeaea;}
+
+.vip_notice{ width:100%; height:563px; margin:0 auto; background:url(./images/27.jpg) no-repeat center center #eee8dc;}
+.vip_notice .pn{ width:1200px; margin:0 auto; overflow:hidden;}
+.vip_notice .vn{ margin:0 100px 0 400px;}
+.vip_notice p{ text-align:center; padding:60px 0 50px 0; font-size:36px; color:#000; }
+.vip_notice .vn li{ width:720px; line-height:45px; color:#000; font-size:16px;}
+/*会员付费及介绍end*/
+
+/*成为万集客会员有什么好处start*/
+.whatVipintro{ width:100%; height:799px; background:url(./images/what_back.png) no-repeat center center;}
+.whatVipintro .vip_intro{ width:1200px; margin:0 auto; overflow:hidden; text-align:center;}
+.whatVipintro .vip_intro .wimg_one{ padding:150px 0 70px 0;}
+.whatVipintro .vip_intro .wimg_two{ padding:100px 120px 0 0;}
+.whatVipintro .vip_intro .wimg_three{ padding:100px 0 0 0;}
+.whatVipintro .vip_intro .vi_btn{ padding:15px 30px; background-color:#725640; font-size:18px; color:#fff; display:table; margin:0 auto; }
+.whatVipintro .vip_intro .vi_btn:hover{ background-color:#926f53;}
+
+.her_shop{ width:100%; height:480px; background:url(./images/what_img4.png) no-repeat center center;}
+.hs{ width:1200px; margin:0 auto; overflow:hidden; text-align:center;}
+.hs .hs_vip{ width:720px; height:288px; margin:0 auto; overflow:hidden; text-align:center; background-color:#fff; margin-top:96px;}
+.hs .hs_vip .wimg_three{ padding:100px 0 0 0;}
+.hs .hs_vip .hs_btn{ padding:9px 24px; font-size:18px; border:3px solid #725640; color:#725640; display:table; margin:0 auto; margin-top:40px;}
+.hs .hs_vip .hs_btn:hover{ background-color:#725640; color:#fff;}
+/*成为万集客会员有什么好处end*/
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--帮助-->
+<!--{if $what}-->
+<!--成为万集客会员有什么好处 start-->
+<div class="whatVipintro">
+	<div class="vip_intro">
+    	<img src="images/what_img1.png" class="wimg_one" />
+        <a href="vip.php?act=vip_info" class="vi_btn">这就去成为会员吧</a>
+    	<img src="images/what_img2.png" class="wimg_two" />
+    	<img src="images/what_img3.png" class="wimg_three" />
+
+    </div>
+</div>
+<!--成为万集客会员有什么好处 end-->
+
+<!--她(他)们都在这里Shoping！ start-->
+<div class="her_shop">
+	<div class="hs">
+        <div class="hs_vip">
+            <img src="images/what_img5.png" class="wimg_three"/>
+            <a href="vip.php?act=vip_info" class="hs_btn">赶快成为会员</a>
+        </div>
+    </div>
+</div>
+<!--她(他)们都在这里Shoping！ end-->
+<!--{/if}-->
+<!--{if $info}-->
+<!--会员付费及介绍start-->
+<div class="intro_img">
+</div>
+<div class="vippay_introduce">
+
+    <div class="introduce_text">
+    	<p><img src="images/vip_intro.png"/></p>
+    	<p style="font-size: 12px;color:#666;padding: 0 0 20px 0;">注：各类型<span style="color:#45ba9f;">会员有效期不会叠加顺延</span>，最新的会员有效期将从购买之时生效，之前的会员有效期将作废。</p>
+        <table class="in_te" cellpadding="0" cellspacing="0">
+        	<tr>
+            	<td class="gray_bg3">体验会员</td>
+            	<td class="gray_bg3">季度会员</td>
+            	<td class="gray_bg3">半年度会员</td>
+            	<td class="gray_bg3">年度会员</td>
+            	<td class="gray_bg2">VIP年度会员</td>
+            </tr>
+        	<tr>
+            	<td class="white_bg2"><div class="bx">免费赠送<span>90天</span>会员</div></td>
+            	<td class="white_bg"><div class="bx bx4">购买<span>39元/季度</span>会员</div></td>
+            	<td class="white_bg"><div class="bx bx4">购买<span>69元/半年</span>会员</div></td>
+            	<td class="white_bg"><div class="bx bx4">购买<span>99元/年</span>会员</div></td>
+            	<td class="white_bg"><div class="bx bx4">购买<span>199元/年</span>会员</div></td>
+            </tr>
+        	<tr>
+            	<td class="white_bg2"><div class="bx3">体验会员价购买商品</div></td>
+            	<td class="white_bg2"><div class="bx2">赠送<span>20元现金券*3张</span><br/>总价值60元</div></td>
+            	<td class="white_bg2"><div class="bx2">赠送<span>30元现金券*4张</span><br/>总价值120元</div></td>
+            	<td class="white_bg2"><div class="bx2">赠送<span>30元现金券*6张</span><br/>总价值180元</div></td>
+            	<td class="white_bg2"><div class="bx2">赠送<span>40元现金券*6张</span><br/>
+                及<span><a href="http://www.wjike.com/category.php?id=704" target="_blank">价值129元小恶魔充电宝1个(随机)</a></span><br/>总价值369元</div></td>
+            </tr>
+        	<tr>
+                <td class="white_bg2 white_bg4"><div class="bx"><!--{if $has_get}--><!--{if $is_login}--><a class="kt_btn3 cp">已领取</a><!--{else}--><a onclick="return freemembers()" class="kt_btn2">登录领取</a><!--{/if}--><!--{else}--><a onclick="return freemembers()" class="kt_btn2">免费领取</a><!--{/if}--></div></td>
+                <td class="white_bg white_bg4"><div class="bx bx4"><!-- {if $members_flag_39} --><a href="javascript:addToCart({$goods_id_three})" class="kt_btn2">支付开通</a><!-- {else} --><a class="kt_btn5">敬请期待</a><!-- {/if} --></div></td>
+                <td class="white_bg white_bg4"><div class="bx bx4"><!-- {if $members_flag_69} --><a href="javascript:addToCart({$goods_id_four})" class="kt_btn2">支付开通</a><!-- {else} --><a class="kt_btn6">敬请期待</a><!-- {/if} --></div></td>
+                <td class="white_bg white_bg4"><div class="bx bx4"><!-- {if $members_flag_99} --><a href="javascript:addToCart({$goods_id_one})" class="kt_btn2">支付开通</a><!-- {else} --><a class="kt_btn4">敬请期待</a><!-- {/if} --></div></td>
+                <td class="white_bg white_bg4"><div class="bx bx4"><!-- {if $members_flag_199} --><a href="javascript:addToCart({$goods_id_two})" class="kt_btn2">支付开通</a><!-- {else} --><a class="kt_btn">敬请期待</a><!-- {/if} --></div></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="vip_notice">
+	<div class="pn">
+    	<p><img src="./images/vip_notice.png"/></p>
+		<div class="vn">
+            <ul>
+                <li>
+                    1、优惠券将会在购买会员成功后15-30分钟到账；
+                </li>
+                <li>
+                    2、优惠券为全场通用券，每单仅限使用1张，不兑现不找零；
+                </li>
+                <li>
+                    3、优惠券仅限折抵商品费用，不适用于运费；
+                </li>
+                <li>
+                    4、本券最终解释权北京神州集客电子商务有限公司所有；
+                </li>
+                <li>
+                    5、购买VIP会员的用户请微信关注"万集客商城"订阅号，提供您的地址，以便邮寄赠品。
+                </li>
+            </ul>
+    	</div>
+    </div>
+</div>
+<!--会员付费及介绍end-->
+<!--{/if}-->
+<!--帮助-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>确认订单 - {$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+{insert_scripts files='../../js/transport.js,../js/utils.js'}
+{insert_scripts files="shopping_flow.js"}
+<style>
+    .wrap-order-c{
+        height: 30px;
+        line-height: 30px;
+        margin:5px 5px;
+        font-size: .825em;
+    }
+    .yz-btn{
+        /* display: block; */
+        background-color: #37af93;
+        border: none;
+        /*width: 90%;*/
+        padding: 4px 6px;
+        /*height: 40px;*/
+        /*line-height: 40px;*/
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+    }
+    .order-js{
+        margin-top: -3px;
+        padding: 2px 0;
+        font-size: 1em;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        height: 18px;
+        vertical-align: text-top;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+    }
+    .order-input{
+        margin-right: 18px;
+        border: 0;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+        color: #9c9c9c;
+    }
+    .rt{
+        float:right;
+    }
+    .f4_b{
+        float: right;
+        color:#000;
+    }
+    #ECS_ORDERTOTAL table tr td{
+        padding: 10px 0;
+        color:#999999;
+    }
+</style>
+<script type="text/javascript">
+	function submit(obj){
+		obj.submit();
+	}
+	function check(theForm){
+		var shippingSelected = false;
+        for (i = 0; i < theForm.elements.length; i ++ ){
+            if (theForm.elements[i].name == 'shipping' && theForm.elements[i].checked){
+                shippingSelected = true;
+            }
+        }
+		var flow_no_shipping = "必须选定一个配送方式。";
+//		if ( !shippingSelected){
+//			alert(flow_no_shipping);
+//			return false;
+//		}
+
+        var  is_overseas=document.getElementById("is_overseas").value;
+        var  id_card=document.getElementById("id_card");
+        if(is_overseas==1)
+        {
+            if(Utils.isEmpty(id_card.value))
+            {
+                alert("身份证不能为空");
+                return  false;
+            }
+            if (!Utils.isEmpty(id_card.value))
+            {
+                // 身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X
+                var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+                if(reg.test(id_card.value) === false)
+                {
+                    alert("请输入正确的身2份证号码。");
+                    return  false;
+                }
+                var res_id = IdCardValidate(id_card.value);
+                if(!res_id)
+                {
+                    alert("请输入正确的身份证号码。");
+                    return  false;
+                }
+            }
+        }
+		theform.submit();
+	}
+</script>
+
+</head>
+<body>
+{include file='head3.html'}
+<div style="background: #f2f0f1;">
+	<form onSubmit="javascript:return check(theForm);" action="order.php?act=done" method="post" name="theForm" id="theForm" >
+
+        <!-- {if $is_membersgoods eq 0} -->
+        <div style="padding:10px;line-height:20px;background: #fff;"  onclick="selectAddress({$gift_id},{$bonus_id},{$is_overseas})">
+        <h3>收货人信息</h3>
+        <table width="100%" border="0" cellpadding="5" cellspacing="1">
+            <tr>
+                <td width="50">收货人:</td>
+                <td>{$consignee.consignee|escape}</td>
+            </tr>
+            <!-- {if $total.real_goods_count gt 0} -->
+            <tr>
+                <td>详址:</td>
+                <td>{$consignee.address_name|escape}<i class="flow_i"></i></td>
+
+            </tr>
+            <!-- {/if} -->
+            <tr>
+                <td>电话:</td>
+                <td>{$consignee.tel}</td>
+                <input type="hidden" id="id_card" name="id_card" value="{$consignee.id_card}">
+                <input type="hidden" id="is_overseas" name="is_overseas" value="{$is_overseas}">
+            </tr>
+        </table>
+        <!-- {/if} -->
+        </div>
+
+        <div style="margin-top:10px;padding:10px;line-height:20px;background: #fff;">
+		<h3>商品列表</h3>
+        <div style="display: block;">
+		<table width="100%" border="0" cellpadding="5" cellspacing="1">
+			<!-- {foreach from=$goods_list item=goods} -->
+			<tr>
+				<td style="padding-bottom: 15px;border-bottom: 1px solid #e0e0e0;"><!-- {if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
+                    <div style="display: inline-block;vertical-align: middle;width: 20%;">
+                        <img src="../../{$goods.goods_thumb}" width="60" height="60"/>
+                    </div>
+                    <div style="display: inline-block;vertical-align: middle;padding-left: 10px;width: 75%;">
+                        <span class="f6">{$goods.goods_name}</span>
+					<!-- { else } -->
+                    <div style="display: inline-block;vertical-align: middle;width: 20%;">
+                        <a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6"><img src="../../{$goods.goods_thumb}" width="60" height="60"/></a>
+                    </div>
+                    <div style="display: inline-block;vertical-align: middle;padding-left: 10px;width: 75%;">
+					<a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6">{$goods.goods_name}</a>
+					<!-- {if $goods.parent_id > 0} -->
+					<span style="color:#FF0000">（相关配件）</span>
+					<!-- {elseif $goods.is_gift} -->
+					<span style="color:#FF0000">（赠品）</span>
+					<!-- {/if} -->
+					<!-- {/if} -->
+					<!-- {if $goods.is_shipping} -->
+					(<span style="color:#FF0000">免运费商品</span>)
+					<!-- {/if} -->
+					<p>{$goods.formated_goods_price} <span class="red">x</span> {$goods.goods_number}</p>
+                </div>
+                </td>
+			</tr>
+			<!-- {/foreach} -->
+		</table>
+        </div>
+        </div>
+        <!--
+		<h3>配送方式</h3>
+		<table width="100%" border="0" cellpadding="5" cellspacing="1">
+			<!-- {foreach from=$shipping_list item=shipping} 循环配送方式 -->
+			<tr>
+				<td width="10" valign="middle"><input name="shipping" id="shipping" type="radio" value="{$shipping.shipping_id}"{if $order.shipping_id eq $shipping.shipping_id and $shipping.support_cod neq 1} checked{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onClick="selectShipping(this)" /></td>
+				<td width="60" valign="middle">{$shipping.shipping_name}</td>
+				<td valign="middle">{$shipping.format_shipping_fee}</td>
+			</tr>
+			<!-- {/foreach} 循环配送方式 -->
+			<tr>
+				<td colspan="3" ><label for="ECS_NEEDINSURE">
+						<input name="need_insure" id="ECS_NEEDINSURE" type="checkbox"  onclick="selectInsure(this.checked)" value="1" {if $order.need_insure}checked="true"{/if} {if $insure_disabled}disabled="true"{/if} />
+						配送是否需要保价</label></td>
+			</tr>
+		</table>
+        -->
+        <div style="margin-top:10px;padding:10px;line-height:20px;background: #fff;padding-bottom: 0;">
+
+        <!-- {if $allow_use_surplus} 是否使用余额 -->
+        <table width="100%" border="0" cellpadding="5" cellspacing="1">
+        <div class="wrap-order-c w700">
+            <label for="contacts">使用余额：</label>
+            <div class="rt"><input name="surplus" type="text" class="order-js order-input" id="ECS_SURPLUS" size="10" value="{$order.surplus|default:0}" onblur="changeSurplus(this.value)" {if $disable_surplus}disabled="disabled"{/if} /><span class="ml-10">可用余额：</span><span class="color-f9">{$your_surplus|default:0}元</span><span id="ECS_SURPLUS_NOTICE" class="notice"></span></div>
+        </div>
+        </table>
+        <!-- {/if} 是否使用余额 -->
+        <!-- {if $allow_use_integral} 是否使用积分 -->
+        <table width="100%" border="0" cellpadding="5" cellspacing="1">
+        <div class="wrap-order-c w700"  style="padding-top: 10px;border-top: 1px solid #e0e0e0;">
+            <label for="contacts">使用积分：</label>
+        <div class="rt"><input name="integral" type="text" class="order-js" id="ECS_INTEGRAL" onblur="changeIntegral(this.value)" value="{$order.integral|default:0}" size="10" />
+        <span class="ml-10">本次可使用积分为：</span><span class="color-f9">{$order_max_integral}积分</span><span id="ECS_INTEGRAL_NOTICE" class="notice"></span>
+        </div>
+        <!-- {/if} 是否使用积分 -->
+        <!-- {if $allow_use_bonus} 是否使用红包 -->
+        <table width="100%" border="0" cellpadding="5" cellspacing="1">
+        <div class="wrap-order-c w700" style="padding-top: 10px;border-top: 1px solid #e0e0e0;">
+            <a href="/mobile/user.php?act=coupons&order_flow=1&address_id={$consignee.address_id}&gift={$gift_id}" style="display:block;height:36px;">
+            <label for="contacts" style="float: left;margin-top: -2px;color: #000;">优惠券：<span class="red">{$str}</span></label>
+            <i class="flow_i"></i><span style="float: right;margin-top: -2px;margin-right:6px;color: #999999;">{$bonus_type_name}</span>
+            <select class="order-js" style="display:none;float:right;margin-top: -2px;border:0;height:30px;appearance:none;-moz-appearance:none;-webkit-appearance:none;" name="bonus" onchange="changeBonus(1,this.value,form.gift.value)" id="ECS_BONUS" >
+                <option value="0" {if $bonus_id eq 0}selected{/if}>{$count_bonus}张未使用</option>
+                <!-- {foreach from=$bonus_list item=bonus} -->
+                <option value="{$bonus.bonus_id}" {if $bonus_id eq $bonus.bonus_id}selected{/if}>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                <!-- {/foreach} -->
+            </select>
+        </a>
+        </div>
+        <!--<div class="wrap-order-c w700" style="padding-top: 10px;border-top: 1px solid #e0e0e0;">-->
+            <!--<label for="contacts">添加优惠券：</label>-->
+            <!--<div style="float: right;"><input name="bonus_sn" type="text" class="order-js" style="border: 0;" placeholder="输入优惠码" size="15" value="{$bonus_sn}" />-->
+            <!--<input name="validate_bonus" type="button" class="yz-btn" value="使用" onclick="validateBonus(document.forms['theForm'].elements['bonus_sn'].value)"  style="margin-top: -3px;" /></div>-->
+        <!--</div>-->
+        </table>
+        <!-- {/if} 是否使用红包 -->
+        <!-- {if $allow_use_gift} 是否使用礼品卡 -->
+        <table width="100%" border="0" cellpadding="5" cellspacing="1">
+        <div class="wrap-order-c w700" style="padding-top: 10px;border-top: 1px solid #e0e0e0;">
+            <a href="/mobile/user.php?act=gift_card&order_flow=1&address_id={$consignee.address_id}&bonus_id={$bonus_id}" style="display:block;height:36px;">
+            <label for="contacts" style="float: left;margin-top: -2px;color: #000;">礼品卡：</label>
+            <i class="flow_i"></i><span style="float: right;margin-top: -2px;margin-right:6px;color: #999999;">{$gift_type_name}</span>
+            <select class="order-js" style="display:none;float:right;margin-top: -2px;border:0;height:30px;appearance:none;-moz-appearance:none;-webkit-appearance:none;" name="gift" onchange="changeBonus(2,form.bonus.value,this.value)" id="ECS_GIFT">
+                <option value="0" {if $gift_id eq 0}selected{/if}>{$count_gift}张未使用</option>
+                <!-- {foreach from=$gift_list item=gift} -->
+                <option value="{$gift.card_id}" {if $gift_id eq $gift.card_id} selected {/if}>{$gift.card_sn}[{$gift.leave_money}]</option>
+                <!-- {/foreach} -->
+            </select>
+            </a>
+        </div>
+        <!--
+        <input type="hidden" name="use_gift" value="{$total.use_gift}" />
+            {$lang.input_gift_no}
+            <input name="card_sn" type="text" class="inputBg" size="15" value="{$order.gift_sn}" />
+            <input name="validate_gift" type="button" class="bnt_blue_1" value="{$lang.validate_gift}" onclick="validateGift(document.forms['theForm'].elements['gift_sn'].value)" style="vertical-align:middle;" />
+        -->
+        </table>
+        <!-- {/if} 是否使用礼品卡 -->
+        </div>
+        <div style="margin-top:10px;padding:10px;line-height:20px;background: #fff;">
+		{include file='order_total.html'}
+        </div>
+
+            <div style="margin:5px;background-color: #fff6db;overflow: hidden;padding: 10px;border: 1px solid #f5d8a7;">
+                <span style="display: block;padding: 4px 0;"><p style="float:left;color: #cf0f06;">优惠券不能和其他促销活动同时享用；</p></span><br />
+            </div>
+		<input type="submit" name="Submit" class="sub_btn" value="提交订单" />
+        <input type="hidden" id="amount_formated" value="{$total.total_order_amount}" />
+	</form>
+</div>
+{include file='foot.html'}
+</body>
+</html>

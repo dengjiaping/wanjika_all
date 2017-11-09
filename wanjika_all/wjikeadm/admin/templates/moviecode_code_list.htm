@@ -1,0 +1,36 @@
+<!-- $Id: privilege_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<div class="list-div" id="listDiv">
+{/if}
+
+<table cellspacing='1' cellpadding='3' id='list-table'>
+  <tr>
+    <th>院线码</th>
+    <th>所属院线</th>
+    <th>是否有效</th>
+	<th>发放手机号</th>
+	<th>添加时间</th>
+	<th>过期时间</th>
+	<th>操作</th>
+  </tr>
+  {foreach from=$code_list item=list}
+  <tr>
+    <td class="first-cell" >{$list.code_sn}</td>
+    <td align="left">{$list.applier_name}</td>
+    <td align="center">{$list.isvalid}</td>
+	<td align="center">{$list.mobile}</td>
+	<td align="center">{$list.add_date}</td>
+	<td align="center">{$list.over_date}</td>
+	<td align="center"><a href="moviecode.php?act=send&code_id={$list.code_id}">发放</a></td>
+  </tr>
+  {/foreach}
+</table>
+
+{if $full_page}
+</div>
+{include file="pagefooter.htm"}
+{/if}

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>塞尔维亚Premier手工巧克力</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.chocolate_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/chocolate_01.jpg) no-repeat center center #fff; }
+.chocolate_all .chocolate_one{ width:1000px; overflow:hidden; margin:0 auto; }
+.chocolate_all .chocolate_two{ width:1000px; overflow:hidden; margin:0 auto; }
+.chocolate_all .chocolate_01{ width:1000px; height:290px; background:url(images/adimages/chocolate_02.jpg) no-repeat center center; margin:0 auto; }
+.chocolate_all .chocolate_02{ width:1000px; height:4342px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--塞尔维亚Premier手工巧克力start-->
+<div class="chocolate_all">
+	<div class="chocolate_one">
+        <div class="chocolate_01"></div>   
+    </div> 
+    
+	<div class="chocolate_two">
+        <div class="chocolate_02">
+        	<img src="images/adimages/chocolate_04.jpg" usemap="#Map" border="0" />
+          <map name="Map" id="Map">
+              <area shape="rect" coords="6,6,992,466" href="http://www.wjike.com/goods.php?id=10403" target="_blank" />
+            </map>
+        	<img src="images/adimages/chocolate_05.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="102,234,215,785" href="http://www.wjike.com/goods.php?id=10409" target="_blank" />
+              <area shape="rect" coords="220,276,330,786" href="http://www.wjike.com/goods.php?id=10408" target="_blank" />
+              <area shape="rect" coords="348,238,445,784" href="http://www.wjike.com/goods.php?id=10407" target="_blank" />
+              <area shape="rect" coords="455,277,562,782" href="http://www.wjike.com/goods.php?id=10406" target="_blank" />
+              <area shape="rect" coords="578,234,678,784" href="http://www.wjike.com/goods.php?id=10405" target="_blank" />
+              <area shape="rect" coords="680,277,793,786" href="http://www.wjike.com/goods.php?id=10403" target="_blank" />
+              <area shape="rect" coords="800,236,914,788" href="http://www.wjike.com/goods.php?id=10398" target="_blank" />
+            </map>
+        	<img src="images/adimages/chocolate_06.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="211,244,309,819" href="http://www.wjike.com/goods.php?id=10402" target="_blank" />
+              <area shape="rect" coords="340,288,439,822" href="http://www.wjike.com/goods.php?id=10400" target="_blank" />
+              <area shape="rect" coords="463,243,569,819" href="http://www.wjike.com/goods.php?id=10397" target="_blank" />
+              <area shape="rect" coords="583,286,701,820" href="http://www.wjike.com/goods.php?id=10395" target="_blank" />
+              <area shape="rect" coords="718,244,830,822" href="http://www.wjike.com/goods.php?id=10394" target="_blank" />
+            </map>
+        	<img src="images/adimages/chocolate_07.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="70,42,482,471" href="http://www.wjike.com/goods.php?id=10392" target="_blank" />
+              <area shape="rect" coords="531,43,950,475" href="http://www.wjike.com/goods.php?id=10389" target="_blank" />
+            </map>
+        	<img src="images/adimages/chocolate_08.jpg" usemap="#Map5" border="0" />
+            <map name="Map5" id="Map5">
+              <area shape="rect" coords="290,18,692,443" href="http://www.wjike.com/goods.php?id=10390" target="_blank" />
+            </map>
+        	<img src="images/adimages/chocolate_09.jpg" usemap="#Map6" border="0" />
+            <map name="Map6" id="Map6">
+              <area shape="rect" coords="23,35,331,456" href="http://www.wjike.com/goods.php?id=10387" target="_blank" />
+              <area shape="rect" coords="348,33,653,454" href="http://www.wjike.com/goods.php?id=10388" target="_blank" />
+              <area shape="rect" coords="671,34,979,455" href="http://www.wjike.com/goods.php?id=10386" target="_blank" />
+            </map>
+        	<img src="images/adimages/chocolate_10.jpg" usemap="#Map7" border="0" />
+            <map name="Map7" id="Map7">
+              <area shape="rect" coords="23,9,490,433" href="http://www.wjike.com/goods.php?id=10432" target="_blank" />
+              <area shape="rect" coords="510,9,979,433" href="http://www.wjike.com/goods.php?id=10431" target="_blank" />
+            </map>
+        </div>   
+    </div> 
+    
+</div>
+
+<!--塞尔维亚Premier手工巧克力end-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+{if $helps}
+<DIV class="bottom_service_link mt clearfix ">
+  <DIV class=help_link_list clearfix>
+    <!-- {foreach from=$helps item=help_cat name=no} -->
+    <DL {if $smarty.foreach.no.last}style="border-right:0px; background:none;"{/if}>
+      <DT>{$help_cat.cat_name} </DT>
+      <!-- {foreach from=$help_cat.article item=item} -->
+      <DD><a href="{$item.url}" target="_blank">{$item.short_title}</a></DD>
+      <!-- {/foreach} -->
+    </DL>
+    <!-- {/foreach} -->
+  </DIV>
+</DIV>
+{/if}

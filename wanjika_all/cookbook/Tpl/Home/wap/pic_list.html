@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><if condition="$seotitle">{$seotitle}<else />{$title}</if>-{$webname}</title>
+	<meta name="keywords" content="{$key}">
+	<meta name="description" content="{$desc}">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/css.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/swipe.css" />
+	<script src="__PUBLIC__/wap/js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="__PUBLIC__/wap/js/swipe.js" type="text/javascript" charset="utf-8"></script>
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+    .list ul li{height: 200px;}
+    .list ul li p{background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.9) 98%, #FFFFFF 100%);width: 100%;padding: 10px 0;text-indent: 10px;text-align: left;border-radius: 8px;}
+    .garbage{background-image: url(/Tpl/Home/wap/images/garbage.png);background-size: cover;position: absolute;width: 40px;height: 40px;left: 5px;top: 5px;}
+    .dgarbage{background-image: url(/Tpl/Home/wap/images/garbage.png);background-size: cover;position: absolute;width: 40px;height: 40px;right: 5px;top: 5px;}
+    .tb{background-image: url(/Tpl/Home/wap/images/tb.png);background-size: cover;position: absolute;width: 40px;height: 40px;right: 5px;top: 5px;}
+</style>
+</head>
+<body>
+	 <div class="list">
+			<ul>
+					<volist name="cookbook" id="cook">
+						<li id="cook{$cook.id}">
+                            <if condition="$cook.is_draft neq 1">
+                            <i class="garbage" onclick="clickdel({$cook.id})"></i>
+                            <i class="tb" id="{$cook.id}" onclick="clickhref(this)"></i>
+                                <p><a href="{$cook.url}">{$cook[name]|msubstr=###,0,10,'utf-8',false}</a></p>
+                                <a href="{$cook.url}"><img src="{$cook.coverpic_url}"></a>
+                            <else/>
+                                <i class="dgarbage" onclick="clickdel({$cook.id})"></i>
+                                <p><a href="/index.php?s=/{$cook.id}&url=update">{$cook[name]|msubstr=###,0,10,'utf-8',false}</a></p>
+                                <a href="/index.php?s=/{$cook.id}&url=update"><img src="{$cook.coverpic_url}"></a>
+                            </if>
+						</li>
+					</volist>
+			</ul>
+		 </div>
+		<ul class="pagination">
+			{$page}
+		</ul>
+     <script>
+         function clickdel(cookid)
+         {
+             if(confirm( "确定要删除?" ))
+             {
+                 $.ajax({
+                     type:'post',
+                     url:'/index.php?s=/Home/Info/del',
+                     data:{
+                         id:cookid
+                     },
+                     cache: false,
+                     success:function(msg){
+                         if(msg.status == 1)
+                         {
+                             $("#cook"+cookid).remove();
+                             alert(msg.info);
+                         }
+                         else
+                         {
+                             alert(msg.info);
+                         }
+                     }
+                 });
+             }
+         }
+         function clickhref(obj)
+         {
+             window.location.href = "/index.php?s=/"+obj.id+"&url=update";
+         }
+         window.alert = function(name){
+             var iframe = document.createElement("IFRAME");
+             iframe.style.display="none";
+             iframe.setAttribute("src", 'data:text/plain,');
+             document.documentElement.appendChild(iframe);
+             window.frames[0].window.alert(name);
+             iframe.parentNode.removeChild(iframe);
+         }
+         window.confirm = function(name){
+             var iframe = document.createElement("IFRAME");
+             iframe.style.display="none";
+             iframe.setAttribute("src", 'data:text/plain,');
+             document.documentElement.appendChild(iframe);
+             var result = window.frames[0].window.confirm(name);
+             iframe.parentNode.removeChild(iframe);
+             return result;
+         };
+     </script>
+</body>

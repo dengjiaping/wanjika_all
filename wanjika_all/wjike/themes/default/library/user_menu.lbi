@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box_1">
+    <div class="us_top_tit">交易管理</div>
+    <div class="userCenterBox">
+
+        <div class="userMenu"  style="border-bottom:0;" >
+            <a href="user.php?act=order_list" {if $action eq 'order_list'|| $action eq 'order_detail'}class="curs"{/if} >{$lang.label_order} </a>
+            <a href="user.php?act=address_list"{if $action eq 'address_list'}class="curs"{/if}>{$lang.label_address}</a>
+            <!--
+            <a href="user.php?act=comment_list"{if $action eq 'comment_list'}class="curs"{/if}>{$lang.label_comment}</a>
+            <a href="user.php?act=consult_list"{if $action eq 'consult_list'}class="curs"{/if}>我的咨询</a>
+            -->
+        </div>
+        <div class="us_top_tit">个人信息</div>
+        <div class="userMenu">
+            <a href="user.php?act=profile"{if $action eq 'profile'}class="curs"{/if}>{$lang.label_profile}</a>
+            <a href="user.php?act=follow"{if $action eq 'follow'}class="curs"{/if}>我的关注</a>
+            <a href="user.php?act=account_log"{if $action eq 'account_log'}class="curs"{/if}>{$lang.label_user_surplus}</a>
+            <a href="user.php?act=coupons"{if $action eq 'coupons'}class="curs"{/if}>我的优惠券</a>
+            <a href="user.php?act=gift_card"{if $action eq 'gift_card'}class="curs"{/if}>我的礼品卡</a>
+            <a href="user.php?act=integral"{if $action eq 'integral'}class="curs"{/if}>我的积分</a>
+            <a href="user.php?act=invoice_information"{if $action eq 'invoice_information'}class="curs"{/if}>发票信息</a>
+            <a href="user.php?act=update_pwd"{if $action eq 'update_pwd'}class="curs"{/if}>修改密码</a>
+            <!--<a href="user.php?act=member_rights"{if $action eq 'member_rights'}class="curs"{/if}>我的会员权益</a>-->
+        </div>
+    </div>
+</div>

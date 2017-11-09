@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>订单详细 - {$shop_name}</title>
+<script type="text/javascript">
+    //调用微信JS api 支付
+    function jsApiCall()
+    {
+        WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                {$jspara},
+                function(res){
+                    if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+                        alert('支付成功');
+                        window.location.href = '/mobile/user.php?act=order_list';
+                    }
+                    else if(res.err_msg == "get_brand_wcpay_request:cancel" ) {
+                        alert('取消支付');
+                    }
+                    else{
+                        alert('支付失败');
+                    }
+                }
+        );
+    }
+
+    function callpay()
+    {
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecdaddy.com">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/base.css?v=ecdaddy" />
+    <style>
+        .address_edit{
+            background: #fff;
+            border-bottom: 1px solid #dadada;
+        }
+        .address_edit li{
+            display: table;
+            width: 96%;
+            margin: 0 auto;
+            border-bottom: 1px solid #dadada;
+        }
+        .address_edit li label{
+            display: inline-block;
+            height: auto;
+            width: 25%;
+            height: 50px;
+            line-height: 50px;
+        }
+        .address_edit li span{
+            width: 70%;
+            text-indent: 20px;
+            height: 49px;
+            border: 0;
+            outline:none;
+            line-height: normal;
+            border-radius: 0;
+            background: #fff;
+            -webkit-appearance: none;
+        }
+        .order_total{
+            display: table;
+            margin:0 auto;
+            padding: 10px;
+            width: 90%;
+        }
+        .order_total_l{
+            float: left;
+            color: #999999;
+        }
+        .order_total_r{
+            float: right;text-align: right;
+        }
+        </style>
+</head>
+<body style="background: #f2f0f1;">
+{include file='head4.html'}
+
+<div class="address_edit">
+    <ul>
+        <li>
+            <label>交易订单</label>
+            <span>{$order.order_sn}</span>
+        </li>
+        <li>
+            <label>状态</label>
+            <span>{$order.mobile_status}</span>
+        </li>
+        <li>
+            <label>下单时间</label>
+            <span>{$order.formated_add_time}</span>
+        </li>
+        <!-- {if $is_membersgoods eq 0} -->
+        <li style="padding: 10px 0;border: 0;">
+            <label>收货信息</label>
+            <div style="display: inline-block;vertical-align: middle;width: 70%;">
+                <p>{$order.consignee}</p>
+                <p>{$order.address_name}</p>
+                <p>{$order.tel}</p>
+            </div>
+        </li>
+        <!--{/if}-->
+    </ul>
+</div>
+<div style="margin-top: 10px;background: #fff;border-top: 1px solid #dadada;border-bottom: 1px solid #dadada;">
+	<!-- {foreach from=$goods_list item=goods} -->
+	<!-- {if $goods.goods_id gt 0 && $goods.extension_code neq 'package_buy'} 商品 -->
+    <div style="display: block;margin: 0 10px;padding: 20px 0px;border-bottom: 1px solid #dadada;">
+        <div style="display: inline-block;vertical-align: middle;width: 25%;"><a href="goods.php?id={$goods.goods_id}&sid={$sid}" target="_blank"><img src="../../{$goods.goods_thumb}" height="62" width="62" /></a></div>
+        <div style="display: inline-block;vertical-align: middle;width: 70%;"><p>{$goods.goods_name}</p><p><span style="color: #e56262;">{$goods.goods_price}</span> X {$goods.goods_number}</p></div>
+    </div>
+	<!-- {elseif $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
+	<a  class="f6">{$goods.goods_name}<span style="color:#FF0000;">（礼包）</span></a>
+	<div id="suit_{$goods.goods_id}" style="display:none">
+		<!-- {foreach from=$goods.package_goods_list item=package_goods_list} -->
+		<a href="goods.php?id={$package_goods_list.goods_id}&sid={$sid}" target="_blank" class="f6">{$package_goods_list.goods_name}</a><br />
+		<!-- {/foreach} -->
+	</div>
+	<!-- {/if} -->
+	<br />
+	<!-- {/foreach} -->
+
+        <div class="order_total">
+            <div class="order_total_l">商品总额：</div>
+            <div class="order_total_r">{$order.formated_goods_amount}</div>
+        </div>
+        <!-- {if $order.discount gt 0} 折扣 -->
+        <div class="order_total">
+            <div class="order_total_l">-优惠：</div>
+            <div class="order_total_r">{$order.formated_discount}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.tax gt 0} -->
+        <div class="order_total">
+            <div class="order_total_l">{$lang.tax}：</div>
+            <div class="order_total_r">{$order.formated_tax}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.shipping_fee > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">配送费用：</div>
+            <div class="order_total_r">{$order.formated_shipping_fee}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.insure_fee > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">{$lang.insure_fee}：</div>
+            <div class="order_total_r">{$order.formated_insure_fee}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.pay_fee > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">{$lang.pay_fee}：</div>
+            <div class="order_total_r">{$order.formated_pay_fee}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.pack_fee > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">{$lang.pack_fee}：</div>
+            <div class="order_total_r">{$order.formated_pack_fee}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.card_fee > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">{$lang.card_fee}：</div>
+            <div class="order_total_r">{$order.formated_card_fee}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.surplus > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">-使用余额：</div>
+            <div class="order_total_r">{$order.formated_surplus}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.integral_money > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">-使用积分：</div>
+            <div class="order_total_r">{$order.formated_integral_money}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.bonus > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">-使用优惠券：</div>
+            <div class="order_total_r">{$order.formated_bonus}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.gift_card_id > 0} -->
+        <div class="order_total">
+            <div class="order_total_l">-使用礼品卡：</div>
+            <div class="order_total_r">{$order.formated_gift_money}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.extension_code eq "group_buy"} -->
+        <div class="order_total">
+            <div class="order_total_l"></div>
+            <div class="order_total_r">{$lang.notice_gb_order_amount}</div>
+        </div>
+        <!-- {/if} -->
+        <!-- {if $order.zipcode} -->
+        <div class="order_total">
+            <div class="order_total_l"></div>
+            <div class="order_total_r">[{$order.zipcode}]</div>
+        </div>
+        <!-- {/if} -->
+        <div class="order_total">
+            <div class="order_total_l" style="color: #000000;">{if $order.order_status eq '未确认'}应付金额：{else}实际支付：{/if}</div>
+            <div class="order_total_r"><span style="color: #e56262;font-size: 16px;">{if $order.order_status eq '已取消'}{$order.formated_money_paid}{elseif $order.order_status eq '已确认'}{$order.formated_money_paid}{else}{$order.formated_order_amount}{/if}</span></div>
+        </div>
+</div>
+{if $order.order_amount gt 0 && $order.order_status neq '退货' && $order.order_status neq '已取消'}<div class="pay_online_bot"><a class="btn-order-pay" href="user.php?act=order_pay&id={$order.order_id}">去支付</a></div>{/if}
+{include file='foot.html'}
+</body>
+</html>

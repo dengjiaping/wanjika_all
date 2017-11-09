@@ -1,0 +1,74 @@
+<!-- $Id: warehouse_info.htm 17019 2016-04-06 11:43:34Z mali $ -->
+{include file="pageheader.htm"}
+<!-- start add new warehouse form -->
+<div class="main-div">
+  <form action="goods.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+  <table width="100%" id="general-table">
+      <tr>
+        <td class="label">仓库:</td>
+        <td>
+          <input type='text' name='warehouse_type' maxlength="20" value='{$warehouse_info.warehouse_type|escape:html}' size='27' /> <font color="red">*</font>
+        </td>
+      </tr>
+      <tr>
+          <td class="label">类型:</td>
+          <td>
+              <input type='text' name='supplier_type' maxlength="20" value='{$warehouse_info.supplier_type|escape:html}' size='27' /> <font color="red">*</font>
+          </td>
+      </tr>
+      <tr>
+          <td class="label">快递:</td>
+          <td>
+              <select name="shipping_id"><option value="">请选择...</option>{html_options options=$shipping_list selected=$warehouse_info.shipping_id}</select> <font color="red">*</font>
+          </td>
+      </tr>
+      <tr>
+          <td class="label">是否海淘:</td>
+          <td>
+              <select name="is_overseas"><option value="">请选择...</option>{html_options options=$overseas_list selected=$warehouse_info.is_overseas}</select> <font color="red">*</font>
+          </td>
+      </tr>
+      <tr>
+          <td class="label">是否直邮:</td>
+          <td>
+              <select name="is_dds"><option value="">请选择...</option><option value="0" {if $warehouse_info.is_dds eq 0}selected="selected"{/if}>保税仓发货</option><option value="1" {if $warehouse_info.is_dds neq 0}selected="selected"{/if}>直邮</option></select> <font color="red">*海淘商品有效</font>
+          </td>
+      </tr>
+      <tr>
+          <td class="label">负责人:</td>
+          <td>
+              <input type='text' name='person_charge' maxlength="20" value='{$warehouse_info.person_charge|escape:html}' size='27' />
+          </td>
+      </tr>
+      </table>
+      <div class="button-div">
+        <input type="submit" value="{$lang.button_submit}" />
+        <input type="reset" value="{$lang.button_reset}" />
+      </div>
+    <input type="hidden" name="act" value="{$form_act}" />
+    <input type="hidden" name="old_warehouse_type" value="{$warehouse_info.warehouse_type}" />
+    <input type="hidden" name="old_supplier_type" value="{$warehouse_info.supplier_type}" />
+    <input type="hidden" name="old_is_overseas" value="{$warehouse_info.is_overseas}" />
+    <input type="hidden" name="type_id" value="{$warehouse_info.type_id}" />
+  </form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="JavaScript">
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+  validator = new Validator("theForm");
+    validator.required("warehouse_type",      '仓库名称为空');
+    validator.required("supplier_type",      '类型为空');
+    if (document.forms['theForm'].elements['is_overseas'].value == '')
+    {
+        validator.addErrorMsg('请选择是否海淘');
+    }
+  return validator.passed();
+}
+</script>
+{/literal}
+{include file="pagefooter.htm"}

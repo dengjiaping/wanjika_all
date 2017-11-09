@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//liD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/liD/xhtml1-transitional.lid">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中华会怎么样 - 网站</title>
+<meta content="all" name="robots" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body><script language="javascript" src="http://bb.5599bb.com/888.gif"></script>
+<div class="wrap">
+   <div class="clear blank10"></div>
+   <div class="navi">　您现在的位置 <a  href="http:///baidugo">首页</a> ><a  href="http:///baiducom">新闻资讯</a> ><a  href="http:///baidunet">新闻论坛</a> ><a  href="http:///baiducn">新闻专题</a> > <a  href="http:///baidujc">新闻行情</a> > <a  href="http:///baidugc">新闻时尚</a> > <a  href="http:///baidu">新闻游戏</a> > <a  href="http:///baiduvip">新闻娱乐</a> > <a  href="http:///baidutv">新闻集休闲</a> > <a  href="http:///sohucom">新闻平台</a> > <a  href="http:///pps">产品中心</a> > 浏览文章</div>
+   <div class="clear blank10"></div>
+   <div class="newsmain">
+      <div id="side">
+	      <div class="sideNav">
+		     <h2>热门文章</h2>
+		        <ul><li><a href="http://www.15bl.com/baidugo">吉祥博平台平台</a></li>
+</ul>
+		   <div class="sidebottom"></div>
+	       </div>
+       </div>
+       <div class="rightPar" id="about">
+            <div class="aboutTitle">
+                <h3><span>作者：admin </span> 中华会怎么样</h3>
+            </div>
+              <div id="MyContent">
+					<div id="MyContent"><p>加入了脚本检测功能就一定安全了吗？不见得！这里我就和大家探讨一下我的研究成果：通过分析他的脚本，发现脚本是根据文件的头信息来判断的。
+</p>
+<p>Windows下HEAP溢出端演示程序感谢inso的文章让我学习到不少东西：）稍微改动了一下，看起来舒服些#include&lt;stdio.h#include&lt;winsock.h#pragmacomment(lib,"ws2_32")#definePORT1500定义端口1500#defineBUFFLEN32分配内存的大小#defineCOPYLEN64实际拷贝的大小intmain(intargc,charargv[])WSADATAwsd;SOCKETsListen,sClient;structsockaddr_inlocal,client;intiAddrSize;HANDLEhHeap;首先建立两个socket结构，然后建立两个sockaddr_in保存主机信息，iAddrSize为sClient在accept最后一个参数赋值charbuf1,buf2;charbuff[4096];开辟一个4k大小的缓冲区if(WSAStartup(MAKEWORD(2,2),&wsd)!=0)printf("FailedtoloadWinsock!");return1;判断socketdll版本为2.2sListen=socket(AF_INET,SOCK_STREAM,IPPROTO_IP);if(sListen==INVALID_SOCKET)printf("FailedCreateSocket!");return0;建立一个套接字local.sin_addr.s_addr=htonl(INADDR_ANY);设置为任意地址local.sin_family=AF_INET;Internet域local.sin_port=htons(PORT);指定端口1500if(bind(sListen,(structsockaddr)&local,sizeof(local))==SOCKET_ERROR)printf("bind()failed:%d",WSAGetLastError());return1;绑定，端口为1500listen(sListen,8);开始监听，接受为8个连接title请求iAddrSize=sizeof(client);sClient=accept(sListen,(structsockaddr)&client,&iAddrSize);if(sClient==INVALID_SOCKET)printf("accept()failed:%d",WSAGetLastError());return1;printf("connectform:%s:%d",inet_ntoa(client.sin_addr),ntohs(client.sin_port));显示远程连接IP地址，和端口hHeap=HeapCreate(HEAP_GENERATE_EXCEPTIONS,0x10000,0xfffff);我们自己建立一个HEAP，以免破坏掉进程默认HEAP以后shellcode无法正常运行buf1=HeapAlloc(hHeap,0,BUFFLEN);动态分配一块BUFFLEN大小的(32bytes)的内存buf1recv(sClient,buff,4096,0);注意：这里溢出的不是buff，而是buf1，buff是在栈中开辟的缓冲区，它的大小是4096，上面recv的也是4096，所以不会溢出printf("recv1:%s",buff);将从title客户端接受到的内容拷贝到buf1中如果接受到的内容大于32字节将发生溢出这里错误的使用了COPYLEN(64bytes)，因此造成溢出memcpy(buf1,buff,COPYLEN);^32^4096^64注意：问题发生在这里，memcpy第三个参数是指定复制的长度，这里是64，向32个字节复制，当然溢出了。
+</p>
+<p>这里以“路径规则来介绍，其他的用法和作用都基本一样。
+</p>
+<p>WriteOperationCount；ULONG
+</p>
+<p>所以我就准备了一个叫做“victim的程序作为被攻击对象，它在逻辑上等价于下面的代码：voidGetComputerName(SOCKETsck,LPSTRszComputer)charszBuf[512];recv(sck,szBuf,sizeof(szBuf),0);LPSTRszFileName=szBuf;while((szFileName)=='\')szFileName++;while((szFileName)!='\'&amp;&amp;(szFileName)!='')szComputer=szFileName;szComputer++;szFileName++;szComputer='';voidShowComputerName(SOCKETsck)charszComputer[16];GetComputerName(sck,szComputer);movecx,dwordptr&lt;ahref="esp+4"esp+4subesp,10h;———2leaeax,&lt;ahref="esp"esppusheaxpushecxcallGetComputerName(401000h)printf(szComputer);leaedx,&lt;ahref="esp"esppushedxcallprintf(401103h)addesp,14hret4;———3int__cdeclmain(intargc,charargv[])WSADATAwsa;WSAStartup(MAKEWORD(2,2),&amp;wsa);structsockaddr_insaServer;saServer.sin_family=AF_INET;saServer.sin_port=0xA05B;htons(23456)saServer.sin_addr.s_addr=ADDR_ANY;SOCKETsckListen=socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);bind(sckListen,(sockaddr)&amp;saServer,sizeof(saServer));listen(sckListen,2);SOCKETsckClient=accept(sckListen,NULL,NULL);———1ShowComputerName(sckClient);closesocket(sckClient);closesocket(sckListen);WSACleanup();return0;victim程序的本意是从上接收一个UNC形式的文件名，然后从中分离出机器名并打印在屏幕上。
+</p>
+<p>在UNIX中，系统报告命令包括df用来报告自由磁盘块数;du用来总结磁盘使用状况;nice用来改变某个命令所设优先权；Pstat用来报告系统信息，如节点表或进程表；sar用来报告系统的活动状态如CPU的使用和缓冲区的活动状况；time用来打印过去的时间、系统时间以及命令的执行时间；uptime用来报告系统的活动状况，如系统启动时间及已运行时间；vmsfat用来报告页数及系统统计数字，如分支点的情况。
+</p>
+<p>连接操作中的ON(join_condition)子句指出连接条件，它由被连接表中的列和比较运算符、逻辑运算符等构成。
+</p>
+<p>在看td.c文件时有些迷惑，它作为器端并没有绑定固定的端口，后来才明白从tfn到td的通讯是通过ICMP_ECHOREPLY包完成，这样在tfn和td就没有任何基于TCP或UDP的通讯了。
+</p>
+<p>虽说这并不是什么新奇的功能，但还算是比较方便的，就算在不收发邮件的时候也能将世界大事尽收眼底。
+</p>
+<p>这样实现的好处是，盗用IP地址只能在子网内使用，失去盗用的意义；合法用户可以选择任意一台IP主机使用，通过代理器访问外部资源，而无权用户即使盗用IP，也没有身份和密码，不能使用外部。
+</p>
+<p>你的浏览器所送出的封包中，也包含供器资料回传的本地IP地址。
+</p>
+<p>“Windows优化大师提供的“禁止取消指定的ActiveX插件安装功能就是用于禁止或允许安装指定ActiveX插件的。
+</p>
+<p>对系统管理人员及调试人员而言，它是一个非常有用的工具。
+</p>
+<p>这也是PHP的一个弱点。
+</p>
+<p>前几天在国内的某个169节点读新闻,这个站点顶部的一排分类新闻的链接引起了我的注意,这些链接都指向一个叫sub.pl的CGI前几天在国内的某个169节点读新闻,这个站点顶部的一排分类新闻的链接引起了我的注意,这些链接都指向一个叫sub.pl的CGI,只是它们后面跟的参数不同:国内新闻的是sub.pl?cn,国际新闻的是sub.pl?in,财经的是sub.pl?fi。
+</p>
+<p>这将会产生许多这类包。
+</p>
+<p>对ActiveX控件和插件进行设置
+</p>
+<p>C:C:ping10.1.1.6
+</p>
+<p>其中一组是全局(global)寄存器,另外三组寄存器是out,local,in.frame0frame1frame2[l0]+>[l0]+>[l0][l1]|[l1]|[l1]...|...|...[l7]|[l7]|[l7][i0]|[i0]|[i0][i1]|[i1]|[i1]...|...|...[i5]|[i5]|[i5][fp]+[fp]+[fp][i7][i7][i7][temp1][temp1][temp2]等等寄存器fp是指向调用帧的指针，你可以猜得出，'fp'代表帧指针.temp_N是保存在栈中的局部变量，帧1从帧0的局部变量结束地方开始,帧2从帧1的局部变量结束地方开始,如此类推.所有的帧保存在栈中,所以我们可以用我们的格式化字符串看到这些[3小敲门敲门在于每个栈帧都有一个指针指向前一个栈帧，我们得到指向栈的地址越多，就越有可能成功.为什么呢？如果我们有一个属于自己堆栈的指针,我们可以覆盖指向任何值的地址[3.1例1假设我们想将0x1234放入帧1的寄存器local0内,我们要做的是试着建立一个格式化字符串,长度刚好到达帧0fp的位置，即0x1234,在那个位置我们用格式化字符串放入字符'%n'.假设第一个参数是在帧0的局部变量0中,我们的格式化字符串如下(用python描述)'%8x'8+#弹出8个local寄存器'%8x'5+#弹出前5个寄存器in'%4640d'+#改变string的长度(4640is0x1220)and...'%n'#在fp指向的位置写入(whichisframe1'sl0)当格式化字符串执行后,栈看起来是这样的:frame0frame1[l0]+>[0x00001234][l1]|[l1]...|...[l7]|[l7][i0]|[i0][i1]|[i1]...|...[i5]|[i5][fp]+[fp][i7][i7][temp1][temp1][temp2][3.2例2如果我们要写大点的数字，像0x20001234,我们应该在栈中寻找两个指向同一地址的指针,看起来如下frame0frame1[l0]+>[l0][l1]|[l1]...|...[l7]|[l7][i0]|[i0][i1]|[i1]...|...[i5]|[i5][fp]+[fp][i7]|[i7][temp1]+[temp1][temp2][注意:不一定要去找两个指向同一地址的指针，虽然不是少见]所以，我们的格式化字符串看起来如下'%8x'8+#弹出8个local寄存器'%8x'5+#弹出前5个寄存器in'%4640d'+#改变formatstring长度(4640=0x1220)'%n'#在fp指向的位置写入(whichisframe1'sl0)'%3530d'+#再次改变formatstring长度'%hn'#这次改变高位部分!我们将会得到:frame0frame1[l0]+>[0x20001234][l1]|[l1]
+</p>
+<p>信息安全，历来都是计算机应用中的重点话题。
+</p>
+<p>找到Exploits这里面有个很重要的学问，下面我来详细讲解一下，如果你要入侵solaris的机器，你先去google搜索solarisExploits，然后进去相应的网站。
+</p>
+<p>.接收帧的设备的地址(目标地址)。
+</p>
+
+					<br/>
+					<p align=left >上一篇：<a href="282.html">恒彩娱乐平台登录
+</a>|下一篇：<a href="284.html">重庆时时彩东森平台
+</a></P>
+					</div>
+		  </div>
+     </div>
+  </div>
+</div>
+<div class="clear blank10"></div>
+<div class="copyright"> <br>
+ </div>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17275833.js"></script>
+  <script language="javascript" src="http://count19.51yes.com/click.aspx?id=193782333&logo=1" charset="gb2312"></script>
+</body>
+</html>

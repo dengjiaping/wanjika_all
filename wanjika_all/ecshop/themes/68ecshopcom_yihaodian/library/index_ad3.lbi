@@ -1,0 +1,147 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+#banner {
+	WIDTH: 600px;
+	HEIGHT: 250px;
+	float:left;
+	position:relative;
+}
+#banner IMG {
+	DISPLAY: block;
+}
+#banner SPAN {
+	DISPLAY: none
+}
+#banner SPAN#banner_1 {
+	DISPLAY: block
+}
+#banner_m {
+	LEFT: 0px;
+	WIDTH: 600px;
+	bottom:0px;
+POSITION:absolute;
+	HEIGHT: 28px;
+}
+#banner_m LI {
+	BACKGROUND: #000;
+	FILTER: alpha(opacity=40);
+	FLOAT: left;
+	MARGIN: 0px 1px 0px 0px;
+
+	WIDTH: 155px;
+	TEXT-ALIGN: center;
+	moz-opacity: 0.4;
+	opacity: 0.4;
+}
+#banner_m LI A {
+	DISPLAY: block;
+	COLOR: #fff;
+	LINE-HEIGHT: 28px;
+	HEIGHT: 28px
+}
+#banner_m LI#banner_m_5 {
+	MARGIN: 0px;
+	WIDTH: 150px
+}
+#banner_m LI.active {
+	FILTER: alpha(opacity=70);
+	moz-opacity: 0.7;
+	opacity: 0.7
+}
+</style>
+<div id="banner">
+  <!--{foreach from=$flash name=myflash item=flash}-->
+  <span id=banner_{$smarty.foreach.myflash.iteration}><a href="{$flash.url}"><img src="{$flash.src}" alt="{$flash.text}" width="600" height="250"></a> </span>
+  <!--{/foreach}-->
+  
+  
+  <div id="banner_m">
+  <ul>
+    <!--{foreach from=$flash name=myflash item=flash}-->
+    <!-- {if $smarty.foreach.myflash.last} -->    
+    <li class="active" id="banner_m_{$smarty.foreach.myflash.iteration}" style="margin-right:0px; float:right;">
+          <a onMouseOver=showbanner({$smarty.foreach.myflash.iteration}) href="{$flash.url}">{$flash.text} </a>
+    </li>
+    <!-- {else} -->
+    <li class="active" id="banner_m_{$smarty.foreach.myflash.iteration}">
+          <a onMouseOver=showbanner({$smarty.foreach.myflash.iteration}) href="{$flash.url}">{$flash.text} </a>
+    </li>
+    <!-- {/if} -->
+    <!--{/foreach}-->
+  </ul>
+</div>
+  
+  
+  
+</div>
+
+<script language=Javascript>
+		setTimeout(function(){nextBanber();},3000);
+		var flash_count = {$flash_count};
+		
+		var li_width = (620/flash_count)-{$flash_count};
+		
+		<!--{foreach from=$flash name=myflash item=flash}-->
+		document.getElementById('banner_m_'+{$smarty.foreach.myflash.iteration}).style.width= li_width+"px";
+		 <!--{/foreach}-->
+		 
+		function nextBanber(){
+			for(j=1;j<=flash_count;j++){
+				
+				if(document.getElementById('banner_'+j).style.display!="none"){who=j;}}
+			var newwho=who+1;
+			if(newwho>flash_count){newwho=1;}
+	
+
+		for(s=1;s<=flash_count;s++){
+					document.getElementById('banner_'+s).style.display="none";
+				
+				
+
+	document.getElementById('banner_m_'+s).className="";
+			}
+			document.getElementById
+
+('banner_'+newwho).style.display="block";
+			document.getElementById('banner_m_'+newwho).className="active";
+			
+
+t=setTimeout(function(){nextBanber();},3000);
+		}
+		function showbanner(i){
+			clearTimeout(t);
+			
+
+setTimeout(function(){
+				for(j=1;j<=flash_count;j++){
+					document.getElementById
+
+('banner_'+j).style.display="none";
+					document.getElementById('banner_m_'+j).className="";
+				}
+	
+
+			document.getElementById('banner_'+i).style.display="block";
+				document.getElementById
+
+('banner_m_'+i).className="active";
+			},100);
+		}
+		
+		function showann(id,count)
+		{
+	
+
+		for(s=1;s<=count;s++)
+			{
+				document.getElementById('ann_'+s).className = 'active'+s;
+		
+
+		document.getElementById('tabcont'+s).style.display = 'none';
+			}
+			document.getElementById
+
+('ann_'+id).className = '';
+			document.getElementById('tabcont'+id).style.display = 'block';
+		}	
+		</script>

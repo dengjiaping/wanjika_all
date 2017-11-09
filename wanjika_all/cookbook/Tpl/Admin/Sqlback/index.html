@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/style.css">
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+  
+  <div class="panel panel-info">
+   
+	  <div class="panel-heading">数据库备份信息</div>
+	
+		
+	    <div class="panel-body">
+		  <div class="alert alert-warning" role="alert">
+			<p>注意：还原之后会清空现在有的数据！备份文件存放在根目录下的Data目录</p>
+		  </div>
+	<!-- Nav tabs -->
+	
+	<table class="table table-bordered table-hover table-condensed">
+	  <tr>
+		
+		<th >备份文件名</th>
+		<th>文件大小</th>	
+		<th>备份时间</th>	
+		<th>操作</th>	
+	
+	  </tr>
+	
+	  <volist name="list" id="vo">
+	  <tr>
+		
+			<td class="font12">{$vo.name}</td>			
+			<td class="font12">{$vo.size}</td>			
+			<td class="font12">{$vo.time}</td>	
+			<td class="font12">
+			<a href="__GROUP__/Sqlback/recover/file/{$vo.name}" class="btn btn-info">还原数据库</a>
+			<a href="__GROUP__/Sqlback/deletebak/file/{$vo.name}" class="btn btn-info">删除备份</a>
+			<a href="__GROUP__/Sqlback/downloadBak/file/{$vo.name}" class="btn btn-info">下载备份</a>
+			</td>	
+	  </tr>
+	  </volist>
+	 
+	  
+	 
+	</table>
+
+	
+		
+		   </div>
+		  
+				
+</div>
+			
+
+
+
+<script type="text/javascript"> 
+jQuery(function($){ 
+//全选 
+$("#btn1").click(function(){ 
+$("input[type='checkbox']").attr("checked","true"); 
+}) 
+//取消全选 
+$("#btn2").click(function(){ 
+$("input[type='checkbox']").removeAttr("checked"); 
+}) 
+
+
+//反选 
+$("#btn4").click(function(){ 
+$("input[type='checkbox']").each(function(){ 
+if($(this).attr("checked")) 
+{ 
+$(this).removeAttr("checked"); 
+} 
+else 
+{ 
+$(this).attr("checked","true"); 
+} 
+}) 
+})
+});
+
+//删除
+
+
+</script> 
+  </body>
+</html>

@@ -1,0 +1,67 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<script type="text/javascript" src="../js/calendar.php"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+<!-- 搜索 -->
+<div class="form-div">
+    <form action="pay_tradeno_list.php?act=tradeno_list" method="post">
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+        使用订单号<input name="order_sn" type="text" id="order_sn" size="15" value={$order_sn}>
+        支付流水号<input name="tradeno" type="text" id="tradeno" size="15" value={$tradeno}>
+        使用状态
+        <select name="status" id="status">
+            <option value="-1">请选择</option>
+            <option value="0" {if $status==0 && $status != null}selected="selected"{/if}>未使用</option>
+            <option value="1" {if $status==1}selected="selected"{/if}>使用成功</option>
+            <option value="2" {if $status==2}selected="selected"{/if}>使用失败</option>
+        </select>
+        使用时间
+        <input type="text" name="start_time" maxlength="60" size="20" value='{$start_time}' readonly="readonly" id="start_time_id" />
+        <input name="start_time_btn" type="button" id="start_time_btn" onclick="return showCalendar('start_time_id', '%Y-%m-%d %H:%M', '24', false, 'start_time_btn');" value="{$lang.btn_select}" class="button"/>
+        ~
+        <input type="text" name="end_time" maxlength="60" size="20" value='{$end_time}' readonly="readonly" id="end_time_id" />
+        <input name="end_time_btn" type="button" id="end_time_btn" onclick="return showCalendar('end_time_id', '%Y-%m-%d %H:%M', '24', false, 'end_time_btn');" value="{$lang.btn_select}" class="button"/>
+        <input type="submit" value="{$lang.button_search}" class="button" />
+    </form>
+</div>
+<div class="list-div" id="listDiv">
+    {/if}
+    <table cellpadding="3" cellspacing="1">
+        <tr>
+            <th>支付流水号</th>
+            <th>添加时间</th>
+            <th>使用状态</th>
+            <th>使用订单号</th>
+            <th>使用时间</th>
+        </tr>
+        {foreach from=$tradeno_list item=tradeno key=okey}
+        <tr>
+            <td align="center" valign="top" nowrap="nowrap">{$tradeno.pay_trade_no}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$tradeno.addtime}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$tradeno.status}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$tradeno.order_sn}</td>
+            <td align="center" valign="top" nowrap="nowrap">{$tradeno.usedtime}</td>
+        </tr>
+        {/foreach}
+    </table>
+    <table id="page-table" cellspacing="0">
+        <tr>
+            <td align="right" nowrap="true">
+                {include file="page.htm"}
+            </td>
+        </tr>
+    </table>
+    {if $full_page}
+</div>
+
+<script language="JavaScript">
+    listTable.recordCount = {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+    listTable.filter.{$key} = '{$item}';
+    {/foreach}
+</script>
+{include file="pagefooter.htm"}
+{/if}

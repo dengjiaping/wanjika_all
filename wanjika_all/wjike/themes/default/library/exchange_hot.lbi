@@ -1,0 +1,49 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods}-->
+    {if $sign_page}
+    <div class="newarrivals_cg" style="overflow: hidden;">
+        <div class="nr_til">
+            <h2>{$exchange_name.name}</h2>
+            <span>{$exchange_name.e_name}</span>
+        </div>
+        <div class="nr_text">
+            <ul>
+                <!-- {foreach from=$hot_goods item=goods key=key} -->
+                <li>
+                    <div class="newproduct">
+                        <a href="{$goods.url}" target="_blank" title="{$goods.name}">
+                            <img src="{$goods.goods_img}" width="216px" height="216px" alt="{$goods.name}"/>
+                        </a>
+                        <a href="{$goods.url}" target="_blank" title="{$goods.name}">{$goods.name}</a>
+                        <span>RMB {$goods.shop_price}</span>
+                    </div>
+                </li>
+                <!-- {/foreach}-->
+            </ul>
+        </div>
+    </div>
+    {else}
+    <div class="newarrivals_cg">
+        <div class="nr_til">
+            <h2>{$exchange_name.name}</h2>
+            <span>{$exchange_name.e_name}</span>
+        </div>
+        <div class="nr_text">
+            <ul>
+                <!-- {foreach from=$hot_goods item=goods key=key} -->
+                <li>
+                    <div class="newproduct">
+                        <a href="{$goods.url}" target="_blank" title="{$goods.name}">
+                            <img src="{$goods.goods_img}" width="216px" height="216px" alt="{$goods.name}"/>
+                        </a>
+                        <a href="{$goods.url}" target="_blank" title="{$goods.name}">{$goods.name}</a>
+                        <span>积分： {$goods.exchange_integral}</span>
+                    </div>
+                </li>
+                <!-- {/foreach}-->
+            </ul>
+        </div>
+    </div>
+    <div class="blank5"></div>
+    {/if}
+<!-- {/if} -->

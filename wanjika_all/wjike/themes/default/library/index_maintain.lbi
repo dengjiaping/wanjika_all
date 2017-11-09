@@ -1,0 +1,583 @@
+<!--热销品牌start-->
+<div class="hotbrand">
+	<div class="entrance">
+    	<img src="images/hotbrandentrance.png" />
+    </div>
+    <div class="hbimg">
+    	<ul>
+        	<li><a href="http://www.wjike.com/b387.html" target="_blank" title="Kao 花王 / カオウ" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_01.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b294.html" target="_blank" title="LION 狮王 / ライオン" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_02.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b662.html" target="_blank" title="清妍" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_03.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b588.html" target="_blank" title="moony 尤妮佳 / ユニ.チャーム" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_04.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b396.html" target="_blank" title="SHISEIDO 资生堂 / シセイドウ" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_05.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b378.html" target="_blank" title="Kose 高丝 / コーセー" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_06.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b356.html" target="_blank" title="Dr.Morita 森田药妆" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_07.jpg" /></a></li>
+        	<li><a href="http://www.wjike.com/b561.html" target="_blank" title="THE BODY SHOP" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_08.jpg" /></a></li>
+            
+        	<li class="hbibot"><a href="http://www.wjike.com/b406.html" target="_blank" title="Goat Soap 山羊奶皂" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_09.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b558.html" target="_blank" title="Boots 博姿" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_010.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b320.html" target="_blank" title="WAKODO 膳魔师 / ワコウドウ" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_011.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b492.html" target="_blank" title="Mellin 美林" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_012.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b293.html" target="_blank" title="Pigeon 贝亲 / ピジョン" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_013.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b493.html" target="_blank" title="Mustela妙思乐" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_014.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b473.html" target="_blank" title="Penaten 贝娜婷" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_015.jpg" /></a></li>
+        	<li class="hbibot"><a href="http://www.wjike.com/b498.html" target="_blank" title="Palmer's 帕玛氏" >
+            	<img src="http://wjike.com/data/afficheimg/hotlogo_016.jpg" /></a></li>
+        </ul>
+    </div>
+</div>
+<!--热销品牌end-->
+
+   
+    <!--新品上架start-->
+    <div class="newarrivals">
+        <div class="nr_til">
+            <h2>新品上架</h2>
+            <span>NEW ARRIVALS</span>
+        </div>
+        <div class="nr_text">
+            <ul>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12270.html" target="_blank" title="澳大利亚Life Space婴儿益生菌粉 0-2岁 60g">
+                            <img src="data/afficheimg/xp_01.png" width="216px" height="216px"/>
+                        </a>
+                        <a href="http://item.wjike.com/12270.html" target="_blank" title="澳大利亚Life Space婴儿益生菌粉 0-2岁 60g">	
+                            澳大利亚Life Space婴儿益生菌粉 60g
+                        </a>
+                        <span>RMB 169</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12269.html" target="_blank" title="美国Mid Gentle婴儿油 295ml">
+                            <img src="data/afficheimg/xp_02.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12269.html" target="_blank" title="美国Mid Gentle婴儿油 295ml">	                    	
+                           美国Mid Gentle婴儿油 295ml
+                        </a>
+                        <span>RMB 39</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12225.html" target="_blank" title="花王Blaune泡沫染发剂白发专用泡沫染发膏7深黑棕">
+                            <img src="data/afficheimg/xp_03.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12225.html" target="_blank" title="花王Blaune泡沫染发剂白发专用泡沫染发膏7深黑棕">	
+                            花王泡沫染发剂白发专用泡沫染发膏
+                        </a>
+                        <span>RMB 99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12223.html" target="_blank" title="日本狮王（LION）洗衣液TOP持久香氛900g 洋甘菊香">
+                            <img src="data/afficheimg/xp_04.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12223.html" target="_blank" title="日本狮王（LION）洗衣液TOP持久香氛900g 洋甘菊香">	
+                            日本狮王洗衣液 900g
+                        </a>
+                        <span>RMB 39</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12222.html" target="_blank" title="日本火箭石碱(ROCKET) 苹果酸混合洗涤剂 600ml">
+                            <img src="data/afficheimg/xp_05.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12222.html" target="_blank" title="日本火箭石碱(ROCKET) 苹果酸混合洗涤剂 600ml">	
+                           日本火箭石碱苹果酸混合洗涤剂 600ml
+                        </a>
+                        <span>RMB 16</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--新品上架end-->
+    
+    
+    <!--热销单品start-->
+    <div class="hotsaleproduct">
+        <div class="nr_til">
+            <h2>热销单品</h2>
+            <span>HOT PRODUCT</span>
+        </div>
+        
+        <div class="newproduct">
+            <a href="http://item.wjike.com/12271.html" target="_blank" title="澳大利亚Life Space成人益生菌 60粒 肠胃调理调节男女通用">
+                <img class="rxbotfive" src="data/afficheimg/rx_01.jpg"/>
+            </a>
+            <a href="http://item.wjike.com/11544.html" target="_blank" title="日本花王（KAO）乐而雅F系列绵柔护翼卫生巾25cm日用18片">
+                <img src="data/afficheimg/rx_04.jpg"/>
+            </a>
+        </div>
+        
+        <div class="nr_text">
+            <ul>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12261.html" target="_blank" title="美国Intimate牛油果提炼维他命E滋润霜  226g">
+                            <img class="np_l" src="data/afficheimg/rx_02.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12261.html" target="_blank" title="美国Intimate牛油果提炼维他命E滋润霜  226g">	
+                            美国牛油果提炼维他命E滋润霜  226g
+                        </a>
+                        <span>RMB 39</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12259.html" target="_blank" title="日本本家豆花庵 豆姬酸奶乳酪豆腐面膜 滋润保湿 豆乳面膜150g">
+                            <img class="np_l" src="data/afficheimg/rx_03.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12259.html" target="_blank" title="日本本家豆花庵 豆姬酸奶乳酪豆腐面膜 滋润保湿 豆乳面膜150g">	
+                            日本本家豆花庵豆乳面膜 150g
+                        </a>
+                        <span>RMB 59</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12254.html" target="_blank" title="美国水宝宝（Coppertone）物理防晒霜 婴儿童男女士孕妇可用88ML SPF50">
+                            <img class="np_l" src="data/afficheimg/rx_05.png" width="196px" height="196px"/>
+                        </a>
+                        <a href="http://item.wjike.com/12254.html" target="_blank" title="美国水宝宝（Coppertone）物理防晒霜 婴儿童男女士孕妇可用88ML SPF50">	
+                            美国水宝宝物理防晒霜 88ml
+                        </a>
+                        <span>RMB 49</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12253.html" target="_blank" title="澳大利亚意高(Ego)QV 止汗露腋下止汗走珠 爽身除汗滚珠男女抑汗 80g ">
+                            <img class="np_l" src="data/afficheimg/rx_06.png" width="196px" height="196px"/>
+                        </a>
+                        <a href="http://item.wjike.com/12253.html" target="_blank" title="澳大利亚意高(Ego)QV 止汗露腋下止汗走珠 爽身除汗滚珠男女抑汗 80g ">	
+                            澳大利亚意高止汗露腋下止汗走珠 80g  
+                        </a>
+                        <span>RMB 59</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--热销单品end-->
+    
+    
+    <!--日韩专区start-->
+    <div class="countryzone">
+        <div class="cz_title">
+            <h2>
+                <img src="data/afficheimg/zone_rihan.png" />
+            </h2>
+            <div class="cz_fl">
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLlsI/mnpfliLboja8iO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDY3MDA0ODAwO30=" target="_blank">小林制药</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuiGs%2bmtlOW4iCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDQ3ODk7fQ==" target="_blank">膳魔师</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6IuixoeWNsCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDQ3Nzc7fQ==" target="_blank">象印</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6Iui0teeIseWomCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDQ3NjI7fQ==" target="_blank">贵爱娘</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6IuS5kOaVpiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDQ3NDk7fQ==" target="_blank">乐敦</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6Iueak%2bS5kOm9vyI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDQ3MzM7fQ==" target="_blank">皓乐齿</a>
+            </div>
+        </div>
+        
+        <div class="nr_text">
+            <ul>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12249.html" target="_blank" title="日本曼丹（Mandom）敏感肌肤弹力紧致面膜5片 橙色">
+                            <img class="np_l" src="data/afficheimg/rh_01.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12249.html" target="_blank" title="日本曼丹（Mandom）敏感肌肤弹力紧致面膜5片 橙色">	
+                            日本曼丹敏感肌肤弹力紧致面膜 5片
+                        </a>
+                        <span>RMB 53</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12247.html" target="_blank" title="日本美洁卫（Mitsuei）本草温和洗洁精 青柠味 600ml">
+                            <img class="np_l" src="data/afficheimg/rh_02.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12247.html" target="_blank" title="日本美洁卫（Mitsuei）本草温和洗洁精 青柠味 600ml">	
+                            日本美洁卫本草温和洗洁精 600ml
+                        </a>
+                        <span>RMB 16</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11816.html" target="_blank" title="日本小林制药（Kobayashiseiyaku）凝胶花瓣洁厕灵自然花香 马桶清洁剂 22.5g">
+                            <img class="np_l" src="data/afficheimg/rh_03.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11816.html" target="_blank" title="日本小林制药（Kobayashiseiyaku）凝胶花瓣洁厕灵自然花香 马桶清洁剂 22.5g">	
+                            日本小林制药凝胶花瓣洁厕灵马桶清洁剂
+                        </a>
+                        <span>RMB 22</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12214.html" target="_blank" title="日本宝洁（PnG）洗衣球 352g 18粒 抗菌清香">
+                            <img class="np_l" src="data/afficheimg/rh_04.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12214.html" target="_blank" title="日本宝洁（PnG）洗衣球 352g 18粒 抗菌清香">	
+                            日本宝洁洗衣球 18粒 
+                        </a>
+                        <span>RMB 46</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12212.html" target="_blank" title="日本贝亲（Pigeon）婴儿全身泡沫沐浴露花香型 500ml">
+                            <img class="np_l" src="data/afficheimg/rh_05.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12212.html" target="_blank" title="日本贝亲（Pigeon）婴儿全身泡沫沐浴露花香型 500ml">	
+                            日本贝亲婴儿全身泡沫沐浴露 500ml
+                        </a>
+                        <span>RMB 109</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12209.html" target="_blank" title="日本牛乳石碱（COW）泡沫沐浴露 温和皂香550ml">
+                            <img class="np_l" src="data/afficheimg/rh_06.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12209.html" target="_blank" title="日本牛乳石碱（COW）泡沫沐浴露 温和皂香550ml">	
+                            日本牛乳石碱泡沫沐浴露 550ml
+                        </a>
+                        <span>RMB 59</span>
+                    </div>
+                </li>
+            </ul>
+         </div>
+         
+        <div class="activityentr">
+            <div class="">
+                <a href="http://item.wjike.com/12206.html" target="_blank" title="日本近江蔓莎润唇膏 薄荷润唇膏 5g">
+                    <img class="np_l" src="data/afficheimg/rh_07.jpg" width="477px" height="485px"/>
+                </a>
+            </div>
+         </div>
+    </div>
+    <!--日韩专区end-->
+    
+    
+    <!--澳新专区start-->
+    <div class="countryzone_aoxin">
+        <div class="cz_title">
+            <h2>
+                <img src="data/afficheimg/zone_aoxin.png" />
+            </h2>
+            <div class="cz_fl">
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6IuiLj%2biKiiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcxMDE5OTc7fQ==" target="_blank">苏芊</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6Iua%2bs%2biKneabvCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcxMDIwMDY7fQ==" target="_blank">澳芝曼</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjQ6IkdBSUEiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDY3MTAyMDEzO30=" target="_blank">GAIA</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IkdvYXQgU29hcCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcxMDIwMjQ7fQ==" target="_blank">Goat Soap</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuaWsOa6quWymyI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcxMDIwMzI7fQ==" target="_blank">新溪岛</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLnmoflrrboirHonJwiO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDY3MTAyMDM5O30=" target="_blank">皇家花蜜</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjU6IkxVQ0FTIjtzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQ2NzEwMjA0Nzt9" target="_blank">LUCAS</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjExOiJKYWNrIE4nSmlsbCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcxMDIwNTY7fQ==" target="_blank">Jack N'Jill</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjU6IkRVIElUIjtzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQ2NzEwMjA2NTt9" target="_blank">DU'IT</a>
+            </div>
+        </div>
+         
+        <div class="activityentr">
+            <div class="">
+                <a href="http://s.wjike.com/goods.php?id=12276" target="_blank" title="澳大利亚澳佳宝(Blackmores)越橘蓝霉素护眼片 30片">
+                    <img class="np_l" src="data/afficheimg/ax_01.jpg" width="477px" height="485px"/>
+                </a>
+            </div>
+         </div>
+        
+        <div class="nr_text">
+            <ul>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11588.html" target="_blank" title="澳大利亚JACK N'JILL玉米淀粉有机卡通宝宝刷牙漱口杯/水杯恐龙图案">
+                            <img class="np_l" src="data/afficheimg/ax_02.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11588.html" target="_blank" title="澳大利亚JACK N'JILL玉米淀粉有机卡通宝宝刷牙漱口杯/水杯恐龙图案">	
+                            澳大利亚卡通宝宝刷牙漱口杯
+                        </a>
+                        <span>RMB 69</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11440.html" target="_blank" title="澳大利亚丽丝雅（Restoria ） Discree黑发还原乳 超过90%天然成分 安全无害 250ml">
+                            <img class="np_l" src="data/afficheimg/ax_03.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11440.html" target="_blank" title="澳大利亚丽丝雅（Restoria ） Discree黑发还原乳 超过90%天然成分 安全无害 250ml">	
+                            澳大利亚丽丝雅黑发还原乳 250ml
+                        </a>
+                        <span>RMB 101</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11169.html" target="_blank" title="新西兰新溪岛（Streamland）儿童蜂蜜500g">
+                            <img class="np_l" src="data/afficheimg/ax_04.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11169.html" target="_blank" title="新西兰新溪岛（Streamland）儿童蜂蜜500g">	
+                            新西兰新溪岛儿童蜂蜜 500g
+                        </a>
+                        <span>RMB 79</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11164.html" target="_blank" title="新西兰康维他(Comvita)儿童特制纯天然麦卢卡蜂胶蜂蜜露(草莓味)200ml">
+                            <img class="np_l" src="data/afficheimg/ax_05.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11164.html" target="_blank" title="新西兰康维他(Comvita)儿童特制纯天然麦卢卡蜂胶蜂蜜露(草莓味)200ml">	
+                            新西兰康维他纯天然麦卢卡蜂胶蜂蜜露
+                        </a>
+                        <span>RMB 98</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11163.html" target="_blank" title="澳大利亚澳佳宝(Blackmores)Celery 芹菜籽精华片3000mg 50粒">
+                            <img class="np_l" src="data/afficheimg/ax_06.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11163.html" target="_blank" title="澳大利亚澳佳宝(Blackmores)Celery 芹菜籽精华片3000mg 50粒">	
+                            澳大利亚澳佳宝芹菜籽精华片 50粒
+                        </a>
+                        <span>RMB 116</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11036.html" target="_blank" title="新西兰趣乐活（Trilogy)玫瑰果油20ml">
+                            <img class="np_l" src="data/afficheimg/ax_07.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11036.html" target="_blank" title="新西兰趣乐活（Trilogy)玫瑰果油20ml">	
+                            新西兰趣乐活玫瑰果油 20ml
+                        </a>
+                        <span>RMB 139</span>
+                    </div>
+                </li>
+            </ul>
+         </div>
+         
+    </div>
+    <!--澳新专区end-->
+    
+    
+    <!--北美专区start-->
+    <div class="countryzone">
+        <div class="cz_title cz_title_bottom">
+            <h2>
+                <img src="data/afficheimg/zone_beimei.png" />
+            </h2>
+            <div class="cz_fl">
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLpppnolYnlrp3lrp0iO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDY3MDA1ODQ5O30=" target="_blank">香蕉宝宝</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuiJvue7tOivuiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDU4NDE7fQ==" target="_blank">艾维诺</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6Ium6puiCr%2bm9kCI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDU4MzI7fQ==" target="_blank">麦肯齐</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLliqDlt57lrp3lrp0iO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDY3MDA1ODI0O30=" target="_blank">加州宝宝</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjEyOiLkuJbnlYzmnIDlpb0iO3M6MTg6InNlYXJjaF9lbmNvZGVfdGltZSI7aToxNDY3MDA1ODE0O30=" target="_blank">世界最好</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6IuWYieWunSI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDU4MDY7fQ==" target="_blank">嘉宝</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6Iuemp%2bi0nSI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDU3OTg7fQ==" target="_blank">禧贝</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuWFsOaAneivuiI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDU3ODc7fQ==" target="_blank">兰思诺</a>
+                <a href="http://s.wjike.com/search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjk6IuS4neWhlOiKmSI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NjcwMDU3ODA7fQ==" target="_blank">丝塔芙</a>
+            </div>
+        </div>
+        
+        <div class="nr_text">
+            <ul>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11195.html" target="_blank" title="美国香蕉宝宝（Baby Banana）香蕉硅胶婴儿牙胶牙刷">
+                            <img class="np_l" src="data/afficheimg/bm_01.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11195.html" target="_blank" title="美国香蕉宝宝（Baby Banana）香蕉硅胶婴儿牙胶牙刷">	
+                            美国香蕉宝宝香蕉硅胶婴儿牙胶牙刷
+                        </a>
+                        <span>RMB 77</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10993.html" target="_blank" title="美国柯克兰（Kirkland Signature）加州西梅干1590g">
+                            <img class="np_l" src="data/afficheimg/bm_02.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10993.html" target="_blank" title="美国柯克兰（Kirkland Signature）加州西梅干1590g">	
+                           美国柯克兰加州西梅干 1590g
+                        </a>
+                        <span>RMB 99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10859.html" target="_blank" title="加拿大丝塔芙(Cetaphil)润肤乳591ml">
+                            <img class="np_l" src="data/afficheimg/bm_03.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10859.html" target="_blank" title="加拿大丝塔芙(Cetaphil)润肤乳591ml">	
+                            加拿大丝塔芙润肤乳 591ml
+                        </a>
+                        <span>RMB 105</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10857.html" target="_blank" title="美国艾维诺（Aveeno）Baby宝宝婴儿沐浴露236ml">
+                            <img class="np_l" src="data/afficheimg/bm_04.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10857.html" target="_blank" title="美国艾维诺（Aveeno）Baby宝宝婴儿沐浴露236ml">	
+                            美国艾维诺Baby宝宝婴儿沐浴露 236ml
+                        </a>
+                        <span>RMB 88</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10849.html" target="_blank" title="美国凡士林(Vaseline）可可油润肤乳295ml">
+                            <img class="np_l" src="data/afficheimg/bm_05.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10849.html" target="_blank" title="美国凡士林(Vaseline）可可油润肤乳295ml">	
+                            美国凡士林可可油润肤乳 295ml
+                        </a>
+                        <span>RMB 50</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10848.html" target="_blank" title="美国Ajax柠檬味洗洁精372ml">
+                            <img class="np_l" src="data/afficheimg/bm_06.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10848.html" target="_blank" title="美国Ajax柠檬味洗洁精372ml">	
+                            美国Ajax柠檬味洗洁精 372ml
+                        </a>
+                        <span>RMB 34</span>
+                    </div>
+                </li>
+            </ul>
+         </div>
+         
+        <div class="activityentr">
+            <div class="">
+                <a href="http://item.wjike.com/12265.html" target="_blank" title="美国Daily Defense摩洛哥坚果油护发素 473ml">
+                    <img class="np_l" src="data/afficheimg/bm_07.jpg" width="477px" height="485px"/>
+                </a>
+            </div>
+         </div>
+    </div>
+    <!--北美专区end-->
+    
+    
+    
+    <!--欧洲专区start-->
+    <div class="countryzone_aoxin" style="margin-bottom: 50px;">
+        <div class="cz_title" style="border-bottom:2px solid #13a732;">
+            <h2>
+                <img src="data/afficheimg/zone_ouzhou.png" />
+            </h2>
+            <div class="cz_fl">
+                <a href="http://www.wjike.com/b473.html" target="_blank">Penaten 贝娜婷</a>
+                <a href="http://www.wjike.com/b478.html" target="_blank">Alpecin 阿佩辛</a>
+                <a href="http://www.wjike.com/b476.html" target="_blank">Schaebens 雪本诗</a>
+                <a href="http://www.wjike.com/b520.html" target="_blank">RAVAZZI</a>
+                <a href="http://www.wjike.com/b497.html" target="_blank">Sanosan 哈罗闪</a>
+            </div>
+        </div>
+         
+        <div class="activityentr">
+            <div class="">
+                <a href="http://s.wjike.com/goods.php?id=12060" target="_blank" title="英国美体小铺（The Body Shop）维E保湿霜 50ml">
+                    <img class="np_l" src="data/afficheimg/oz_01.jpg" width="477px" height="485px"/>
+                </a>
+            </div>
+         </div>
+        
+        <div class="nr_text">
+            <ul>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12052.html" target="_blank" title="英国清妍（Simple）高保湿全能乳液 125ml">
+                            <img class="np_l" src="data/afficheimg/oz_02.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12052.html" target="_blank" title="英国清妍（Simple）高保湿全能乳液 125ml">	
+                            英国清妍高保湿全能乳液 125ml
+                        </a>
+                        <span>RMB 53</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12050.html" target="_blank" title="英国美体小铺（The body shop）维E睡眠面膜 100ml">
+                            <img class="np_l" src="data/afficheimg/oz_03.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12050.html" target="_blank" title="英国美体小铺（The body shop）维E睡眠面膜 100ml">	
+                            英国美体小铺维E睡眠面膜 100ml
+                        </a>
+                        <span>RMB 139</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/12035.html" target="_blank" title="英国博姿（Boots）小黄瓜保湿乳 150ml">
+                            <img class="np_l" src="data/afficheimg/oz_04.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/12035.html" target="_blank" title="英国博姿（Boots）小黄瓜保湿乳 150ml">	
+                            英国博姿小黄瓜保湿乳 150ml
+                        </a>
+                        <span>RMB 33</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10807.html" target="_blank" title="德国哈罗闪(SANOSAN)婴儿润肤乳液200ml">
+                            <img class="np_l" src="data/afficheimg/oz_05.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10807.html" target="_blank" title="德国哈罗闪(SANOSAN)婴儿润肤乳液200ml">	
+                            德国哈罗闪婴儿润肤乳液 200ml
+                        </a>
+                        <span>RMB 71</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/10489.html" target="_blank" title="德国VICKS BABY BALSAM宝宝通鼻膏 安神舒缓镇痛 50g">
+                            <img class="np_l" src="data/afficheimg/oz_06.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/10489.html" target="_blank" title="德国VICKS BABY BALSAM宝宝通鼻膏 安神舒缓镇痛 50g">	
+                            德国VICKS BABY BALSAM宝宝通鼻膏
+                        </a>
+                        <span>RMB 67</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="newproduct">
+                        <a href="http://item.wjike.com/11982.html" target="_blank" title="德国宝比珊(Buebchen)洗发沐浴二合一 足球男孩(浅蓝色)温和无泪配方 230ml适合1岁以上">
+                            <img class="np_l" src="data/afficheimg/oz_07.png"/>
+                        </a>
+                        <a href="http://item.wjike.com/11982.html" target="_blank" title="德国宝比珊(Buebchen)洗发沐浴二合一 足球男孩(浅蓝色)温和无泪配方 230ml适合1岁以上">	
+                            德国宝比珊洗发沐浴二合一 230ml
+                        </a>
+                        <span>RMB 38</span>
+                    </div>
+                </li>
+            </ul>
+         </div>
+         
+    </div>
+    <!--欧洲专区end-->
+    
+    

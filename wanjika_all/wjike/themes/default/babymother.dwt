@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>母婴全球购,呵护宝宝健康成长</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.babymother_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/babymother_01.jpg) no-repeat top center #fff; }
+.babymother_all .babymother_one{ width:100%; overflow:hidden; margin:0 auto; }
+.babymother_all .babymother_two{ width:100%; overflow:hidden; margin:0 auto; }
+
+.babymother_all .babymother_01{ width:1000px; height:217px; background:url(images/adimages/babymother_02.jpg) no-repeat center center; margin:0 auto; }
+.babymother_all .babymother_02{ width:1000px; height:217px; background:url(images/adimages/babymother_04.jpg) no-repeat center center; margin:0 auto; }
+.babymother_all .babymother_03{ width:1000px; height:216px; background:url(images/adimages/babymother_05.jpg) no-repeat center center; margin:0 auto; }
+.babymother_all .babymother_04{ width:1000px; height:217px; background:url(images/adimages/babymother_06.jpg) no-repeat center center; margin:0 auto; }
+.babymother_all .babymother_05{ width:1000px; height:3133px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!--母婴全球购,呵护宝宝健康成长start-->
+<div class="babymother_all">
+	<div class="babymother_one">
+        <div class="babymother_01"></div>
+        <div class="babymother_02"></div>
+        <div class="babymother_03"></div>
+        <div class="babymother_04"></div>
+    </div>
+
+	<div class="babymother_two">
+        <div class="babymother_05">
+        	<img src="images/adimages/babymother_07.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="27,13,495,322" href="http://wjike.com/goods.php?id=10519" target="_blank" />
+              <area shape="rect" coords="504,17,971,323" href="http://wjike.com/goods.php?id=10644" target="_blank" />
+              <area shape="rect" coords="33,341,494,634" href="http://wjike.com/goods.php?id=10449" target="_blank" />
+              <area shape="rect" coords="507,339,967,635" href="http://wjike.com/goods.php?id=10731" target="_blank" />
+            </map>
+        	<img src="images/adimages/babymother_08.jpg" />
+        	<img src="images/adimages/babymother_09.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="11,25,251,330" href="http://wjike.com/goods.php?id=10675" target="_blank" />
+              <area shape="rect" coords="266,29,497,330" href="http://wjike.com/goods.php?id=10672" target="_blank" />
+              <area shape="rect" coords="510,26,744,330" href="http://wjike.com/goods.php?id=10474" target="_blank" />
+              <area shape="rect" coords="759,26,994,330" href="http://wjike.com/goods.php?id=10665" target="_blank" />
+              <area shape="rect" coords="10,340,249,645" href="http://wjike.com/goods.php?id=10664" target="_blank" />
+              <area shape="rect" coords="263,341,495,643" href="http://wjike.com/goods.php?id=10663" target="_blank" />
+              <area shape="rect" coords="512,343,745,649" href="http://wjike.com/goods.php?id=10475" target="_blank" />
+              <area shape="rect" coords="760,342,991,643" href="http://wjike.com/goods.php?id=10485" target="_blank" />
+            </map>
+        	<img src="images/adimages/babymother_10.jpg" />
+        	<img src="images/adimages/babymother_11.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="31,23,496,332" href="http://wjike.com/goods.php?id=10337" target="_blank" />
+              <area shape="rect" coords="504,27,965,330" href="http://wjike.com/goods.php?id=10489" target="_blank" />
+              <area shape="rect" coords="33,342,494,648" href="http://wjike.com/goods.php?id=10355" target="_blank" />
+              <area shape="rect" coords="504,343,968,650" href="http://wjike.com/goods.php?id=10352" target="_blank" />
+            </map>
+        	<img src="images/adimages/babymother_12.jpg" usemap="#Map4" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="27,201,977,515" href="http://www.wjike.com/vip.php?act=vip_info" target="_blank" />
+            </map>
+      </div>
+    </div>
+</div>
+<!--母婴全球购,呵护宝宝健康成长end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

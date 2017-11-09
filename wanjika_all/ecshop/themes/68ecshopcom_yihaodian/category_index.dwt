@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="themes/68ecshopcom_yihaodian/channel_index.css" rel="stylesheet" type="text/css" />
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<?php
+if($_REQUEST['id'])
+{
+	$id = $_REQUEST['id'];
+}
+else
+{
+	$id = $_REQUEST['category'];
+}
+function get_categories($cat_id = 0)
+{
+    if ($cat_id > 0)
+    {
+			  $parent_id = $cat_id;
+    }
+    else
+    {
+        $parent_id = 0;
+    }
+
+    /*
+     判断当前分类中全是是否是底级分类，
+     如果是取出底级分类上级分类，
+     如果不是取当前分类及其下的子分类
+    */
+    $sql = 'SELECT count(*) FROM ' . $GLOBALS['ecs']->table('category') . " WHERE parent_id = '$cat_id' AND is_show = 1 ";
+    if ($GLOBALS['db']->getOne($sql) || $parent_id == 0)
+    {
+        /* 获取当前分类及其子分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, a.sort_order AS parent_order, a.cat_id, a.is_show,' .
+                    'b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order AS child_order ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE a.parent_id = '$parent_id' ORDER BY parent_order ASC, a.cat_id ASC, child_order ASC";
+    }
+    else
+    {
+        /* 获取当前分类及其父分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order, b.is_show ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE b.parent_id = '$parent_id' ORDER BY sort_order ASC";
+    }
+    $res = $GLOBALS['db']->getAll($sql);
+
+    $cat_arr = array();
+    foreach ($res AS $row)
+    {
+        if ($row['is_show'])
+        {
+            $cat_arr[$row['cat_id']]['id']   = $row['cat_id'];
+            $cat_arr[$row['cat_id']]['name'] = $row['cat_name'];
+            $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
+
+            if ($row['child_id'] != NULL)
+            {
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['id']   = $row['child_id'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['name'] = $row['child_name'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['url']  = build_uri('category', array('cid' => $row['child_id']), $row['child_name']);
+            }
+        }
+    }
+
+    return $cat_arr;
+}
+function get_cat_name_add($id)
+{
+    $sql = 'SELECT cat_name ' . 'FROM ' . $GLOBALS['ecs']->table('category')  . "WHERE cat_id =$id " ;
+		$cat_name = $GLOBALS['db']->getOne($sql);
+		return $cat_name;
+}
+function get_parent($value,$id='')
+{
+
+    if($value!=0)
+    {
+			$sql = 'SELECT parent_id FROM ' . $GLOBALS['ecs']->table('category') . " WHERE cat_id = '$value'";
+			$res = $GLOBALS['db']->getOne($sql);
+			return get_parent($res,$value);
+    }
+		else
+		{
+			return $id;
+		}
+}
+include_once("includes/lib_goods.php");
+$this->assign('categories1'     ,    get_categories(get_parent($id)));
+$this->assign('cat_name'     ,       get_cat_name_add(get_parent($id)))
+?>
+
+<script type="text/javascript" src="themes/68ecshopcom_yihaodian/js/MSClass.js"></script>
+ 
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->	   
+
+<div id="container" class="clearfix">
+
+<div id="main" class="clearfix" >
+    
+    
+<div class="banner980x60 mt5" style="width:980px;height:60px;"><img src="{$topcat_info.cat_index_rightad}" width="980" height="60"></a>
+</div>
+<div id="maincontent"  style="margin-top:6px;">
+            <div id="sidebarleft" class="fl">
+<div id="beautycare">
+                
+<h1 class="beautytitle">{$cat_name}
+</h1>
+<!--{foreach from=$categories1 item=cat name=cat}-->
+<div class="facecare">
+    <h2 class="facetitle">    
+  <a href="{$cat.url}" class="a_color" target="_blank" title="{$cat.name|escape:html}">
+    {$cat.name|escape:html}
+  </a>
+</h2>
+    <ul style="overflow:hidden;">
+    <!--{foreach from=$cat.children item=child name=name}-->
+<li><a href="{$child.url}" class="a_color" target="_blank" title="{$child.name|escape:html}">{$child.name|escape:html}</a></li>
+
+{if !$smarty.foreach.name.last}
+<li>|</li>
+{/if}
+      <!--{/foreach}--> 
+       <div class="clear"></div>
+    </ul>
+</div>
+{/foreach}
+
+</div>
+                            
+<div class="hotranking mt10">
+    <div class="hotitle">本周热销单品</div>
+    <div class="hotimgs">
+    {foreach  from=$goods_list_hot name="goods_list_hot" item=hotgoods}	
+    <div class="hoteg {if $smarty.foreach.goods_list_hot.last}hoteglast{/if}">
+             <div class="hotimg"><a class="hotimgsmall" href="{$hotgoods.url}"  target="_blank" ><img src="{$hotgoods.goods_thumb}"  width="40" height="40"/></a></div>
+            <div class="hotimgtxt">          
+                <div class="newtxtitle">
+                  <a href="{$hotgoods.url}"  target="_blank" title="{$hotgoods.goods_name}">{$hotgoods.goods_name}</a>
+                </div>
+                <p class="hotprice" endTime="0" price="3.5" realpriceId="1001514">{$hotgoods.shop_price}</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+        {/foreach}
+        
+    </div>
+    <!--hotimgs-->
+</div>
+<div class="hotranking mt10" id="weekHotProductList">
+    <div class="hotitle">新品上架</div>
+    <div class="hotimgs">
+           	{foreach  from=$goods_list_new name="goods_list_new" item=hotgoods}	
+    
+      
+        <div class="hoteg {if $smarty.foreach.goods_list_new.last}hoteglast{/if}">
+             <div class="hotimg"><a class="hotimgsmall" href="{$hotgoods.url}"  target="_blank" ><img src="{$hotgoods.goods_thumb}"  width="40" height="40"/></a></div>
+            <div class="hotimgtxt">          
+                <div class="newtxtitle">
+                  <a href="{$hotgoods.url}"  target="_blank" title="{$hotgoods.goods_name}">{$hotgoods.goods_name}</a>
+                </div>
+                <p class="hotprice" endTime="0" price="3.5" realpriceId="1001514">{$hotgoods.shop_price}</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+        {/foreach}
+    
+    </div>
+    <!--hotimgs-->
+</div>
+
+                </div>
+              
+                
+                
+                <div class="fr" style="width:765px; overflow:hidden;">
+                <div id="middle" class="fl">
+<div class="flash" style="position:relative;">
+   <!-- #BeginLibraryItem "/library/chanl_ad3.lbi" --><!-- #EndLibraryItem -->	   
+
+</div>
+
+
+<div class="midcolumn mt10">
+    <div class="midcolumntitle">
+        <h3 class="newproduct">每周推荐</h3>
+        <p class="more color_gary"><a href="search.php?intro=best"   target="_blank">更多</a></p>
+    </div>
+
+    <div class="newimgs mt10">
+      {foreach  from=$goods_list_best name="goods_list_best" item=bestgoods}
+      {if $smarty.foreach.goods_list_best.iteration < 5}
+       		<div class="newsimgeg fl {if $smarty.foreach.goods_list_best.first}newsimgegfirst pointer{/if}">
+            
+            {if $bestgoods.promote_price neq ''}
+            <div class="channel_tagsprites9"></div>
+            {/if}
+            
+            
+                <a class="newproimg" href="{$bestgoods.url}" title="{$bestgoods.goods_name}" target="_blank"><img src="{$bestgoods.goods_thumb}"/ width="115" height="115"></a>
+                <div class="newtxt">
+                    <div class="newtxtitle">
+	                    <a href="{$bestgoods.url}" title="{$bestgoods.goods_name}"  target="_blank">
+	                   		{$bestgoods.goods_name}
+	                    </a>
+                    </div>
+                    <p>售价：<span class="proprice" realpriceId="900083">{if $bestgoods.promote_price > 0}{$bestgoods.promote_price}
+                    {else}
+                    
+                    {$bestgoods.shop_price}
+                    {/if}</span>
+                    
+                    <br />
+                    市场价：<span class="propricelinethrough" >{$bestgoods.market_price}</span>
+                    </p>
+                </div>
+            </div>
+            {/if}
+            	{/foreach}
+              
+            <div class="clear"></div>
+        </div>
+        <!--newimgs-->
+    </div>
+    
+    
+    </div>
+    <div id="sidebarright"  class="fr">
+<div class="hotranking hotrankingtime">
+    <div class="hotitle"><h4 class="limitime">限时抢购</h4></div>
+    <div class="timecon">
+    
+     <!-- {if $promotion_goods} -->
+<script >
+
+var Tday = new Array();
+
+var daysms = 24 * 60 * 60 * 1000
+
+var hoursms = 60 * 60 * 1000
+
+var Secondms = 60 * 1000
+
+var microsecond = 1000
+
+var DifferHour = -1
+
+var DifferMinute = -1
+
+var DifferSecond = -1
+
+function clock(key)
+
+  {
+
+   var time = new Date()
+
+   var hour = time.getHours()
+
+   var minute = time.getMinutes()
+
+   var second = time.getSeconds()
+
+   var timevalue = ""+((hour > 12) ? hour-12:hour)
+
+   timevalue +=((minute < 10) ? ":0":":")+minute
+
+   timevalue +=((second < 10) ? ":0":":")+second
+
+   timevalue +=((hour >12 ) ? " PM":" AM")
+
+   var convertHour = DifferHour
+
+   var convertMinute = DifferMinute
+
+   var convertSecond = DifferSecond
+
+   var Diffms = Tday[key].getTime() - time.getTime()
+
+   DifferHour = Math.floor(Diffms / daysms)
+
+   Diffms -= DifferHour * daysms
+
+   DifferMinute = Math.floor(Diffms / hoursms)
+
+   Diffms -= DifferMinute * hoursms
+
+   DifferSecond = Math.floor(Diffms / Secondms)
+
+   Diffms -= DifferSecond * Secondms
+
+   var dSecs = Math.floor(Diffms / microsecond)
+
+   
+
+   if(convertHour != DifferHour) a="<span>"+DifferHour+"</span>";
+
+   if(convertMinute != DifferMinute) b="<span>"+DifferMinute+"</span>";
+
+   if(convertSecond != DifferSecond) c="<span>"+DifferSecond+"</span>";
+
+     d="<span>"+dSecs+"</span>"
+
+     if (DifferHour>0) {a=a} 
+
+     else {a=''}
+
+   document.getElementById("leftTime"+key).innerHTML = a + b + c + d; //显示倒计时信息
+ }
+
+</script>
+
+
+<!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}-->
+<!--{if $smarty.foreach.promotion_foreach.iteration lt 3}-->
+
+
+{if $smarty.foreach.promotion_foreach.first}
+        <div class="timebg" id="leftTime{$key}">
+        <span>00</span><span>00</span><span>00</span>
+        </div>
+        {/if}
+        <div class="timeproduct ">
+            <div class="channel_timeapdiv"></div>
+            <div class="timeproductimg">
+			 
+			  <a class="timeproductimgbig" href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}" ><img src="{$goods.thumb}" width="115" height="115" /></a></div>
+              <p class="timeproductxt color_gary"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">
+                {$goods.name|escape:html}
+</a></p>
+			<span class="timeproductxt "><span class="buyingprice" style="font-size:14px;">{$goods.promote_price}</span></span>
+            <span class="timeproductxt propricelinethrough">{$goods.market_price}</span>
+
+            
+    
+        </div>
+        
+        
+        <script>
+Tday[{$key}] = new Date("{$goods.gmt_end_time}");  
+window.setInterval(function()    
+{clock({$key});}, 1000);    
+</script>
+          <!--{/if}-->
+          <!--{/foreach}-->
+        
+        <!-- {/if} -->
+
+    </div>
+    
+
+</div>
+   </div>
+<div style="height:0px; line-height:0px; clear:both;"></div>
+
+{foreach  from=$childcat_goods item=cat}        
+<div class="midcolumn1 mt10">
+    <div class="midcolumntitle1" >
+        <h3 class="newproduct">{$cat.cat_name}</h3>
+        <p class="more color_gary"><a href="{$cat.url}" target="_blank">更多</a></p>
+    </div>
+
+    <div class="newimgs1 mt10" >
+    
+    {foreach  from=$cat.children  name="cat_children"  item=catgoods}	
+    {if $smarty.foreach.cat_children.iteration < 6}
+        <div class="newsimgeg1 fl {if $smarty.foreach.cat_children.index  eq 0}newsimgegfirst pointer{/if}">
+        
+                <a class="newproimg" href="{$catgoods.url}" title="{$catgoods.goods_name}" target="_blank"><img src="{$catgoods.goods_thumb}" width="115" height="115"/></a>
+                <div class="newtxt">
+                    <div class="newtxtitle">
+	                    <a href="{$catgoods.url}" title="{$catgoods.goods_name}"  target="_blank">
+	                   		{$catgoods.goods_name}
+	                    </a>
+                    </div>
+                    <p><span class="proprice" >{$catgoods.shop_price}</span><span class="propricelinethrough" >{$catgoods.market_price}</span>
+                    </p>
+                </div>
+            </div>
+        
+     {/if}
+           	{/foreach} 
+            <div class="clear"></div>
+        </div>
+        <!--newimgs-->
+    </div>
+{/foreach}
+
+  </div>
+            
+               <div style="height:0px; line-height:0px; clear:both;"></div>
+            </div>
+         <div style="height:0px; line-height:0px; clear:both;"></div>
+        </div>
+
+</div>
+<div class="clearfix"></div>
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

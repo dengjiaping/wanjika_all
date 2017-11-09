@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小C美图管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/css/bootcss.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">		
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+        <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+	
+	
+
+  </head>
+  <body>
+  <div class="panel panel-info">
+   <div class="panel-heading">微信管理</div>
+
+    <div class="panel-body form-horizontal">
+		 
+				
+					<div class="form-group">
+						<label for="leixin" class="col-sm-3 control-label">回复类型:</label>
+						<div class="col-sm-4">
+						<button  class="btn <if condition="$v['leixin'] eq '1'">btn-primary<else />btn-default</if>" role="button" data-toggle="modal" data-target="#myModal">文本</button>
+						<button class="btn <if condition="$v['leixin'] eq '2'">btn-primary<else />btn-default</if>" role="button" data-toggle="modal" data-target="#tuwen">站内图文</button>									
+						</div> 
+					  </div>
+					   
+						</form>
+			</div>
+			</div>
+		  
+		  
+		
+		
+		  
+				
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">文本回复</h4>
+      </div>
+      <div class="modal-body">
+	  
+      
+				 <form action="__GROUP__/Weixin/eidtkey" method="post" role="form" >
+						 <div class="form-group">
+						<label >关键词:</label>
+						
+						  <input type="text" class="form-control" id="key" name="key" value="{$v['key']}" placeholder="用户发送该关键词回复下面设置的内容" />
+						
+					  </div>
+						  <div class="form-group">
+							<label>回复内容</label>
+							<textarea class="form-control" rows="6" name="text">{$v['text']}</textarea>
+							<input type="hidden" name="leixin" value="1" />						
+							<input type="hidden" name="id" value="{$v['id']}" />						
+						  </div>		 
+				   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+        <button type="submit" class="btn btn-primary">保存修改</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="tuwen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">图文回复</h4>
+      </div>
+      <div class="modal-body">
+	  
+       <form action="__GROUP__/Weixin/eidtkey" method="post" role="form" >
+						  <div class="form-group">
+						<label >关键词:</label>
+						
+						  <input type="text" class="form-control" id="key" value="{$v['key']}" name="key" placeholder="用户发送该关键词回复下面设置的内容" />
+						
+					  </div>
+						  <div class="form-group">
+							<label>分类</label>
+							<select name="cid" class="form-control">
+							 
+							  <volist name="cate" id="vo">
+							  <option value="{$vo.id}" <if condition="$v['cid'] eq $vo['id']">selected</if>>{$vo.catename}</option>
+							  </volist>
+							
+							</select>
+
+						  </div>
+						  <div class="form-group">
+							<label>数量</label>
+							<select name="num"  class="form-control">
+							  <option value="1" <if condition="$v['num'] eq '1'">selected</if>>1</option>
+							  <option value="2" <if condition="$v['num'] eq '2'">selected</if>>2</option>
+							  <option value="3" <if condition="$v['num'] eq '3'">selected</if>>3</option>
+							  <option value="4" <if condition="$v['num'] eq '4'">selected</if>>4</option>
+							  <option value="5" <if condition="$v['num'] eq '5'">selected</if>>5</option>
+							</select>
+						  </div>
+						 
+						  <div class="checkbox">
+							<label class="radio-inline">
+							  <input type="radio" name="sort" id="inlineRadio1" <if condition="$v['sort'] eq 'istop desc'">checked</if> value="istop desc"> 置顶
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="sort" id="inlineRadio1" <if condition="$v['sort'] eq 'id desc'">checked</if> value="id desc"> 最新
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="sort" id="inlineRadio2" <if condition="$v['sort'] eq 'isrec desc'">checked</if> value="isrec desc"> 推荐
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="sort" id="inlineRadio3" <if condition="$v['sort'] eq 'hits desc'">checked</if> value="hits desc"> 点击
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="sort" id="inlineRadio3" <if condition="$v['sort'] eq 'revs desc'">checked</if> value="revs desc"> 热评
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="sort" id="inlineRadio3" <if condition="$v['sort'] eq 'rand()'">checked</if> value="rand()"> 随机
+							</label>
+						  </div>
+						    <input type="hidden" name="leixin" value="2" />
+						    <input type="hidden" name="id" value="{$v['id']}" />
+						
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+        <button type="submit" class="btn btn-primary">保存</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

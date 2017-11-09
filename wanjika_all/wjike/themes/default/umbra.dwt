@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base target="_blank" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>品质生活来自Umbra</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.umbra_all{ width:100%; margin:0 auto; overflow:hidden; background:url(images/adimages/umbr_01.jpg) no-repeat top center #e4e0dd; }
+.umbra_all .umbra_one{ width:100%; overflow:hidden; margin:0 auto; }
+.umbra_all .umbra_two{ width:100%; overflow:hidden; margin:0 auto; }
+.umbra_all .umbra_three{ width:100%; overflow:hidden; margin:0 auto; }
+.umbra_all .umbra_four{ width:100%; overflow:hidden; margin:0 auto; }
+.umbra_all .umbra_five{ width:100%; overflow:hidden; margin:0 auto; }
+.umbra_all .umbra_six{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/umbr_16.jpg) no-repeat center center; }
+.umbra_all .umbra_seven{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/umbr_18.jpg) no-repeat center center; }
+
+.umbra_all .umbra_01{ width:996px; height:509px; background:url(images/adimages/umbr_02.jpg) no-repeat center center; margin:0 auto; }
+.umbra_all .umbra_02{ width:996px; height:530px; background:url(images/adimages/umbr_04.jpg) no-repeat center center; margin:0 auto; }
+.umbra_all .umbra_03{ width:996px; height:2063px; margin:0 auto; }
+.umbra_all .umbra_04{ width:996px; height:1948px; margin:0 auto; }
+.umbra_all .umbra_07{ width:996px; height:502px; margin:0 auto; }
+.umbra_all .umbra_08{ width:996px; height:200px; margin:0 auto; }
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--品质生活来自Umbarstart-->
+<div class="umbra_all">
+	<div class="umbra_one">
+        <div class="umbra_01"></div>   
+        <div class="umbra_02"></div> 
+    </div> 
+    
+	<div class="umbra_two">
+        <div class="umbra_03">
+        	<a href="goods.php?id=10060" target="_blank" ><img src="images/adimages/umbr_05.jpg"/></a>
+        	<a href="goods.php?id=1778" target="_blank" ><img src="images/adimages/umbr_06.jpg"/></a>
+        	<a href="goods.php?id=10059" target="_blank" ><img src="images/adimages/umbr_07.jpg"/></a>
+        	<a href="goods.php?id=10058" target="_blank" ><img src="images/adimages/umbr_08.jpg"/></a>
+        </div>
+    </div>
+
+  	<div class="umbra_three">
+        <div class="umbra_04">
+        	<img src="images/adimages/umbr_09.jpg" usemap="#Map" border="0"/>
+            <map name="Map" id="Map">
+              <area shape="rect" coords="28,3,442,621" href="goods.php?id=10066" target="_blank" />
+              <area shape="rect" coords="472,2,970,299" href="goods.php?id=10062" target="_blank" />
+              <area shape="rect" coords="472,322,969,621" href="goods.php?id=10065" target="_blank" />
+              <area shape="rect" coords="28,636,255,952" href="goods.php?id=10067" target="_blank" />
+              <area shape="rect" coords="267,635,495,949" href="goods.php?id=10063" target="_blank" />
+              <area shape="rect" coords="506,636,731,951" href="goods.php?id=975" target="_blank" />
+              <area shape="rect" coords="745,636,970,951" href="goods.php?id=2120" target="_blank" />
+            </map>
+        	<img src="images/adimages/umbr_10.jpg" usemap="#Map2" border="0"/>
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="29,4,254,313" href="goods.php?id=2093" target="_blank" />
+              <area shape="rect" coords="268,4,493,315" href="goods.php?id=987" target="_blank" />
+              <area shape="rect" coords="504,5,730,313" href="goods.php?id=1015" target="_blank" />
+              <area shape="rect" coords="743,2,970,314" href="goods.php?id=10061" target="_blank" />
+              <area shape="rect" coords="29,329,444,950" href="goods.php?id=1521" target="_blank" />
+              <area shape="rect" coords="473,329,970,626" href="goods.php?id=10064" target="_blank" />
+              <area shape="rect" coords="473,648,969,949" href="goods.php?id=2129" target="_blank" />
+            </map>
+        </div>
+    </div>
+
+
+    <div class="umbra_six">
+        <div class="umbra_07">
+        	<img src="images/adimages/umbr_15.jpg"/>
+        </div>
+    </div>
+
+    <div class="umbra_seven">
+        <div class="umbra_08">
+        	<a href="vip.php?act=vip_info"><img src="images/adimages/umbr_17.jpg"/></a>
+        </div>   
+    </div> 
+      
+</div>
+
+<!--品质生活来自Umbarend-->
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+<div id="bottomNav" class="box">
+ <div class="box_1">
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>]
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+ </div>
+</div>
+<!--{/if}-->
+<!--友情链接 end-->
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+<!-- $Id: bonus_type_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+
+<script type="text/javascript" src="../js/calendar.php?lang={$cfg_lang}"></script>
+<link href="../js/calendar/calendar.css" rel="stylesheet" type="text/css" />
+
+{include file="pageheader.htm"}
+{insert_scripts files="selectzone.js"}
+<div class="main-div">
+<form action="bonus.php" method="post" name="theForm" enctype="multipart/form-data" onsubmit="return validate()">
+<table width="100%">
+  <tr>
+    <td class="label">{$lang.type_name}</td>
+    <td>
+      <input type='text' name='type_name' maxlength="30" value="{$bonus_arr.type_name}" size='20' />    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <a href="javascript:showNotice('Type_money_a');" title="{$lang.form_notice}">
+      <img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}"></a>{$lang.type_money}</td>
+    <td>
+    <input type="text" name="type_money" value="{$bonus_arr.type_money}" size="20" />
+    <br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="Type_money_a">{$lang.type_money_notic}</span>    </td>
+  </tr>
+  <tr>
+    <td class="label"><a href="javascript:showNotice('NoticeMinGoodsAmount');" title="{$lang.form_notice}"> <img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}" /></a>{$lang.min_goods_amount}</td>
+    <td><input name="min_goods_amount" type="text" id="min_goods_amount" value="{$bonus_arr.min_goods_amount}" size="20" />
+    <br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="NoticeMinGoodsAmount">{$lang.notice_min_goods_amount}</span> </td>
+  </tr>
+  <tr>
+    <td class="label">{$lang.send_method}</td>
+    <td>
+      <input type="radio" name="send_type" value="0" {if $bonus_arr.send_type eq 0} checked="true" {/if} onClick="showunit(0)"  />{$lang.send_by[0]}
+      <input type="radio" name="send_type" value="1" {if $bonus_arr.send_type eq 1} checked="true" {/if} onClick="showunit(1)"  />{$lang.send_by[1]}
+      <input type="radio" name="send_type" value="2" {if $bonus_arr.send_type eq 2} checked="true" {/if} onClick="showunit(2)"  />{$lang.send_by[2]}
+      <input type="radio" name="send_type" value="3" {if $bonus_arr.send_type eq 3} checked="true" {/if} onClick="showunit(3)"  />{$lang.send_by[3]}    </td>
+  </tr>
+  <tr id="1" style="display:none">
+    <td class="label">
+      <a href="javascript:showNotice('Order_money_a');" title="{$lang.form_notice}">
+      <img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}"></a>{$lang.min_amount}</td>
+    <td>
+      <input name="min_amount" type="text" id="min_amount" value="{$bonus_arr.min_amount}" size="20" />
+      <br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="Order_money_a">{$lang.order_money_notic}</span>    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <a href="javascript:showNotice('Send_start_a');" title="{$lang.form_notice}">
+      <img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}"></a>{$lang.send_startdate}</td>
+    <td>
+      <input name="send_start_date" type="text" id="send_start_date" size="22" value='{$bonus_arr.send_start_date}' readonly="readonly" /><input name="selbtn1" type="button" id="selbtn1" onclick="return showCalendar('send_start_date', '%Y-%m-%d', false, false, 'selbtn1');" value="{$lang.btn_select}" class="button"/>
+      <br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="Send_start_a">{$lang.send_startdate_notic}</span>    </td>
+  </tr>
+  <tr>
+    <td class="label">{$lang.send_enddate}</td>
+    <td>
+      <input name="send_end_date" type="text" id="send_end_date" size="22" value='{$bonus_arr.send_end_date}' readonly="readonly" /><input name="selbtn2" type="button" id="selbtn2" onclick="return showCalendar('send_end_date', '%Y-%m-%d', false, false, 'selbtn2');" value="{$lang.btn_select}" class="button"/>    </td>
+  </tr>
+  <tr>
+    <td class="label">
+	  <a href="javascript:showNotice('Use_start_a');" title="{$lang.form_notice}">
+      <img src="images/notice.gif" width="16" height="16" border="0" alt="{$lang.form_notice}"></a>
+	{$lang.use_startdate}</td>
+    <td>
+      <input name="use_start_date" type="text" id="use_start_date" size="22" value='{$bonus_arr.use_start_date}' readonly="readonly" /><input name="selbtn3" type="button" id="selbtn3" onclick="return showCalendar('use_start_date', '%Y-%m-%d', false, false, 'selbtn3');" value="{$lang.btn_select}" class="button"/>
+	  <br /><span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="Use_start_a">{$lang.use_startdate_notic}</span>    </td>
+  </tr>
+  <tr>
+    <td class="label">{$lang.use_enddate}</td>
+    <td>
+      <input name="use_end_date" type="text" id="use_end_date" size="22" value='{$bonus_arr.use_end_date}' readonly="readonly" /><input name="selbtn4" type="button" id="selbtn4" onclick="return showCalendar('use_end_date', '%Y-%m-%d', false, false, 'selbtn4');" value="{$lang.btn_select}" class="button"/>    </td>
+  </tr>
+  <tr>
+	<td class="label">{$lang.use_goods_id}</td>
+	<td style="width:70%;">
+		<!-- 商品搜索 -->
+		<div class="form-div">
+			<img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+			<!-- 分类 -->
+			<select id="use_goods_cat_id" name="cat_id"><option value="0">{$lang.all_category}</caption>{$cat_list}</select>
+			<!-- 品牌 -->
+			<select id="use_goods_brand_id" name="brand_id"><option value="0">{$lang.all_brand}</caption>{html_options options=$brand_list}</select>
+			<!-- 关键字 -->
+			<input type="text" id="use_goods_keyword" name="keyword" size="30" />
+			<input type="button" value="{$lang.button_search}" class="button" onclick="javascript:searchUseGoods()" />
+		</div>
+	</td>
+	</tr>
+	<tr>
+		<td class="label"></td>
+		<td style="width:70%;">
+		<!-- 商品列表 -->
+			<div class="list-div">
+				<div>
+					<span style="width:30%;float:left;text-align:center;">{$lang.all_goods}</span>
+					<span style="width:30%;float:left;text-align:center;">{$lang.handler}</span>
+					<span style="width:30%;float:left;text-align:center;">{$lang.use_bonus_goods}</span>
+			  </div>
+			  <select id="use_goods_source_select" name="source_select" size="20" style="width:30%;float:left;" ondblclick="use_goods_sz.addItem4Bonus(false)" multiple="true">
+			  </select>
+			  <div style="width:30%;float:left;text-align:center;">
+				  <p><input type="button" value="&gt;&gt;" onclick="use_goods_sz.addItem4Bonus(true)" class="button" /></p>
+				  <p><input type="button" value="&gt;" onclick="use_goods_sz.addItem4Bonus(false)" class="button" /></p>
+				  <p><input type="button" value="&lt;" onclick="use_goods_sz.dropItem4Bonus(false)" class="button" /></p>
+				  <p><input type="button" value="&lt;&lt;" onclick="use_goods_sz.dropItem4Bonus(true)" class="button" /></p>
+			 </div>
+			  <select id="use_goods_target_select" name="use_goods_target_select[]" multiple="multiple" size="20" style="width:30%;float:left;" ondblclick="use_goods_sz.dropItem4Bonus(false)">
+				{foreach from=$use_goods_list item=goods}
+				<option value="{$goods.goods_id}">{$goods.goods_name}</option>
+				{/foreach}
+			  </select>
+		</div>
+	</td>
+  </tr>
+  <tr>
+	<td class="label">{$lang.use_bonus_paylist}</td>
+	<td>
+		{foreach from=$payment_list item=payment}
+			{if $payment.selected eq 1}
+				<input id="payments_list" type="checkbox" checked name="payments_list[]" value="{$payment.pay_id}"/>{$payment.pay_name}
+			{else}
+				<input id="payments_list" type="checkbox" name="payments_list[]" value="{$payment.pay_id}"/>{$payment.pay_name}
+			{/if}
+		{/foreach}
+	</td>
+  </tr>
+	
+  <tr>
+    <td class="label">&nbsp;</td>
+    <td>
+      <input type="submit" value="{$lang.button_submit}" class="button" onclick="collect_goods_ids();"/>
+      <input type="reset" value="{$lang.button_reset}" class="button" />
+      <input type="hidden" name="act" value="{$form_act}" />
+      <input type="hidden" name="type_id" value="{$bonus_arr.type_id}" />
+	</td>
+  </tr>
+</table>
+</form>
+</div>
+{insert_scripts files="../js/utils.js,validator.js"}
+{literal}
+<script language="javascript">
+function collect_goods_ids()
+{
+	var use_goods_target_select_obj = document.getElementById("use_goods_target_select");
+	var use_goods_target_select_options = use_goods_target_select_obj.options;
+	for (i = 0; i < use_goods_target_select_options.length; i++)
+	{
+		use_goods_target_select_options[i].selected = true;
+	}
+}
+document.forms['theForm'].elements['type_name'].focus();
+/**
+ * 检查表单输入的数据
+ */
+function validate()
+{
+  validator = new Validator("theForm");
+  validator.required("type_name",      type_name_empty);
+  validator.required("type_money",     type_money_empty);
+  validator.isNumber("type_money",     type_money_isnumber, true);
+  validator.islt('send_start_date', 'send_end_date', send_start_lt_end);
+  validator.islt('use_start_date', 'use_end_date', use_start_lt_end);
+  if (document.getElementById(1).style.display == "")
+  {
+    var minAmount = parseFloat(document.forms['theForm'].elements['min_amount'].value);
+    if (isNaN(minAmount) || minAmount <= 0)
+    {
+	  validator.addErrorMsg(invalid_min_amount);
+    }	
+  }
+  return validator.passed();
+}
+onload = function()
+{
+  {/literal}
+  get_value = '{$bonus_arr.send_type}';
+  {literal}
+
+  showunit(get_value)
+  // 开始检查订单
+  startCheckOrder();
+}
+/* 红包类型按订单金额发放时才填写 */
+function gObj(obj)
+{
+  var theObj;
+  if (document.getElementById)
+  {
+    if (typeof obj=="string") {
+      return document.getElementById(obj);
+    } else {
+      return obj.style;
+    }
+  }
+  return null;
+}
+
+function showunit(get_value)
+{
+  gObj("1").style.display =  (get_value == 2) ? "" : "none";
+  document.forms['theForm'].elements['selbtn1'].disabled  = (get_value != 1 && get_value != 2);
+  document.forms['theForm'].elements['selbtn2'].disabled  = (get_value != 1 && get_value != 2);
+
+  return;
+}
+	var bounsTypeId = '{$bonus_type.type_id}';
+	var elements    = document.forms['theForm'].elements;
+	var sz          = new SelectZone(1, elements['source_select'], elements['target_select'], '');
+	var source_select_obj = document.getElementById("use_goods_source_select");
+	var target_select_obj = document.getElementById("use_goods_target_select");
+	var use_goods_sz = new SelectZone(1, source_select_obj, target_select_obj, '');
+	var type_source_select_obj = document.getElementById("use_type_source_select");
+	var type_target_select_obj = document.getElementById("use_type_target_select");
+	var use_type_sz = new SelectZone(1, type_source_select_obj, type_target_select_obj, '');
+
+  {literal}
+  function searchUseType()
+  {
+		var use_type_cat_id_obj = document.getElementById("use_type_cat_id");
+
+		var filters   = new Object;
+
+		filters.cat_id = use_type_cat_id_obj.value;
+
+		use_type_sz.loadOptions('get_goods_list', filters);
+  }
+
+  function searchUseGoods()
+  {
+		var use_goods_cat_id_obj = document.getElementById("use_goods_cat_id");
+		var use_goods_brand_id_obj = document.getElementById("use_goods_brand_id");
+		var use_goods_keyword_obj = document.getElementById("use_goods_keyword");
+
+		var filters   = new Object;
+
+		filters.cat_id = use_goods_cat_id_obj.value;
+		filters.brand_id = use_goods_brand_id_obj.value;
+		filters.keyword = Utils.trim(use_goods_keyword_obj.value);
+
+		use_goods_sz.loadOptions('get_goods_list', filters);
+  }
+{/literal}
+//-->
+</script>
+{/literal}
+{include file="pagefooter.htm"}

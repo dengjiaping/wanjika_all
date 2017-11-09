@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>乐扣满99元送保鲜盒</title>
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.leko_all{ width:100%; margin:0 auto; overflow:hidden; background-color:#76c6f7; }
+.leko_all .leko_one{ width:100%; overflow:hidden; margin:0 auto; }
+.leko_all .leko_two{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/leko_03.jpg) repeat-x center center; }
+.leko_all .leko_three{ width:100%; overflow:hidden; margin:0 auto; background:url(images/adimages/leko_010.jpg) repeat-x center center; }
+.leko_all .leko_four{ width:100%; overflow:hidden; margin:0 auto;  background:url(images/adimages/leko_011.jpg) repeat-x center center; }
+.leko_all .leko_five{ width:100%; overflow:hidden; margin:0 auto;  background:url(images/adimages/leko_012.jpg) repeat-x center center; }
+.leko_all .leko_six{ width:100%; overflow:hidden; margin:0 auto; background-color:#2594d9; }
+.leko_all .leko_seven{ width:100%; overflow:hidden; margin:0 auto; background-color:#88dbee; }
+
+.leko_all .leko_01{ width:1200px; height:354px; background:url(images/adimages/leko_02.jpg) no-repeat center center; margin:0 auto; }
+.leko_all .leko_02{ width:1200px; height:354px; background:url(images/adimages/leko_04.jpg) no-repeat center center; margin:0 auto; }
+.leko_all .leko_03{ width:1200px; height:558px; margin:0 auto; }
+.leko_all .leko_04{ width:1200px; height:688px; margin:0 auto; }
+.leko_all .leko_05{ width:1200px; height:687px; margin:0 auto; }
+.leko_all .leko_06{ width:1200px; height:688px; margin:0 auto; }
+.leko_all .leko_07{ width:1200px; height:627px; margin:0 auto; }
+.leko_all .leko_08{ width:1200px; height:219px; margin:0 auto; }
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--乐扣满99元送保鲜盒start-->
+<div class="leko_all">
+	<div class="leko_one">
+        <div class="leko_01"></div>
+        <div class="leko_02"></div>
+    </div>
+
+	<div class="leko_two">
+        <div class="leko_03">
+        	<img src="images/adimages/leko_05.jpg" />
+        </div>
+    </div>
+
+  <div class="leko_three">
+        <div class="leko_04">
+        	<img src="images/adimages/leko_06.jpg" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="48,201,302,555" href="goods.php?id=5262" target="_blank" />
+              <area shape="rect" coords="331,201,584,555" href="goods.php?id=5265" target="_blank" />
+              <area shape="rect" coords="615,202,869,554" href="goods.php?id=5267" target="_blank" />
+              <area shape="rect" coords="897,200,1151,556" href="goods.php?id=10055" target="_blank" />
+            </map>
+      </div>
+    </div>
+
+  <div class="leko_four">
+        <div class="leko_05">
+        	<img src="images/adimages/leko_07.jpg" usemap="#Map2" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="49,200,302,553" href="goods.php?id=1511" target="_blank" />
+              <area shape="rect" coords="331,200,584,553" href="goods.php?id=10052" target="_blank" />
+              <area shape="rect" coords="616,202,868,553" href="goods.php?id=1517" target="_blank" />
+              <area shape="rect" coords="896,200,1151,554" href="goods.php?id=1525" target="_blank" />
+            </map>
+      </div>
+    </div>
+
+  <div class="leko_five">
+        <div class="leko_06">
+        	<img src="images/adimages/leko_08.jpg" usemap="#Map3" border="0" />
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="49,206,301,560" href="goods.php?id=1505" target="_blank" />
+              <area shape="rect" coords="332,208,584,560" href="goods.php?id=1506" target="_blank" />
+              <area shape="rect" coords="615,206,868,559" href="goods.php?id=10068" target="_blank" />
+              <area shape="rect" coords="897,207,1150,559" href="goods.php?id=10069" target="_blank" />
+            </map>
+      </div>
+    </div>
+
+    <div class="leko_seven">
+        <div class="leko_08">
+        	<a href="search.php?encode=YToyOntzOjg6ImtleXdvcmRzIjtzOjY6IuS5kOaJoyI7czoxODoic2VhcmNoX2VuY29kZV90aW1lIjtpOjE0NDgzNDc1MTI7fQ=="  target="_blank"><img src="images/adimages/leko_013.jpg" /></a>
+        </div>
+    </div>
+
+	<div class="leko_six">
+        <div class="leko_07">
+        	<img src="images/adimages/leko_09.jpg" />
+        </div>
+    </div>
+</div>
+
+<!--乐扣满99元送保鲜盒end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

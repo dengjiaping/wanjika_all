@@ -1,0 +1,63 @@
+<!-- $Id: sms_send_ui.htm 16697 2009-09-24 03:57:47Z liuhui $ -->
+{include file="pageheader.htm"}
+
+<div class="main-div">
+<form method="POST" action="charge.php?act=insert" name="charge" onsubmit="return validate();">
+<table >
+  <tr>
+    <td class="label">面值:</td>
+    <td><input name="facevalue" type="text" size="10" value="{$facevalue}" />{$lang.require_field} {$lang.msg_notice}
+    </td>
+  </tr>
+    <tr>
+        <td class="label">售价:</td>
+        <td><input name="price" type="text" size="10" value="{$price}" />{$lang.require_field} {$lang.msg_notice}
+        </td>
+    </tr>
+    <tr>
+    <td class="label">运营商:</td>
+    <td><select name="catname">
+        <option value='中国移动'>中国移动</option>
+        <option value='中国联通' {if $catname=='中国联通'}selected="selected"{/if}>中国联通</option>
+        <option value='中国电信' {if $catname=='中国电信'}selected="selected"{/if}>中国电信</option>
+        </select></td>
+  </tr>
+    <tr>
+        <td class="label">省份:</td>
+        <td><input name="province" type="text" size="10" value="{$province}" />{$lang.require_field} {$lang.msg_notice}<span>注：省份只填写省份名称，如：河北</span>
+        </td>
+    </tr>
+
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" name="submit" value="{$lang.button_submit}" class="button" />
+      <input type="reset" value="{$lang.button_reset}" class="button" />
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+{literal}
+function  validate() {
+  var f = document['charge'];
+  var facevalue = f.elements['facevalue'].value;
+  var price = f.elements['price'].value;
+  var catname = f.elements['catname'].value;
+  var province = f.elements['province'].value;
+
+  if(facevalue==''||price==''||catname==''||province=='')
+	{
+		return false;
+	}
+	else
+	{
+	  return true;
+	}
+}
+{/literal}
+//-->
+</script>
+{include file="pagefooter.htm"}

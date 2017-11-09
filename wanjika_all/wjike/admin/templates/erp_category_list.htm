@@ -1,0 +1,32 @@
+<!-- $Id: category_list.htm 17019 2010-01-29 10:10:34Z liuhui $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+<!-- start ad position list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+<table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+  <tr>
+    <th>ERP存货大类名称</th>
+    <th>ERP存货大类编码</th>
+    <th>{$lang.handler}</th>
+  </tr>
+  {foreach from=$cat_info item=cat}
+  <tr align="center" id="{$cat.erpcat_id}">
+    <td align="30%" class="first-cell" >{$cat.erpcat_name}</td>
+    <td width="30%">{$cat.erpcat_code}</td>
+    <td width="40%" align="center">
+      <a href="erp_category.php?act=edit&amp;erpcat_id={$cat.erpcat_id}">{$lang.edit}</a> |
+      <a href="javascript:;" onclick="listTable.remove({$cat.erpcat_id}, '{$lang.drop_confirm}')" title="{$lang.remove}">{$lang.remove}</a>
+    </td>
+  </tr>
+  {/foreach}
+</table>
+{if $full_page}
+</div>
+</form>
+{include file="pagefooter.htm"}
+{/if}

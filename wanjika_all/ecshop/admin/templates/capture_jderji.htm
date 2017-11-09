@@ -1,0 +1,47 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<!-- 订单列表 -->
+<form method="post" action="order.php?act=operate" name="listForm" onsubmit="return check()">
+  <div class="list-div" id="listDiv">
+{/if}
+      <table cellpadding="3" cellspacing="1">
+          <tr>
+              <th>排名</th>
+              <th>商品名称</th>
+              <th>商品链接</th>
+              <th>商品ID</th>
+              <th>价格</th>
+          </tr>
+          {foreach from=$capture_list item=capture  key=okey}
+          <tr>
+              <td align="center" valign="top" nowrap="nowrap">{$capture.rank}</td>
+              <td align="center" valign="top" nowrap="nowrap">{$capture.name}</td>
+              <td align="center" valign="top" nowrap="nowrap">{$capture.href}</td>
+              <td align="center" valign="top" nowrap="nowrap">{$capture.skuid}</td>
+              <td align="center" valign="top" nowrap="nowrap">{$capture.price}</td>
+          </tr>
+          {/foreach}
+      </table>
+      <table id="page-table" cellspacing="0">
+          <tr>
+              <td align="right" nowrap="true">
+                  {include file="page.htm"}
+              </td>
+          </tr>
+      </table>
+      {if $full_page}
+  </div>
+
+    <script language="JavaScript">
+        listTable.recordCount = {$record_count};
+        listTable.pageCount = {$page_count};
+
+        {foreach from=$filter item=item key=key}
+        listTable.filter.{$key} = '{$item}';
+        {/foreach}
+    </script>
+    {include file="pagefooter.htm"}
+    {/if}
+
+
